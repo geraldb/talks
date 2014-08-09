@@ -1,0 +1,387 @@
+title: CSS Next - CSS Preprocessors
+
+h1. CSS Next - CSS Preprocessors
+
+Lightning Talk, May 2012 - Gerald Bauer
+
+
+h1. What's CSS?
+
+CSS => Cascading Style Sheets 
+
+Ice Breakers:
+
+* What's missing in CSS?
+* Are you using any CSS preprocessors?
+
+
+
+h1. Dynamic CSS
+
+CSS preprocessors extend "standard" CSS with:
+
+* Variables
+* Functions and Operations
+* Nested Rules
+* Mixins
+* And much more (Interpolation, Conditionals, Looping, Imports, Keyword Arguments, etc.)
+
+
+h1. CSS Variables
+
+Define variables:
+
+{{{
+$bingo-text:         white;
+$bingo-background:   green;
+}}}
+
+Use variables:
+
+{{{
+.bingo {
+    background-color: $bingo-background;
+    color:            $bingo-text;
+}
+}}}
+
+Becomes (compiled to "standard" CSS):
+
+{{{
+.bingo {
+    background-color: white;
+    color:            green;
+}
+}}}
+
+Not just colors:
+
+{{{
+$base-font-size:   18px;
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}}}
+
+
+
+h1. CSS Functions and Operations
+
+Yes, you can. Use standard math operations (+, -, *, /, and %) for numbers - even with units.
+For colors, use functions for changing the lightness, hue, saturation, and more.
+
+
+{{{
+#navbar {
+  $navbar-width: 800px;
+  $navbar-items: 5;
+  $navbar-color: #ce4dd6;
+
+  width: $navbar-width;
+  border-bottom: 2px solid $navbar-color;
+
+  li {
+    float: left;
+    width: $navbar-width/$navbar-items - 10px;
+
+    background-color: lighten($navbar-color, 20%);
+    &:hover {
+      background-color: lighten($navbar-color, 10%);
+    }
+  }
+}
+}}}
+
+Becomes (compiled to "standard" CSS):
+
+{{{
+#navbar {
+  width: 800px;
+  border-bottom: 2px solid #ce4dd6;
+}
+
+#navbar li {
+  float: left;
+  width: 150px;
+  background-color: #e5a0e9;
+}
+
+#navbar li:hover { background-color: #d976e0; }
+}}}
+
+
+
+h1. CSS Nested Rules
+
+{{{
+#header {
+  h1 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  p { font-size: 12px;
+    a { text-decoration: none;
+      &:hover { border-width: 1px }
+    }
+  }
+}
+}}}
+
+Becomes (compiled to "standard" CSS):
+
+{{{
+#header h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+#header p {
+  font-size: 12px;
+}
+#header p a {
+  text-decoration: none;
+}
+#header p a:hover {
+  border-width: 1px;
+}
+}}}
+
+
+h1. CSS Mixins
+
+{{{
+.slide { 
+  background-image: -webkit-linear-gradient(top left, #FFFFFF 0%, #00A3EF 100%);  /* Webkit (Chrome 11+) */
+  background-image:    -moz-linear-gradient(top left, #FFFFFF 0%, #00A3EF 100%);  /* Mozilla Firefox     */
+  background-image:     -ms-linear-gradient(top left, #FFFFFF 0%, #00A3EF 100%);  /* IE 10+              */
+  background-image:      -o-linear-gradient(top left, #FFFFFF 0%, #00A3EF 100%);  /* Opera               */
+  background-image:         linear-gradient(top left, #FFFFFF 0%, #00A3EF 100%);  /* Proposed W3C Markup */
+}
+}}}
+
+Use mixin for vendor "prefix-free" code:
+
+{{{
+.slide {
+  @include linear-gradient(top left, #FFFFFF, #00A3EF);
+}
+}}}
+
+Define mixin for reuse:
+
+{{{
+@mixin linear-gradient($pos, $start-color, $end-color) {
+  background-image:  -webkit-linear-gradient($pos, $start-color 0%, $end-color 100%); 
+  background-image:     -moz-linear-gradient($pos, $start-color 0%, $end-color 100%); 
+  background-image:      -ms-linear-gradient($pos, $start-color 0%, $end-color 100%); 
+  background-image:       -o-linear-gradient($pos, $start-color 0%, $end-color 100%); 
+  background-image:          linear-gradient($pos, $start-color 0%, $end-color 100%); 
+}
+}}}
+
+
+h1. Reuse - yes you can. Use pre-built Mixin libraries
+
+Bourbon includes pre-built mixins for:
+
+* Animations
+* Background Image
+* Background Size
+* Border Image
+* Border Radius
+* Box Shadow
+* Box Sizing
+* Columns
+* Flex Box
+* Inline Block
+* Linear Gradient
+* Radial Gradient
+* Transform
+* Transitions
+* And many more
+
+What is Bourbon?
+
+Bourbon is a free, open source mixin library (see "@github.com/thoughtbot/bourbon@":https://github.com/thoughtbot/bourbon).
+
+
+
+h1. Imports
+
+Use @import@ directive to include libraries or your own stylesheets. Example:
+
+{{{
+@import "bourbon";    // 3rd party css mixin library 
+
+@import "settings";   // global color settings using variables
+
+@import "flash";
+@import "navbar";
+@import "button";
+@import "breadcrumb";
+
+...
+}}}
+
+
+h1. Yes, you can. CSS Programming 
+
+Simple Button:
+
+{{{
+@mixin simple($base-color, $grayscale: false) {
+  $color:         hsl(0, 0, 100%);
+  $border:        adjust-color($base-color, $saturation:  9%,  $lightness: -14%);
+  $inset-shadow:  adjust-color($base-color, $saturation: -8%,  $lightness:  15%);
+  $stop-gradient: adjust-color($base-color, $saturation:  9%,  $lightness: -11%);
+  $text-shadow:   adjust-color($base-color, $saturation:  15%, $lightness: -18%);
+
+  @if lightness($base-color) > 70% {
+    $color:       hsl(0, 0, 20%);
+    $text-shadow: adjust-color($base-color, $saturation: 10%, $lightness: 4%);
+  }
+
+  @if $grayscale == true {
+    $border:        grayscale($border);
+    $inset-shadow:  grayscale($inset-shadow);
+    $stop-gradient: grayscale($stop-gradient);
+    $text-shadow:   grayscale($text-shadow);
+  }
+
+  border: 1px solid $border;
+  @include border-radius (3px);
+  @include box-shadow (inset 0 1px 0 0 $inset-shadow);
+  color: $color;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  @include linear-gradient ($base-color, $stop-gradient);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 $text-shadow;
+  -webkit-background-clip: padding-box;
+
+  &:hover {
+    $base-color-hover:    adjust-color($base-color, $saturation: -4%, $lightness: -5%);
+    $inset-shadow-hover:  adjust-color($base-color, $saturation: -7%, $lightness:  5%);
+    $stop-gradient-hover: adjust-color($base-color, $saturation:  8%, $lightness: -14%);
+
+    @if $grayscale == true {
+      $base-color-hover:    grayscale($base-color-hover);
+      $inset-shadow-hover:  grayscale($inset-shadow-hover);
+      $stop-gradient-hover: grayscale($stop-gradient-hover);
+    }
+
+    @include box-shadow (inset 0 1px 0 0 $inset-shadow-hover);
+    cursor: pointer;
+    @include linear-gradient ($base-color-hover, $stop-gradient-hover);
+  }
+
+  &:active {
+    $border-active:       adjust-color($base-color, $saturation: 9%, $lightness: -14%);
+    $inset-shadow-active: adjust-color($base-color, $saturation: 7%, $lightness: -17%);
+
+    @if $grayscale == true {
+      $border-active:       grayscale($border-active);
+      $inset-shadow-active: grayscale($inset-shadow-active);
+    }
+
+    border: 1px solid $border-active;
+    @include box-shadow (inset 0 0 8px 4px $inset-shadow-active, inset 0 0 8px 4px $inset-shadow-active, 0 1px 1px 0 #eee);
+  }
+}
+}}}
+
+
+
+h1. Alternative CSS Preprocessors
+
+* Sass   =>  "@sass-lang.com@":http://sass-lang.com
+
+* Less   =>  "@lesscss.org@":http://lesscss.org
+
+* Stylus  => "@learnboost.github.com/stylus@":http://learnboost.github.com/stylus
+
+* Others
+
+
+
+h1. Usage - Server Side and Client Side
+
+h3. Server
+
+{{{
+$ sass styles.sass styles.css
+}}}
+
+or
+
+{{{
+$ lessc styles.less > styles.css
+}}}
+
+
+h3. Browser (Client-Side)
+
+1) Link @.less@ stylesheets with the @rel@ set to @stylesheet/less@:
+
+{{{
+<link rel="stylesheet/less" type="text/css" href="styles.less">
+}}}
+
+2) Add @less.js@ library:
+
+{{{
+<script src="less.js" type="text/javascript"></script>
+}}}
+
+
+
+
+
+
+
+h1. "Official" CSS3 Variables
+
+Upcoming Module for CSS3 Variables => "@dev.w3.org/csswg/css-variables@":http://dev.w3.org/csswg/css-variables
+
+Example:
+
+Define variables:
+
+{{{
+:root  { var-color: blue; }
+div    { var-color: green; }
+#alert { var-color: red; }
+}}}
+
+
+Use variables:
+
+{{{
+* { color: var(color); }
+}}}
+
+Includes calculations:
+
+{{{
+one   { var-foo: 10px; }
+two   { var-bar: calc(var(foo) + 10px); }
+three { var-foo: calc(var(bar) + 10px); }
+}}}
+
+
+
+h1. Examples in the Wild
+
+* Twitter Bootstrap  (HTML/CSS/JS Templates) => "@twitter.github.com/bootstrap@":http://twitter.github.com/bootstrap
+  
+See "Using LESS with Bootstrap Page":http://twitter.github.com/bootstrap/less.html
+
+
+* Wettpool
+
+See "Style Page":http://wettpool.herokuapp.com/style
+
+
+
+h1. The End - Thank You
+
+Questions? Comments?
