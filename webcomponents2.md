@@ -1,9 +1,9 @@
 title: Building Your Own Web Components (Tags / Elements)
 
 
-
 # Who's this guy?
 
+|                |                |
 | -------------- | -------------- |
 | `football.db`  | Open Football Data; see [`github.com/openfootball`](https://github.com/openfootball) |
 | `beer.db`      | Open Beer, Brewery n Brewpub Data; see [`github.com/openbeer`](https://github.com/openbeer) |
@@ -32,7 +32,9 @@ Tag == Element == Web Component  e.g. => `<beer-of-the-day>`
 
 Lets you build your own tags that you can use as easily as plain old `<div>` or `<span>` tags.
 
-Example:
+
+
+# `<football-matchday>` - Use or Build Your Own Web Component (Tag / Element) - Example
 
 Step 1: Import element definition into your page using an HTML import (`<link rel='import'>`)
 
@@ -52,17 +54,17 @@ Step 2: Use the new element; once imported the new element is a first-class HTML
 
 # Trivia Quiz - How many builtin standard elements (tags) has HTML 4.1? HTML 5?
 
-A ( ) 50+
+A [ ]  50+
 
-B ( ) 100+
+B [ ] 100+
 
-C ( ) 500+
+C [ ] 500+
 
-D ( ) 1,000+
+D [ ] 1,000+
 
-E ( ) 5,000+
+E [ ] 5,000+
 
-F ( ) 10,000+
+F [ ] 10,000+
 
 
 # All HTML 5 Elements (A-Z)
@@ -70,9 +72,9 @@ F ( ) 10,000+
 **A**
 `<a>`
 `<abbr>`
-x`<acronym>`
+(x)`<acronym>`
 `<address>`
-x`<applet>`
+(x)`<applet>`
 `<area>`
 (5)`<article>`
 (5)`<aside>`
@@ -80,12 +82,12 @@ x`<applet>`
 **B**
 `<b>`
 `<base>`
-x`<basefont>`
+(x)`<basefont>`
 (5)`<bdi>`
 `<bdo>`
-x`<bgsound>`
-x`<big>`
-x`<blink>`
+(x)`<bgsound>`
+(x)`<big>`
+(x)`<blink>`
 `<blockquote>`
 `<body>`
 `<br>`
@@ -106,7 +108,7 @@ x`<blink>`
 (5)`<details>`
 `<dfn>`
 `<dialog>`
-x`<dir>`
+(x)`<dir>`
 `<div>`
 `<dl>`
 `<dt>`
@@ -224,8 +226,11 @@ x`<dir>`
 (x)`<xmp>`
 
 
+(x) => do NOT use; non-standard, obsolete, or deprecated HTML elements
+(5) => new in HTML 5
 
-# `<beer-of-the-day>` - Use or Build Your Own Web Component (Tag / Element) - More Examples
+
+# Welcome to the Web Components Revolution!
 
 Now imagine a world with
 
@@ -235,7 +240,10 @@ or with
 
 1,000,000+ elements (tags)
 
-=> Welcome to the web components revolution!
+
+
+
+# `<super-button>` - Use or Build Your Own Web Component (Tag / Element) - More Examples
 
 ~~~
 <super-button></super-button>
@@ -259,56 +267,49 @@ _many_ more goodies.
 **Q**: What about namespaces? How's a custom element different from a built-in standard element
 e.g. `<div>`, `<span>`?
 
-**A**: Custom elements **MUST** use a dash (`-`).
+**A**: Custom elements **MUST** use a dash (`-`) e.g. `<super-button>`.
 
 
 
 
 #  "Real World" Web Components - Paper Elements (Material Design)
 
-Introduced to the World at Google I/O 2014
+Introduced to the World at the Google I/O 2014 Conference
 
-~~~
-<paper-button>
-<paper-checkbox>
-<paper-dialog-transition>
-<paper-dialog>
-<paper-fab>
-<paper-focusable>
-<paper-icon-button>
-<paper-input>
-<paper-item>
-<paper-menu-button-overlay>
-<paper-menu-button>
-<paper->
-<paper->
-<paper->
-<paper->
-<paper->
-<paper->
-<paper->
-<paper->
-<paper->
-<paper->
-<paper->
-<paper->
-<paper->
-<paper->
-<paper->
-<paper->
-<paper->
-~~~
+`<paper-button>`
+`<paper-checkbox>`
+`<paper-dialog-transition>`
+`<paper-dialog>`
+`<paper-fab>`
+`<paper-focusable>`
+`<paper-icon-button>`
+`<paper-input>`
+`<paper-item>`
+`<paper-menu-button-overlay>`
+`<paper-menu-button>`
+`<paper-progress>`
+`<paper-radio-button>`
+`<paper-radio-group>`
+`<paper-ripple>`
+`<paper-shadow>`
+`<paper-slider>`
+`<paper-tab>`
+`<paper-tabs>`
+`<paper-toast>`
+`<paper-toggle-button>`
 
 Usage:
 
 ~~~
-<paper-toolbar theme='light'>
-  <paper-button icon='menu'></paper-button>
-  <paper-button icon='refresh'></paper-button>
-  <div flex>Toolbar: light theme</div>
-  <paper-button icon='add'></paper-button>
-</paper-toolbar>
+<paper-dialog heading='Hello Vienna.js'>
+  <p>Lorem ipsum ....</p>
+  <paper-button label='More Info...' dismissive></paper-button>
+  <paper-button label='Decline' affirmative></paper-button>
+  <paper-button label='Accept' affirmative autofocus></paper-button>
+</paper-dialog>
 ~~~
+
+![](i/paper-dialog.png)
 
 
 
@@ -325,16 +326,15 @@ Usage:
 
 (`<element>`) - [W3C Spec](http://www.w3.org/TR/custom-elements/)
 
+#### HTML Imports
+
+(`<link rel='import'>` - include and (re)use HTML documents) - [W3C Spec](http://www.w3.org/TR/html-imports/)
+
 #### Shadow DOM
 
 (`createShadowRoot()` - hide DOM subtrees under shadow roots) - [W3C Spec](http://www.w3.org/TR/shadow-dom/)
 
 ![](i/shadow-dom-work-in-progress.png)
-
-
-#### HTML Imports
-
-(`<link rel='import'>` - include and (re)use HTML documents) - [W3C Spec](http://www.w3.org/TR/html-imports/)
 
 
 
@@ -349,9 +349,10 @@ Usage:
 
 # Web Components Machinery - New Web Standard Building Blocks - Can I Use?
 
-tl;dr:
+Tl;dr:
 
-Chrome 36+ ships all the web components machinery (built into the browser and turn on by default)
+Chrome 36+ ships all the web components machinery (built into the browser
+and turned on by default)
 
 Firefox ships "lite" web components machinery
 (shipping HTML Templates and Custom Elements; NOT shipping Shadow DOM and HTML Imports)
@@ -362,14 +363,13 @@ Firefox ships "lite" web components machinery
 ([Source: ](http://www.polymer-project.org/resources/compatibility.html))
 
 
-
 # Web Components Machinery - New Web Standard Building Blocks - Can I Use?
 
 ### HTML Templates (`<template>`)
 
 - Shipped by Chrome (and Opera) - Stable
 - Shipped by Firefox - Stable
-- Shipped by Safari - Stable (?)
+- Shipped by Safari (8+) - Stable (?)
 - Under consideration by Internet Explorer - Maybe in 2020?
 - [`caniuse.com/#feat=template`](http://caniuse.com/#feat=template)
 
