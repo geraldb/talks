@@ -3,9 +3,9 @@ title: Building Your Own Tags / Elements / Web Components
 
 # Who's this guy?
 
-- `football.db`   - Open Football Data; see [`github.com/openfootball`]()
-- `beer.db`       - Open Beer, Brewery n Brewpubs Data; see [`github.com/openbeer`]()
-- `world.db`      - Open World Data (Countries, Regions, Cities); see [`github.com/openmundi`]()
+- `football.db`   - Open Football Data; see [`github.com/openfootball`](https://github.com/openfootball)
+- `beer.db`       - Open Beer, Brewery n Brewpubs Data; see [`github.com/openbeer`](https://github.com/openbeer)
+- `world.db`      - Open World Data (Countries, Regions, Cities); see [`github.com/openmundi`](https://github.com/openmundi)
 
 
 
@@ -17,7 +17,7 @@ Agenda
 * Web Components Machinery - New Web Standard Building Blocks
 * What's X-Tag? What's Polymer?
 * Example 1 - `<beer-of-the-day>`  
-* Example 2 - `<football-js event='at.2013/14'>`
+* Example 2 - `<football-js event='at.2014/15'>`
 
 
 
@@ -121,6 +121,9 @@ Usage:
 
 (hide DOM subtrees under shadow roots - `createShadowRoot()`) - [W3C Spec](http://www.w3.org/TR/shadow-dom/)
 
+![](i/shadow-dom-work-in-progess.png)
+
+
 #### HTML Imports
 
 (include and reuse HTML documents) - [W3C Spec](http://www.w3.org/TR/html-imports/)
@@ -152,37 +155,41 @@ Firefox ships "lite" web components machinery
 
 # Web Components Machinery - New Web Standard Building Blocks - Can I Use?
 
-### HTML Templates (`<template>`)  - [`caniuse.com/#feat=template`](http://caniuse.com/#feat=template)
+### HTML Templates (`<template>`)
 
 - Shipped by Chrome (and Opera) - Stable
 - Shipped by Firefox - Stable
 - Shipped by Safari - Stable (?)
 - Under consideration by Internet Explorer - Maybe in 2020?
+- [`caniuse.com/#feat=template`](http://caniuse.com/#feat=template)
 
-### Custom Elements (`<element>`) - [`caniuse.com/#feat=custom-elements`](http://caniuse.com/#feat=custom-elements)
+### Custom Elements (`<element>`)
 
 - Shipped by Chrome (and Opera) - Stable
 - Shipped by Firefox - Some Bugs (Flag Required - `dom.webcomponents.enabled`)
 - Under consideration by Internet Explorer - Maybe in 2020?
 - Not supported by Safari - Who knows when or what?
+- [`caniuse.com/#feat=custom-elements`](http://caniuse.com/#feat=custom-elements)
 
-### Shadow DOM (`createShadowRoot()`, scoped CSS) - [`caniuse.com/#feat=shadowdom`](http://caniuse.com/#feat=shadowdom)
+### Shadow DOM (`createShadowRoot()`, scoped CSS)
 
 - Shipped by Chrome (and Opera) - Stable
 - Not supported by Firefox
 - Under consideration by Internet Explorer - Maybe in 2020?
 - Not supported by Safari - Who knows when or what?
+- [`caniuse.com/#feat=shadowdom`](http://caniuse.com/#feat=shadowdom)
 
 <!--
 - Shipped by Firefox - Some Bugs (Flag Required - `dom.webcomponents.enabled`)
 -->
 
-### HTML Imports (`<link rel='import' href='x-tag.html'>`) - [caniuse.com/#feat=imports](http://caniuse.com/#feat=imports)
+### HTML Imports (`<link rel='import' href='x-tag.html'>`)
 
 - Shipped by Chrome (and Opera) - Stable
 - Not supported by Firefox
 - Under consideration by Internet Explorer - Maybe in 2020?
 - Not supported by Safari - Who knows when or what?
+- [caniuse.com/#feat=imports](http://caniuse.com/#feat=imports)
 
 <!--
 - Shipped by Firefox - Some Bugs (Flag Required)
@@ -222,12 +229,19 @@ More info @ [`x-tags.org`](http://x-tags.org)
 
 
 
-### Polymer - Tag Line => Welcome to the future
+### Polymer
 
 Library by Google - lets you use and build custom tags;
 uses web components machinery built into modern browsers; (ugly) pollyfills for older browsers.
 
 More info @ [`www.polymer-project.org`](http://www.polymer-project.org)
+
+![](i/polymer-site.png)
+
+
+
+
+
 
 
 
