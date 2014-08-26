@@ -3,11 +3,9 @@ title: Building Your Own Web Components (Tags / Elements)
 
 # Who's this guy?
 
-|                |                |
-| -------------- | -------------- |
-| `football.db`  | Open Football Data; see [`github.com/openfootball`](https://github.com/openfootball) |
-| `beer.db`      | Open Beer, Brewery n Brewpub Data; see [`github.com/openbeer`](https://github.com/openbeer) |
-| `world.db`     | Open World Data (Countries, Regions, Cities); see [`github.com/openmundi`](https://github.com/openmundi) |
+- **`football.db`** - Open Football Data; see [`github.com/openfootball`](https://github.com/openfootball)
+- **`beer.db`**  - Open Beer, Brewery n Brewpub Data; see [`github.com/openbeer`](https://github.com/openbeer)
+- **`world.db`** - Open World Data (Countries, Regions, Cities); see [`github.com/openmundi`](https://github.com/openmundi)
 
 
 
@@ -28,9 +26,11 @@ Agenda
 - What's a custom element?
 - What's a web component?
 
-Tag == Element == Web Component  e.g. => `<beer-of-the-day>`
+Tag == Element == Web Component
+e.g. => `<beer-of-the-day>`, `<football-matchday>`, `<super-button>`
 
-Lets you build your own tags that you can use as easily as plain old `<div>` or `<span>` tags.
+Web components machinery lets you
+build your own tags that you can use as easily as plain old `<div>` or `<span>` tags.
 
 
 
@@ -42,7 +42,8 @@ Step 1: Import element definition into your page using an HTML import (`<link re
 <link rel='import' href='football-matchday.html'>
 ~~~
 
-Step 2: Use the new element; once imported the new element is a first-class HTML element; use like any other
+Step 2: Use the new element; once imported the new `<football-matchday>` element
+is a first-class HTML element; use like any other
 
 ~~~
 <football-matchday event='at.2014/15'></football-matchday>
@@ -54,17 +55,18 @@ Step 2: Use the new element; once imported the new element is a first-class HTML
 
 # Trivia Quiz - How many builtin standard elements (tags) has HTML 4.1? HTML 5?
 
-A [ ]  50+
+A) --  50+  ?
 
-B [ ] 100+
+B) --  100+  ?
 
-C [ ] 500+
+C) --  200+  ?
 
-D [ ] 1,000+
+D) --  500+  ?
 
-E [ ] 5,000+
+E) --  1,000+  ?
 
-F [ ] 10,000+
+F) --  10,000+  ?
+
 
 
 # All HTML 5 Elements (A-Z)
@@ -226,19 +228,20 @@ F [ ] 10,000+
 (x)`<xmp>`
 
 
-(x) => do NOT use; non-standard, obsolete, or deprecated HTML elements
+(x) => do NOT use; non-standard, obsolete, or deprecated HTML elements    
 (5) => new in HTML 5
+
 
 
 # Welcome to the Web Components Revolution!
 
 Now imagine a world with
 
-100,000+ elements (tags)
+100,000+ HTML elements (tags)
 
 or with
 
-1,000,000+ elements (tags)
+1,000,000+ HTML elements (tags)
 
 
 
@@ -267,7 +270,7 @@ _many_ more goodies.
 **Q**: What about namespaces? How's a custom element different from a built-in standard element
 e.g. `<div>`, `<span>`?
 
-**A**: Custom elements **MUST** use a dash (`-`) e.g. `<super-button>`.
+**A**: Custom elements **MUST** use a dash (`-`) e.g. `<beer-of-the-day>`, `<football-matchday>`, `<super-button>`.
 
 
 
@@ -355,7 +358,7 @@ Chrome 36+ ships all the web components machinery (built into the browser
 and turned on by default)
 
 Firefox ships "lite" web components machinery
-(shipping HTML Templates and Custom Elements; NOT shipping Shadow DOM and HTML Imports)
+(shipping HTML Templates and Custom Elements; NOT shipping (in development) Shadow DOM and HTML Imports)
 
 
 ![](i/polymer-compatibility.png)
@@ -365,40 +368,40 @@ Firefox ships "lite" web components machinery
 
 # Web Components Machinery - New Web Standard Building Blocks - Can I Use?
 
-### HTML Templates (`<template>`)
+### HTML Templates (`<template>`) - Standard
 
 - Shipped by Chrome (and Opera) - Stable
 - Shipped by Firefox - Stable
 - Shipped by Safari (8+) - Stable (?)
-- Under consideration by Internet Explorer - Maybe in 2020?
+- Under consideration by Internet Explorer (Status: Public support) - Maybe in 2017?
 - [`caniuse.com/#feat=template`](http://caniuse.com/#feat=template)
 
-### Custom Elements (`<element>`)
+### Custom Elements (`<element>`) - Work-In-Progress
 
 - Shipped by Chrome (and Opera) - Stable
 - Shipped by Firefox - Some Bugs (Flag Required - `dom.webcomponents.enabled`)
-- Under consideration by Internet Explorer - Maybe in 2020?
-- Not supported by Safari - Who knows when or what?
+- Under consideration by Internet Explorer (Status: Mixed public signals) - Maybe in 2020?
+- Not supported by Safari (Status: Mixed public signals) - Who knows when or what?
 - [`caniuse.com/#feat=custom-elements`](http://caniuse.com/#feat=custom-elements)
 
-### Shadow DOM (`createShadowRoot()`, scoped CSS)
+### Shadow DOM (`createShadowRoot()`, scoped CSS) - Work-In-Progress
 
 - Shipped by Chrome (and Opera) - Stable
-- Not supported by Firefox
-- Under consideration by Internet Explorer - Maybe in 2020?
-- Not supported by Safari - Who knows when or what?
+- In Development (?) by Firefox
+- Under consideration by Internet Explorer (Status: Mixed public signals) - Maybe in 2020?
+- Not supported by Safari (Status: Mixed public signals) - Who knows when or what?
 - [`caniuse.com/#feat=shadowdom`](http://caniuse.com/#feat=shadowdom)
 
 <!--
 - Shipped by Firefox - Some Bugs (Flag Required - `dom.webcomponents.enabled`)
 -->
 
-### HTML Imports (`<link rel='import' href='x-tag.html'>`)
+### HTML Imports (`<link rel='import' href='x-tag.html'>`) - Work-In-Progress
 
 - Shipped by Chrome (and Opera) - Stable
-- Not supported by Firefox
-- Under consideration by Internet Explorer - Maybe in 2020?
-- Not supported by Safari - Who knows when or what?
+- In Development (?) by Firefox
+- Under consideration by Internet Explorer (Status: Mixed public signals) - Maybe in 2020?
+- Not supported by Safari (Status: No public signal) - Who knows when or what? 
 - [caniuse.com/#feat=imports](http://caniuse.com/#feat=imports)
 
 <!--
@@ -669,8 +672,15 @@ That's it.
 
 ## Learn More
 
-- [webcomponents.org]()
+- [webcomponents.org](http://webcomponents.org)
 - []
+
+HTML5 Rocks Series
+
+- [HTML's New Template Tag: Standardizing client-side templating](http://www.html5rocks.com/en/tutorials/webcomponents/template) by Eric Bidelman (Google); February 26th, 2013 (Updated: December 18th, 2013)
+- [Custom Elements: Defining new elements in HTML](http://www.html5rocks.com/en/tutorials/webcomponents/customelements) by Eric Bidelman (Google); August 28th, 2013 (Updated: December 18th, 2013)
+- [Shadow DOM 101](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom) by By Dominic Cooney (Google); January 4th, 2013 (Updated: December 18th, 2013)
+- [HTML Imports: #include for the web](http://www.html5rocks.com/en/tutorials/webcomponents/imports) by By Eric Bidelman (Google); November 11th, 2013 (Updated: December 18th, 2013)
 
 
 
@@ -679,7 +689,12 @@ That's it.
 
 ### Chrome
 
+- [`chrome`]  chrome dashboard (status) link??
 - [`chromium.org/blink/web-components`](http://www.chromium.org/blink/web-components)
+
+### Firefox
+
+- bugzilla pages
 
 ### Internet Explorer
 
