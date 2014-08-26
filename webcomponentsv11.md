@@ -1,15 +1,17 @@
-title: Building Your Own Tags / Elements / Web Components
+title: Building Your Own Web Components (Tags / Elements)
+
 
 
 # Who's this guy?
 
-- `football.db`   - Open Football Data; see [`github.com/openfootball`](https://github.com/openfootball)
-- `beer.db`       - Open Beer, Brewery n Brewpubs Data; see [`github.com/openbeer`](https://github.com/openbeer)
-- `world.db`      - Open World Data (Countries, Regions, Cities); see [`github.com/openmundi`](https://github.com/openmundi)
+| -------------- | -------------- |
+| `football.db`  | Open Football Data; see [`github.com/openfootball`](https://github.com/openfootball) |
+| `beer.db`      | Open Beer, Brewery n Brewpub Data; see [`github.com/openbeer`](https://github.com/openbeer) |
+| `world.db`     | Open World Data (Countries, Regions, Cities); see [`github.com/openmundi`](https://github.com/openmundi) |
 
 
 
-# Building Your Own Tags / Elements / Web Components
+# Building Your Own Web Components (Tags / Elements)
 
 Agenda
 
@@ -17,52 +19,228 @@ Agenda
 * Web Components Machinery - New Web Standard Building Blocks
 * What's X-Tag? What's Polymer?
 * Example 1 - `<beer-of-the-day>`  
-* Example 2 - `<football-js event='at.2014/15'>`
+* Example 2 - `<football-matchday event='at.2014/15'>`
 
 
-
-
-# `<beer-of-the-day>` - Use or Build Your Own Tag / Element / Web Component
+# `<beer-of-the-day>` - Use or Build Your Own Web Component (Tag / Element)
 
 - What's a custom tag?
 - What's a custom element?
 - What's a web component?
 
-Tag == Element == Web Component
+Tag == Element == Web Component  e.g. => `<beer-of-the-day>`
 
 Lets you build your own tags that you can use as easily as plain old `<div>` or `<span>` tags.
 
 Example:
 
-- Step 1: Import element definition into your page using an HTML import (`<link rel="import">`)
-- Step 2: Use the new element; once imported the new element is a first-class HTML element; use like any other
+Step 1: Import element definition into your page using an HTML import (`<link rel='import'>`)
 
 ~~~
-<!-- Step 1: Import element -->
-<link rel="import" href="football-js.html">
+<link rel='import' href='football-matchday.html'>
+~~~
 
-<!-- Step 2: Use the new element -->
-<football-js event="at.2014/15"></football-js>
+Step 2: Use the new element; once imported the new element is a first-class HTML element; use like any other
+
+~~~
+<football-matchday event='at.2014/15'></football-matchday>
 ~~~
 
 ![](i/football-js.png)
 
-or
-
-~~~
-<!-- Step 1: Import element -->
-<link rel="import" href="google-map.html">
-
-<!-- Step 2: Use the new element -->
-<google-map lat="37.790" long="-122.390"></google-map>
-~~~
 
 
-# `<beer-of-the-day>` - Use or Build Your Own Tag / Element / Web Component - More Examples
+# Trivia Quiz - How many builtin standard elements (tags) has HTML 4.1? HTML 5?
 
+A ( ) 50+
+
+B ( ) 100+
+
+C ( ) 500+
+
+D ( ) 1,000+
+
+E ( ) 5,000+
+
+F ( ) 10,000+
+
+
+# All HTML 5 Elements (A-Z)
+
+**A**
+`<a>`
+`<abbr>`
+x`<acronym>`
+`<address>`
+x`<applet>`
+`<area>`
+(5)`<article>`
+(5)`<aside>`
+(5)`<audio>`
+**B**
+`<b>`
+`<base>`
+x`<basefont>`
+(5)`<bdi>`
+`<bdo>`
+x`<bgsound>`
+x`<big>`
+x`<blink>`
+`<blockquote>`
+`<body>`
+`<br>`
+`<button>`
+**C**
+(5)`<canvas>`
+`<caption>`
+(x)`<center>`
+`<cite>`
+`<code>`
+`<col>`
+`<colgroup>`
+**D**
+(5)`<data>`
+(5)`<datalist>`
+`<dd>`
+`<del>`
+(5)`<details>`
+`<dfn>`
+`<dialog>`
+x`<dir>`
+`<div>`
+`<dl>`
+`<dt>`
+**E**
+`<em>`
+(5)`<embed>`
+**F**
+`<fieldset>`
+(5)`<figcaption>`
+(5)`<figure>`
+(x)`<font>`
+(5)`<footer>`
+`<form>`
+(x)`<frame>`
+(x)`<frameset>`
+**G H**
+`<h1>`
+`<h2>`
+`<h3>`
+`<h4>`
+`<h5>`
+`<h6>`
+`<head>`
+(5)`<header>`
+(x,5)`<hgroup>`
+`<hr>`
+`<html>`
+**I**
+`<i>`
+`<iframe>`
+`<img>`
+`<input>`
+`<ins>`
+(x)`<isindex>`
+**J K**
+`<kbd>`
+(5)`<keygen>`
+**L**
+`<label>`
+`<legend>`
+`<li>`
+`<link>`
+(x)`<listing>`
+**M**
+(5)`<main>`
+`<map>`
+(5)`<mark>`
+(x)`<marquee>`
+(5)`<menu>`
+(5)`<menuitem>`
+`<meta>`
+(5)`<meter>`
+**N**
+(5)`<nav>`
+(x)`<nobr>`
+(x)`<noframes>`
+`<noscript>`
+**O**
+`<object>`
+`<ol>`
+`<optgroup>`
+`<option>`
+(5)`<output>`
+**P**
+`<p>`
+`<param>`
+(5)`<picture>`
+(x)`<plaintext>`
+`<pre>`
+(5)`<progress>`
+**Q**
+`<q>`
+**R**
+(5)`<rp>`
+(5)`<rt>`
+(5)`<ruby>`
+**S**
+`<s>`
+`<samp>`
+`<script>`
+(5)`<section>`
+`<select>`
+`<small>`
+(5)`<source>`
+(x)`<spacer>`
+`<span>`
+(x)`<strike>`
+`<strong>`
+`<style>`
+`<sub>`
+(5)`<summary>`
+`<sup>`
+**T**
+`<table>`
+`<tbody>`
+`<td>`
+`<textarea>`
+`<tfoot>`
+`<th>`
+`<thead>`
+(5)`<time>`
+`<title>`
+`<tr>`
+(5)`<track>`
+(x)`<tt>`
+**U**
+`<u>`
+`<ul>`
+**V**
+`<var>`
+(5)`<video>`
+**W**
+(5)`<wbr>`
+**X Y Z**
+(x)`<xmp>`
+
+
+
+# `<beer-of-the-day>` - Use or Build Your Own Web Component (Tag / Element) - More Examples
+
+Now imagine a world with
+
+100,000+ elements (tags)
+
+or with
+
+1,000,000+ elements (tags)
+
+=> Welcome to the web components revolution!
 
 ~~~
 <super-button></super-button>
+
+<google-map lat='37.79' long='-122.390'></google-map>
 
 <you-tube-video imfeelinglucky='rock me amadeus'></yout-tube-video>
 
@@ -78,9 +256,17 @@ _many_ more goodies.
 </marked-js>
 ~~~
 
+**Q**: What about namespaces? How's a custom element different from a built-in standard element
+e.g. `<div>`, `<span>`?
+
+**A**: Custom elements **MUST** use a dash (`-`).
 
 
-#  "Real World" Paper Elements (Material Design)
+
+
+#  "Real World" Web Components - Paper Elements (Material Design)
+
+Introduced to the World at Google I/O 2014
 
 ~~~
 <paper-button>
@@ -88,7 +274,29 @@ _many_ more goodies.
 <paper-dialog-transition>
 <paper-dialog>
 <paper-fab>
-
+<paper-focusable>
+<paper-icon-button>
+<paper-input>
+<paper-item>
+<paper-menu-button-overlay>
+<paper-menu-button>
+<paper->
+<paper->
+<paper->
+<paper->
+<paper->
+<paper->
+<paper->
+<paper->
+<paper->
+<paper->
+<paper->
+<paper->
+<paper->
+<paper->
+<paper->
+<paper->
+<paper->
 ~~~
 
 Usage:
@@ -107,7 +315,7 @@ Usage:
 
 # Web Components Machinery - New Web Standard Building Blocks
 
-### New Browser Machinery
+### New (Built-in) Browser Machinery
 
 #### HTML Templates
 
@@ -119,14 +327,15 @@ Usage:
 
 #### Shadow DOM
 
-(hide DOM subtrees under shadow roots - `createShadowRoot()`) - [W3C Spec](http://www.w3.org/TR/shadow-dom/)
+(`createShadowRoot()` - hide DOM subtrees under shadow roots) - [W3C Spec](http://www.w3.org/TR/shadow-dom/)
 
-![](i/shadow-dom-work-in-progess.png)
+![](i/shadow-dom-work-in-progress.png)
 
 
 #### HTML Imports
 
-(include and reuse HTML documents) - [W3C Spec](http://www.w3.org/TR/html-imports/)
+(`<link rel='import'>` - include and (re)use HTML documents) - [W3C Spec](http://www.w3.org/TR/html-imports/)
+
 
 
 ### Higher-Level Machinery (w/ JavaScript Libraries)
@@ -134,6 +343,7 @@ Usage:
 #### MDV (Model Driven Views)
 
 (`repeat='{{{{ greetings }}}}'`) - JavaScript Library
+
 
 
 
