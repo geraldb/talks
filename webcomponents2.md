@@ -1,6 +1,19 @@
 title: Building Your Own Web Components (Tags / Elements)
 
 
+%css
+
+pre {
+  padding: 4px 4px 4px 4px;
+  border-top: #bbb 1px solid;
+  border-bottom: #bbb 1px solid;
+  background: #f3f3f3;
+}
+
+%end
+
+
+
 # Who's this guy?
 
 - **`football.db`** - Open Football Data; see [`github.com/openfootball`](https://github.com/openfootball)
@@ -374,7 +387,7 @@ Firefox ships "lite" web components machinery
 
 ![](i/polymer-compatibility.png)
 
-([Source: Polymer Compatibility](http://www.polymer-project.org/resources/compatibility.html))
+([Source: Polymer Browser Compatibility](http://www.polymer-project.org/resources/compatibility.html))
 
 
 
