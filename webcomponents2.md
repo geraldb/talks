@@ -480,37 +480,40 @@ More info @
 
 `beer-of-the-day.html`
 
-<!-- check: use noscript  e.g
-       <polymer-element name='beer-of-the-day' noscript>
-       - use if you don't need any further JavaScript logic
-          e.g lifecycle callbacks, mixins, etc.
-  -->
-
 ~~~
 <polymer-element name='beer-of-the-day'>
 
   <style>
-    ## add background-image ???  use :host ?
-     p { background-color: yellow; }  ?? use/style for overlay image - text
+    p { background-color: yellow; }
   </style>
 
   <template>
     <p>I'm a fan of <b>Ottakringer Wiener Original</b>
-      and this is my Shadow DOM.
+        and this is my Shadow DOM.
     </p>
   </template>
 
   <script>
     <!-- no JavaScript needed for now;
-         sorry ;-)
+          sorry ;-)
       -->
   </script>
 
 </polymer-element>
 ~~~
 
-[ add pic here ]
+<!-- check: use noscript  e.g
+       <polymer-element name='beer-of-the-day' noscript>
+       - use if you don't need any further JavaScript logic
+          e.g lifecycle callbacks, mixins, etc.
+  -->
 
+<!--
+[ add pic here ]
+ ## add background-image ???  use :host ?
+  p { background-color: yellow; }  ?? use/style for overlay image - text
+
+  -->
 
 # Example 1 - `<beer-of-the-day>` Tag Usage
 
@@ -534,12 +537,14 @@ More info @
 </html>
 ~~~
 
+<!--
+  todo
 [add pic here - dom before show shadow dom]
 
 [add pic here - turn on shadow dom - setting]
 
 [add pic here - dom after show shadow dom]
-
+-->
 
 
 # Example 2 - `<football-matchday>` Österr. Bundesliga Matchday Widget
@@ -575,17 +580,19 @@ The new way:
 
 ### Matchday Data as JavaScript Objects
 
-[fix: try w/o data e.g. event.title ?? ]
+<!--
+ fix: try w/o data e.g. event.title ??
+-->
 
 ~~~
 {
   "event":{"key":"at.2014/15","title":"Österr. Bundesliga 2014/15"},
-  "round":{"pos":2,"title":"2. Runde","start_at":"2013/07/27","end_at":"2013/07/28"},
-  "games":[{"team1_title":"SK Rapid Wien","team1_code":"RAP","team2_title":"SC Wiener Neustadt","team2_code":"WRN","play_at":"2013/07/27","score1":4,"score2":0},
-           {"team1_title":"FC Admira Wacker","team1_code":"ADM","team2_title":"FC Wacker Innsbruck","team2_code":"FCW","play_at":"2013/07/27","score1":1,"score2":2},
-           {"team1_title":"SV Ried","team1_code":"RIE","team2_title":"Wolfsberger AC","team2_code":"WAC","play_at":"2013/07/27","score1":1,"score2":0},
-           {"team1_title":"FC RB Salzburg","team1_code":"RBS","team2_title":"FK Austria Wien","team2_code":"AUS","play_at":"2013/07/27","score1":5,"score2":1},
-           {"team1_title":"SK Sturm Graz","team1_code":"STU","team2_title":"SV Grödig","team2_code":"SVG","play_at":"2013/07/28","score1":0,"score2":2}]
+  "round":{"pos":6,"title":"6. Runde","start_at":"2014/08/23","end_at":"2014/08/24"},
+  "games":[{"team1_title":"Sturm Graz","team1_code":"STU","team2_title":"Wolfsberger AC","team2_code":"WAC","play_at":"2014/08/23","score1":1,"score2":2},
+           {"team1_title":"RB Salzbrug","team1_code":"RBS","team2_title":"SCR Altach","team2_code":"ALT","play_at":"2014/08/23","score1":5,"score2":0},
+           {"team1_title":"SV Ried","team1_code":"RIE","team2_title":"SV Grödig","team2_code":"SVG","play_at":"2014/08/23","score1":2,"score2":2},
+           {"team1_title":"Wr. Neustadt","team1_code":"WRN","team2_title":"Admira Wacker","team2_code":"ADM","play_at":"2014/08/23","score1":5,"score2":4},
+           {"team1_title":"Austria Wien","team1_code":"AUS","team2_title":"Rapid Wien","team2_code":"RAP","play_at":"2014/08/24","score1":2,"score2":2}]
 }
 ~~~
 
@@ -600,7 +607,7 @@ The new way:
 ~~~
 
 
-# Example 2 - `<football-js>` Widget - Nested Templates
+# Example 2 - `<football-matchday>` Widget - Nested Templates
 
 ~~~
 <template>
@@ -633,10 +640,10 @@ The new way:
 
 
 
-# Example 2 - `<football-js>` - All Together Now
+# Example 2 - `<football-matchday>` - All Together Now
 
 ~~~
-<polymer-element name='football-js' attributes='event'>
+<polymer-element name='football-matchday' attributes='event'>
  
   <template>
    <style>
@@ -676,16 +683,16 @@ The new way:
  </template>
   
   <script>
-    Polymer('football-js', {
-      // event: 'euro.2012',
+    Polymer('football-matchday', {
+      // event: 'at.2014/15',
       data: {
-        "event":{"key":"at.2013/14","title":"\u00d6sterr. Bundesliga 2013/14"},
-        "round":{"pos":2,"title":"2. Runde","start_at":"2013/07/27","end_at":"2013/07/28"},
-        "games":[{"team1_key":"rapid","team1_title":"SK Rapid Wien","team1_code":"RAP","team2_key":"wrneustadt","team2_title":"SC Wiener Neustadt","team2_code":"WRN","play_at":"2013/07/27","score1":4,"score2":0,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null},
-                 {"team1_key":"admira","team1_title":"FC Admira Wacker","team1_code":"ADM","team2_key":"innsbruck","team2_title":"FC Wacker Innsbruck","team2_code":"FCW","play_at":"2013/07/27","score1":1,"score2":2,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null},
-                 {"team1_key":"ried","team1_title":"SV Ried","team1_code":"RIE","team2_key":"wac","team2_title":"Wolfsberger AC","team2_code":"WAC","play_at":"2013/07/27","score1":1,"score2":0,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null},
-                 {"team1_key":"salzburg","team1_title":"FC RB Salzburg","team1_code":"RBS","team2_key":"austria","team2_title":"FK Austria Wien","team2_code":"AUS","play_at":"2013/07/27","score1":5,"score2":1,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null},
-                 {"team1_key":"sturm","team1_title":"SK Sturm Graz","team1_code":"STU","team2_key":"groedig","team2_title":"SV Gr\u00f6dig","team2_code":"SVG","play_at":"2013/07/28","score1":0,"score2":2,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null}]
+       "event":{"key":"at.2014/15","title":"Österr. Bundesliga 2014/15"},
+       "round":{"pos":6,"title":"6. Runde","start_at":"2014/08/23","end_at":"2014/08/24"},
+       "games":[{"team1_title":"Sturm Graz","team1_code":"STU","team2_title":"Wolfsberger AC","team2_code":"WAC","play_at":"2014/08/23","score1":1,"score2":2},
+                {"team1_title":"RB Salzbrug","team1_code":"RBS","team2_title":"SCR Altach","team2_code":"ALT","play_at":"2014/08/23","score1":5,"score2":0},
+                {"team1_title":"SV Ried","team1_code":"RIE","team2_title":"SV Grödig","team2_code":"SVG","play_at":"2014/08/23","score1":2,"score2":2},
+                {"team1_title":"Wr. Neustadt","team1_code":"WRN","team2_title":"Admira Wacker","team2_code":"ADM","play_at":"2014/08/23","score1":5,"score2":4},
+                {"team1_title":"Austria Wien","team1_code":"AUS","team2_title":"Rapid Wien","team2_code":"RAP","play_at":"2014/08/24","score1":2,"score2":2}]
        } 
     });
   </script>
@@ -693,7 +700,7 @@ The new way:
 ~~~
 
 
-# Example 2 - `<football-js>` - Usage
+# Example 2 - `<football-matchday>` - Usage
 
 ~~~
 <!DOCTYPE html>
@@ -702,10 +709,10 @@ The new way:
     <meta charset='utf-8'>
     <title>football.js</title>
     <script src='js/libs/polymer.min.js'></script>
-    <link rel='import' href='football-js.html'>
+    <link rel='import' href='football-matchday.html'>
   </head>
   <body>
-    <football-js event='at.2013/14'></football-js>
+    <football-matchday event='at.2014/15'></football-matchday>
   </body>
 </html>
 ~~~
