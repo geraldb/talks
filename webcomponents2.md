@@ -387,7 +387,7 @@ Firefox ships "lite" web components machinery
 
 ![](i/polymer-compatibility.png)
 
-([Source: Polymer Browser Compatibility](http://www.polymer-project.org/resources/compatibility.html))
+(Source: [Polymer Browser Compatibility](http://www.polymer-project.org/resources/compatibility.html))
 
 
 
