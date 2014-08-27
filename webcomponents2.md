@@ -13,7 +13,7 @@ title: Building Your Own Web Components (Tags / Elements)
 
 Agenda
 
-* What's a custom tag? What's a custom element? What's a web component?
+* What's a web component? What's a custom tag? What's a custom element? 
 * Web Components Machinery - New Web Standard Building Blocks
 * What's X-Tag? What's Polymer?
 * Example 1 - `<beer-of-the-day>`  
@@ -22,15 +22,15 @@ Agenda
 
 # `<beer-of-the-day>` - Use or Build Your Own Web Component (Tag / Element)
 
+- What's a web component?
 - What's a custom tag?
 - What's a custom element?
-- What's a web component?
 
-Tag == Element == Web Component
+Web Component == Tag == Element
 e.g. => `<beer-of-the-day>`, `<football-matchday>`, `<super-button>`
 
 Web components machinery lets you
-build your own tags that you can use as easily as plain old `<div>` or `<span>` tags.
+build your own HTML tags that you can use as easily as plain old `<div>` or `<span>` tags.
 
 
 
@@ -275,7 +275,7 @@ e.g. `<div>`, `<span>`?
 
 
 
-#  "Real World" Web Components - Paper Elements (Material Design)
+#  Paper Elements (Material Design) - "Real World" Web Components 
 
 Introduced to the World at the Google I/O 2014 Conference
 
@@ -315,6 +315,13 @@ Usage:
 ![](i/paper-dialog.png)
 
 
+#  Google Web Components - "Real World" Web Components (Cont.)
+
+More info @ [`github.com/GoogleWebComponents`](https://github.com/GoogleWebComponents) 
+
+[add google web componets; check/fix link]
+
+
 
 
 # Web Components Machinery - New Web Standard Building Blocks
@@ -331,11 +338,16 @@ Usage:
 
 #### HTML Imports
 
-(`<link rel='import'>` - include and (re)use HTML documents) - [W3C Spec](http://www.w3.org/TR/html-imports/)
+(`<link rel='import'>` - include and (re)use HTML documents in other HTML documents) - [W3C Spec](http://www.w3.org/TR/html-imports/)
 
 #### Shadow DOM
 
-(`createShadowRoot()` - hide DOM subtrees under shadow roots) - [W3C Spec](http://www.w3.org/TR/shadow-dom/)
+(`createShadowRoot()` - DOM trees inside DOM trees; hide DOM trees under shadow roots) - [W3C Spec](http://www.w3.org/TR/shadow-dom/)
+
+##### Scoped CSS
+
+[W3C Spec]()   [fix/add missing link]
+
 
 ![](i/shadow-dom-work-in-progress.png)
 
@@ -345,7 +357,7 @@ Usage:
 
 #### MDV (Model Driven Views)
 
-(`repeat='{{{{ greetings }}}}'`) - JavaScript Library
+(`repeat='{{{{ greetings }}}}'`) - JavaScript Library for two-way databinding (incl. auto-updates w/ change observers 'n' more)
 
 
 
@@ -363,7 +375,8 @@ Firefox ships "lite" web components machinery
 
 ![](i/polymer-compatibility.png)
 
-([Source: ](http://www.polymer-project.org/resources/compatibility.html))
+([Source: Polymer Compatibility](http://www.polymer-project.org/resources/compatibility.html))
+
 
 
 # Web Components Machinery - New Web Standard Building Blocks - Can I Use?
@@ -384,10 +397,10 @@ Firefox ships "lite" web components machinery
 - Not supported by Safari (Status: Mixed public signals) - Who knows when or what?
 - [`caniuse.com/#feat=custom-elements`](http://caniuse.com/#feat=custom-elements)
 
-### Shadow DOM (`createShadowRoot()`, scoped CSS) - Work-In-Progress
+### Shadow DOM (`createShadowRoot()`, Scoped CSS) - Work-In-Progress
 
 - Shipped by Chrome (and Opera) - Stable
-- In Development (?) by Firefox
+- In Development by Firefox
 - Under consideration by Internet Explorer (Status: Mixed public signals) - Maybe in 2020?
 - Not supported by Safari (Status: Mixed public signals) - Who knows when or what?
 - [`caniuse.com/#feat=shadowdom`](http://caniuse.com/#feat=shadowdom)
@@ -399,7 +412,7 @@ Firefox ships "lite" web components machinery
 ### HTML Imports (`<link rel='import' href='x-tag.html'>`) - Work-In-Progress
 
 - Shipped by Chrome (and Opera) - Stable
-- In Development (?) by Firefox
+- In Development by Firefox
 - Under consideration by Internet Explorer (Status: Mixed public signals) - Maybe in 2020?
 - Not supported by Safari (Status: No public signal) - Who knows when or what? 
 - [caniuse.com/#feat=imports](http://caniuse.com/#feat=imports)
@@ -413,17 +426,18 @@ Firefox ships "lite" web components machinery
 
 # Web Compontens Machinery - Industry (Browser)  News / Support
 
-### The Good -  Google, Firefox
+### The Good -  Google, Mozilla
 
-Google I/O 2014 -  Paper Elements n Material Design  =>  Google wants you to build web apps (running anywhere desktop, tablet, phone)
+Google I/O 2014 -  Paper Elements 'n' Material Design  =>
+Google wants you to build web apps (running anywhere e.g. desktop, tablet, phone) - everything in HTML/CSS/JS.
 
-Firefox OS   => Firefox wants you to build mobile web apps for Firefox OS (everything in HTML/CSS/JS). 
+Firefox OS   => Mozilla wants you to build mobile web apps for Firefox OS - everything in HTML/CSS/JS.
 
 
 ### The Bad 'n' Ugly - Apple, Microsoft
 
 No news. No suprise. Apple wants you to build iOS apps (Cocoa/ObjectiveC)
-and Microsoft wants you to build - suprise, suprise - Windows apps (Win32/.NET/WinRT) first.
+and Microsoft wants you to build - suprise, suprise - Windows apps (Win32/.NET/WinRT/C#) first.
 
 
 
@@ -438,7 +452,9 @@ for all modern browsers
 (in theory; in practice looks like an orphan - last news update (blog post) dated
 June 15th, 2013, that is, more than a year ago; github repo about two commits per month (!))
 
-More info @ [`x-tags.org`](http://x-tags.org)
+More info @
+[`x-tags.org`](http://x-tags.org) 'n'
+[`github.com/x-tag`](https://github.com/x-tag)
 
 
 
@@ -447,14 +463,12 @@ More info @ [`x-tags.org`](http://x-tags.org)
 Library by Google - lets you use and build custom tags;
 uses web components machinery built into modern browsers; (ugly) pollyfills for older browsers.
 
-More info @ [`www.polymer-project.org`](http://www.polymer-project.org)
+More info @
+[`www.polymer-project.org`](http://www.polymer-project.org) 'n'
+[`github.com/polymer`](https://github.com/polymer)
+
 
 ![](i/polymer-site.png)
-
-
-
-
-
 
 
 
@@ -466,13 +480,28 @@ More info @ [`www.polymer-project.org`](http://www.polymer-project.org)
 
 ~~~
 <polymer-element name='beer-of-the-day'>
+
+  <style>
+    ## add background-image ???  use :host ?
+     p { background-color: yellow; }  ?? use/style for overlay image - text
+  </style>
+
   <template>
-    <span>I'm a fan of <b>Ottakringer Helles</b>
+    <p>I'm a fan of <b>Ottakringer Wiener Original</b>
       and this is my Shadow DOM.
-    </span>
+    </p>
   </template>
+
+  <script>
+    <!-- no JavaScript needed for now;
+         sorry ;-)
+      -->
+  </script>
+
 </polymer-element>
 ~~~
+
+[ add pic here ]
 
 
 # Example 1 - `<beer-of-the-day>` Tag Usage
@@ -497,8 +526,15 @@ More info @ [`www.polymer-project.org`](http://www.polymer-project.org)
 </html>
 ~~~
 
+[add pic here - dom before show shadow dom]
 
-# Example 2 - `<football-js>` Bundesliga Matchday Widget
+[add pic here - turn on shadow dom - setting]
+
+[add pic here - dom after show shadow dom]
+
+
+
+# Example 2 - `<football-matchday>` Österr. Bundesliga Matchday Widget
 
 What's `football.js`?
 
@@ -512,26 +548,30 @@ The old way in JavaScript. Usage Example:
 <div id='bl'></div>
 
 <script>
-  Widget.create( '#bl', { event: 'at.2013/14' } );
+  MatchdayWidget.create( '#bl', { event: 'at.2014/15' } );
 </script>
 ~~~
 
 The new way:
 
 ~~~
-<link rel='import' href='football-js.html'>   <!-- HTML Imports -->
+<!-- step 1: HTML Imports -->
+<link rel='import' href='football-matchday.html'>
 
-<football-js event='at.2013/14'></football-js>  <!-- custom tag use -->
+<!-- step 2: use custom tag -->
+<football-matchday event='at.2014/15'></football-matchday>
 ~~~
 
 
-# Example 2 - `<football-js>` - MDV (Model Driven Views)
+# Example 2 - `<football-matchday>` - MDV (Model Driven Views)
 
 ### Matchday Data as JavaScript Objects
 
+[fix: try w/o data e.g. event.title ?? ]
+
 ~~~
 {
-  "event":{"key":"at.2013/14","title":"Österr. Bundesliga 2013/14"},
+  "event":{"key":"at.2014/15","title":"Österr. Bundesliga 2014/15"},
   "round":{"pos":2,"title":"2. Runde","start_at":"2013/07/27","end_at":"2013/07/28"},
   "games":[{"team1_title":"SK Rapid Wien","team1_code":"RAP","team2_title":"SC Wiener Neustadt","team2_code":"WRN","play_at":"2013/07/27","score1":4,"score2":0},
            {"team1_title":"FC Admira Wacker","team1_code":"ADM","team2_title":"FC Wacker Innsbruck","team2_code":"FCW","play_at":"2013/07/27","score1":1,"score2":2},
@@ -675,15 +715,6 @@ That's it.
 - [webcomponents.org](http://webcomponents.org)
 - []
 
-HTML5 Rocks Series
-
-- [HTML's New Template Tag: Standardizing client-side templating](http://www.html5rocks.com/en/tutorials/webcomponents/template) by Eric Bidelman (Google); February 26th, 2013 (Updated: December 18th, 2013)
-- [Custom Elements: Defining new elements in HTML](http://www.html5rocks.com/en/tutorials/webcomponents/customelements) by Eric Bidelman (Google); August 28th, 2013 (Updated: December 18th, 2013)
-- [Shadow DOM 101](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom) by By Dominic Cooney (Google); January 4th, 2013 (Updated: December 18th, 2013)
-- [HTML Imports: #include for the web](http://www.html5rocks.com/en/tutorials/webcomponents/imports) by By Eric Bidelman (Google); November 11th, 2013 (Updated: December 18th, 2013)
-
-
-
 
 # Appendix: Web Components Machinery - New Web Standard Building Blocks - Sources
 
@@ -709,3 +740,57 @@ modern IE ?! - is this possible? - IE and modern?
 
 
 
+# Appendix: Google Map "Classic" JavaScript API vs `<google-map>`
+
+[see andi osmany talk ??]
+
+
+# Appendix: Web Components in Action
+
+
+[add example] from   Web Components in Action by Chris Bucked ??
+
+add link to (upcoming) book - free first chapter available
+
+Example:
+
+
+
+# Appendix: New Anti-Pattern? Single Web Component App `<my-beer-app>`
+
+~~~
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Beer App</title>
+    <link rel='import' href='my-beer-app.html'>
+  </head>
+  <body>
+    <my-beer-app>
+  </body>
+</html>
+~~~
+
+Anti-Pattern? Why? Why Not?
+
+
+
+# Appendix: Vanilla JS Example - HTML5 Rocks Article Series
+
+HTML5 Rocks Series
+
+- [HTML's New Template Tag: Standardizing client-side templating](http://www.html5rocks.com/en/tutorials/webcomponents/template) by Eric Bidelman (Google); February 26th, 2013 (Updated: December 18th, 2013)
+- [Custom Elements: Defining new elements in HTML](http://www.html5rocks.com/en/tutorials/webcomponents/customelements) by Eric Bidelman (Google); August 28th, 2013 (Updated: December 18th, 2013)
+- [Shadow DOM 101](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom) by By Dominic Cooney (Google); January 4th, 2013 (Updated: December 18th, 2013)
+- [Shadow DOM 201]() - fix
+- [Shadow DOM 301]() - fix
+- [HTML Imports: #include for the web](http://www.html5rocks.com/en/tutorials/webcomponents/imports) by By Eric Bidelman (Google); November 11th, 2013 (Updated: December 18th, 2013)
+
+
+# Appendix: Vanilla JS Example - Create a Shadow DOM 
+
+
+# Appendix: Vanilla JS Example - Stamp-Out a Template
+
+
+# Appendix: Vanilla JS Example - Register a Custom Web Element
