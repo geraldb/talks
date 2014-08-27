@@ -319,8 +319,7 @@ Usage:
 
 More info @ [`github.com/GoogleWebComponents`](https://github.com/GoogleWebComponents) 
 
-[add google web componets; check/fix link]
-
+![](i/google-web-components.png)
 
 
 
@@ -344,9 +343,9 @@ More info @ [`github.com/GoogleWebComponents`](https://github.com/GoogleWebCompo
 
 (`createShadowRoot()` - DOM trees inside DOM trees; hide DOM trees under shadow roots) - [W3C Spec](http://www.w3.org/TR/shadow-dom/)
 
-##### Scoped CSS
+##### CSS Scoping Module Level 1
 
-[W3C Spec]()   [fix/add missing link]
+[W3C Spec](http://dev.w3.org/csswg/css-scoping)
 
 
 ![](i/shadow-dom-work-in-progress.png)
@@ -388,6 +387,9 @@ Firefox ships "lite" web components machinery
 - Shipped by Safari (8+) - Stable (?)
 - Under consideration by Internet Explorer (Status: Public support) - Maybe in 2017?
 - [`caniuse.com/#feat=template`](http://caniuse.com/#feat=template)
+
+![](i/caniuse-template.png)
+
 
 ### Custom Elements (`<element>`) - Work-In-Progress
 
@@ -720,7 +722,7 @@ That's it.
 
 - [webcomponents.org](http://webcomponents.org)
 
-[add screenshoot here]
+![](i/webcomponents-site.png)
 
 
 
@@ -728,14 +730,15 @@ That's it.
 
 ### Chrome
 
-- [`chromestatus.com/features`](http://www.chromestatus.com/features)
+- [`chromestatus.com`](http://www.chromestatus.com/features)
 - [`chromium.org/blink/web-components`](http://www.chromium.org/blink/web-components)
 
 ### Firefox
 
 - Bugzilla pages
    - [Bug #856140 - Update document.register to adhere to the latest Custom Element spec](https://bugzilla.mozilla.org/show_bug.cgi?id=856140)
-   - [Bug 877072 - Implement HTML Imports](https://bugzilla.mozilla.org/show_bug.cgi?id=877072)
+   - [Bug #877072 - Implement HTML Imports](https://bugzilla.mozilla.org/show_bug.cgi?id=877072)
+   - [Bug #806506 - Implement web components ShadowRoot interface](https://bugzilla.mozilla.org/show_bug.cgi?id=806506)
    - and others
 
 
@@ -751,6 +754,7 @@ modern IE ?! - is this possible? - IE and modern?
 - Secrets, Secrets, Secrets - Who knows when or what? 
 
 
+<!--
 
 # Appendix: Google Map "Classic" JavaScript API vs `<google-map>`
 
@@ -766,6 +770,7 @@ add link to (upcoming) book - free first chapter available
 
 Example:
 
+-->
 
 
 # Appendix: New Anti-Pattern? Single Web Component App `<my-beer-app>`
@@ -793,10 +798,10 @@ HTML5 Rocks Series
 
 - [HTML's New Template Tag: Standardizing client-side templating](http://www.html5rocks.com/en/tutorials/webcomponents/template) by Eric Bidelman (Google); February 26th, 2013 (Updated: December 18th, 2013)
 - [Custom Elements: Defining new elements in HTML](http://www.html5rocks.com/en/tutorials/webcomponents/customelements) by Eric Bidelman (Google); August 28th, 2013 (Updated: December 18th, 2013)
-- [Shadow DOM 101](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom) by By Dominic Cooney (Google); January 4th, 2013 (Updated: December 18th, 2013)
-- [Shadow DOM 201]() - fix
-- [Shadow DOM 301]() - fix
-- [HTML Imports: #include for the web](http://www.html5rocks.com/en/tutorials/webcomponents/imports) by By Eric Bidelman (Google); November 11th, 2013 (Updated: December 18th, 2013)
+- [Shadow DOM 101](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom) by Dominic Cooney (Google); January 4th, 2013 (Updated: December 18th, 2013)
+- [Shadow DOM 201: CSS and Styling](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201) by Eric Bidelman (Google); March 15th, 2013 (Updated: April 10th, 2014)
+- [Shadow DOM 301: Advanced Concepts & DOM APIs](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301) by Eric Bidelman (Google); March 21st, 2013 (Updated: December 18th, 2013)
+- [HTML Imports: #include for the web](http://www.html5rocks.com/en/tutorials/webcomponents/imports) by Eric Bidelman (Google); November 11th, 2013 (Updated: December 18th, 2013)
 
 
 # Appendix: Vanilla JS Example - Register a Custom Web Element
