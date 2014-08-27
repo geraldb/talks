@@ -478,6 +478,12 @@ More info @
 
 `beer-of-the-day.html`
 
+<!-- check: use noscript  e.g
+       <polymer-element name='beer-of-the-day' noscript>
+       - use if you don't need any further JavaScript logic
+          e.g lifecycle callbacks, mixins, etc.
+  -->
+
 ~~~
 <polymer-element name='beer-of-the-day'>
 
@@ -713,19 +719,25 @@ That's it.
 ## Learn More
 
 - [webcomponents.org](http://webcomponents.org)
-- []
+
+[add screenshoot here]
+
 
 
 # Appendix: Web Components Machinery - New Web Standard Building Blocks - Sources
 
 ### Chrome
 
-- [`chrome`]  chrome dashboard (status) link??
+- [`chromestatus.com/features`](http://www.chromestatus.com/features)
 - [`chromium.org/blink/web-components`](http://www.chromium.org/blink/web-components)
 
 ### Firefox
 
-- bugzilla pages
+- Bugzilla pages
+   - [Bug #856140 - Update document.register to adhere to the latest Custom Element spec](https://bugzilla.mozilla.org/show_bug.cgi?id=856140)
+   - [Bug 877072 - Implement HTML Imports](https://bugzilla.mozilla.org/show_bug.cgi?id=877072)
+   - and others
+
 
 ### Internet Explorer
 
@@ -787,10 +799,41 @@ HTML5 Rocks Series
 - [HTML Imports: #include for the web](http://www.html5rocks.com/en/tutorials/webcomponents/imports) by By Eric Bidelman (Google); November 11th, 2013 (Updated: December 18th, 2013)
 
 
+# Appendix: Vanilla JS Example - Register a Custom Web Element
+
+~~~
+var proto = Object.create(HTMLElement.prototype);
+
+proto.createdCallback = function() {
+  this.textContent = 'I'm an x-foo!';
+};
+
+proto.foo = function() {
+  console.log('foo() called');
+};
+
+var XFoo = document.registerElement('x-foo', {
+  prototype: proto
+});
+~~~
+
+Now use like:
+
+~~~
+var xfoo = new XFoo();   // or
+var xfoo = document.createElement('x-foo');
+
+document.body.appendChild( xfoo );
+~~~
+
+or
+
+~~~
+<x-foo>   <!-- OMG! It's HTML! -->
+~~~
+
 # Appendix: Vanilla JS Example - Create a Shadow DOM 
 
 
 # Appendix: Vanilla JS Example - Stamp-Out a Template
 
-
-# Appendix: Vanilla JS Example - Register a Custom Web Element
