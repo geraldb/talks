@@ -2,23 +2,25 @@ title: Building Web Services (HTTP APIs) with Ruby (and Sinatra)
 
 
 
-
-
 # Agenda
 
 - What's Sinatra?
 - Let a Thousand Sinatra Clones Bloom
 - Why Sinatra? Goodies
-- Example Web Service (HTTP API) - Routes
+- Example Web Service (HTTP JSON API) - Routes
 - Sinatra in Action - `get '/beer/:key'`
-- What's JSON? 
-- What's JSONP?
+- What's JSON?
+- What's JSONP? What's CORS?
 - Serializers - From Ruby Objects to JavaScript Objects
+- What's Rack?
+- Rum, Cuba, Roda - More Micro Webframework Alternatives
+- What's Metal? Rack v2.0 - Faster, Faster, Faster
+- HTTP JSON API - Faster, Faster, Faster
 - Appendix: Sinatra Styles - Classic or Modern (Modular)
-- Appendix: Database Connection Management
 - Appendix: Sinatra Books
-- Appendix: What's Rack?
-
+- Appendix: "Real World" HTTP JSON APIs
+- Appendix: JSON Schema
+- Appendix: HTTP JSON API Guidlines
 
 
 
@@ -75,10 +77,10 @@ Open browser:
 
 # Let a Thousand Sinatra Clones Bloom
 
-Micro Frameworks Inspired by Sinatra
+Many micro frameworks inspired by Sinatra. Example:
 
 
-Express.js (in Server-Side JavaScript w/ Node.js):
+Express.js (in Server-Side JavaScript w/ **Node.js**):
 
 ~~~
 var express = require( 'express' );
@@ -92,7 +94,7 @@ app.listen( 4567 );
 ~~~
 
 
-Scotty (in Haskell):
+Scotty (in **Haskell**):
 
 What's Haskell?
 
@@ -108,16 +110,16 @@ main = scotty 4567 $ do
 ~~~
 
 
-- *Perl*: Dancer
-- *PHP*: Fitzgerald
-- *Groovy/Java*: Ratpack
-- *CoffeeScript*: Zappa
-- *Lua*: Mercury
-- *F#/.NET*: Frank
-- *C#/.NET*: Nancy
-- *C*: Bogart
-- *Go*: Martini
-- *Python*: Flask  (started as an april fool's joke - that easy?! - it can't be true)
+- **Perl**: Dancer
+- **PHP**: Fitzgerald
+- **Groovy**: Ratpack
+- **CoffeeScript**: Zappa
+- **Lua**: Mercury
+- **F#/.NET**: Frank
+- **C#/.NET**: Nancy
+- **C**: Bogart
+- **Go**: Martini
+- **Python**: Flask  (started as an april fool's joke - that easy?! - it can't be true)
 - and [many more](http://en.wikipedia.org/wiki/Sinatra_(software)#Frameworks_inspired_by_Sinatra).
 
 
@@ -130,7 +132,7 @@ main = scotty 4567 $ do
 
 2) Easy to package up into a gem. Example:
 
-    $ gem install beerdb     # Yes, the beerdb includes a Sinatra app.
+    $ gem install beerdb     # Yes, the beerdb gem includes a Sinatra app.
 
 
 3) Lets you build command line tools. Example:
@@ -140,7 +142,7 @@ main = scotty 4567 $ do
 
 4) Lets you mount app inside app (including Rails). Example:
 
-    mount BeerDb::Server, :at => '/api/v3'
+    mount BeerDb::Service, at: '/api/v3'
 
 
 
@@ -173,6 +175,8 @@ Get random beer `/beer/rand` and random brewery `/brewery/rand`.
 `beerdb/server.rb`:
 
 ~~~
+include BeerDb::Models
+
 get '/beer/:key' do |key|
 
   beer = Beer.find_by!( key: key )
@@ -191,7 +195,7 @@ end
 That's it.
 
 
-Bonus:
+# Bonus: Sinatra in Action - `get '/beer/:key'`
 
 ~~~
 get '/beer/:key' do |key|
@@ -272,9 +276,9 @@ becomes `Content-Type: application/javascript`:
 ~~~
 functionCallback(
   {
-    key: "hofstettnergranitbock",
-    title: "Hofstettner Granitbock",
-    abv: 7.2,
+    "key": "hofstettnergranitbock",
+    "title": "Hofstettner Granitbock",
+    "abv": 7.2,
     ...
   }
 );
@@ -301,39 +305,41 @@ end
 
 CORS = Cross-Origin Resource Sharing
 
-JSONP "Hack" no longer needed; let's you use "plain" standard HTTP Request in JavaScript.
-Requires a "modern" browser 
+JSONP "Hack" no longer needed; let's you use "plain" standard HTTP requests
+in JavaScript; requires a "modern" browser
 
 Uses HTTP headers in request and response (for access control).
 
 ### Example 1) Simple GET request
 
-Request (needs to send along Origin header):
+Browser must send along Origin header in request:
 
 ~~~
 Origin: http://foo.example
 ~~~
 
-Response (use Access-Control-Allow-Origin header to allows):
+Server must return Access-Control-Allow-Origin header in request to allow access
+to browser:
 
 ~~~
 Access-Control-Allow-Origin: *
 ~~~
 
+
 ### Example 2) POST "pre-flight" request w/ OPTIONS
 
-Request:
+CORS HTTP Request Headers:
 
 ~~~
-Origin: http://foo.example
+Origin: http://example.com
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER
 ~~~
 
-Response:
+CORS HTTP Response Headers:
 
 ~~~
-Access-Control-Allow-Origin: http://foo.example
+Access-Control-Allow-Origin: http://example.com
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER
 Access-Control-Max-Age: 1728000
@@ -342,7 +348,7 @@ Access-Control-Max-Age: 1728000
 
 # Serializers - From Ruby Objects (in Memory) to JavaScript Object (in Text) 
 
-JSON built into Ruby 2.0 as a standard library. Example:
+JSON built into Ruby 2.x as a standard library. Example:
 
 ~~~
 require 'json'
@@ -359,7 +365,7 @@ hash =
 ~~~
 puts JSON.generate( hash )
 
->> {"key":"hofstettnergranitbock","title":"Hofstettner Granitbock"}
+# => {"key":"hofstettnergranitbock","title":"Hofstettner Granitbock"}
 ~~~
 
 ### 2) `#to_json`
@@ -367,14 +373,14 @@ puts JSON.generate( hash )
 ~~~
 puts hash.to_json
 
->>  {"key":"hofstettnergranitbock","title":"Hofstettner Granitbock"}
+# =>  {"key":"hofstettnergranitbock","title":"Hofstettner Granitbock"}
 ~~~
 
 
 
-# Serializers - From Ruby Objects (in Memory) to JavaScript Object (in Text) Continued
+# Serializers - From Ruby Objects (in Memory) to JavaScript Object (in Text) Cont'd
 
-Serializers for your Models. Example:
+Serializers for your models. Example:
 
 ~~~
 class BeerSerializer
@@ -525,161 +531,62 @@ hello_app =  ->{ |env|
                    [200, {}, ["Hello Linz! Hello Pasching!"]]
                }
 
-Rack::Handler::Webserver.run hello_app
+Rack::Handler::Webserver.run( hello_app )
 ~~~
 
 
+# Rack in Action - `GET '/beer/:key`
 
-#  "Real World" Example - sport.db.admin - Apps inside Apps inside Apps
+To be done
 
-[`sport.db.admin / config / routes.rb`](https://github.com/sportdb/sport.db.admin/blob/master/config/routes.rb):
+
+
+
+# "Real World" Example - Stack Rack Apps inside Rack Apps inside Rack Apps - sport.db.admin
+
+[`sport.db.admin/config/routes.rb`](https://github.com/sportdb/sport.db.admin/blob/master/config/routes.rb):
 
 ~~~
 Sportdbhost::Application.routes.draw do
 
-  mount About::App,     :at => '/sysinfo'
-  mount DbBrowser::App, :at => '/browse'
+  mount About::App,     at: '/sysinfo'
+  mount DbBrowser::App, at: '/browse'
 
   get '/api' => redirect('/api/v1')
-  mount SportDb::Api, :at => '/api/v1'
+  mount SportDb::Service, at: '/api/v1'
 
-  mount LogDb::App, :at => '/logs'
+  mount LogDb::App, at: '/logs'
 
-  mount SportDbAdmin::Engine, :at => '/'
+  mount SportDbAdmin::Engine, at: '/'
 
 end
 ~~~
 
 
-# What's Metal? - Rack v2.0
+# Rum, Cuba, Roda 'n' Friends - More Micro Framework Alternatives
 
-Q: Why update (break) Rack v1.0?
+### [Rum](https://github.com/chneukirchen/rum) - gRand Unified Mapper for Rack apps
 
-A: Make it faster, faster, faster. Non-blocking streaming with asynchronous event callbacks is the new black.
-
-
-An app without any middleware:
+First version by Rack inventor Christian Neukirchen in 2009. Example:
 
 ~~~
-require 'the_metal/puma'
-
-TheMetal.create_server(->(req, res) {
-  res.write_head 200, 'Content-Type' => 'text/plain'
-  res.write "Hello World\n"
-  res.finish
-}).listen 9292, '0.0.0.0'
+App = Rum.new {
+    on get, path('greet') do
+      on param("name") do |name|
+        puts "Hello, #{Rack::Utils.escape_html name}!"
+      end
+      on default do
+        puts "Hello Linz! Hello Pasching!"
+      end
+    end
+  }
 ~~~
 
-You can use a class too:
+### [Cuba](http://cuba.is) - Tiny but powerful Mapper for Rack apps
 
-~~~
-class Application
-  def call req, res
-    res.write_head 200, 'Content-Type' => 'text/plain'
-    res.write "Hello World\n"
-    res.finish
-  end
-end
+Uses the idea of Rum (thus, the name Cuba) and adds a little more machinery.
+Example:
 
-require 'the_metal/puma'
-server = TheMetal.create_server Application.new
-server.listen 9292, '0.0.0.0'
-~~~
-
-
-# What's Metal? - Rack v2.0 - Cont'd
-
-An app that checks out a database connection when the request starts and checks it back in when the response is finished:
-
-~~~
-require 'the_metal'
-
-class Application
-  def call req, res
-    res.write_head 200, 'Content-Type' => 'text/plain'
-    res.write "Hello World\n"
-    res.finish
-  end
-end
-
-class DBEvents
-  def start_app app
-    puts "ensure database connection"
-  end
-
-  def start_request req, res
-    puts "-> checkout connection"
-  end
-
-  def finish_request req, res
-    puts "<- checkin connection"
-  end
-end
-
-require 'the_metal/puma'
-app = TheMetal.build_app [DBEvents.new], [], Application.new
-server = TheMetal.create_server app
-server.listen 9292, '0.0.0.0'
-~~~
-
-
-# Rum, Cuba, Roda 'n' Friends
-
-More Microframeworks Alternatives
-
-- Rum
-   - First version by Rack inventor Christian Neune 
-
-- Cuba  - <cuba.is>
-   - uses the idea of rum (thus, the name Cuba) and adds a little more machinery
-
-- Roda - <roda.jeremyevans.net>
-   - uses the idea of cuba and adds yet more  machinery (e.g. better request tree, plugins, etc.)
-
-   
-- Where's this all headed?  Rail 6.0? - Just kidding.
-
-
--- lines of codes
-
-Library   | Lines of Code (LOC)
-----------|---------------------
-Cuba         |        152
-Sinatra      |       1_476
-Rails (*)    |      13_181
-(Almost) Sinatra |      7
-
-(*) only ActionPack (Rails is over 40_000+ LOC)
-
-Assumption less lines of code => faster code, more requests/secs - only use what you need
-
-(Source: Cuba Slides)
-
-- (Almost) Sinatra  ->  add link here
-
-
-
-
-# What's a Request Tree?
-
-Sinatra - plain "flat" request tree 
-
-~~~
-get "/articles/:id" do |id|
-  article = Article[id]
-end
-
-get "/articles/:article_id/comments/:id" do |article_id, id|
-  article = Article[article_id]
-  comment = article.comments[id]
-end
-~~~
-
-vs
-
-nested request tree
-
-Cuba Version:
 ~~~
 on get, "articles/:id" do |id|
   article = Article[id]
@@ -690,40 +597,190 @@ on get, "articles/:id" do |id|
 end
 ~~~
 
-Roda  version:
+### [Roda](http://roda.jeremyevans.net) - Routing Tree Webframework
+
+Uses the idea of Cuba and adds yet more machinery
+(e.g. better request tree, plugins, etc.). Example:
+
+~~~
+route do |r|
+  # GET / request
+  r.root do
+    r.redirect "/hello"
+  end
+
+  # /hello branch
+  r.on "hello" do
+
+    # GET /hello/world request
+    r.get "world" do
+      "Hello world!"
+    end
+
+    # /hello request
+    r.is do
+      # GET /hello request
+      r.get do
+        "Hello!"
+      end
+
+      # POST /hello request
+      r.post do
+        puts "Someone said hello!"
+        r.redirect
+      end
+    end
+  end
+end
+~~~
+
+
+
+# Rum, Cuba, Roda 'n' Friends - More Micro Framework Alternatives - Cont'd
+
+Why? Why? Why?
+
+Assumption less lines of code => faster code, more requests/secs - only use what you need
+
+Library          | Lines of Code (LOC)
+-----------------|--------------------
+Cuba             |                 152
+Sinatra          |               1_476
+Rails (*)        |              13_181
+(Almost) Sinatra |                   7
+
+(*) only ActionPack (Rails is over 40_000+ LOC)
+
+(Source: [Cuba Slides](http://files.soveran.com/cuba/#11), [(Almost) Sinatra](https://github.com/rkh/almost-sinatra))
 
 
 
 
-# HTTP JSON APIs - Go Version
+# What's Metal? - Rack v2.0  - Faster, Faster, Faster
 
-Try another language, for example,
+Q: Why update (break) Rack v1.0?
 
-Why Go?
-
-- code gets compiled to zero-dependency (small) machine-code binaries
-- kind of a "better" more "modern" C
-    - code gets compiled and linked (no virtual machine, or byte code runtime or just-in-time compiler machinery etc. needed)
+A: Make it faster, faster, faster. Non-blocking streaming with asynchronous event callbacks is the new black.
 
 
+An app without any middleware:
+
+~~~
+hello_app = ->(req, res) {
+                 res.write_head( 200, 'Content-Type' => 'text/plain' )
+                 res.write( "Hello Linz! Hello Pasching!\n" )
+                 res.finish
+              }
+
+require 'the_metal/puma'
+
+server = TheMetal.create_server( hello_app )
+server.listen( 9292, '0.0.0.0' )
+~~~
+
+You can use a class too:
+
+~~~
+class App
+  def call( req, res )
+    res.write_head( 200, 'Content-Type' => 'text/plain' )
+    res.write( "Hello Linz! Hello Pasching!\n" )
+    res.finish
+  end
+end
+
+require 'the_metal/puma'
+
+server = TheMetal.create_server( App.new )
+server.listen( 9292, '0.0.0.0' )
+~~~
 
 
-# HTTP JSON API - Rack v1.0 Version
+
+# What's Metal? - Rack v2.0 - Cont'd
+
+An app that checks out a database connection when the request starts
+and checks it back in when the response is finished:
+
+~~~
+require 'the_metal'
+
+class App
+  def call( req, res )
+    res.write_head( 200, 'Content-Type' => 'text/plain' )
+    res.write( "Hello Linz! Hello Pasching!\n" )
+    res.finish
+  end
+end
+
+class DbEvents
+  def start_app( app )
+    puts "ensure database connection"
+  end
+
+  def start_request( req, res )
+    puts "-> checkout connection"
+  end
+
+  def finish_request( req, res )
+    puts "<- checkin connection"
+  end
+end
+
+require 'the_metal/puma'
+
+app = TheMetal.build_app( [DbEvents.new], [], App.new )
+
+server = TheMetal.create_server( app )
+server.listen( 9292, '0.0.0.0' )
+~~~
 
 
-# HTTP JOSN APIs - NoSQL Version
+#  HTTP JSON APIs - Faster, Faster, Faster - Try Another Language
+
+Trivia Quiz: What language is this?
+
+~~~
+func GetEvents() interface{} {
+  // step 1: fetch records
+  events := FetchEvents()
+  log.Println( events )
+
+  // step 2: map to json structs for serialization/marshalling
+  type JsEvent struct {
+    Key   string `json:"key"`
+    Title string `json:"title"`
+  }
+  data := []*JsEvent{}
+
+  for _,event := range events {
+   data = append( data, &JsEvent {
+                          Key:   event.Key,
+                          Title: event.Title, } )
+  }
+  return data
+}
+~~~
+
+
+#  HTTP JSON APIs - Faster, Faster, Faster - Why Go?
+
+Just an example. Use what works for you. Why Go?
+
+Kind of a "better" more "modern" C.
+
+Code gets compiled (to machine-code ahead-of-time) and linked
+to let you build (small-ish) zero-dependency
+all-in-one binary (file) programs.
+
+No virtual machine or byte code runtime or just-in-time compiler machinery needed;
+includes garbage collector.
+
+
+
+# HTTP JSON APIs - Faster, Faster, Faster - NoSQL Version
 
 Try a NoSQL database and get JSON HTTP APIs (almost) for "free".
-
-
-
-
-
-
-
-
-
-
 
 
 # That's it. Thanks.
@@ -735,7 +792,6 @@ Try a NoSQL database and get JSON HTTP APIs (almost) for "free".
 Learn more about Sinatra @ [`sinatrarb.com`](http://sinatrarb.com)
 
 Learn more about the open beer 'n' brewery database (`beer.db`) @ [`github.com/openbeer`](https://github.com/openbeer)
-
 
 
 
@@ -774,7 +830,8 @@ January 2013, SitePoint, 150 Pages
 
 
 
-# "Real-World" HTTP JSON APIs Examples
+
+# Appendix: "Real-World" HTTP JSON APIs Examples
 
 Learn from the "masters". Examples:
 
@@ -782,6 +839,7 @@ Learn from the "masters". Examples:
 - Basecamp API -> [github.com/basecamp/api](https://github.com/basecamp/api)
 - Heroku API  ->  [devcenter.heroku.com/categories/platform-api](https://devcenter.heroku.com/categories/platform-api)
 - Travis CI API -> [docs.travis-ci.com/api](http://docs.travis-ci.com/api)
+- Many more
 
 ~~~
 $ curl -i https://api.github.com/users/octocat/orgs
@@ -813,7 +871,7 @@ JSON Payload:
 ~~~
 
 
-# GitHub API Example - List Commits on a Repo
+# Appendix: GitHub HTTP JSON API Example - List Commits on a Repo
 
 ~~~
 GET /repos/:owner/:repo/commits
@@ -905,47 +963,75 @@ JSON Payload:
 ~~~
 
 
-# new slides / ideas
+# Appendix: JSON Schema
 
+Project site -> [`json-schema.org`](http://json-schema.org)
 
+What's JSON Schema?
 
+Describe your data structure 'n' types (schema) in JSON. Example:
 
-
-# rack-test
-
-
-
-# json schema ???
-
-- project site -> [json-schema.org](http://json-schema.org)
-
-What's?
-
-Describe your data structure n types (schema) in JSON. Example:
-
+~~~
+{
+  "title": "Example Schema",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "age": {
+      "description": "Age in years",
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": ["firstName", "lastName"]
+}
+~~~
 
 Why?
 
 Pros:
 
 - More tooling
-  - auto-generate docu
-  - auto-generate tests
-  - auto-generate (test) client libraries
-  - auto-generate validator (for required fields, types, etc.)
-
+    - auto-generate docu
+    - auto-generate tests
+    - auto-generate (test) client libraries
+    - auto-generate validator (for required fields, types, etc.)
 - More (re)use
-  - (re)use "common" schemas
+    - (re)use "common" schemas
 
 
+# Appendix: HTTP JSON API Design Guidelines
 
+Example: Heroku API Design Guidelines
 
-# HTTP JSON API Guidelines
+- Require TLS
+- Version with Accepts header
+- Support caching with Etags
+- Trace requests with Request-Ids
+- Paginate with ranges
+- Requests
+    - Return appropriate status codes
+    - Provide full resources where available
+    - Accept serialized JSON in request bodies
+    - Use consistent path formats
+    - Downcase paths and attributes
+    - Support non-id dereferencing for convenience
+    - Minimize path nesting
+- Responses
+    - Provide resource (UU)IDs
+    - Provide standard timestamps
+    - Use UTC times formatted in ISO8601
+    - Nest foreign key relations
+    - Generate structured errors
+    - Show rate limit status
+    - Keep JSON minified in all responses
 
-Heroku API Design Guidelines
+(Source: [`github.com/interagent/http-api-design`](https://github.com/interagent/http-api-design))
 
-- 
-- 
-
-(Source: )
+Note: Site also includes Sinatra starter templates and generators.
 
