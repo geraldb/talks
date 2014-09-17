@@ -1,6 +1,17 @@
 title: Building Web Services (HTTP APIs) with Ruby (and Sinatra)
 
 
+%css
+
+pre {
+  padding: 4px 4px 4px 4px;
+  border-top: #bbb 1px solid;
+  border-bottom: #bbb 1px solid;
+  background: #f3f3f3;
+}
+
+%end
+
 
 # Agenda
 
