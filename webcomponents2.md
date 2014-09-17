@@ -13,15 +13,6 @@ pre {
 %end
 
 
-
-# Who's this guy?
-
-- **`football.db`** - Open Football Data; see [`github.com/openfootball`](https://github.com/openfootball)
-- **`beer.db`**  - Open Beer, Brewery n Brewpub Data; see [`github.com/openbeer`](https://github.com/openbeer)
-- **`world.db`** - Open World Data (Countries, Regions, Cities); see [`github.com/openmundi`](https://github.com/openmundi)
-
-
-
 # Building Your Own Web Components (Tags / Elements)
 
 Agenda
