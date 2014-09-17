@@ -16,7 +16,6 @@ title: Building Web Services (HTTP APIs) with Ruby (and Sinatra)
 - Rum, Cuba, Roda - More Micro Webframework Alternatives
 - What's Metal? Rack v2.0 - Faster, Faster, Faster
 - HTTP JSON API - Faster, Faster, Faster
-- Appendix: Sinatra Styles - Classic or Modern (Modular)
 - Appendix: Sinatra Books
 - Appendix: "Real World" HTTP JSON APIs
 - Appendix: JSON Schema
@@ -570,7 +569,7 @@ end
 
 ### [Rum](https://github.com/chneukirchen/rum) - gRand Unified Mapper for Rack apps
 
-First version by Rack inventor Christian Neukirchen in 2009. Example:
+First version by Rack inventor Christian Neukirchen in 2008. Example:
 
 ~~~
 App = Rum.new {
@@ -1157,4 +1156,100 @@ Example: Heroku API Design Guidelines
 (Source: [`github.com/interagent/http-api-design`](https://github.com/interagent/http-api-design))
 
 Note: Site also includes Sinatra starter templates and generators.
+
+
+# Appendix: HTTP JSON API Design Guidelines (Cont'd)
+
+{json:api} Project - [`jsonapis.org`](http://jsonapi.org)
+
+A(nother) standard for building APIs in JSON. Example:
+
+~~~
+{
+  "links": {
+    "posts.author": {
+      "href": "http://example.com/people/{posts.author}",
+      "type": "people"
+    },
+    "posts.comments": {
+      "href": "http://example.com/comments/{posts.comments}",
+      "type": "comments"
+    }
+  },
+  "posts": [{
+    "id": "1",
+    "title": "Rails is Omakase",
+    "links": {
+      "author": "9",
+      "comments": [ "5", "12", "17", "20" ]
+    }
+  }]
+}
+~~~
+
+
+# Appendix: HTTP JSON API Design Guidelines (Cont'd)
+
+Article:[Best Practices for Designing a Pragmatic RESTful API](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+by Vinay Sahni
+
+TL;DR
+
+- An API is a user interface for a developer - so put some effort into making it pleasant
+- Use RESTful URLs and actions
+- Use SSL everywhere, no exceptions
+- An API is only as good as its documentation - so have great documentation
+- Version via the URL, not via headers
+- Use query parameters for advanced filtering, sorting & searching
+- Provide a way to limit which fields are returned from the API
+- Return something useful from POST, PATCH & PUT requests
+- HATEOAS isn't practical just yet
+- Use JSON where possible, XML only if you have to
+- You should use camelCase with JSON, but snake_case is 20% easier to read
+- Pretty print by default & ensure gzip is supported
+- Don't use response envelopes by default
+- Consider using JSON for POST, PUT and PATCH request bodies
+- Paginate using Link headers
+- Provide a way to autoload related resource representations
+- Provide a way to override the HTTP method
+- Provide useful response headers for rate limiting
+- Use token based authentication, transported over OAuth2 where delegation is needed
+- Include response headers that facilitate caching
+- Define a consumable error payload
+- Effectively use HTTP Status codes
+
+
+# Appendix: HTTP JSON API Design Guidelines (Cont'd)
+
+Books
+
+![](i/restful_web_apis.gif)  RESTful Web APIs by Leonard Richardson, Mike Amundsen;
+September 2013; O'Reilly 408 Pages
+
+- Examine API design strategies, including the collection pattern and pure hypermedia
+- Understand how hypermedia ties representations together into a coherent API
+- Discover how XMDP and ALPS profile formats can help you meet the Web API "semantic challenge"
+- Learn close to two-dozen standardized hypermedia data formats
+- Apply best practices for using HTTP in API implementations
+- Create Web APIs with the JSON-LD standard and other the Linked Data approaches
+- Understand the CoAP protocol for using REST in embedded systems
+
+![](i/rest_api_design_rulebook.gif)
+REST API Design Rulebook: Designing Consistent RESTful Web Service Interfaces
+by Mark Masse; October 2011; O'Reilly; 116 Pages
+
+
+And many more
+
+- Designing Hypermedia APIs by Steve Klabnik
+- RESTful Web Services Cookbook - Solutions for Improving Scalability and Simplicity
+  by Subbu Allamaraju; February 2010; O'Reilly (Yahoo Press)
+- REST in Practice - Hypermedia and Systems Architecture
+  by Jim Webber, Savas Parastatidis, Ian Robinson
+  September 2010; O'Reilly 
+- CORS in Action: Creating and consuming cross-origin APIs by Monsur Hossain;
+  October 2014; Manning
+- Getting Started with OAuth 2.0 - Programming clients for secure web API authorization and authentication
+  by Ryan Boyd; February 2012; O'Reilly
+- And so on.
 
