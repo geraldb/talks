@@ -48,7 +48,7 @@ $ gem install sinatra
 
 
 
-# What's Sinatra? (Continued)
+# What's Sinatra? (Cont'd)
 
 Example - `hallo.rb`:
 
@@ -511,14 +511,14 @@ Learn more about Rack @ [`rack.github.io`](http://rack.github.io).
 Mimimalistic Rack App
 
 ~~~
-lambda { |env| [200, {}, ["Hello Linz! Hello Pasching!"]] }
+lambda { |env| [200, {'Content-Type' => 'text/plain'}, ['Hello Linz! Hello Pasching!']] }
 ~~~
 
 To use Rack, provide an "app": an object that responds to the call method,
 taking the environment hash as a parameter, and returning an Array with three elements:
 
-- The HTTP response code  e.g. `200`
-- A Hash of headers e.g. `{}`
+- The HTTP response code  e.g. `200`  
+- A Hash of headers e.g. `{ 'Content-Type' => 'text/plain' }`
 - The response body, which must respond to each e.g. `["Hello Linz! Hello Pasching!"]`
 
 
@@ -528,7 +528,10 @@ taking the environment hash as a parameter, and returning an Array with three el
 require 'rack'
 
 hello_app =  ->{ |env|
-                   [200, {}, ["Hello Linz! Hello Pasching!"]]
+                   [ 200,
+                     { 'Content-Type' => 'text/plain' },
+                     [ 'Hello Linz! Hello Pasching!' ]
+                   ]
                }
 
 Rack::Handler::Webserver.run( hello_app )
@@ -636,7 +639,7 @@ end
 
 
 
-# Rum, Cuba, Roda 'n' Friends - More Micro Framework Alternatives - Cont'd
+# Rum, Cuba, Roda 'n' Friends - More Micro Framework Alternatives (Cont'd)
 
 Why? Why? Why?
 
@@ -654,6 +657,101 @@ Rails (*)        |              13_181
 (Source: [Cuba Slides](http://files.soveran.com/cuba/#11), [(Almost) Sinatra](https://github.com/rkh/almost-sinatra))
 
 
+
+# Micro Benchmarks - Requests/sec - Memory Allocation/Request
+
+Collected on:
+
+- OSX, 10.8.5, MacBook Pro i5 (2.5GHz), 8GiG 1600 MHz DDR3.
+- ruby 2.1.2p95 (GCC 4.7.3)
+
+Library          |    Requests/sec | % from best
+-----------------|-----------------|------------
+rack             |         8808.83 |     100.0 %
+roda             |         7182.15 |     81.53 %
+rack-response    |         6876.73 |     78.07 %
+cuba             |         6159.57 |     69.92 %
+sinatra          |         2899.94 |     32.92 %
+
+Library        | Allocs/Req | Memsize/Req
+---------------|------------|------------
+rack           |         60 |        1704
+roda           |         71 |        2144
+rack-response  |         83 |        3072
+cuba           |        100 |        3457
+sinatra        |        253 |       10011
+
+(Source: [`luislavena/bench-micro`](https://github.com/luislavena/bench-micro))
+
+Notes
+
+~~~
+$ wrk -t 2 http://localhost:9292/
+~~~
+
+All the micro frameworks were run using Puma on Ruby 2.1,  
+in production mode and using 16 threads:
+
+~~~
+$ puma -e production -t 16:16 apps/(rack.ru|rodo.ru|rack-response.ru|cuba.ru|sinatra.ru)
+~~~
+
+`sinatra.ru`:
+
+~~~
+require "sinatra/base"
+
+class HelloWorld < Sinatra::Base
+  get "/" do
+    "Hello World!"
+  end
+end
+
+App = HelloWorld
+run App
+~~~
+
+`rack.ru`:
+
+~~~
+class HelloWorld
+  def call(env)
+    if env['REQUEST_METHOD'] == 'GET' && env['PATH_INFO'] == '/'
+      [
+        200,
+        {"Content-Type" => "text/html"},
+        ["Hello World!"]
+      ]
+    else
+     [
+       404,
+       {"Content-Type" => "text/html"},
+       [""]
+     ]
+    end
+  end
+end
+
+App = HelloWorld.new
+run App
+~~~
+
+`rack-response.ru`:
+
+~~~
+class HelloWorld
+  def call(env)
+    if env['REQUEST_METHOD'] == 'GET' && env['PATH_INFO'] == '/'
+      Rack::Response.new('Hello World!', 200, { 'Content-Type' => 'text/html' }).finish
+    else
+      Rack::Response.new('', 404, { 'Content-Type' => 'text/html' }).finish
+    end
+  end
+end
+
+App = HelloWorld.new
+run App
+~~~
 
 
 # What's Metal? - Rack v2.0  - Faster, Faster, Faster
@@ -810,7 +908,7 @@ vs.
 ~~~
 require 'sinatra/base'
 
-class Server < Sinatra::Base
+class App < Sinatra::Base
 
   get '/' do
     'Hallo Linz! Hallo Pasching!'
@@ -829,6 +927,31 @@ November 2011, O'Reilly, 122 Pages
 January 2013, SitePoint, 150 Pages
 
 
+# Appendix: More Micro Framework Alternatives
+
+### [Grape](https://github.com/intridea/grape) - Micro framework for creating REST-like APIs
+
+~~~
+require 'grape'
+
+class API < Grape::API
+  get :hello do
+    { hello: "world" }
+  end
+end
+~~~
+
+### [Crêpe](https://github.com/crepe/crepe) - The thin API stack
+
+~~~
+require 'crepe'
+
+class API < Crepe::API
+   get :hello do 
+    { hello: "world" }
+   end
+end
+~~~
 
 
 # Appendix: "Real-World" HTTP JSON APIs Examples
