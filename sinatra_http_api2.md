@@ -26,7 +26,7 @@ title: Building Web Services (HTTP APIs) with Ruby (and Sinatra)
 
 # What's Sinatra?
 
-Simple (yet powerful and flexible) micro webframwork.
+Simple (yet powerful and flexible) micro webframework.
 
 ~~~
 require 'sinatra'
