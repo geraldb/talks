@@ -113,7 +113,7 @@ Use `go get github.com/mattn/go-sqlite3` to install.
 ~~~
 func FetchEvents() []Event {
 
-  db = sql.Open( "sqlite3", "./football.db" )
+  db, err := sql.Open( "sqlite3", "./football.db" )
   if err != nil {
     log.Fatal(err)
   }
@@ -154,10 +154,9 @@ import (
 ~~~
 
 ~~~
-func GetEvents() (interface{},error) {
+func GetEvents() (interface{}, error) {
   // step 1: fetch records
   events := FetchEvents()
-  log.Println( events )
 
   // step 2: map to json structs for serialization/marshalling
   type JsEvent struct {
