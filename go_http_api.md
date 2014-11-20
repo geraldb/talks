@@ -51,7 +51,7 @@ Includes sportkit - starter kit for HTTP JSON API - Go Edition -> [`github.com/s
 
 # Go Structs, Structs, Structs
 
-`database_structs.go`:
+`sportkit/database_structs.go`:
 
 ~~~
 type Event struct {
@@ -65,7 +65,7 @@ type Team struct {
 }
 ~~~
 
-NOTE: Go Ids (Names) starting with capital letter (upper case) are public (by definition).
+NOTE: Go ids (names) starting with capital letter (upper case) are public (by definition).
 
 ~~~
 type JsEvent struct {
@@ -83,7 +83,7 @@ type JsTeam struct {
 
 # Database Queries
 
-`database_finders.go`:
+`sportkit/database_finders.go`:
 
 ~~~
 query :=
@@ -138,7 +138,7 @@ func FetchEvents() []Event {
 }
 ~~~
 
-NOTE: Go has NO exceptions; function (almost) always returns err codes.
+NOTE: Go has NO exceptions; function (almost) always returns error (`err`) types.
 
 Why no exceptions?  Go's headline feature is concurrency (w/ Go (co)routines and channels) -
 exceptions do NOT really work in an (asynchronous) concurrent world.
