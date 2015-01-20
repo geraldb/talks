@@ -98,10 +98,15 @@ Note: You can host your site on Amazon S3.
 
 # Let a Thousand Static Site Generators Bloom in Ruby
 
+- { :awestruct }   - a static site-baking tool   @ [`awestruct.org`](http://awestruct.org) [(Code)](https://github.com/awestruct)
+- Bonsai   - a tiny static web site generator   @[`tinytree.info`](http://tinytree.info) [(Code)](https://github.com/benschwarz/bonsai)
+- Frank   - a static site non-framework    @ [(Code)](https://github.com/blahed/frank)
+- Hobix   - commandline blogging & static pages & ruby   @ [`hobix.github.io/hobix`](http://hobix.github.io/hobix)   [(Code)](https://github.com/hobix/hobix)
+
 
 #  Build Your Own Static Site Generator in Ruby in 5 Minutes
 
-Nostaliga - Anyone remember those build your own blog in Ruby on Rails in 5 minutes?
+Nostaliga - Anyone remember those "Build Your Own blog in Ruby on Rails in 5 Minutes" live demos?
 
 ~~~
 require 'find'
