@@ -96,6 +96,39 @@ Note: You can host your site on Amazon S3.
 - Hakyll (Haskell)
 
 
+# Let a Thousand Static Site Generators Bloom in Ruby
+
+
+#  Build Your Own Static Site Generator in Ruby in 5 Minutes
+
+Nostaliga - Anyone remember those build your own blog in Ruby on Rails in 5 minutes?
+
+~~~
+require 'find'
+require 'kramdown'
+
+# 1) make an out directory
+Dir.mkdir('out') unless File.exist?('out')
+
+# 2) loop over files and generate hypertext (.html) from markdown (.md)
+Find.find('./docs') do |path|
+  if File.extname(path) == '.md'
+    contents = File.read(path)
+
+    File.open( "out/#{path.sub('.md','.html')}", 'w')  do |file| 
+      file.write( Kramdown::Document.new(contents).to_html )
+    end
+  end
+end
+~~~
+
+Many more ways. Example:
+
+- [Using Rake to Generate a Blog](http://patshaughnessy.net/2015/1/8/using-rake-to-generate-a-blog) by Pat Shaughnessy; January 2015 
+
+
+
+
 
 
 
