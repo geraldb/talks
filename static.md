@@ -20,7 +20,7 @@ On your live production site requires
 
 
 
-# Static Site Generator
+# Static Site Generators
 
 On your live prodcution site requires
 
@@ -33,7 +33,7 @@ Note: You can host your site on Amazon S3 (Simple Storage Service).
 
 
 
-# Why Static?
+# Static is the New Dynamic - Why Static?
 
 - Fast, Faster, Fastest
 
@@ -121,6 +121,7 @@ The web stack
 - Hakyll (Haskell)
 
 
+
 # Let a Thousand Static Site Generators Bloom in Ruby
 
 - { :awestruct }   - a static site-baking tool   @ [`awestruct.org`](http://awestruct.org) [(Code)](https://github.com/awestruct)
@@ -191,7 +192,7 @@ Octopress (2.0+3.0)  | =>  8_700+ Stars (+400) | 3_100+ Forks
 Jekyll Bootstrap     | =>  2_400+ Stars        | 1_400+ Forks
 Jekyll Now           | =>    900+ Stars        | 3_000+ Forks
 
-Content is king. Growing faster! More Jekyll Themes
+Content is king. Growing faster. More Jekyll Themes
 
 -------------------- | ----------------------- |-----------
 Jekyll Incorporated  | =>  800+ Stars          | 200+ Forks
@@ -202,50 +203,155 @@ Minimal Mistakes     | =>  400+ Stars          | 900+ Forks
 
 
 
+# Jekyll Getting Started
+
+## Method 1 -  Fork GitHub Jekyll Theme Repo
+
+- Step 1: Fork a GitHub Jekyll Theme Repo e.g. `jekyll-minimal-theme`
+- Step 2: Change the repo name to `<yourname>.github.io`
+- Step 3: Change the Jekyll settings in `_config.yml` e.g. `site.url`
+
+That's it. Edit your first post in the `_posts` folder.
 
 
-# WordPress - Jekyll Goodies
+## Method 2 -  "Hacker-Style" - Use the Command-Line
 
-- WordPress Jekyll Export Plugin  => One Click - gets you a zip w/ ready-to-use static Jekyll site
+~~~
+$ jekyll new mysite
+$ cd mysite
+$ jekyll serve
 
-(best of both worlds - use all the WordPress tools plus get a fast and simple static site for live production)
+# => Now browse to http://localhost:400
+~~~
 
+
+
+# Jekyll - Beyond the Basics - Collections
+
+(e.g. new post types e.g. books, albums, links, etc.)
+
+
+# Jekyll - Beyond the Basics - Data
+
+- Data in YAML, JSON, CSV
+
+
+
+# Dynamic Examples  -  YouTube Videos
+
+Add a YouTube video; use the video tag.
+
+
+
+# Dynamic Examples  - Comments, Comments, Comments
+
+Add comments using JavaScript-only service
+(Disqus, Facebook, etc.)
+
+
+# Dynamic Example   - Brute Force Hammer Method
+
+Re-generate and re-deploy your site
+every minute (or when pinged with web hook etc.)
+
+
+# Jekyll Goodies -  HTML Proofer
+
+
+
+# Jekyll Goodies - GitHub.js, Prose.io
+
+Write and save your posts in your browser with "distraction-free"
+simple editor like Prose.io - a content editor for GitHub, for example.
+ 
+How does it work?
+
+GitHub offers an HTTP JSON API; using the GitHub.js machinery lets you
+build your own single-page web app in JavaScript only - no server required
+other than GitHub itself ;-).
+
+
+
+# Jekyll Goodies - `jekyll-planet`
+
+Subscribe to web feeds and (auto-)save the latest posts
+in your Jekyll `_posts` folder.
+
+Why?! Lets others use whatever blog (or content managment system) they like - you don't care -
+to pull in the posts and get the stories added to your site
+all you need is a ye good ol' web feed.
+
+
+
+# Jekyll Goodies - WordPress Export Plugin
+
+- WordPress Jekyll Export Plugin
+
+One Click - gets you a zip w/ ready-to-use static Jekyll site
+
+Why?! Best of both worlds - use all the WordPress tools
+plus get a fast and simple static site for live production.
 
 
 
 
 # GitHub Pages
 
+What's GitHub Pages?
+
+
+Milestones
 
 
 
-# Octopress v1.0 vs. Octopress v2.0
 
-- v1.0 (Released 20??)
+# GitHub Pages Tip - Make Your `gh_pages` Branch the Default; Delete `master` Branch
 
-  Basically a ready-to-use pre-configured Jekyll site w/ a theme, helpers, build scripts and more.
-  "packaged" as git repo. To get started use
+
+
+
+
+
+# Octopress 3.0 Upcoming
+
+### "Classic" Octopress
+
+Basically a pre-configured Jekyll site w/ a theme, helpers, build scripts and more.
+"packaged" as ready-to-fork-and-use git repo. To get started use:
   
 $ git clone octopress
 
-and than start changing the configuration settings in ???.
+and than start changing the configuration settings and so on.
+
+What's wrong with that?!
+
+- Not-so-easy to update.
+- Not-so-easy to extend and configure.
 
 
-- v2.0 (Released February 2015)
+### "Modern" Octopress (Released February 2015)
 
-  Modul-mania. Now almost everything is a gem (more than 20+ gems e.g. octopress-videotag, octopress-unpublish,
-    octopress-deplay)
-      plus a new command line tool (that is, octopress)
-
-To get started, use:
+Modul-mania. Now almost everything is a gem
+(more than 20+ gems e.g. `octopress-videotag`, `octopress-unpublish`, `octopress-deploy`, and so on)
+plus a new command line tool (that is, `octopress`). To get started, use:
 
 $ gem install octopress
 $ octopress new
 
-
-Why?
+Why?!
 
 - Easier to update.
 - Easier to extend and configure (use what you need; no big all-in-one git repo hairball -
-    instead many small gems that work with "plain vanilla" jekyll)
+instead many small gems that work with "plain vanilla" jekyll).
+
+**There will no longer be a division between Octopress and Jekyll.**
+
+
+
+#  Thank You - Questions? Comments? 
+
+Check the Planet Jekyll incl. Jekyll Theme of the Month Series,
+Jekyll Snippets (Tips 'n' Tricks), Jekyll Quick Reference (Cheat Sheet),
+Jekyll Minimial Theme and more.
+
 

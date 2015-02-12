@@ -1,5 +1,7 @@
 
 
+%%% todo - move to planet jekyll
+ move to quickrefs/versions.md  ???
 
 
 ## Milestones
