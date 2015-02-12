@@ -152,12 +152,18 @@ The web stack
 
 
 
-# Static Site Generators Directories
+# Static Site Generators Directories - `staticgen.com`
 
-- [staticgen.com](http://www.staticgen.com)
-- [staticsitegenerators.net](http://staticsitegenerators.net)
+![](i/site-staticgen-com.png)
 
-[add screenshots]
+(Source: [staticsitegenerators.net](http://staticsitegenerators.net))
+
+
+# Static Site Generators Directories - `staticsitegenerators.net`
+
+![](i/site-staticsitegenerators-net.png)
+
+(Source: [staticgen.com](http://www.staticgen.com))
 
 
 
@@ -255,6 +261,8 @@ Many more ways. Example:
 
 Rails =>  24 900+ Stars / 9 700+ Forks
 
+![](i/jekyll-trending.png)
+
                      | Stars                   | Forks
 -------------------- | ----------------------- |-------------
 Jekyll               | => 18 500+ Stars        | 3 800+ Forks
@@ -290,6 +298,7 @@ HTML5 Boilerplate    | =>  28 600+ Stars       |  7 400+ Forks
 
 That's it. Edit your first post in the `_posts` folder.
 
+![](i/jekyll-minimal-theme.png)
 
 
 # Jekyll Getting Started - Method 2 - "Hacker-Style" - Use the Command-Line
@@ -312,42 +321,166 @@ Browse your site e.g. open the page @ `http://127.0.0.1:4000`
 
 
 
-
-
 # Jekyll - Beyond the Basics - Collections
 
-(e.g. new post types e.g. books, albums, links, etc.)
+Basically like new post types e.g. books, albums, links, apps, etc.
+
+Add a new "custom" folder (starting with underscore e.g. `_apps`)
+for each new collection
+and add your posts (w/o dates) as usual. Example:
+
+~~~
+_apps/
+  beer-a-day.md
+  country-codes.md
+  sportweb.md
+~~~
+
+In your templates use `site.apps`. Example:
+
+~~~
+{{{% for app in site.apps %}}}
+
+  <div class='app'>
+      <a href="{{{{ site.url }}}}{{{{ app.url }}}}">
+        {{{{ app.title }}}}
+      </a>
+      <br>
+      <a href="{{{{ site.url }}}}{{{{ app.url }}}}">
+        <img src="{{{{site.url}}}}/i/{{{{app.screenshot}}}}">
+      </a>
+  </div>
+
+{{{% endfor %}}}
+~~~
+
+For collection such as `_books`, `_albums` or `_links` use
+`site.books`, `site.albums`, `site.links` and so on.
 
 
 # Jekyll - Beyond the Basics - Data
 
-- Data in YAML, JSON, CSV
+Lets you store data in the `_data` folder in YAML, JSON, CSV. Example:
+
+~~~
+_data/
+   books.yml
+~~~
+
+`books.yml`:
+
+~~~
+- title:     "111 Gründe, Bier zu lieben"
+  subtitle:  Das Buch gegen den Durst
+  author:    Marc Halupczok
+  publisher: Schwarzkopf + Schwarzkopf
+  tags:      de, culture, history
+  isbn:      978-3-86265-399-7
+  cover:     111-gruende-bier-zu-lieben.jpg
+
+- title:     Bier in Wien (A La Carte)
+  author:    Christian Grünwald (Herausgeber)
+  publisher: D + R Verlagsgesellschaft
+  tags:      at, wien, vienna, city guide
+  isbn:      978-3-902469-52-6
+  cover:     at/bier-in-wien.jpg
+~~~
+
+In your templates use `site.data.books`. Example:
+
+~~~
+{{{% for book in site.data.books %}}}
+
+  <div class='book'>
+    <img src="{{{{site.url}}}}/i/{{{{book.cover}}}}">
+    <br>
+    {{{{ book.title }}}}
+    {{{% if book.edition %}}}
+       {{{{ book.edition}}}}
+    {{{% endif %}}}
+    by {{{{ book.author }}}}; {{{{ book.publisher }}}}
+  </div>
+
+{{{% endfor %}}}
+~~~
 
 
 
-# Dynamic Examples  -  YouTube Videos
+# Dynamic Examples  -  Videos
 
-Add a YouTube video; use the video tag.
+**Syntax**
+
+~~~
+{{{% video urls [class names] [width height] [preload:auto|metadata|none] %}}}
+~~~
+
+**Examples***
+
+~~~
+{{{% video {{{{ site.cdn }}/videos/clouds.mp4 %}}}
+{{{% video featured wide /images/clouds.jpg /videos/clouds.mp4 /videos/clouds.webm /videos/clouds.ogv 1080px 608px preload:auto %}}}
+~~~
+
+Becomes
+
+~~~
+<video controls preload='metadata' onclick='(function(el){ if(el.paused) el.play(); else el.pause() })(this)'>
+  <source src='https://cdn.com/video/clouds.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+</video>
+
+<video class='featured wide' controls poster='/images/clouds.jpg' width='1080px' height='608px' preload='auto'
+  onclick='(function(el){ if(el.paused) el.play(); else el.pause() })(this)'>
+  <source src='/videos/clouds.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+  <source src='/videos/clouds.webm' type='video/webm; codecs="vp8, vorbis"'>
+  <source src='/videos/clouds.ogv' type='video/ogg; codecs="theora, vorbis"'>
+</video>
+~~~
+
+(Source: [octopress/video-tag](https://github.com/octopress/video-tag))
 
 
+# More Dynamic Examples
 
-# Dynamic Examples  - Comments, Comments, Comments
+**Comments, Comments, Comments**
 
-Add comments using JavaScript-only service
-(Disqus, Facebook, etc.)
+Add comments using JavaScript-only service (Disqus, Facebook, etc.)
 
+**Brute Force Hammer Method**
 
-# Dynamic Example   - Brute Force Hammer Method
+Re-generate and re-deploy your site every minute (or when pinged with web hook etc.)
 
-Re-generate and re-deploy your site
-every minute (or when pinged with web hook etc.)
 
 
 # Jekyll Goodies -  HTML Proofer
 
+What's HTML Proofer?
+
+HTML Proofer is gem (html-proofer) that  proofreads your HTML output 
+Tests include if your image references are legitimate, 
+if they have alt tags, if your internal links are working, and so on. 
+
+Usage:
+
+~~~
+require 'html/proofer'
+
+HTML::Proofer.new("./_site").run
+~~~
+
+Or configure your Travis build:
+
+~~~
+script: jekyll build && htmlproof ./_site
+~~~
+
+(Source: [jekyllrb.com/docs/continuous-integration](http://jekyllrb.com/docs/continuous-integration/))
 
 
-# Jekyll Goodies - GitHub.js, Prose.io
+
+
+# More Jekyll Goodies
+
+**Prose.io, GitHub.js**
 
 Write and save your posts in your browser with "distraction-free"
 simple online text editor like Prose.io - a content editor for GitHub, for example.
@@ -358,9 +491,7 @@ GitHub offers an HTTP JSON API; using the GitHub.js machinery lets you
 build your own single-page web app in JavaScript only - no server required
 other than GitHub itself ;-).
 
-
-
-# Jekyll Goodies - `jekyll-planet`
+**`jekyll-planet`**
 
 Subscribe to web feeds and (auto-)save the latest posts
 in your Jekyll `_posts` folder.
@@ -369,17 +500,20 @@ Why?! Lets others use whatever blog (or content managment system) they like - yo
 to pull in the posts and get the stories added to your site
 all you need is a ye good ol' web feed.
 
-
-
-# Jekyll Goodies - WordPress Export Plugin
-
-- WordPress Jekyll Export Plugin
+**WordPress Jekyll Export Plugin**
 
 One Click - gets you a zip w/ ready-to-use static Jekyll site
 
 Why?! Best of both worlds - use all the WordPress tools
 plus get a fast and simple static site for live production.
 
+
+Find out more:
+
+- [Prose.io](https://github.com/prose)
+- [GitHub.js](https://github.com/michael/github)
+- [jekyll-planet gem](https://github.com/feedreader/jekyll-planet)
+- [WordPress Jekyll Exporter](https://wordpress.org/plugins/jekyll-exporter)
 
 
 
@@ -389,12 +523,46 @@ What's GitHub Pages?
 
 - Free Hosting
 - Free Content Tracker
-- Free Jekyll Processing
+- Free Ruby Processing w/ Jekyll
 
-=> Where's the catch?
+=> Where's the catch? You have to use git.
 
-Milestones
+![](i/site-pages-github-com.png)
 
+
+# GitHub Pages Milestones / History
+
+2015:
+
+- Jan 2015 +++ [How GitHub uses GitHub to document GitHub](https://github.com/blog/1939-how-github-uses-github-to-document-github)
+
+2014:
+
+- Jul 2014 +++ [GitHub Pages now runs Jekyll 2.2.0](https://github.com/blog/1867-github-pages-now-runs-jekyll-2-2-0)
+- May 2014 +++ [GitHub Pages <3](https://github.com/blog/1833-github-pages-3)
+- Mar 2014 +++ [Repository metadata and plugin support for GitHub Pages](https://github.com/blog/1797-repository-metadata-and-plugin-support-for-github-pages)
+
+2013:
+
+- Sep 2013 +++ [Viewing YAML Metadata in your Documents](https://github.com/blog/1647-viewing-yaml-metadata-in-your-documents)
+- Aug 2013 +++ [Cutting the GitHub Pages Gem](https://github.com/blog/1581-cutting-the-github-pages-gem)
+- May 2013 +++ [Jekyll Turns 1.0](https://github.com/blog/1502-jekyll-turns-1-0)
+- Apr 2013 +++ [New GitHub Pages domain: github.io](https://github.com/blog/1452-new-github-pages-domain-github-io)
+- Jan 2013 +++ [GitHub Pages updated to Jekyll 0.12.0](https://github.com/blog/1366-github-pages-updated-to-jekyll-0-12-0)
+
+2012:
+
+- Jun 2012 +++ [GitHub Pages Update](https://github.com/blog/1173-github-pages-update)
+- Apr 2012 +++ [Instantly Beautiful Project Pages](https://github.com/blog/1081-instantly-beautiful-project-pages)
+
+2009:
+
+- Apr 2009 +++ [Pages 2.0](https://github.com/blog/410-pages-2-0)
+- Apr 2009 +++ [GitHub Pages Upgraded to Jekyll 0.5.0](https://github.com/blog/402-github-pages-upgraded-to-jekyll-0-5-0)
+
+2008:
+
+- Dec 2008 +++ [GitHub Pages](https://github.com/blog/272-github-pages)
 
 
 
@@ -573,3 +741,7 @@ Check the Planet Jekyll includes:
 - Jekyll Quick Reference (Cheat Sheet),
 - Jekyll Minimial Theme
 - and more.
+
+![](i/planet-jekyll.png)
+
+
