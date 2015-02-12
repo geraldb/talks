@@ -51,6 +51,44 @@ To recover
 
 
 
+# Static Site Generator - Folder Structure Example
+
+~~~
+├── _config.yml                               # site configuration
+├── _posts                                    # sample blog posts
+|   ├── 2014-05-05-sportdb-update-v192.md     #   filename format:
+|   ├── 2014-10-10-new-repo-baviria-bayern.md #    => YEAR-MONTH-DAY-TITLE.MARKUP
+|   ├── 2014-10-21-sql-views.md
+|   ├── 2014-11-11-new-reop-maps.md
+|   └── 2014-12-15-quick-starter-datafiles.md
+├── _layouts                           
+|   ├── default.html                   # master layout template
+|   └── post.html                      # single blog post template
+├── css                               
+|   ├── _settings.scss                 # style settings (e.g. variables)
+|   └── style.scss                     # master style page
+├── feed.xml                           # web feed template (e.g. in atom format)
+├── archive.html                       # archive template
+└── index.html                         # index template
+~~~
+
+will result in:
+
+~~~
+└── _site                                # output build folder; site gets generated here
+    ├── css
+    |   └── style.css                    # styles for pages (copied 1:1 as is)
+    ├── sportdb-update-v192.html         # blog post page
+    ├── new-repo-baviria-bayern.html     # another blog post page
+    ├── sql-views.html                   #  ""
+    ├── new-repo-maps.html               #  ""
+    ├── quick-starter-datafiles.html     #  ""
+    ├── feed.xml                         # web feed (e.g. in atom format)
+    ├── archive.html                     # archive page
+    └── index.html                       # index page
+~~~
+
+
 # Meet the Obama campaign's $250 million fundraising platform
 
 ![](i/obama-jekyll.png)
@@ -184,30 +222,28 @@ Many more ways. Example:
 
 # Static is the New Dynamic - Jekyll is the New Ruby Killer App
 
-Rails =>  24_900+ Stars/9_700+ Forks
+Rails =>  24 900+ Stars / 9 700+ Forks
 
-                     |                         |
+                     |                         |   
 -------------------- | ----------------------- |-------------
-Jekyll               | => 18_500+ Stars        | 3_800+ Forks
-Octopress (2.0+3.0)  | =>  8_700+ Stars (+400) | 3_100+ Forks
-Jekyll Bootstrap     | =>  2_400+ Stars        | 1_400+ Forks
-Jekyll Now           | =>    900+ Stars        | 3_000+ Forks
+Jekyll               | => 18 500+ Stars        | 3 800+ Forks
+Octopress (2.0+3.0)  | =>  8 700+ Stars (+400) | 3 100+ Forks
+Jekyll Bootstrap     | =>  2 400+ Stars        | 1 400+ Forks
+Jekyll Now           | =>    900+ Stars        | 3 000+ Forks
 
 Content is king. Growing faster. More Jekyll Themes
 
-                     |                         |
+                     |                         |   
 -------------------- | ----------------------- |-----------
-Jekyll Incorporated  | =>  800+ Stars          | 200+ Forks
-Poole                | => 1000+ Stars          | 300+ Forks
-Hyde                 | =>  800+ Stars          | 400+ Forks
-Lanyon               | =>  700+ Stars          | 400+ Forks
-Minimal Mistakes     | =>  400+ Stars          | 900+ Forks
+Jekyll Incorporated  | =>   800+ Stars         | 200+ Forks
+Poole                | => 1 000+ Stars         | 300+ Forks
+Hyde                 | =>   800+ Stars         | 400+ Forks
+Lanyon               | =>   700+ Stars         | 400+ Forks
+Minimal Mistakes     | =>   400+ Stars         | 900+ Forks
 
 
 
-# Jekyll Getting Started
-
-## Method 1 -  Fork GitHub Jekyll Theme Repo
+# Jekyll Getting Started - Method 1 -  Fork GitHub Jekyll Theme Repo
 
 - Step 1: Fork a GitHub Jekyll Theme Repo e.g. `jekyll-minimal-theme`
 - Step 2: Change the repo name to `<yourname>.github.io`
@@ -216,15 +252,26 @@ Minimal Mistakes     | =>  400+ Stars          | 900+ Forks
 That's it. Edit your first post in the `_posts` folder.
 
 
-## Method 2 -  "Hacker-Style" - Use the Command-Line
+
+# Jekyll Getting Started - Method 2 - "Hacker-Style" - Use the Command-Line
 
 ~~~
-$ jekyll new mysite
-$ cd mysite
-$ jekyll serve
-
-# => Now browse to http://localhost:400
+  $ jekyll new my-site
+     # => New jekyll site installed in ~/my-site
+  $ cd my-site
+  $ jekyll build
+     # => Configuration file: ~/_config.yml
+     #                Source: ~/my-site
+     #           Destination: ~/my-site/_site
+     #          Generating... done.
+  $ jekyll serve
+     # =>     Server address: http://127.0.0.1:4000/
+     #      Server running... press ctrl-c to stop.
 ~~~
+
+Browse your site e.g. open the page @ `http://127.0.0.1:4000`
+
+
 
 
 
