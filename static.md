@@ -57,7 +57,7 @@ To recover
 ├── _config.yml                               # site configuration
 ├── _posts                                    # sample blog posts
 |   ├── 2014-05-05-sportdb-update-v192.md     #   filename format:
-|   ├── 2014-10-10-new-repo-baviria-bayern.md #    => YEAR-MONTH-DAY-TITLE.MARKUP
+|   ├── 2014-10-10-new-repo-bavaria-bayern.md #    => YEAR-MONTH-DAY-TITLE.MARKUP
 |   ├── 2014-10-21-sql-views.md
 |   ├── 2014-11-11-new-reop-maps.md
 |   └── 2014-12-15-quick-starter-datafiles.md
@@ -79,13 +79,44 @@ will result in:
     ├── css
     |   └── style.css                    # styles for pages (copied 1:1 as is)
     ├── sportdb-update-v192.html         # blog post page
-    ├── new-repo-baviria-bayern.html     # another blog post page
+    ├── new-repo-bavaria-bayern.html     # another blog post page
     ├── sql-views.html                   #  ""
     ├── new-repo-maps.html               #  ""
     ├── quick-starter-datafiles.html     #  ""
     ├── feed.xml                         # web feed (e.g. in atom format)
     ├── archive.html                     # archive page
     └── index.html                       # index page
+~~~
+
+# Example Blog Post 
+
+~~~
+---
+layout: post
+title: "New Repo - Bayern (Bavaria) - incl. European Beer Stars 2011, 2012, 2013"
+---
+
+Hello, I'v moved all beer, brewpub n brewery data for Bayern
+(Baviria) to its own repo, that is, [`openbeer/by-bayern`](https://github.com/openbeer/by-bayern).
+
+Note, the repo also includes all European Beer Star winners from Bayern
+(Bavaria) for the years 2011, 2012 and 2013. Cheers. Prost.
+~~~
+
+or 
+
+~~~
+---
+layout: post
+title: "New Repo - Bayern (Bavaria) - incl. European Beer Stars 2011, 2012, 2013"
+---
+
+<p>Hello, I'v moved all beer, brewpub n brewery data for Bayern
+(Baviria) to its own repo, that is, <a href="https://github.com/openbeer/by-bayern"><code>openbeer/by-bayern</code></a>.
+</p>
+
+<p>Note, the repo also includes all European Beer Star winners from Bayern
+(Bavaria) for the years 2011, 2012 and 2013. Cheers. Prost.</p>
 ~~~
 
 
