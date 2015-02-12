@@ -224,7 +224,7 @@ Many more ways. Example:
 
 Rails =>  24 900+ Stars / 9 700+ Forks
 
-                     |                         |   
+                     | Stars                   | Forks
 -------------------- | ----------------------- |-------------
 Jekyll               | => 18 500+ Stars        | 3 800+ Forks
 Octopress (2.0+3.0)  | =>  8 700+ Stars (+400) | 3 100+ Forks
@@ -233,7 +233,7 @@ Jekyll Now           | =>    900+ Stars        | 3 000+ Forks
 
 Content is king. Growing faster. More Jekyll Themes
 
-                     |                         |   
+                     | Stars                   | Forks
 -------------------- | ----------------------- |-----------
 Jekyll Incorporated  | =>   800+ Stars         | 200+ Forks
 Poole                | => 1 000+ Stars         | 300+ Forks
@@ -311,8 +311,8 @@ every minute (or when pinged with web hook etc.)
 # Jekyll Goodies - GitHub.js, Prose.io
 
 Write and save your posts in your browser with "distraction-free"
-simple editor like Prose.io - a content editor for GitHub, for example.
- 
+simple online text editor like Prose.io - a content editor for GitHub, for example.
+
 How does it work?
 
 GitHub offers an HTTP JSON API; using the GitHub.js machinery lets you
@@ -348,6 +348,11 @@ plus get a fast and simple static site for live production.
 
 What's GitHub Pages?
 
+- Free Hosting
+- Free Content Tracker
+- Free Jekyll Processing
+
+=> Where's the catch?
 
 Milestones
 
@@ -356,8 +361,56 @@ Milestones
 
 # GitHub Pages Tip - Make Your `gh_pages` Branch the Default; Delete `master` Branch
 
+Step 1a) Already has `gh-pages` branch:
 
+~~~
+git checkout gh-pages   
+git merge master
+git push
+~~~
 
+Step 1b) Create `gh-pages` branch:
+
+~~~
+git checkout -b gh-pages
+git merge master
+git push origin gh-pages
+~~~
+
+Step 2) Make `gh-pages` branch default branch on GitHub via settings tab
+
+Step 3)  Delete `master` branch on GitHub
+
+~~~
+git push origin :master     # will delete master branch on remote (that is, github)
+    
+git branch -d master        # will delete master branch in local remote
+~~~
+
+Step 4) Delete local git repo and get a fresh clone from GitHub
+
+~~~
+rm -rf <repo>
+git clone <repo-remote-url>
+~~~
+
+That's it.
+
+**Bonus: Check if remote is setup with `git remote show <repo-remote-shorthand>`**
+
+~~~
+$ git remote show origin
+# => * remote origin
+       Fetch URL: https://github.com/openbeer/book.git
+       Push  URL: https://github.com/openbeer/book.git
+       HEAD branch: gh-pages
+       Remote branch:
+          gh-pages tracked
+       Local branch configured for 'git pull':
+          gh-pages merges with remote gh-pages
+       Local ref configured for 'git push':
+          gh-pages pushes to gh-pages (up to date)
+~~~
 
 
 
@@ -396,11 +449,88 @@ instead many small gems that work with "plain vanilla" jekyll).
 **There will no longer be a division between Octopress and Jekyll.**
 
 
+# Octopress 3.0 in Action
+
+~~~
+$ octopress --help
+
+octopress 3.0.0 -- Octopress is an obsessively designed toolkit for Jekyll blogging.
+
+Usage:
+
+  octopress <subcommand> [options]
+
+Options:
+  -h, --help         Show this message
+  -v, --version      Print the name and version
+  -t, --trace        Show the full backtrace when an error occurs
+
+Subcommands:
+  new         Creates a new site with Jekyll and Octopress scaffolding at the specified path.
+  docs        Launch local server with docs for Octopress v3.0.0.rc.31 and Octopress plugins.
+  init        Add Octopress's default scaffolding to your site.
+  publish     Convert a draft to a normal published post.
+  unpublish   Convert a post to a draft. Command accepts path to post or search string.
+  isolate     Move all posts not matching selected post to _posts/_exile. Command accepts path to post or search string.
+  integrate   Reintegrate posts from _posts/_exile.
+  deploy      Deploy your Octopress site.
+~~~
+
+## `new post` Command
+
+~~~
+$ octopress new post --help
+
+octopress new post -- Add a new post to your Jekyll site.
+
+Usage:
+
+  octopress new post <TITLE> [options]
+
+Options:
+  -d,  --date DATE    Use 'now' or a String that is parseable by Time#parse.
+  -tm, --template PATH  New post from a template.
+  -l,  --lang LANGUAGE  Set a post language (e.g. en, it) for multi-language sites.
+  -f,  --force        Overwrite file if it already exists
+  -s,  --slug SLUG    Use this slug in filename instead of sluggified post title.
+  -d,  --dir DIR      Create post at _posts/DIR/.
+  -c,  --config <CONFIG_FILE>[,CONFIG_FILE2,...]  Custom Jekyll configuration file
+  -h,  --help         Show this message
+~~~
+
+## `deploy` Command
+
+~~~
+$ octopress deploy --help
+
+octopress deploy 1.0.4 -- Deploy your Octopress site.
+
+Usage:
+
+  octopress deploy [options]
+
+Options:
+      --config FILE  The path to your config file (default: _deploy.yml)
+  -h, --help         Show this message
+
+Subcommands:
+  pull         Pull down the published copy of your site into DIR
+  init         Create a configuration file for a deployment method (git, rsync, s3).
+  add-bucket   Add a new S3 bucket and configure it for static websites. Name defaults to bucket_name in config file
+~~~
+
+and many more.
+
+
+
 
 #  Thank You - Questions? Comments? 
 
-Check the Planet Jekyll incl. Jekyll Theme of the Month Series,
-Jekyll Snippets (Tips 'n' Tricks), Jekyll Quick Reference (Cheat Sheet),
-Jekyll Minimial Theme and more.
+Check the Planet Jekyll includes:
 
-
+- Jekyll News Reader
+- Jekyll Theme of the Month Series
+- Jekyll Snippets (Tips 'n' Tricks)
+- Jekyll Quick Reference (Cheat Sheet),
+- Jekyll Minimial Theme
+- and more.
