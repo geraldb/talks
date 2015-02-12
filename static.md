@@ -293,31 +293,30 @@ Rails =>  24 900+ Stars / 9 700+ Forks
 
 ![](i/jekyll-trending.png)
 
-                     | Stars                   | Forks
--------------------- | ----------------------- |-------------
-Jekyll               | => 18 500+ Stars        | 3 800+ Forks
-Octopress (2.0+3.0)  | =>  8 700+ Stars (+400) | 3 100+ Forks
-Jekyll Bootstrap     | =>  2 400+ Stars        | 1 400+ Forks
-Jekyll Now           | =>    900+ Stars        | 3 000+ Forks
+~~~
+Jekyll                => 18 500+ Stars         3 800+ Forks
+Octopress (2.0+3.0)   =>  8 700+ Stars (+400)  3 100+ Forks
+Jekyll Bootstrap      =>  2 400+ Stars         1 400+ Forks
+Jekyll Now            =>    900+ Stars         3 000+ Forks
+~~~
 
 Content is king. Growing faster. More Jekyll Themes
 
-                     | Stars                   | Forks
--------------------- | ----------------------- |-----------
-Jekyll Incorporated  | =>   800+ Stars         | 200+ Forks
-Poole                | => 1 000+ Stars         | 300+ Forks
-Hyde                 | =>   800+ Stars         | 400+ Forks
-Lanyon               | =>   700+ Stars         | 400+ Forks
-Minimal Mistakes     | =>   400+ Stars         | 900+ Forks
+~~~
+Jekyll Incorporated   =>   800+ Stars          200+ Forks
+Poole                 => 1 000+ Stars          300+ Forks
+Hyde                  =>   800+ Stars          400+ Forks
+Lanyon                =>   700+ Stars          400+ Forks
+Minimal Mistakes      =>   400+ Stars          900+ Forks
+~~~
 
 
 Now - let's add Bootstrap (or HTML5 Boilerplate) - Just kidding ;-)
 
-                     | Stars                   | Forks
--------------------- | ----------------------- |--------------
-Bootstrap            | =>  77 600+ Stars       | 29 800+ Forks
-HTML5 Boilerplate    | =>  28 600+ Stars       |  7 400+ Forks
-
+~~~
+Bootstrap             =>  77 600+ Stars        29 800+ Forks
+HTML5 Boilerplate     =>  28 600+ Stars         7 400+ Forks
+~~~
 
 
 # Jekyll Getting Started - Method 1 -  Fork GitHub Jekyll Theme Repo
@@ -369,19 +368,19 @@ _apps/
 In your templates use `site.apps`. Example:
 
 ~~~
-{{{% for app in site.apps %}}}
+{%% for app in site.apps %}
 
   <div class='app'>
-      <a href="{{{{ site.url }}}}{{{{ app.url }}}}">
-        {{{{ app.title }}}}
+      <a href="{{{ site.url }}{{{ app.url }}">
+        {{{ app.title }}
       </a>
       <br>
-      <a href="{{{{ site.url }}}}{{{{ app.url }}}}">
-        <img src="{{{{site.url}}}}/i/{{{{app.screenshot}}}}">
+      <a href="{{{ site.url }}{{{ app.url }}">
+        <img src="{{{site.url}}/i/{{{app.screenshot}}">
       </a>
   </div>
 
-{{{% endfor %}}}
+{%% endfor %}
 ~~~
 
 For collection such as `_books`, `_albums` or `_links` use
@@ -419,19 +418,19 @@ _data/
 In your templates use `site.data.books`. Example:
 
 ~~~
-{{{% for book in site.data.books %}}}
+{%% for book in site.data.books %}
 
   <div class='book'>
-    <img src="{{{{site.url}}}}/i/{{{{book.cover}}}}">
+    <img src="{{{site.url}}/i/{{{book.cover}}">
     <br>
-    {{{{ book.title }}}}
-    {{{% if book.edition %}}}
-       {{{{ book.edition}}}}
-    {{{% endif %}}}
-    by {{{{ book.author }}}}; {{{{ book.publisher }}}}
+    {{{ book.title }}
+    {%% if book.edition %}
+       {{{ book.edition}}
+    {%% endif %}
+    by {{{ book.author }}; {{{ book.publisher }}
   </div>
 
-{{{% endfor %}}}
+{%% endfor %}
 ~~~
 
 
@@ -441,14 +440,14 @@ In your templates use `site.data.books`. Example:
 **Syntax**
 
 ~~~
-{{{% video urls [class names] [width height] [preload:auto|metadata|none] %}}}
+{%% video urls [class names] [width height] [preload:auto|metadata|none] %}
 ~~~
 
 **Examples**
 
 ~~~
-{{{% video {{{{ site.cdn }}/videos/clouds.mp4 %}}}
-{{{% video featured wide /images/clouds.jpg /videos/clouds.mp4 /videos/clouds.webm /videos/clouds.ogv 1080px 608px preload:auto %}}}
+{%% video {{{ site.cdn }}/videos/clouds.mp4 %}
+{%% video featured wide /images/clouds.jpg /videos/clouds.mp4 /videos/clouds.webm /videos/clouds.ogv 1080px 608px preload:auto %}
 ~~~
 
 Becomes
