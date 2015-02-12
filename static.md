@@ -242,6 +242,14 @@ Lanyon               | =>   700+ Stars         | 400+ Forks
 Minimal Mistakes     | =>   400+ Stars         | 900+ Forks
 
 
+Now - let's add Bootstrap (or HTML5 Boilerplate) - Just kidding ;-)
+
+                     | Stars                   | Forks
+-------------------- | ----------------------- |--------------
+Bootstrap            | =>  77 600+ Stars       | 29 800+ Forks
+HTML5 Boilerplate    | =>  28 600+ Stars       |  7 400+ Forks
+
+
 
 # Jekyll Getting Started - Method 1 -  Fork GitHub Jekyll Theme Repo
 
