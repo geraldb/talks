@@ -8,18 +8,18 @@ Almost Sinatra in Six Lines of Ruby - A Breakdown
 - What's Sinatra?
 - What's Almost Sinatra?
 - Why? Why? Why?
-- Almost Sinatra - A Breakdown - Line 1/6
+- Almost Sinatra - A Breakdown - Line 1
 - What's Rack?
 - What's Tilt?
-- Almost Sinatra - A Breakdown - Line 2/6
-- Almost Sinatra - A Breakdown - Line 3/6
-- Almost Sinatra - A Breakdown - Line 4/6
-- Almost Sinatra - A Breakdown - Line 5/6
-- Almost Sinatra - A Breakdown - Line 6/6
+- Almost Sinatra - A Breakdown - Line 2
+- Almost Sinatra - A Breakdown - Line 3
+- Almost Sinatra - A Breakdown - Line 4
+- Almost Sinatra - A Breakdown - Line 5
+- Almost Sinatra - A Breakdown - Line 6
 - The Proof of the Pudding  - example.rb
 - Got Inspired? Build Your Own Microframework
-- Thanks - Links, Links, Links
 - Real World Case Study - webservice gem - (Yet Another) HTTP JSON API (Web Service) Builder 
+- Thanks - Links, Links, Links
 - Bonus: Fun Almost Sinatra Obfuscation Hacks
  
 
@@ -28,7 +28,7 @@ Almost Sinatra in Six Lines of Ruby - A Breakdown
 > aweseome /ˈɔːsəm/ - adjective  -
 >   inspiring, excellent, outstanding, wonderful, cool, terrific, extraordinary
 
-### What's Awesome <X>? 
+### What's Awesome [Your-Topic-Here]? 
 
 A collection of awesome links. A single README page on GitHub.
 Contributions welcome. Send in a pull request etc.
@@ -382,7 +382,7 @@ end
 
 # Thanks - Links, Links, Links
 
-- Article :: [Decoding “Almost Sinatra](https://robm.me.uk/2013/12/13/decoding-almost-sinatra.html), by Rob Miller
+- Article :: [Decoding Almost Sinatra](https://robm.me.uk/2013/12/13/decoding-almost-sinatra.html), by Rob Miller
 - Article :: [Code Safari: Almost Sinatra, Almost Readable](http://www.sitepoint.com/code-safari-almost-sinatra-almost-readable/), by Xavier Shay
 - Article :: [tilt gem - let's build (yet another) micro web framework in less than 33 lines of code](http://planetruby.github.io/gems/tilt.html), by Gerald Bauer
 
@@ -392,7 +392,7 @@ end
 "Calculate" the Sinatra Port 4567:
 
 ~~~
-Date.new.year + 145).abs     # Date.new.year always returns -4712, the default value for years
+(Date.new.year + 145).abs     # Date.new.year always returns -4712, the default value for years
 # => 4567
 ~~~
 
