@@ -1,19 +1,6 @@
 title: Dr Jekyll and Mr Hyde - Build Static Sites in Ruby
 
 
-%css
-
-pre {
-  padding: 4px 4px 4px 4px;
-  border-top: #bbb 1px solid;
-  border-bottom: #bbb 1px solid;
-  background: #f3f3f3;
-}
-
-%end
-
-
-
 # Agenda
 
 - What is HTML? - The Ten Most Important Tags
