@@ -25,12 +25,12 @@ and millions of (web) sites.
 
 HTML                                 | Notes
 ------------------------------------ | -------------------
-**Basic Block Tags**                 | -
+**Basic Block Tags**                 |
 `<p>..</p>`                          | Paragraph
 `<h1>..</h1>` - `<h6>..</h6>`        | Heading 1-6
 `<ul>(<li>...</li>)+</ul>`           | Bullet (Unordered) List
 `<ol>(<li>...</li>)+</ol>`           | Numbered (Ordered) List
-**Basic Inline Tags**                | -
+**Basic Inline Tags**                |
 `<i>...</i> or <em>...</em>`         | Italic Text (Emphasis)
 `<b>...</b> or <strong>...</strong>` | Bold Text (Strong Emphasis)
 `<br>`                               | (Hard) Line Break
@@ -157,7 +157,7 @@ Tom Preston-Werner - Blogging Like a Hacker
 
 Not just about blogs e.g.
 
-Jekyll - Simple, blog-aweere, static sites
+Jekyll - Simple, blog-aware, static sites
 
 ![](i/showcase-jekyllrb.png)
 
