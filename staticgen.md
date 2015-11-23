@@ -147,3 +147,37 @@ excerpt_separator: "<!--more-->"
 
 (Source: [`_config.yml`](https://github.com/remotesynth/Static-Site-Samples/blob/master/jekyllsite/_config.yml))
 
+
+
+# Middleman or Jekyll? -  Summary
+
+                         | Middleman  | Jekyll
+-------------------------| ---------- | ---------
+GitHub Stars (+1s)       | ★4 756    | ★22 380
+Gem Downloads            | 870 043    | 1 756 295
+                         |
+Settings / Configuration | Ruby       | YAML
+HTML Templates           | Ruby (ERB) | Liquid
+. Layouts                | Yes        | Yes
+. Includes               | Yes        | Yes
+Front Matter / Meta Data | YAML       | YAML
+CSS Preprocessing        | Sass       | Sass
+HTML "Shortcodes"        | Markdown   | Markdown
+
+
+
+# Middleman or Jekyll? - More Static Site Builders in Ruby
+
+Sorted by GitHub Stars (+1s):
+
+<!-- todo: use/add stars char -->
+
+- [Nanoc](https://github.com/nanoc/nanoc) by Denis Defreyne et al (★1 225)
+- [Ruhoh](https://github.com/ruhoh/ruhoh.rb) by Jade Dominguez et al (★611)
+- [Bonsai](https://github.com/benschwarz/bonsai) by Ben Schwarz et al (★269)
+- [Awestruct](https://github.com/awestruct/awestruct) by Bob McWhirter et al (★208) 
+- [WebGen](https://github.com/gettalong/webgen) by Thomas Leitner et al (★77)
+- [ZenWeb](https://github.com/seattlerb/zenweb) by Ryan Davis et al (★50)
+- and many more
+
+
