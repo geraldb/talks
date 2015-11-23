@@ -1,4 +1,7 @@
 
+
+# Ruby, Ruby, Ruby
+
 # Middleman or Jekyll?  - HTML Templates
 
 **Middleman**
@@ -179,5 +182,85 @@ Sorted by GitHub Stars (+1s):
 - [WebGen](https://github.com/gettalong/webgen) by Thomas Leitner et al (★77)
 - [ZenWeb](https://github.com/seattlerb/zenweb) by Ryan Davis et al (★50)
 - and many more
+
+
+# Python, Python, Python
+
+
+
+# Pelican or Nicola? 
+
+
+<!-- todo: -->
+
+
+# JavaScript, JavaScript, JavaScript
+
+# Wintersmith or Metalsmith? - HTML Templates
+
+**Wintersmith** - [Jade Template Language](http://jade-lang.com)
+
+~~~
+doctype html
+html(lang="en")
+    include ./partials/head
+  body
+    include ./partials/header
+
+    div(id="main-wrapper")
+        div(class="container")
+            include ./partials/homepagemiddle
+
+    include ./partials/footer
+~~~
+
+(Source: [templates/index.jade](https://github.com/remotesynth/Static-Site-Samples/blob/master/wintersmithsite/templates/index.jade))
+
+
+
+# Go, Clojure, Haskell, [Your Language Here], etc.
+
+# Hugo or [Your Static Site Builder Here]? - HTML Templates
+
+**Hugo** - [Go Temmplate Language](https://golang.org/pkg/html/template)
+
+~~~
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "header.html" . }}
+    <div id="main-wrapper">
+        <div class="container">
+            <article class="box post">
+                <div class="image featured" style="background-image: url('{{ .Site.BaseUrl }}{{ .Params.banner }}');"></div>
+                <header>
+                  <h2>{{ .Title }}</h2>
+                  <p>{{ .Params.shortdesc }}</p>
+                </header>
+                {{ .Content }}
+            </article>
+        </div>
+    </div>
+    {{ partial "footer.html" . }}
+  </body>
+</html>
+~~~
+
+(Source: [layouts/_default/single.html](https://github.com/remotesynth/Static-Site-Samples/blob/master/hugosite/layouts/_default/single.html))
+
+
+
+# HTML Templates - Summary
+
+Site Builder  | Language   | HTML Templates
+------------- | ---------- | ----------------------------------------
+Middleman     | Ruby       | Embedded Ruby (ERB) Template Language
+Jekyll        | Ruby       | Liquid Template Language 
+Pelican       | Python     | Jinja2 Template Language
+Nicola        | Python     | Jinja2 Template Language
+Wintersmith   | JavaScript | Jade Template Language
+Metallsmith   | JavaScript | Handlebars (HBS) Template Language
+Hugo          | Go         | Go Template Language
 
 
