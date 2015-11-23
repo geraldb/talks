@@ -19,7 +19,7 @@
 </html>
 ~~~
 
-(Source: [layouts/layout.erb](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/source/layouts/layout.erb))
+(Source: [`layouts/layout.erb`](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/source/layouts/layout.erb))
 
 
 **Jekyll**
@@ -40,11 +40,11 @@
 </html>
 ~~~
 
-(Source: [_layouts/default.html](https://github.com/remotesynth/Static-Site-Samples/blob/master/jekyllsite/_layouts/default.html))
+(Source: [`_layouts/default.html`](https://github.com/remotesynth/Static-Site-Samples/blob/master/jekyllsite/_layouts/default.html))
 
 
 
-# Middleman or Jekyll? -- Post with Front Matter (Categories, etc.)
+# Middleman or Jekyll? - Post with Front Matter (Categories, etc.)
 
 
 **Middleman**
@@ -70,7 +70,7 @@ After watching Princess Bubblegum teach the children about the Food Chain
 ...
 ~~~
 
-(Source: [posts/2014-06-12-season-6-food-chain.md](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/source/posts/2014-06-12-season-6-food-chain.markdown))
+(Source: [`posts/2014-06-12-season-6-food-chain.md`](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/source/posts/2014-06-12-season-6-food-chain.markdown))
 
 
 
@@ -97,11 +97,11 @@ After watching Princess Bubblegum teach the children about the Food Chain
 ...
 ~~~
 
-(Source: [_posts/2014-06-12-season-6-food-chain.md](https://github.com/remotesynth/Static-Site-Samples/blob/master/jekyllsite/_posts/2014-06-12-season-6-food-chain.markdown))
+(Source: [`_posts/2014-06-12-season-6-food-chain.md`](https://github.com/remotesynth/Static-Site-Samples/blob/master/jekyllsite/_posts/2014-06-12-season-6-food-chain.markdown))
 
 
 
-# Middleman or Jekyll?   Configuration / Settings
+# Middleman or Jekyll? - Configuration / Settings
 
 **Middleman**
 
@@ -126,7 +126,7 @@ end
 page "/feed.xml", layout: false
 ~~~
 
-(Source: [config.rb](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/config.rb))
+(Source: [`config.rb`](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/config.rb))
 
 
 **Jekyll**
@@ -145,5 +145,5 @@ url:     "http://yourdomain.com"
 excerpt_separator: "<!--more-->"
 ~~~
 
-(Source: [_config.yml](https://github.com/remotesynth/Static-Site-Samples/blob/master/jekyllsite/_config.yml))
+(Source: [`_config.yml`](https://github.com/remotesynth/Static-Site-Samples/blob/master/jekyllsite/_config.yml))
 
