@@ -3,8 +3,6 @@
 
 **Middleman**
 
-[layouts/layout.erb](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/source/layouts/layout.erb):
-
 ~~~
 <!DOCTYPE html>
 <html>
@@ -21,9 +19,10 @@
 </html>
 ~~~
 
-**Jekyll**
+(Source: [layouts/layout.erb](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/source/layouts/layout.erb))
 
-[_layouts/default.html](https://github.com/remotesynth/Static-Site-Samples/blob/master/jekyllsite/_layouts/default.html):
+
+**Jekyll**
 
 ~~~
 <!DOCTYPE html>
@@ -41,14 +40,15 @@
 </html>
 ~~~
 
+(Source: [_layouts/default.html](https://github.com/remotesynth/Static-Site-Samples/blob/master/jekyllsite/_layouts/default.html))
+
+
 
 # Middleman or Jekyll? -- Post with Front Matter (Categories, etc.)
 
 
 **Middleman**
 
-[posts/2014-06-12-season-6-food-chain.md](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/source/posts/2014-06-12-season-6-food-chain.markdown)
-
 ~~~
 ---
 layout: post
@@ -69,12 +69,13 @@ Finn and Jake are examining the 'Catapilla Family'.
 After watching Princess Bubblegum teach the children about the Food Chain
 ...
 ~~~
+
+(Source: [posts/2014-06-12-season-6-food-chain.md](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/source/posts/2014-06-12-season-6-food-chain.markdown))
+
 
 
 **Jekyll**
 
-[_posts/2014-06-12-season-6-food-chain.md](https://github.com/remotesynth/Static-Site-Samples/blob/master/jekyllsite/_posts/2014-06-12-season-6-food-chain.markdown)
-
 ~~~
 ---
 layout: post
@@ -95,13 +96,14 @@ Finn and Jake are examining the 'Catapilla Family'.
 After watching Princess Bubblegum teach the children about the Food Chain
 ...
 ~~~
+
+(Source: [_posts/2014-06-12-season-6-food-chain.md](https://github.com/remotesynth/Static-Site-Samples/blob/master/jekyllsite/_posts/2014-06-12-season-6-food-chain.markdown))
+
 
 
 # Middleman or Jekyll?   Configuration / Settings
 
 **Middleman**
-
-[config.rb](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/config.rb):
 
 ~~~
 set :css_dir, 'stylesheets'
@@ -124,9 +126,10 @@ end
 page "/feed.xml", layout: false
 ~~~
 
-**Jekyll**
+(Source: [config.rb](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/config.rb))
 
-[_config.yml]():
+
+**Jekyll**
 
 ~~~
 title: Adventure Time!
@@ -142,4 +145,5 @@ url:     "http://yourdomain.com"
 excerpt_separator: "<!--more-->"
 ~~~
 
+(Source: [_config.yml](https://github.com/remotesynth/Static-Site-Samples/blob/master/jekyllsite/_config.yml))
 
