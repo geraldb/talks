@@ -20,7 +20,7 @@ And the Winner is...
 
 # Hello, Middleman
 
-[add site pic here]
+![](i/staticgen-middleman.png)
 
 by Thomas Reynolds et al -
 [★4 756 GitHub Stars](https://github.com/middleman/middleman),
@@ -38,7 +38,7 @@ Static Site Spotlight:
 
 # Hello, Jekyll
 
-[add site pic here]
+![](i/staticgen-jekyll.png)
 
 by Tom Preston-Werner, Nick Quaranto,
 Parker Moore, Jordon Bedwell, Matt Rogers et al -
@@ -179,7 +179,7 @@ set :images_dir, 'images'
 
 set :site_title, 'Adventure Time!'
 set :banner, '/images/about.jpg'
-set :description, 'Adventure Time is an American animated television series created by Pendleton Ward for Cartoon Network...'
+set :description, 'Adventure Time is an American animated television series...'
 
 activate :blog do |blog|
   blog.sources           = "posts/{year}-{month}-{day}-{title}.html"
@@ -202,8 +202,8 @@ page "/feed.xml", layout: false
 title: Adventure Time!
 email: brian.rinaldi@example.com
 banner: "/images/about.jpg"
-description: > Adventure Time is an American animated television series created by Pendleton Ward for Cartoon Network.
-  The series follows the adventures of Finn, a human boy, and his best friend and adoptive brother Jake,
+description: > Adventure Time is an American animated television series...
+  The series follows the adventures of Finn, a human boy, and his best friend...
   a dog with magical powers to change shape and grow and shrink at will...
 
 baseurl: "" 
@@ -243,16 +243,16 @@ HTML "Shortcodes"        | Markdown   | Markdown
 - [**ZenWeb**](https://github.com/seattlerb/zenweb) by Ryan Davis et al (★50)
 - and many more
 
-Sorted by GitHub Stars (+1s)
+Note: Sorted by GitHub Stars (+1s)
 
 
 
 
 # Part II. - Python, Python, Python
 
-# Hello, Pelican 
+# Hello, Pelican
 
-[add site pic here]
+![](i/staticgen-pelican.png)
 
 by Alexis Metaireau et al -
 [★5 231 GitHub Stars](https://github.com/getpelican/pelican),
@@ -260,16 +260,16 @@ by Alexis Metaireau et al -
 
 Static Site Spotlight: 
 
-[Pelican Blog](https://github.com/getpelican/pelican-blog) • 
-[Linux Kernel Archives](https://www.kernel.org/pelican.html)
-
+[Pelican Blog](https://github.com/getpelican/pelican-blog) •
+[Linux Kernel Archives](https://www.kernel.org/pelican.html) •
+[Many More](https://github.com/getpelican/pelican/wiki/Powered-by-Pelican)
 
 
 # Hello, Nikola
 
-[add site pic here]
+![](i/staticgen-nikola.png)
 
-by Roberto Alsina et al - 
+by Roberto Alsina et al -
 [★874 GitHub Stars](https://github.com/getnikola/nikola),
 [6 038 Downloads Last Month](https://pypi.python.org/pypi/Nikola)
 
@@ -295,7 +295,7 @@ HTML "Shortcodes"        | reStructuredText   | reStructuredText
 
 Notes:
 
-- CSS Preprocessing - LESS or Sass supported with plugins
+CSS Preprocessing - LESS or Sass supported with plugins
 
 
 # Pelican or Nikola? - More Static Site Builders (in Python)
@@ -305,7 +305,7 @@ Notes:
 - [**Letterpress**](https://github.com/an0/Letterpress) by Ling Wang et al (★513)
 - and many more
 
-Sorted by GitHub Stars (+1s)
+Note: Sorted by GitHub Stars (+1s)
 
 
 
@@ -313,9 +313,9 @@ Sorted by GitHub Stars (+1s)
 
 # Hello, Wintersmith
 
-[add site pic here]
+![](i/staticgen-wintersmith.png)
 
-by Johan Nordberg et al - 
+by Johan Nordberg et al -
 [★2 578 GitHub Stars](https://github.com/jnordberg/wintersmith),
 [3 113 Downloads Last Month](https://www.npmjs.com/package/wintersmith)
 
@@ -328,9 +328,9 @@ Static Site Spotlight:
 
 # Hello, Metalsmith
 
-[add site pic here]
+![](i/staticgen-metalsmith.png)
 
-by Ian Storm Taylor et al - 
+by Ian Storm Taylor et al -
 [★4 070 GitHub Stars](https://github.com/segmentio/metalsmith),
 [40 213 Downloads Last Month](https://www.npmjs.com/package/metalsmith)
 
@@ -366,26 +366,26 @@ html(lang="en")
 
                          | Wintersmith | Metalsmith
 -------------------------| ---------- | ---------
-GitHub Stars (+1s)       | ★2 578    | ★4 070 
+GitHub Stars (+1s)       | ★2 578    | ★4 070
 Downloads Last Month     | 3 113    | 40 213
                          |
 Settings / Configuration | JSON       | JavaScript
-HTML Templates           | Jade       | ?
+HTML Templates           | Jade       | Handlebars (HBS)
 . Layouts                | Yes        | Yes
 . Includes               | Yes        | Yes
-Front Matter / Meta Data | ?          | ?
-CSS Preprocessing        | ?          | ?
-HTML "Shortcodes"        | ?          | Markdown 
+Front Matter / Meta Data | YAML       | YAML
+CSS Preprocessing        | -          | Plugins
+HTML "Shortcodes"        | Markdown   | Markdown
 
 
 # Wintersmith or Metalsmith? - More Static Site Builders (in JavaScript)
 
-- [**Hexo**]() by ?? et al (★??)
-- [**Harp**]() by ?? et al (★??)
-- [**Blacksmith**]() by ?? et al (★??)
+- [**Hexo**](https://github.com/hexojs/hexo) by Tommy Chen et al (★7 346)
+- [**Harp**](https://github.com/sintaxi/harp) by Brock Whitten et al (★3 417)
+- [**Blacksmith**](https://github.com/flatiron/blacksmith) by  et al (★571)
 - and many more
 
-Sorted by GitHub Stars (+1s)
+Note: Sorted by GitHub Stars (+1s)
 
 
 
@@ -393,15 +393,14 @@ Sorted by GitHub Stars (+1s)
 
 # Part IV. - Go, Go, Go
 
-[add site pic here]
+![](i/staticgen-hugo.png)
 
 by Steve Francia et al - 
-[★6 701 GitHub Stars](https://github.com/spf13/hugo),
-[? Downloads Last Month]()
+[★6 701 GitHub Stars](https://github.com/spf13/hugo)
 
 Static Site Spotlight: 
 
-[Balsamiq Documentation]() • 
+[Balsamiq Documentation](http://blogs.balsamiq.com/ux/2015/11/19/new-documentation-site) •
 [Adventure Time! Hugo Sample](https://github.com/remotesynth/Static-Site-Samples/tree/master/hugosite) •
 [Many More](https://gohugo.io/showcase)
 
@@ -438,17 +437,16 @@ Static Site Spotlight:
 
 # Hugo - Summary
 
-                         | Hugo      
+                         | Hugo
 -------------------------| ---------- 
-GitHub Stars (+1s)       | ★6 701   
-Downloads Last Month     | ?    
+GitHub Stars (+1s)       | ★6 701 
                          |
 Settings / Configuration | TOML
 HTML Templates           | Go Templates
 . Layouts                | Yes
 . Includes               | Yes
-Front Matter / Meta Data | Custom
-CSS Preprocessing        | ?
+Front Matter / Meta Data | TOML
+CSS Preprocessing        | -
 HTML "Shortcodes"        | Markdown
 
 
@@ -461,7 +459,7 @@ HTML "Shortcodes"        | Markdown
 # GitHub Stars
 
 Site Builder  | GitHub Stars
-------------- | ------------- 
+------------- | -------------
 Jekyll        | ★22 380 
 Hugo          | ★6 701
 Pelican       | ★5 231
@@ -476,34 +474,38 @@ Nicola        | ★874
 
 **Configuration / Settings**
 
-1) Use a data format: YAML • TOML • JSON
-2) Use a (scripting) language: Ruby • Python • JavaScript 
+- 1) Use a data format: YAML • TOML • JSON
+- 2) Use a (scripting) language: Ruby • Python • JavaScript 
 
 **HTML Templates**
 
-1) Use a "classic" template language: Liquid • Jinja • Handlebars (HBS) • Go Templates
-2) Use a (scripting) language: Embedded Ruby (ERB) • Embedded JavaScript (EJS) 
-3) Use a "compact" template language: Jade • Haml
+- 1) Use a "classic" template language: Liquid • Jinja • Handlebars (HBS) • Go Templates
+- 2) Use a (scripting) language: Embedded Ruby (ERB) • Embedded JavaScript (EJS) 
+- 3) Use a "compact" template language: Jade • Haml
 
 **CSS Preprocessing**
 
-1) No, thanks
-2) Sass • LESS • Stylus
+- 1) No, thanks
+- 2) Sass • LESS • Stylus
 
 **HTML "Shortcodes"**
 
-1) No, thanks
-2) Markdown • ReStructuredText (ReST)  
+- 1) No, thanks
+- 2) Markdown • ReStructuredText (ReST)  
 
 
 
 
 # And the Winner is...
 
-WordPress (Static Site) Export Plugin
+WordPress (Static Site) Exporter Plugin
 
-[add pic here]
+![](i/staticgen-wp-jekyll-exporter.png)
 
+by Ben Balter et al (★561)
+
+WordPress: [`plugins/jekyll-exporter`](https://wordpress.org/plugins/jekyll-exporter),
+GitHub: [`benbalter/wordpress-to-jekyll-exporter`](https://github.com/benbalter/wordpress-to-jekyll-exporter)
 
 
 
