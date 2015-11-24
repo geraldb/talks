@@ -110,7 +110,7 @@ Static Site Spotlight:
 # Middleman or Jekyll? - Post with Front Matter (Categories, etc.)
 
 
-**Middleman**
+**Middleman** - YAML + Markdown
 
 ~~~
 ---
@@ -139,7 +139,7 @@ After watching Princess Bubblegum teach the children about the Food Chain
 
 # Middleman or Jekyll? - Post with Front Matter (Categories, etc.)
 
-**Jekyll**
+**Jekyll** - YAML + Markdown
 
 ~~~
 ---
@@ -168,7 +168,7 @@ After watching Princess Bubblegum teach the children about the Food Chain
 
 # Middleman or Jekyll? - Configuration / Settings
 
-**Middleman**
+**Middleman** - Ruby
 
 ~~~
 set :css_dir, 'stylesheets'
@@ -196,7 +196,7 @@ page "/feed.xml", layout: false
 
 # Middleman or Jekyll? - Configuration / Settings (Cont.)
 
-**Jekyll**
+**Jekyll** - YAML
 
 ~~~
 title: Adventure Time!
