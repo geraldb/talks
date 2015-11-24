@@ -12,7 +12,6 @@ The World's Greatest (Free) Static Site Builders / Generators
 -   V. PHP, Haskell, Lisp, Rust, C, etc.
 
 And the Winner is...
-    
 
 
 
@@ -20,12 +19,11 @@ And the Winner is...
 
 # Hello, Middleman
 
-![](i/staticgen-middleman.png)
-
 by Thomas Reynolds et al -
 [★4 756 GitHub Stars](https://github.com/middleman/middleman),
 [870 043 Gem Downloads](https://rubygems.org/gems/middleman)
 
+![](i/staticgen-middleman.png)
 
 Static Site Spotlight: 
 
@@ -38,12 +36,12 @@ Static Site Spotlight:
 
 # Hello, Jekyll
 
-![](i/staticgen-jekyll.png)
-
 by Tom Preston-Werner, Nick Quaranto,
 Parker Moore, Jordon Bedwell, Matt Rogers et al -
 [★22 380 GitHub Stars](https://github.com/jekyll/jekyll),
 [1 756 295 Gem Downloads](https://rubygems.org/gems/jekyll)
+
+![](i/staticgen-jekyll.png)
 
 Static Site Spotlight:
 
@@ -252,11 +250,11 @@ Note: Sorted by GitHub Stars (+1s)
 
 # Hello, Pelican
 
-![](i/staticgen-pelican.png)
-
 by Alexis Metaireau et al -
 [★5 231 GitHub Stars](https://github.com/getpelican/pelican),
 [14 749 Downloads Last Month](https://pypi.python.org/pypi/pelican)
+
+![](i/staticgen-pelican.png)
 
 Static Site Spotlight: 
 
@@ -267,11 +265,11 @@ Static Site Spotlight:
 
 # Hello, Nikola
 
-![](i/staticgen-nikola.png)
-
 by Roberto Alsina et al -
 [★874 GitHub Stars](https://github.com/getnikola/nikola),
 [6 038 Downloads Last Month](https://pypi.python.org/pypi/Nikola)
+
+![](i/staticgen-nikola.png)
 
 Static Site Spotlight: 
 
@@ -291,11 +289,9 @@ HTML Templates           | Jinja2     | Jinja2
 . Includes               | Yes        | Yes
 Front Matter / Meta Data | reStructuredText   | reStructuredText
 CSS Preprocessing        | -          | -
-HTML "Shortcodes"        | reStructuredText   | reStructuredText 
+HTML "Shortcodes"        | reStructuredText   | reStructuredText
 
-Notes:
-
-CSS Preprocessing - LESS or Sass supported with plugins
+Note: CSS Preprocessing - LESS or Sass supported with plugins
 
 
 # Pelican or Nikola? - More Static Site Builders (in Python)
@@ -313,11 +309,11 @@ Note: Sorted by GitHub Stars (+1s)
 
 # Hello, Wintersmith
 
-![](i/staticgen-wintersmith.png)
-
 by Johan Nordberg et al -
 [★2 578 GitHub Stars](https://github.com/jnordberg/wintersmith),
 [3 113 Downloads Last Month](https://www.npmjs.com/package/wintersmith)
+
+![](i/staticgen-wintersmith.png)
 
 Static Site Spotlight: 
 
@@ -328,11 +324,11 @@ Static Site Spotlight:
 
 # Hello, Metalsmith
 
-![](i/staticgen-metalsmith.png)
-
 by Ian Storm Taylor et al -
 [★4 070 GitHub Stars](https://github.com/segmentio/metalsmith),
 [40 213 Downloads Last Month](https://www.npmjs.com/package/metalsmith)
+
+![](i/staticgen-metalsmith.png)
 
 Static Site Spotlight: 
 
@@ -393,10 +389,10 @@ Note: Sorted by GitHub Stars (+1s)
 
 # Part IV. - Go, Go, Go
 
-![](i/staticgen-hugo.png)
-
 by Steve Francia et al - 
 [★6 701 GitHub Stars](https://github.com/spf13/hugo)
+
+![](i/staticgen-hugo.png)
 
 Static Site Spotlight: 
 
@@ -502,8 +498,7 @@ WordPress (Static Site) Exporter Plugin
 
 ![](i/staticgen-wp-jekyll-exporter.png)
 
-by Ben Balter et al (★561)
-
+by Ben Balter et al (★561),
 WordPress: [`plugins/jekyll-exporter`](https://wordpress.org/plugins/jekyll-exporter),
 GitHub: [`benbalter/wordpress-to-jekyll-exporter`](https://github.com/benbalter/wordpress-to-jekyll-exporter)
 
