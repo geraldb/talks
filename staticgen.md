@@ -1,5 +1,16 @@
 title: The World's Greatest (Free) Static Site Builders / Generators 
 
+%css
+
+pre {
+  padding: 4px 4px 4px 4px;
+  border-top: #bbb 1px solid;
+  border-bottom: #bbb 1px solid;
+  background: #f3f3f3;
+}
+
+%end
+
 
 # Agenda
 
@@ -19,9 +30,10 @@ And the Winner is...
 
 # Hello, Middleman
 
-by Thomas Reynolds et al -
-[★4 756 GitHub Stars](https://github.com/middleman/middleman),
-[870 043 Gem Downloads](https://rubygems.org/gems/middleman)
+by Thomas Reynolds et al (★4 756 / 870 043 Downloads) -
+web: [`middlemanapp.com`](https://middlemanapp.com),
+github: [`middleman/middleman`](https://github.com/middleman/middleman),
+gem: [`middleman`](https://rubygems.org/gems/middleman)
 
 ![](i/staticgen-middleman.png)
 
@@ -37,9 +49,10 @@ Static Site Spotlight:
 # Hello, Jekyll
 
 by Tom Preston-Werner, Nick Quaranto,
-Parker Moore, Jordon Bedwell, Matt Rogers et al -
-[★22 380 GitHub Stars](https://github.com/jekyll/jekyll),
-[1 756 295 Gem Downloads](https://rubygems.org/gems/jekyll)
+Parker Moore, Jordon Bedwell, Matt Rogers et al (★22 380 / 1 756 295 Downloads) -
+web: [`jekyllrb.com`](http://jekyllrb.com),
+github: [`jekyll/jekyll`](https://github.com/jekyll/jekyll),
+gem: [`jekyll`](https://rubygems.org/gems/jekyll)
 
 ![](i/staticgen-jekyll.png)
 
@@ -65,15 +78,15 @@ Static Site Spotlight:
 ~~~
 <!DOCTYPE html>
 <html>
-  <%= partial "partials/head" %>
+  <%%= partial "partials/head" %>
   <body>
-    <%= partial "partials/header" %>
+    <%%= partial "partials/header" %>
     <div id="main-wrapper">
       <div class="container">
-      <%= yield %>
+      <%%= yield %>
       </div>
     </div>
-    <%= partial "partials/footer" %>
+    <%%= partial "partials/footer" %>
   </body>
 </html>
 ~~~
@@ -88,15 +101,15 @@ Static Site Spotlight:
 ~~~
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
+  {%% include head.html %}
   <body>
-    {% include header.html %}
+    {%% include header.html %}
     <div id="main-wrapper">
       <div class="container">
-      {{ content }}
+      {{{ content }}
       </div>
     </div>
-    {% include footer.html %}
+    {%% include footer.html %}
   </body>
 </html>
 ~~~
@@ -216,18 +229,18 @@ excerpt_separator: "<!--more-->"
 
 # Middleman or Jekyll? -  Summary
 
-                         | Middleman  | Jekyll
--------------------------| ---------- | ---------
-GitHub Stars (+1s)       | ★4 756    | ★22 380
-Gem Downloads            | 870 043    | 1 756 295
-                         |
-Settings / Configuration | Ruby       | YAML
-HTML Templates           | Ruby (ERB) | Liquid
-. Layouts                | Yes        | Yes
-. Includes               | Yes        | Yes
-Front Matter / Meta Data | YAML       | YAML
-CSS Preprocessing        | Sass       | Sass
-HTML "Shortcodes"        | Markdown   | Markdown
+|  -                       | Middleman  | Jekyll    |
+| ------------------------ | ---------- | --------- |
+| GitHub Stars (+1s)       | ★4 756    | ★22 380  |
+| Gem Downloads            | 870 043    | 1 756 295 |
+|  -                       |  -         |  -        |
+| Settings / Configuration | Ruby       | YAML      |
+| HTML Templates           | Ruby (ERB) | Liquid    |
+| . Layouts                | Yes        | Yes       |
+| . Includes               | Yes        | Yes       |
+| Front Matter / Meta Data | YAML       | YAML      |
+| CSS Preprocessing        | Sass       | Sass      |
+| HTML "Shortcodes"        | Markdown   | Markdown  |
 
 
 
@@ -250,9 +263,11 @@ Note: Sorted by GitHub Stars (+1s)
 
 # Hello, Pelican
 
-by Alexis Metaireau et al -
-[★5 231 GitHub Stars](https://github.com/getpelican/pelican),
-[14 749 Downloads Last Month](https://pypi.python.org/pypi/pelican)
+by Alexis Metaireau et al (★5 231 / 14 749 Downloads Last Month) -
+web: [`getpelican.com`](http://getpelican.com),
+github: [`getpelican/pelican`](https://github.com/getpelican/pelican),
+pypi: [`pelican`](https://pypi.python.org/pypi/pelican)
+
 
 ![](i/staticgen-pelican.png)
 
@@ -265,9 +280,11 @@ Static Site Spotlight:
 
 # Hello, Nikola
 
-by Roberto Alsina et al -
-[★874 GitHub Stars](https://github.com/getnikola/nikola),
-[6 038 Downloads Last Month](https://pypi.python.org/pypi/Nikola)
+by Roberto Alsina et al (★874 / 6 038 Downloads Last Month) -
+web: [`getnikola.com`](https://getnikola.com),
+github: [`getnikola/nikola`](https://github.com/getnikola/nikola),
+pypi: [`Nikola`](https://pypi.python.org/pypi/Nikola)
+
 
 ![](i/staticgen-nikola.png)
 
@@ -278,18 +295,18 @@ Static Site Spotlight:
 
 # Pelican or Nikola? -  Summary
 
-                         | Pelican  | Nikola
--------------------------| ---------- | ---------
-GitHub Stars (+1s)       | ★5 231    | ★874
-Downloads Last Month     | 14 749    | 6 038 
-                         |
-Settings / Configuration | Python     | Python
-HTML Templates           | Jinja2     | Jinja2
-. Layouts                | Yes        | Yes
-. Includes               | Yes        | Yes
-Front Matter / Meta Data | reStructuredText   | reStructuredText
-CSS Preprocessing        | -          | -
-HTML "Shortcodes"        | reStructuredText   | reStructuredText
+|   -                      | Pelican          | Nikola           |
+| ------------------------ | ---------------- | ---------------- |
+| GitHub Stars (+1s)       | ★5 231          | ★874            |
+| Downloads Last Month     | 14 749           | 6 038            |
+|  -                       |  -               |  -               |
+| Settings / Configuration | Python           | Python           |
+| HTML Templates           | Jinja2           | Jinja2           |
+| . Layouts                | Yes              | Yes              |
+| . Includes               | Yes              | Yes              |
+| Front Matter / Meta Data | reStructuredText | reStructuredText |
+| CSS Preprocessing        | -                | -                |
+| HTML "Shortcodes"        | reStructuredText | reStructuredText |
 
 Note: CSS Preprocessing - LESS or Sass supported with plugins
 
@@ -309,9 +326,11 @@ Note: Sorted by GitHub Stars (+1s)
 
 # Hello, Wintersmith
 
-by Johan Nordberg et al -
-[★2 578 GitHub Stars](https://github.com/jnordberg/wintersmith),
-[3 113 Downloads Last Month](https://www.npmjs.com/package/wintersmith)
+by Johan Nordberg et al (★2 578 / 3 113 Downloads Last Month) -
+web: [`wintersmith.io`](http://wintersmith.io),
+github: [`jnordberg/wintersmith`](https://github.com/jnordberg/wintersmith),
+npm: [`wintersmith`](https://www.npmjs.com/package/wintersmith)
+
 
 ![](i/staticgen-wintersmith.png)
 
@@ -324,9 +343,10 @@ Static Site Spotlight:
 
 # Hello, Metalsmith
 
-by Ian Storm Taylor et al -
-[★4 070 GitHub Stars](https://github.com/segmentio/metalsmith),
-[40 213 Downloads Last Month](https://www.npmjs.com/package/metalsmith)
+by Ian Storm Taylor et al (★4 070 / 40 213 Downloads Last Month) -
+web: [`metalsmith.io`](http://metalsmith.io),
+github: [`segmentio/metalsmith`](https://github.com/segmentio/metalsmith),
+npm: [`metalsmith`](https://www.npmjs.com/package/metalsmith)
 
 ![](i/staticgen-metalsmith.png)
 
@@ -360,18 +380,18 @@ html(lang="en")
 
 # Wintersmith or Metalsmith? -  Summary
 
-                         | Wintersmith | Metalsmith
--------------------------| ---------- | ---------
-GitHub Stars (+1s)       | ★2 578    | ★4 070
-Downloads Last Month     | 3 113    | 40 213
-                         |
-Settings / Configuration | JSON       | JavaScript
-HTML Templates           | Jade       | Handlebars (HBS)
-. Layouts                | Yes        | Yes
-. Includes               | Yes        | Yes
-Front Matter / Meta Data | YAML       | YAML
-CSS Preprocessing        | -          | Plugins
-HTML "Shortcodes"        | Markdown   | Markdown
+| -                        | Wintersmith | Metalsmith       |
+| ------------------------ | ----------- | ---------------- |
+| GitHub Stars (+1s)       | ★2 578     | ★4 070          |
+| Downloads Last Month     | 3 113       | 40 213           |
+| -                        | -           | -                |
+| Settings / Configuration | JSON        | JavaScript       |
+| HTML Templates           | Jade        | Handlebars (HBS) |
+| . Layouts                | Yes         | Yes              |
+| . Includes               | Yes         | Yes              |
+| Front Matter / Meta Data | YAML        | YAML             |
+| CSS Preprocessing        | -           | Plugins          |
+| HTML "Shortcodes"        | Markdown    | Markdown         |
 
 
 # Wintersmith or Metalsmith? - More Static Site Builders (in JavaScript)
@@ -389,8 +409,9 @@ Note: Sorted by GitHub Stars (+1s)
 
 # Part IV. - Go, Go, Go
 
-by Steve Francia et al - 
-[★6 701 GitHub Stars](https://github.com/spf13/hugo)
+by Steve Francia et al (★6 701) - 
+web: [`gohugo.io`](https://gohugo.io),
+github: [`spf13/hugo`](https://github.com/spf13/hugo)
 
 ![](i/staticgen-hugo.png)
 
@@ -408,22 +429,22 @@ Static Site Spotlight:
 ~~~
 <!DOCTYPE html>
 <html>
-  {{ partial "head.html" . }}
+  {{{ partial "head.html" . }}
   <body>
-    {{ partial "header.html" . }}
+    {{{ partial "header.html" . }}
     <div id="main-wrapper">
         <div class="container">
             <article class="box post">
-                <div class="image featured" style="background-image: url('{{ .Site.BaseUrl }}{{ .Params.banner }}');"></div>
+                <div class="image featured" style="background-image: url('{{{ .Site.BaseUrl }}{{{ .Params.banner }}');"></div>
                 <header>
-                  <h2>{{ .Title }}</h2>
-                  <p>{{ .Params.shortdesc }}</p>
+                  <h2>{{{ .Title }}</h2>
+                  <p>{{{ .Params.shortdesc }}</p>
                 </header>
-                {{ .Content }}
+                {{{ .Content }}
             </article>
         </div>
     </div>
-    {{ partial "footer.html" . }}
+    {{{ partial "footer.html" . }}
   </body>
 </html>
 ~~~
@@ -433,18 +454,17 @@ Static Site Spotlight:
 
 # Hugo - Summary
 
-                         | Hugo
--------------------------| ---------- 
-GitHub Stars (+1s)       | ★6 701 
-                         |
-Settings / Configuration | TOML
-HTML Templates           | Go Templates
-. Layouts                | Yes
-. Includes               | Yes
-Front Matter / Meta Data | TOML
-CSS Preprocessing        | -
-HTML "Shortcodes"        | Markdown
-
+|  -                       | Hugo          |
+| ------------------------ | ------------- |
+| GitHub Stars (+1s)       | ★6 701       |
+|  -                       |  -            |
+| Settings / Configuration | TOML          |
+| HTML Templates           | Go Templates  |
+| . Layouts                | Yes           |
+| . Includes               | Yes           |
+| Front Matter / Meta Data | TOML          |
+| CSS Preprocessing        | -             |
+| HTML "Shortcodes"        | Markdown      |
 
 
 
@@ -454,15 +474,15 @@ HTML "Shortcodes"        | Markdown
 
 # GitHub Stars
 
-Site Builder  | GitHub Stars
-------------- | -------------
-Jekyll        | ★22 380 
-Hugo          | ★6 701
-Pelican       | ★5 231
-Middleman     | ★4 756    
-Metallsmith   | ★4 070
-Wintersmith   | ★2 578 
-Nicola        | ★874
+| Site Builder  | GitHub Stars  |
+| ------------- | ------------- |
+| Jekyll        | ★22 380      |
+| Hugo          | ★6 701       |
+| Pelican       | ★5 231       |
+| Middleman     | ★4 756       | 
+| Metallsmith   | ★4 070       |
+| Wintersmith   | ★2 578       |
+| Nicola        | ★874         |
 
 
 
@@ -494,34 +514,45 @@ Nicola        | ★874
 
 # And the Winner is...
 
-WordPress (Static Site) Exporter Plugin
+**WordPress (Static Site) Exporter Plugin**
+
+by Ben Balter et al (★561),
+wordpress: [`plugins/jekyll-exporter`](https://wordpress.org/plugins/jekyll-exporter),
+github: [`benbalter/wordpress-to-jekyll-exporter`](https://github.com/benbalter/wordpress-to-jekyll-exporter)
 
 ![](i/staticgen-wp-jekyll-exporter.png)
 
-by Ben Balter et al (★561),
-WordPress: [`plugins/jekyll-exporter`](https://wordpress.org/plugins/jekyll-exporter),
-GitHub: [`benbalter/wordpress-to-jekyll-exporter`](https://github.com/benbalter/wordpress-to-jekyll-exporter)
 
 
 
 # Links, Links, Links
 
-**Articles**
+**Articles / Booklets**
 
+- [Static Website Generators Reviewed: Jekyll, Middleman, Roots, Hugo](http://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review) by Mathias Biilmann Christensen; Smashing Magazine; Nov 2015
+- [Why Static Website Generators Are The Next Big Thing](http://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing) by Mathias Biilmann Christensen; Smashing Magazine; Nov 2015
+- [Static Site Generators: Modern Tools for Static Website Development](http://www.oreilly.com/web-platform/free/static-site-generators.csp) by Brian Rinaldi; Free O'Reilly E-Booklet; Sept 2015
 
 **News**
 
+- [Vienna.html (Static Site) News @ Twitter](https://twitter.com/viennahtml)
+- [{static is} The New Dynamic](http://www.thenewdynamic.org) 
 
 **Events**
 
+- [Vienna.html Meetup](http://viennahtml.github.io) - Next Meetup Feb 2016 @ sektor5 - Vienna, Austria
+- [Static Web Tech Meetup](http://www.staticwebtech.com) - @ San Francisco, California
+- [{static is} The New Dynamic Meetup](http://www.meetup.com/The-New-Dynamic) - @ New York City, New York
 
 
 
 # Bonus: Many More Static Site Builder / Generators
 
-_What about PHP, Haskell, Lisp, Bash, Rust, C, [Your Language Here], etc.?_
+**Q**: What about PHP, Haskell, Lisp, Bash, Rust, C, _[Your Language Here]_, etc.?
 
-See the staticgen or staticgen sites.
+**A**: See the Static Site Builder / Generator Directories:
 
+- [`staticgen.com`](http://www.staticgen.com)
+- [`staticsitegenerators.net`](https://staticsitegenerators.net)
 
 
