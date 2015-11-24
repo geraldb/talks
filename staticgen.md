@@ -1,10 +1,68 @@
+title: The World's Greatest (Free) Static Site Builders / Generators 
 
 
-# Ruby, Ruby, Ruby
+# Agenda
+
+The World's Greatest (Free) Static Site Builders / Generators 
+
+-   I. Ruby       - Middleman or Jekyll?
+-  II. Python     - Pelican or Nikola?
+- III. JavaScript - Wintersmith or Metallsmith?
+-  IV. Go         - Hugo?
+-   V. PHP, Haskell, Lisp, Rust, C, etc.
+
+And the Winner is...
+    
+
+
+
+# Part I. - Ruby, Ruby, Ruby
+
+# Hello, Middleman
+
+[add site pic here]
+
+by Thomas Reynolds et al -
+[★4 756 GitHub Stars](https://github.com/middleman/middleman),
+[870 043 Gem Downloads](https://rubygems.org/gems/middleman)
+
+
+Static Site Spotlight: 
+
+[ROSSConf](https://github.com/rossconf/rossconf.io) •
+[Sass Language](https://github.com/sass/sass-site) •
+[Adventure Time! Middleman Sample](https://github.com/remotesynth/Static-Site-Samples/tree/master/middlemansite) •
+[Many More](https://middlemanapp.com/community/built_using_middleman)
+
+
+
+# Hello, Jekyll
+
+[add site pic here]
+
+by Tom Preston-Werner, Nick Quaranto,
+Parker Moore, Jordon Bedwell, Matt Rogers et al -
+[★22 380 GitHub Stars](https://github.com/jekyll/jekyll),
+[1 756 295 Gem Downloads](https://rubygems.org/gems/jekyll)
+
+Static Site Spotlight:
+
+[Vienna.rb](https://github.com/vienna-rb/vienna-rb.github.com) •
+[Vienna.html](https://github.com/viennahtml/viennahtml.github.io) •
+[Facebook React](https://github.com/facebook/react/tree/master/docs) •
+[Bootstrap](https://github.com/twbs/bootstrap/tree/master/docs) •
+[Stack Overflow Blog](https://github.com/StackExchange/stack-blog) •
+[PHP: The Right Way](https://github.com/codeguy/php-the-right-way) •
+[Open Data Handbook v2](https://github.com/okfn/opendatahandbook) •
+[Adventure Time! Jekyll Sample](https://github.com/remotesynth/Static-Site-Samples/tree/master/jekyllsite) •
+[Many More](https://github.com/jekyll/jekyll/wiki/Sites)
+[And More](http://planetjekyll.github.io/showcase)
+
+
 
 # Middleman or Jekyll?  - HTML Templates
 
-**Middleman**
+**Middleman** - Embedded Ruby (ERB) Template Language
 
 ~~~
 <!DOCTYPE html>
@@ -25,7 +83,9 @@
 (Source: [`layouts/layout.erb`](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/source/layouts/layout.erb))
 
 
-**Jekyll**
+# Middleman or Jekyll?  - HTML Templates (Cont.)
+
+**Jekyll** - Liquid Template Language
 
 ~~~
 <!DOCTYPE html>
@@ -76,6 +136,8 @@ After watching Princess Bubblegum teach the children about the Food Chain
 (Source: [`posts/2014-06-12-season-6-food-chain.md`](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/source/posts/2014-06-12-season-6-food-chain.markdown))
 
 
+
+# Middleman or Jekyll? - Post with Front Matter (Categories, etc.)
 
 **Jekyll**
 
@@ -132,6 +194,8 @@ page "/feed.xml", layout: false
 (Source: [`config.rb`](https://github.com/remotesynth/Static-Site-Samples/blob/master/middlemansite/config.rb))
 
 
+# Middleman or Jekyll? - Configuration / Settings (Cont.)
+
 **Jekyll**
 
 ~~~
@@ -169,32 +233,112 @@ HTML "Shortcodes"        | Markdown   | Markdown
 
 
 
-# Middleman or Jekyll? - More Static Site Builders in Ruby
+# Middleman or Jekyll?  More Static Site Builders (in Ruby)
 
-Sorted by GitHub Stars (+1s):
-
-<!-- todo: use/add stars char -->
-
-- [Nanoc](https://github.com/nanoc/nanoc) by Denis Defreyne et al (★1 225)
-- [Ruhoh](https://github.com/ruhoh/ruhoh.rb) by Jade Dominguez et al (★611)
-- [Bonsai](https://github.com/benschwarz/bonsai) by Ben Schwarz et al (★269)
-- [Awestruct](https://github.com/awestruct/awestruct) by Bob McWhirter et al (★208) 
-- [WebGen](https://github.com/gettalong/webgen) by Thomas Leitner et al (★77)
-- [ZenWeb](https://github.com/seattlerb/zenweb) by Ryan Davis et al (★50)
+- [**Nanoc**](https://github.com/nanoc/nanoc) by Denis Defreyne et al (★1 225)
+- [**Ruhoh**](https://github.com/ruhoh/ruhoh.rb) by Jade Dominguez et al (★611)
+- [**Bonsai**](https://github.com/benschwarz/bonsai) by Ben Schwarz et al (★269)
+- [**Awestruct**](https://github.com/awestruct/awestruct) by Bob McWhirter et al (★208) 
+- [**WebGen**](https://github.com/gettalong/webgen) by Thomas Leitner et al (★77)
+- [**ZenWeb**](https://github.com/seattlerb/zenweb) by Ryan Davis et al (★50)
 - and many more
 
-
-# Python, Python, Python
-
+Sorted by GitHub Stars (+1s)
 
 
-# Pelican or Nicola? 
 
 
-<!-- todo: -->
+# Part II. - Python, Python, Python
+
+# Hello, Pelican 
+
+[add site pic here]
+
+by Alexis Metaireau et al -
+[★5 231 GitHub Stars](https://github.com/getpelican/pelican),
+[14 749 Downloads Last Month](https://pypi.python.org/pypi/pelican)
+
+Static Site Spotlight: 
+
+[Pelican Blog](https://github.com/getpelican/pelican-blog) • 
+[Linux Kernel Archives](https://www.kernel.org/pelican.html)
 
 
-# JavaScript, JavaScript, JavaScript
+
+# Hello, Nikola
+
+[add site pic here]
+
+by Roberto Alsina et al - 
+[★874 GitHub Stars](https://github.com/getnikola/nikola),
+[6 038 Downloads Last Month](https://pypi.python.org/pypi/Nikola)
+
+Static Site Spotlight: 
+
+[Nikola](https://github.com/getnikola/nikola-site)
+
+
+# Pelican or Nikola? -  Summary
+
+                         | Pelican  | Nikola
+-------------------------| ---------- | ---------
+GitHub Stars (+1s)       | ★5 231    | ★874
+Downloads Last Month     | 14 749    | 6 038 
+                         |
+Settings / Configuration | Python     | Python
+HTML Templates           | Jinja2     | Jinja2
+. Layouts                | Yes        | Yes
+. Includes               | Yes        | Yes
+Front Matter / Meta Data | reStructuredText   | reStructuredText
+CSS Preprocessing        | -          | -
+HTML "Shortcodes"        | reStructuredText   | reStructuredText 
+
+Notes:
+
+- CSS Preprocessing - LESS or Sass supported with plugins
+
+
+# Pelican or Nikola? - More Static Site Builders (in Python)
+
+- [**Cactus**](https://github.com/koenbok/Cactus) by Koen Bok et al (★2 450)
+- [**Hyde**](https://github.com/hyde/hyde) by Lakshmi et al (★1 234)
+- [**Letterpress**](https://github.com/an0/Letterpress) by Ling Wang et al (★513)
+- and many more
+
+Sorted by GitHub Stars (+1s)
+
+
+
+# Part III. - JavaScript, JavaScript, JavaScript
+
+# Hello, Wintersmith
+
+[add site pic here]
+
+by Johan Nordberg et al - 
+[★2 578 GitHub Stars](https://github.com/jnordberg/wintersmith),
+[3 113 Downloads Last Month](https://www.npmjs.com/package/wintersmith)
+
+Static Site Spotlight: 
+
+[Wintersmith Examples](https://github.com/jnordberg/wintersmith/tree/master/examples) •
+[Adventure Time! Wintersmith Sample](https://github.com/remotesynth/Static-Site-Samples/tree/master/wintersmithsite) •
+[Many More](https://github.com/jnordberg/wintersmith/wiki/Showcase)
+
+
+# Hello, Metalsmith
+
+[add site pic here]
+
+by Ian Storm Taylor et al - 
+[★4 070 GitHub Stars](https://github.com/segmentio/metalsmith),
+[40 213 Downloads Last Month](https://www.npmjs.com/package/metalsmith)
+
+Static Site Spotlight: 
+
+[Metalsmith](https://github.com/segmentio/metalsmith.io) • 
+[Metalsmith Examples](https://github.com/segmentio/metalsmith/tree/master/examples)
+
 
 # Wintersmith or Metalsmith? - HTML Templates
 
@@ -218,9 +362,51 @@ html(lang="en")
 
 
 
-# Go, Clojure, Haskell, [Your Language Here], etc.
+# Wintersmith or Metalsmith? -  Summary
 
-# Hugo or [Your Static Site Builder Here]? - HTML Templates
+                         | Wintersmith | Metalsmith
+-------------------------| ---------- | ---------
+GitHub Stars (+1s)       | ★2 578    | ★4 070 
+Downloads Last Month     | 3 113    | 40 213
+                         |
+Settings / Configuration | JSON       | JavaScript
+HTML Templates           | Jade       | ?
+. Layouts                | Yes        | Yes
+. Includes               | Yes        | Yes
+Front Matter / Meta Data | ?          | ?
+CSS Preprocessing        | ?          | ?
+HTML "Shortcodes"        | ?          | Markdown 
+
+
+# Wintersmith or Metalsmith? - More Static Site Builders (in JavaScript)
+
+- [**Hexo**]() by ?? et al (★??)
+- [**Harp**]() by ?? et al (★??)
+- [**Blacksmith**]() by ?? et al (★??)
+- and many more
+
+Sorted by GitHub Stars (+1s)
+
+
+
+
+
+# Part IV. - Go, Go, Go
+
+[add site pic here]
+
+by Steve Francia et al - 
+[★6 701 GitHub Stars](https://github.com/spf13/hugo),
+[? Downloads Last Month]()
+
+Static Site Spotlight: 
+
+[Balsamiq Documentation]() • 
+[Adventure Time! Hugo Sample](https://github.com/remotesynth/Static-Site-Samples/tree/master/hugosite) •
+[Many More](https://gohugo.io/showcase)
+
+
+# Hugo - HTML Templates
 
 **Hugo** - [Go Temmplate Language](https://golang.org/pkg/html/template)
 
@@ -250,17 +436,95 @@ html(lang="en")
 (Source: [layouts/_default/single.html](https://github.com/remotesynth/Static-Site-Samples/blob/master/hugosite/layouts/_default/single.html))
 
 
+# Hugo - Summary
 
-# HTML Templates - Summary
+                         | Hugo      
+-------------------------| ---------- 
+GitHub Stars (+1s)       | ★6 701   
+Downloads Last Month     | ?    
+                         |
+Settings / Configuration | TOML
+HTML Templates           | Go Templates
+. Layouts                | Yes
+. Includes               | Yes
+Front Matter / Meta Data | Custom
+CSS Preprocessing        | ?
+HTML "Shortcodes"        | Markdown
 
-Site Builder  | Language   | HTML Templates
-------------- | ---------- | ----------------------------------------
-Middleman     | Ruby       | Embedded Ruby (ERB) Template Language
-Jekyll        | Ruby       | Liquid Template Language 
-Pelican       | Python     | Jinja2 Template Language
-Nicola        | Python     | Jinja2 Template Language
-Wintersmith   | JavaScript | Jade Template Language
-Metallsmith   | JavaScript | Handlebars (HBS) Template Language
-Hugo          | Go         | Go Template Language
+
+
+
+
+# Part V. - Conclusions
+
+
+# GitHub Stars
+
+Site Builder  | GitHub Stars
+------------- | ------------- 
+Jekyll        | ★22 380 
+Hugo          | ★6 701
+Pelican       | ★5 231
+Middleman     | ★4 756    
+Metallsmith   | ★4 070
+Wintersmith   | ★2 578 
+Nicola        | ★874
+
+
+
+# Building Blocks
+
+**Configuration / Settings**
+
+1) Use a data format: YAML • TOML • JSON
+2) Use a (scripting) language: Ruby • Python • JavaScript 
+
+**HTML Templates**
+
+1) Use a "classic" template language: Liquid • Jinja • Handlebars (HBS) • Go Templates
+2) Use a (scripting) language: Embedded Ruby (ERB) • Embedded JavaScript (EJS) 
+3) Use a "compact" template language: Jade • Haml
+
+**CSS Preprocessing**
+
+1) No, thanks
+2) Sass • LESS • Stylus
+
+**HTML "Shortcodes"**
+
+1) No, thanks
+2) Markdown • ReStructuredText (ReST)  
+
+
+
+
+# And the Winner is...
+
+WordPress (Static Site) Export Plugin
+
+[add pic here]
+
+
+
+
+# Links, Links, Links
+
+**Articles**
+
+
+**News**
+
+
+**Events**
+
+
+
+
+# Bonus: Many More Static Site Builder / Generators
+
+_What about PHP, Haskell, Lisp, Bash, Rust, C, [Your Language Here], etc.?_
+
+See the staticgen or staticgen sites.
+
 
 
