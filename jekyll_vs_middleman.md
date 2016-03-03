@@ -394,6 +394,6 @@ Use what works for you.
 
 - [`staticgen.com`](http://www.staticgen.com)
 - [`staticsitegenerators.net`](https://staticsitegenerators.net)
-- [Static Site Generators @ `static-revival.com`](https://www.static-revival.com/static-site-generators)
+- [Static Site Generators @ `static-revival.com`](https://www.static-revival.com/static-site-generators/)
 
 
