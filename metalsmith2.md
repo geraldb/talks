@@ -119,7 +119,7 @@ Resulting in:
 
 # Metalsmith - HTML Templates - Handlebars or Nunjucks?
 
-Handlebars.js (web: [`handlebarsjs.com`](http://handlebarsjs.com)) - Minimalistic
+**Handlebars** (web: [`handlebarsjs.com`](http://handlebarsjs.com)) - Minimalistic
 Mustache-style `{{}}` "logic-less" templates
 (e.g. no arguments for if conditionals or each loops possible,
 no nested layouts, no content blocks, no inline macros, etc.)   
@@ -143,7 +143,7 @@ no nested layouts, no content blocks, no inline macros, etc.)
 
 # Metalsmith - HTML Templates - Handlebars or Nunjucks? (Cont.)
 
-Nunjucks.js (web: [`mozilla.github.io/nunjucks`](https://mozilla.github.io/nunjucks)) - Rich & powerful
+**Nunjucks** (web: [`mozilla.github.io/nunjucks`](https://mozilla.github.io/nunjucks)) - Rich & powerful
 template language with block inheritance, autoescaping, macros, asynchronous control, and much more.
 (Inspired by Jinja2 - a python template language inspired by Django's template language).
 
@@ -174,7 +174,6 @@ template language with block inheritance, autoescaping, macros, asynchronous con
 
 Metalsmith uses Consolidate.js (github: [tj/consolidate.js](https://github.com/tj/consolidate.js)) -
 a template engine consolidation library for Node.js.
-
 More template engines include:
 
 - Eco (Embedded CoffeeScript)
@@ -262,17 +261,6 @@ Links 'n' Bookmarks in JSON
 
 ~~~
 <div>
-  <b>News 'n' Updates</b>
-    <ul>
-        {%% for post in posts %}
-           <li><a href="{{{ post.urlxx }}">{{{ post.title }}</a></li>
-        {%% endfor %}
-    </ul>
-</div>
-~~~
-
-~~~
-<div>
   <b>Links 'n' Bookmarks</b>
     <ul>
         {%% for link in links %}
@@ -280,6 +268,17 @@ Links 'n' Bookmarks in JSON
         {%% endfor %}
     </ul>
 </div>  
+~~~
+
+~~~
+<div>
+  <b>News 'n' Updates</b>
+    <ul>
+        {%% for post in posts %}
+           <li><a href="{{{ post.urlxx }}">{{{ post.title }}</a></li>
+        {%% endfor %}
+    </ul>
+</div>
 ~~~
 
 (Source: [`staystatic/metalsmith-nunjucks/src/index.html`](https://github.com/staystatic/metalsmith-nunjucks/blob/master/src/index.html))
