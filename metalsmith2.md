@@ -6,8 +6,10 @@ title: Building Static (Web) Sites w/ Metalsmith (Node.js)
 - What's Metalsmith?
 - Everything is a Plugin
 - File / Directory Structure
+
 - Real World Showcase -  Node.js Project Site
 - More Plugins
+- 
 
 
 
@@ -104,7 +106,7 @@ Resulting in:
 ```
 
 
-# Metalsmith - File / Directory Structure  - Output (Cont.)
+# Metalsmith - File / Directory Structure - Output (Cont.)
 
 ![](i/staystatic-samplesite.png)
 
@@ -132,7 +134,7 @@ no nested layouts, no content blocks, no inline macros, etc.)
 </html>
 ~~~
 
-(Source: [staystatic/metalsmith-handlebars/layouts/default.html](https://github.com/staystatic/metalsmith-handlebars/blob/master/layouts/default.html))
+(Source: [`staystatic/metalsmith-handlebars/layouts/default.html`](https://github.com/staystatic/metalsmith-handlebars/blob/master/layouts/default.html))
 
 
 # Metalsmith - HTML Templates - Handlebars or Nunjucks? (Cont.)
@@ -160,7 +162,7 @@ template language with block inheritance, autoescaping, macros, asynchronous con
 
 
 
-(Source: [staystatic/metalsmith-nunjucks/layouts/default.html](https://github.com/staystatic/metalsmith-nunjucks/blob/master/layouts/default.html))
+(Source: [`staystatic/metalsmith-nunjucks/layouts/default.html`](https://github.com/staystatic/metalsmith-nunjucks/blob/master/layouts/default.html))
 
 
 
@@ -177,6 +179,156 @@ More template engines include:
 - Liquid
 - Mustache
 - And many more
+
+
+# Metalsmith - Pages n Posts with Front Matter
+
+YAML + Markdown
+
+~~~
+---
+layout: post
+title:  beer.db - New Repo /maps - Free Interactive Beer Maps w/ Brewery Listings
+---
+
+The beer.db project - offering free public domain beer, brewery
+and brewpubs data - added a new repo, that is, `/maps` 
+for hosting 'full-screen' interactive beer maps with brewery listings.
+
+See an example [beer map for Austria](http://openbeer.github.io/maps/at)
+(~200 breweries n brewpubs) live or
+[check the source](https://github.com/openbeer/maps) using the mapbox.js mapping library.
+
+...
+~~~
+
+(Source: [`staystatic/metalsmith-nunjucks/src/posts/new-repo-maps.md`](https://github.com/staystatic/metalsmith-nunjucks/blob/master/src/posts/new-repo-maps.md))
+
+
+# Metalsmith - Datafiles 
+
+Links 'n' Bookmarks in JSON
+
+~~~
+[
+ { "title": "football.db - Open Football Data",
+   "url":   "https://github.com/openfootball" },
+ { "title": "beer.db - Open Beer, Brewery 'n' Brewpub Data",
+   "url":   "https://github.com/openbeer" },
+ { "title": "world.db - Open World Data",
+   "url":   "https://github.com/openmundi" }
+]
+~~~
+
+(Source: [`staystatic/metalsmith-nunjucks/src/data/links.json`](https://github.com/staystatic/metalsmith-nunjucks/blob/master/src/data/links.json))
+
+
+# Metalsmith - HTML Templates - Loops - Handlebars or Nunjucks?
+
+**Handlebars**
+
+~~~
+<div>
+  <b>Links 'n' Bookmarks</b>
+    <ul>
+        {{{#each links}}
+          <li><a href="{{{ url }}">{{{ title }}</a></li>
+        {{{/each}}
+    </ul>
+</div>  
+~~~
+
+~~~
+<div>
+  <b>News 'n' Updates</b>
+    <ul>
+        {{{#each posts}}
+           <li><a href="{{{ urlxx }}">{{{ title }}</a></li>
+        {{{/each}}
+    </ul>
+</div>
+~~~
+
+(Source: [`staystatic/metalsmith-handlebars/src/index.html`](https://github.com/staystatic/metalsmith-handlebars/blob/master/src/index.html))
+
+
+# Metalsmith - HTML Templates - Loops - Handlebars or Nunjucks? (Cont.)
+
+**Nunjucks**
+
+~~~
+<div>
+  <b>News 'n' Updates</b>
+    <ul>
+        {%% for post in posts %}
+           <li><a href="{{{ post.urlxx }}">{{{ post.title }}</a></li>
+        {%% endfor %}
+    </ul>
+</div>
+~~~
+
+~~~
+<div>
+  <b>Links 'n' Bookmarks</b>
+    <ul>
+        {%% for link in links %}
+          <li><a href="{{{ link.url }}">{{{ link.title }}</a></li>
+        {%% endfor %}
+    </ul>
+</div>  
+~~~
+
+(Source: [`staystatic/metalsmith-nunjucks/src/index.html`](https://github.com/staystatic/metalsmith-nunjucks/blob/master/src/index.html))
+
+
+
+# Metalsmith - All Together Now - build.js
+
+
+~~~
+var Metalsmith  = require('metalsmith');
+var markdown    = require('metalsmith-markdown');
+var layouts     = require('metalsmith-layouts');
+var inplace     = require('metalsmith-in-place');
+var metadata    = require('metalsmith-metadata');
+var collections = require('metalsmith-collections');
+var permalinks  = require('metalsmith-permalinks');
+var nunjucks    = require('nunjucks');
+
+
+// Note: Need to add configuration to nunjucks that metalsmith cannot
+nunjucks
+  .configure( 'layouts', {watch: false, noCache: true}); 
+
+
+metalsmith = Metalsmith(__dirname)
+  .use(metadata({
+    site:  { title:     "Metalsmith (+Nunjucks) Stay Static Site Sample",
+             base_url": "http://staystatic.github.io/sites/metalsmith-nunjucks/" },
+    links: 'data/links.json'
+  }))
+  .use(collections({
+      posts: {
+        pattern: 'posts/**/*.md',
+        sortBy: 'date',
+        reverse: true
+      }}))
+  .use(markdown())
+  .use(inplace({
+    engine: 'nunjucks',
+    pattern: '**/*.html'
+  }))
+  .use(layouts({
+    engine: 'nunjucks',
+    pattern: '**/*.html',
+    directory: 'layouts'
+  }))
+  .build(function(err){
+    if (err) throw err;
+  });
+~~~
+
+(Source: [`staystatic/metalsmith-nunjucks/build.js`](https://github.com/staystatic/metalsmith-nunjucks/blob/master/build.js))
 
 
 
@@ -376,16 +528,87 @@ And Many More
 
 
 
-# Links, Links, Links
+# Metalsmith - Write Your Own Plugins
 
-Interested in Static (Web) Site Builders / Generators?
+**Inline Plugin**
 
-Follow the [Static Times News Channel](https://twitter.com/statictimes).
+~~~
+.use( function(files, metalsmith, done) {
+    console.log(files);
+    console.log(metalsmith);
+    done();
+})
+~~~
 
-or 
+Will dump all files (w/ meta data and content block)
+and the metalsmith hash (w/ options, site data, collections, etc.)
+to the console. Great help for understanding how metalsmith works and for
+debugging - when it doesn't work ;-).
 
-See the [Stay Static Showcase](http://staystatic.github.io).
 
-Thanks. 
 
+
+# Metalsmith - Write Your Own Plugins
+
+**"Standard" Plugin**
+
+~~~
+var parseDate = function (files, metalsmith, done) {
+  var moment = require("moment");
+  for(var file in files) {
+	if(files[file].date) {
+	  var date = new Date(files[file].date);
+	  files[file].year = moment(date).format("YYYY");
+	  files[file].month = moment(date).format("MM");
+	  files[file].day = moment(date).format("DD");
+	}
+  }
+  done();
+};
+~~~
+
+
+Usage:
+
+~~~
+.use(parseDate)
+~~~
+
+
+
+# Links, Links, Links - Static Site News, Events 'n' More
+
+**Stay Static Sample Sites (Showcase)**
+
+- [Stay Static](http://staystatic.github.io)
+  - [`/metalsmith-handlebars`](https://github.com/staystatic/metalsmith-handlebars)
+  - [`/metalsmith-nunjucks`](https://github.com/staystatic/metalsmith-nunjucks)
+
+**Metalsmith Articles**
+
+- [Awesome Metalsmith](https://github.com/metalsmith/awesome-metalsmith) - articles, tutorials, sample sites and more about Metalsmith
+
+**News**
+
+- [Static Times News @ Twitter](https://twitter.com/statictimes)
+- [{static is} The New Dynamic](http://www.thenewdynamic.org)
+  - [Metalsmith](http://www.thenewdynamic.org/tool/metalsmith)
+
+**Events**
+
+- [Vienna.html Meetup](http://viennahtml.github.io) - Next Meetup April 2016 @ sektor5 - Vienna, Austria
+- [Static Web Tech Meetup](http://www.staticwebtech.com) - @ San Francisco, California
+- [{static is} The New Dynamic Meetup](http://www.meetup.com/The-New-Dynamic) - @ New York City, New York
+
+
+
+# Bonus: Many More Static Site Builder / Generators
+
+**Q**: What about Ruby, Python, PHP, Hugo, Haskell, Rust, C, Swift, Lisp, Bash, _[Your Language Here]_, etc.?
+
+**A**: See the Static Site Builder / Generator Directories:
+
+- [`staticgen.com`](http://www.staticgen.com)
+- [`staticsitegenerators.net`](https://staticsitegenerators.net)
+- [Static Site Generators @ `static-revival.com`](https://www.static-revival.com/static-site-generators/)
 
