@@ -6,11 +6,15 @@ title: Building Static (Web) Sites w/ Metalsmith (Node.js)
 - What's Metalsmith?
 - Everything is a Plugin
 - File / Directory Structure
-
+- HTML Templates - Handlebars or Nunjucks?
+- Pages n Posts with Front Matter
+- Datafiles
+- HTML Templates - Loops
+- All Together Now - build.js
 - Real World Showcase -  Node.js Project Site
 - More Plugins
-- 
-
+- Write Your Own Plugins
+- Links, Links, Links
 
 
 # What's Metalsmith?
