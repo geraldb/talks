@@ -111,6 +111,74 @@ Resulting in:
 (Source: Stay Static Sample Site Showcase - `index.html`)
 
 
+# Metalsmith - HTML Templates - Handlebars or Nunjucks?
+
+Handlebars.js (web: [`handlebarsjs.com`](http://handlebarsjs.com)) - Minimalistic
+Mustache-style `{{}}` "logic-less" templates
+(e.g. no arguments for if conditionals or each loops possible,
+no nested layouts, no content blocks, no inline macros, etc.)   
+
+~~~
+<!DOCTYPE html>
+<html>
+  {{{> head }}
+  <body>
+     {{{> header }}
+    <div class="main">
+      {{{{ contents }}}
+    </div>   
+     {{{> footer }}
+  </body>
+</html>
+~~~
+
+(Source: [staystatic/metalsmith-handlebars/layouts/default.html](https://github.com/staystatic/metalsmith-handlebars/blob/master/layouts/default.html))
+
+
+# Metalsmith - HTML Templates - Handlebars or Nunjucks? (Cont.)
+
+Nunjucks.js (web: [`mozilla.github.io/nunjucks`](https://mozilla.github.io/nunjucks)) - Rich & powerful
+template language with block inheritance, autoescaping, macros, asynchronous control, and much more.
+(Inspired by Jinja2 - a python template language inspired by Django's template language).
+
+
+~~~
+<!DOCTYPE html>
+<html>
+  {%% include 'partials/head.html' %}
+  <body>
+    {%% include 'partials/header.html' %}
+    <div class="main">
+      {%% block content %}
+        {{{ contents | safe }}
+      {%% endblock %}
+    </div>   
+    {%% include 'partials/footer.html' %}
+  </body>
+</html>
+~~~
+
+
+
+(Source: [staystatic/metalsmith-nunjucks/layouts/default.html](https://github.com/staystatic/metalsmith-nunjucks/blob/master/layouts/default.html))
+
+
+
+# Metalsmith - HTML Templates - Handlebars or Nunjucks? (Cont.)
+
+Metalsmith uses Consolidate.js (github: [tj/consolidate.js](https://github.com/tj/consolidate.js)) -
+a template engine consolidation library for Node.js.
+
+More template engines include:
+
+- Eco (Embedded CoffeeScript)
+- EJS (Embedded JavaScript)
+- Jade
+- Liquid
+- Mustache
+- And many more
+
+
 
 # Real World Showcase -  Node.js Project Site
 
