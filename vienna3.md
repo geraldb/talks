@@ -4,22 +4,17 @@ title: Vienna.html #3
 
 # Vienna.html #3 - Welcome
 
-Agenda
+### Agenda
 
 - Intro - News & Upcoming Events
 - Talk #1 by Stefan Haslinger (Aua-Uff-Code Podcast) - Static site generating for podcasting with Octopad  
 - Talk #2 by Richard Traindl - Real World Static Site Show Case - Tierarztpraxis Kaisterstrasse - Can I Haz Cat Pics?
 
+### Sponsors
 
-# Vienna.html #3 - Sponsors - Thank You
+Space => **sektor5 Coworking** - Thank You
 
-Space
-
-**sektor5 Coworking** - Thank You
-
-Drinks
-
-**BDSwiss** - Thank You
+Drinks => **BDSwiss** - Thank You
 
 - BDSwiss has [web openings in Vienna](http://careers.bdswiss.com)
 
