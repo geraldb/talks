@@ -61,7 +61,7 @@ merges templates, etc.
 
 On your live production site requires
 
-- web server (e.g. apache) only
+- web server (e.g. apache, ngnix, etc.) only
 
 - **NO** database needed
 - **NO** application server needed
@@ -69,9 +69,10 @@ On your live production site requires
 Note: You can even go "server-less" e.g.
 host your site on a web service e.g. Amazon S3 (Simple Storage Service).
 
-You build the **complete** site, that is, **all pages** "ahead-of-time"
+You build the complete site, that is, **all pages** "ahead-of-time"
 on a "build" machine. You will end-up with a bunch of (static) ready-to-use
-HTML, CSS and JS files.  Upload to production site and you're live
+HTML, CSS and JS files (and media files e.g. images, etc.). 
+Upload to production site and you're live
 w/ a kind of "super cache".
 
 
@@ -84,30 +85,105 @@ w/ a kind of "super cache".
 3. ?
 
 
+
 ## Hello, Hugo!
 
-by Steve Francia et al (★10 039) -
+by Steve Francia, Bjørn Erik Pedersen et al (★10 166) -
 web: [`gohugo.io`](https://gohugo.io),
 github: [`spf13/hugo`](https://github.com/spf13/hugo)
 
-[add pic here]  -- check staticgen if already uploaded/included
+![](i/staticgen-hugo.png)
 
 
+## News Flash - New Hugo Release v0.16 on June 6th, 2016
+
+Over 550 contributions by over 110 contributors to the main Hugo codebase.
+Since last release (on November 25th, 2015)
+Hugo has gained 3500 stars, 90 contributors and 23 additional themes.
+
+What's news?
+
+- Partial Builds
+- Template Improvements e.g. now w/ blocks and many more
+  new template functions (e.g. countwords, jsonify, md5, readFile, etc.);
+- And Much More
+
+See [Release Notes](http://gohugo.io/meta/release-notes).
 
 
 ## Getting Started w/ Hugo
 
-Download the single-file Hugo binary. That's it.
+Hugo is an all-in-one single-file binary (e.g. ~15 Megs) 
+Download the package from the [release page](https://github.com/spf13/hugo/releases) 
+and unpack the Hugo binary. That's it.
+
+> Linux Tip: Hugo has become part of the official Debian and Ubuntu repositories since January 2016!
+> If you run the latest version, simply run `apt-get install hugo` to get started.
 
 Try:
 
 ```
-$ hugo
+$ hugo help
 ```
 
 prints
 
 ```
+hugo is the main command, used to build your Hugo site.
+
+Hugo is a Fast and Flexible Static Site Generator
+built with love by spf13 and friends in Go.
+
+Complete documentation is available at http://gohugo.io/.
+
+Usage:
+  hugo [flags]
+  hugo [command]
+
+Available Commands:
+  server      A high performance webserver
+  version     Print the version number of Hugo
+  config      Print the site configuration
+  check       Check content in the source directory
+  benchmark   Benchmark hugo by building a site a number of times.
+  convert     Convert your content to different formats
+  new         Create new content for your site
+  list        Listing out various types of content
+  undraft     Undraft changes the content's draft status from 'True' to 'False'
+  import      Import your site from others.
+  gen         A collection of several useful generators.
+
+Flags:
+  -b, --baseURL string          hostname (and path) to the root, e.g. http://spf13.com/
+  -D, --buildDrafts             include content marked as draft
+  -F, --buildFuture             include content with publishdate in the future
+      --cacheDir string         filesystem path to cache directory. Defaults: $TMPDIR/hugo_cache/
+      --canonifyURLs            if true, all relative URLs will be canonicalized using baseURL
+      --cleanDestinationDir     Remove files from destination not found in static directories
+      --config string           config file (default is path/config.yaml|json|toml)
+  -c, --contentDir string       filesystem path to content directory
+  -d, --destination string      filesystem path to write files to
+      --disable404              Do not render 404 page
+      --disableRSS              Do not build RSS files
+      --disableSitemap          Do not build Sitemap file
+      --forceSyncStatic         Copy all files when static is changed.
+      --ignoreCache             Ignores the cache directory
+  -l, --layoutDir string        filesystem path to layout directory
+      --log                     Enable Logging
+      --logFile string          Log File path (if set, logging enabled automatically)
+      --noTimes                 Don't sync modification time of files
+      --pluralizeListTitles     Pluralize titles in lists using inflect (default true)
+      --preserveTaxonomyNames   Preserve taxonomy names as written ("Gérard Depardieu" vs "gerard-depardieu")
+      --renderToMemory          render to memory (only useful for benchmark testing)
+  -s, --source string           filesystem path to read files relative from
+      --stepAnalysis            display memory and timing of different steps of the program
+  -t, --theme string            theme to use (located in /themes/THEMENAME/)
+      --uglyURLs                if true, use /filename.html instead of /filename/
+  -v, --verbose                 verbose output
+      --verboseLog              verbose logging
+  -w, --watch                   watch filesystem for changes and recreate as needed
+
+Use "hugo [command] --help" for more information about a command.
 ```
 
 
@@ -115,11 +191,12 @@ prints
 
 Shows how-to-use:
 
-- Posts
-- Pages
-- Datafiles
+- Posts (e.g. Blog Posts with Published Dates)
+- Pages  (e.g. About Page)
+- Datafiles (e.g. Bookmarks n Links)
 
-[add pic here]
+![](i/staystatic-samplesite.png)
+
 
 
 ## Hugo Stay Static site - File Structure
@@ -174,6 +251,153 @@ See an example [beer map for Austria](http://openbeer.github.io/maps/at)
 (Source: [`staystatic/middleman/source/posts/2014-11-11-new-repo-maps.html.md`](https://github.com/staystatic/middleman/blob/master/source/posts/2014-11-11-new-repo-maps.html.md))
 
 
+
+
+## Markdown Madness
+
+Markdown Library Options in Go
+
+- No (Official) Standard Markdown Library
+
+1. Blackfriday  [Add star here] 1 858 by Russ Ross  (github: [russross/blackfriday](https://github.com/russross/blackfriday))
+2. Mmark  [Add star here] 84 by Miek Gieben (github: [miekg/mmark](https://github.com/miekg/mmark))
+   - A fork of Blackfriday; adds (even) more markdown extensions e.g. titleblocks, parts, asides, callouts and much more
+
+
+## Markdown Goodies / Extensions
+
+- Tables
+- Fenced Code Blocks ("GitHub"-Style)
+- Footnotes
+- Typgraphy
+  - Smart Quotes
+  - Smart Fractions
+- Definition Lists
+- Strikethrough
+- No Intra-Word Emphasis
+
+
+## Markdown Goodies - Tables
+
+```
+Feature                  | Hugo
+------------------------ | ------------
+Settings / Configuration | TOML
+Front Matter / Meta Data | TOML
+| Datafiles              | TOML
+HTML Templates           | Go Templates
+HTML "Shortcodes"        | Markdown
+```
+
+becomes
+
+Feature                  | Hugo
+------------------------ | ------------
+Settings / Configuration | TOML
+Front Matter / Meta Data | TOML
+| Datafiles              | TOML
+HTML Templates           | Go Templates
+HTML "Shortcodes"        | Markdown
+
+
+
+## Markdown Goodies - Fenced Code Blocks
+
+    ```
+    func markdownRender(ctx *RenderingContext) []byte {
+	    return blackfriday.Markdown(ctx.Content, getHTMLRenderer(0, ctx),
+		         getMarkdownExtensions(ctx))
+    }
+    ```
+
+## Markdown Goodies - Footnotes
+
+```
+This is a footnote.[^1]
+
+[^1]: the footnote text.
+```
+
+becomes
+
+This is a footnote. <sup>1</sup>
+
+1. the footnote text. ↩
+
+
+
+## Markdown Goodies - Typography
+
+**Smart Quotes**
+
+```
+Hugo says "Hello, World!"   # e.g  ".." => “..”
+Hugo says 'Hello, World!'   # e.g. '..' => ‘..’
+```
+
+becomes
+
+Hugo says "Hello, World!" <br>
+Hugo says ‘Hello, World!’
+
+
+**Smart Fractions**
+
+4/5 => <sup>4</sup>&frasl;<sub>5</sub>
+
+
+
+
+## Markdown Goodies - Definition Lists
+
+```
+Markup
+: the difference between the cost price and the selling price
+
+Markdown
+: a reduction in price, usually to encourage buying
+: the amount by which a price is reduced
+```
+
+becomes
+
+Markup
+: the difference between the cost price and the selling price
+
+Markdown
+: a reduction in price, usually to encourage buying
+: the amount by which a price is reduced
+
+
+
+
+## Markdown Goodies
+
+**Strikethrough**
+
+```
+Markdown Madness 50% Off Now Only €199 was ~~€399~~ Buy Now!!!
+```
+
+becomes
+
+Markdown Madness 50% Off Now Only €199 was ~~€399~~ Buy Now!!!
+
+
+**No Intra-Word Emphasis**
+
+```
+This is _emphasized_.
+And this say_hello_world method is not.
+```
+
+becomes
+
+This is _emphasized_.<br>
+And this say_hello_world method is not.
+
+
+
 # Hugo Stay Static Site - Datafiles
 
 **Hugo** - TOML
@@ -223,6 +447,150 @@ See an example [beer map for Austria](http://openbeer.github.io/maps/at)
 ~~~
 
 (Source: [`staystatic/middleman/source/index.html.erb`](https://github.com/staystatic/middleman/blob/master/source/index.html.erb))
+
+
+
+## HTML Template Options in Go
+
+Standard Go Template Language
+
+- [Text Template Package](https://golang.org/pkg/text/template) e.g. `import "text/template"`
+- [HTML Template Package](https://golang.org/pkg/html/template) e.g. `import "html/template"`--
+  same interface as text/template package but automatically
+  secures HTML output against certain attacks
+  (e.g. knows HTML, CSS, JavaScript, and URIs.)
+
+
+
+
+
+
+## HTML Standard Go template
+
+New in Go 1.6 - Blocks, Blocks, Blocks
+
+`base.html`:
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ block "title" . }}
+      <!-- Blocks may include default content. -->
+      {{ .Site.Title }}
+    {{ end }}</title>
+  </head>
+  <body>
+    <!-- Code that all your templates share, like a header -->
+
+    {{ block "main" . }}
+      <!-- The part of the page that begins to differ between templates -->
+    {{ end }}
+
+    <!-- More shared code, perhaps a footer -->
+  </body>
+</html>
+```
+
+`list.html`:
+```
+<!-- Note the lack of Go's context "dot" when defining blocks -->
+{{ define "main" }}
+  <h1>Posts</h1>
+  {{ range .Data.Pages }}
+    <article>
+      <h2>{{ .Title }}</h2>
+      {{ .Content }}
+    </article>
+  {{ end }}
+{{ end }}
+```
+
+`single.html`:
+```
+{{ define "title" }}
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+{{ end }}
+```
+
+
+
+## HTML Shortcodes
+
+Usage:
+```
+{{< youtube 09jf3ow9jfw >}}
+```
+
+"Macro":
+```
+<div class="embed video-player">
+<iframe class="youtube-player" type="text/html" width="640" height="385"
+        src="http://www.youtube.com/embed/{{ index .Params 0 }}"
+        allowfullscreen frameborder="0">
+</iframe>
+</div>
+```
+
+becomes
+
+```
+<div class="embed video-player">
+<iframe class="youtube-player" type="text/html" width="640" height="385"
+        src="http://www.youtube.com/embed/09jf3ow9jfw"
+        allowfullscreen frameborder="0">
+</iframe>
+</div>
+```
+
+
+##  HTML Shortcodes  - Figure (Image w/ Caption)
+
+```
+<figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
+    {{ with .Get "link"}}<a href="{{.}}">{{ end }}
+        <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />
+    {{ if .Get "link"}}</a>{{ end }}
+    {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
+    <figcaption>{{ if isset .Params "title" }}
+        <h4>{{ .Get "title" }}</h4>{{ end }}
+        {{ if or (.Get "caption") (.Get "attr")}}<p>
+        {{ .Get "caption" }}
+        {{ with .Get "attrlink"}}<a href="{{.}}"> {{ end }}
+            {{ .Get "attr" }}
+        {{ if .Get "attrlink"}}</a> {{ end }}
+        </p> {{ end }}
+    </figcaption>
+    {{ end }}
+</figure>
+```
+
+
+
+
+## HTML Template Options in Go - Alternatives
+
+Inspired by Haml, Slim, Jade and Friends
+
+- **Amber** [add star here] 612 (github: [eknkc/amber](https://github.com/eknkc/amber)) by Ekin Koc et al
+- **Ace** [add star here] 474 (github: [yosssi/ace](https://github.com/yosssi/ace)) by Keiji Yoshida et al
+
+```
+html
+    head
+        title Page Title
+    body
+        div#content
+            p
+                | This is a long page content
+                | These lines are all part of the parent p
+
+                a[href="/"] Go To Main Page
+```
 
 
 
@@ -284,28 +652,6 @@ results in
 
 
 
-
-## Go Template Language
-
-
-
-
-## Go Template Language Alternatives
-
-
-
-
-
-
-
-
-## Case Study - Adding Comments - Jim Pick's Blog (A Developer in Vancouver)
-
-A Hugo blog
-
-show pic here [https://jimpick.com/2016/05/05/introducing-lambda-comments/]
-
-
 ## Options for Adding Comments
 
 - Disqus
@@ -315,22 +661,11 @@ show pic here [https://jimpick.com/2016/05/05/introducing-lambda-comments/]
 - Comment on Hacker News
 - etc.
 
-Do-it-yourself (DIY) "Server-less"
-
-
-## What's Lambda Comments?
+Do-it-yourself (DIY) "Server-less" Example - [Lambda Comments](https://jimpick.com/2016/05/05/introducing-lambda-comments/) by Jim Pick
 
 
 
-
-
-
-
-
-
-
-
-## Static is the New Dynamic - Why Static?
+## Why Static? - Static is the New Dynamic
 
 - Fast, Faster, Fastest
 
@@ -342,7 +677,8 @@ Do-it-yourself (DIY) "Server-less"
 Bonus: Secure e.g. just a bunch of (static) files on your server.
 
 
-## Static is the New Dynamic - Why Static? (Cont.)
+
+## Why Static? - Static is the New Dynamic (Cont.)
 
 Some Articles:
 
@@ -382,8 +718,6 @@ And some more.
 
 
 
-
-
 # Thanks - Stay Static
 
 **Stay Static Sample Sites (Showcase)**
@@ -419,20 +753,25 @@ More [`jamstack.org`](http://jamstack.org)
 
 StaticGen.com
 
+![](i/site-staticgen-com.png)
 
 
-## What's TOML? What's YAML?
+## What's YAML? What's TOML?
+
+YAML (YAML Ain't Markup Language) - <http://yaml.org>
+
+TOML (Tom's Obvious, Minimal Language) - <https://github.com/toml-lang/toml>
 
 
 
 ## What's Markdown? What's Markup?
 
-Markup.  (add up arrow) Markdown.  (add down arrow)
-
-- add markdown intro here
+Add link to Use Markdown for Websites, Books, Presentation etc. talk here
 
 
 
 ## Vienna.html - Join Us - No Database Required
 
 Next meetup (last before the summer)
+
+Add data and talks here
