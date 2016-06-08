@@ -1,38 +1,5 @@
 title: Stay Static - Build Static (Web)sites w/ Hugo and Go templates
 
-# Flash Back
-
-## Flash Back - Oldie but Goldie
-
-Thanks for welcoming back.
-
-We ♥ Programming Language Talk (Nov, 2014)
-
-[**Building Web Services (HTTP JSON APIs) with Go**](https://github.com/geraldb/talks/blob/master/go_http_api.md)
-[(Slides)](http://slideshow-s9.github.io/demos/go_http_api.html)
-
-
-## Flack Back - Oldie but Goldie (Cont.)
-
-**Why Go? - Faster, Faster, Faster**
-
-Use what works for you.
-
-Kind of a "better" more "modern" C.
-
-Code gets compiled (to machine-code ahead-of-time) and linked
-to let you build (small-ish) zero-dependency
-all-in-one binary (file) programs.
-
-No virtual machine or byte code runtime or just-in-time compiler machinery needed;
-includes garbage collector.
-
-### Go's Headline Features
-
-- Fast Builds - Imports, Package Structure, etc.
-- Concurreny - Go (co)-routines, channels
-    e.g. "agent model" - no threads, no shared state/variables - message passing w/ agents, etc.
-
 
 ## Agenda
 
