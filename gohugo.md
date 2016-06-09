@@ -413,9 +413,9 @@ url   = "https://github.com/openmundi"
 <div>
   <b>Links 'n' Bookmarks</b>
     <ul>
-        {{ range .Site.Data.links.links }}
-          <li><a href="{{ .url }}">{{ .title }}</a></li>
-        {{ end }}
+        {{{ range .Site.Data.links.links }}
+          <li><a href="{{{ .url }}">{{{ .title }}</a></li>
+        {{{ end }}
     </ul>
 </div>
 ```
@@ -424,11 +424,11 @@ url   = "https://github.com/openmundi"
 <div>
   <b>News 'n' Updates</b>
     <ul>
-        {{ range .Site.Pages }}
-        {{ if eq .Type "post" }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{ end }}
-        {{ end }}
+        {{{ range .Site.Pages }}
+        {{{ if eq .Type "post" }}
+            <li><a href="{{{ .Permalink }}">{{{ .Title }}</a></li>
+        {{{ end }}
+        {{{ end }}
     </ul>
 </div>
 ```
@@ -445,17 +445,17 @@ url   = "https://github.com/openmundi"
 ```
 <!DOCTYPE html>
 <html>
-  {{ partial "head.html" . }}
+  {{{ partial "head.html" . }}
   <body>
 
-    {{ partial "header.html" . }}
+    {{{ partial "header.html" . }}
 
     <div class="page">
-      <h1>{{ .Title }}</h1>
-      {{ .Content }}
+      <h1>{{{ .Title }}</h1>
+      {{{ .Content }}
     </div>
 
-    {{ partial "footer.html" . }}
+    {{{ partial "footer.html" . }}
   </body>
 </html>
 ```
@@ -486,17 +486,17 @@ New in Go 1.6 - Blocks, Blocks, Blocks
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{ block "title" . }}
+    <title>{{{ block "title" . }}
       <!-- Blocks may include default content. -->
-      {{ .Site.Title }}
-    {{ end }}</title>
+      {{{ .Site.Title }}
+    {{{ end }}</title>
   </head>
   <body>
     <!-- Code that all your templates share, like a header -->
 
-    {{ block "main" . }}
+    {{{ block "main" . }}
       <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
+    {{{ end }}
 
     <!-- More shared code, perhaps a footer -->
   </body>
@@ -507,27 +507,27 @@ New in Go 1.6 - Blocks, Blocks, Blocks
 
 ```
 <!-- Note the lack of Go's context "dot" when defining blocks -->
-{{ define "main" }}
+{{{ define "main" }}
   <h1>Posts</h1>
-  {{ range .Data.Pages }}
+  {{{ range .Data.Pages }}
     <article>
-      <h2>{{ .Title }}</h2>
-      {{ .Content }}
+      <h2>{{{ .Title }}</h2>
+      {{{ .Content }}
     </article>
-  {{ end }}
-{{ end }}
+  {{{ end }}
+{{{ end }}
 ```
 
 `single.html`:
 
 ```
-{{ define "title" }}
-  {{ .Title }} &ndash; {{ .Site.Title }}
-{{ end }}
-{{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-{{ end }}
+{{{ define "title" }}
+  {{{ .Title }} &ndash; {{{ .Site.Title }}
+{{{ end }}
+{{{ define "main" }}
+  <h1>{{{ .Title }}</h1>
+  {{{ .Content }}
+{{{ end }}
 ```
 
 
@@ -536,7 +536,7 @@ New in Go 1.6 - Blocks, Blocks, Blocks
 Usage:
 
 ```
-{{< youtube 09jf3ow9jfw >}}
+{{{< youtube 09jf3ow9jfw >}}
 ```
 
 "Macro":
@@ -544,7 +544,7 @@ Usage:
 ```
 <div class="embed video-player">
 <iframe class="youtube-player" type="text/html" width="640" height="385"
-        src="http://www.youtube.com/embed/{{ index .Params 0 }}"
+        src="http://www.youtube.com/embed/{{{ index .Params 0 }}"
         allowfullscreen frameborder="0">
 </iframe>
 </div>
@@ -565,21 +565,21 @@ becomes
 # HTML Shortcodes  - Figure (Image w/ Caption)
 
 ```
-<figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
-    {{ with .Get "link"}}<a href="{{.}}">{{ end }}
-        <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />
-    {{ if .Get "link"}}</a>{{ end }}
-    {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
-    <figcaption>{{ if isset .Params "title" }}
-        <h4>{{ .Get "title" }}</h4>{{ end }}
-        {{ if or (.Get "caption") (.Get "attr")}}<p>
-        {{ .Get "caption" }}
-        {{ with .Get "attrlink"}}<a href="{{.}}"> {{ end }}
-            {{ .Get "attr" }}
-        {{ if .Get "attrlink"}}</a> {{ end }}
-        </p> {{ end }}
+<figure {{{ with .Get "class" }}class="{{{.}}"{{{ end }}>
+    {{{ with .Get "link"}}<a href="{{{.}}">{{{ end }}
+        <img src="{{{ .Get "src" }}" {{{ if or (.Get "alt") (.Get "caption") }}alt="{{{ with .Get "alt"}}{{{.}}{{{else}}{{{ .Get "caption" }}{{{ end }}"{{{ end }} />
+    {{{ if .Get "link"}}</a>{{{ end }}
+    {{{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
+    <figcaption>{{{ if isset .Params "title" }}
+        <h4>{{{ .Get "title" }}</h4>{{{ end }}
+        {{{ if or (.Get "caption") (.Get "attr")}}<p>
+        {{{ .Get "caption" }}
+        {{{ with .Get "attrlink"}}<a href="{{{.}}"> {{{ end }}
+            {{{ .Get "attr" }}
+        {{{ if .Get "attrlink"}}</a> {{{ end }}
+        </p> {{{ end }}
     </figcaption>
-    {{ end }}
+    {{{ end }}
 </figure>
 ```
 
