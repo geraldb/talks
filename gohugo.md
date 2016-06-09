@@ -1,11 +1,20 @@
-title: Stay Static - Build Static (Web)sites w/ Hugo and Go templates
+title: Stay Static - Build Static (Web)sites w/ Hugo and Go Templates
 
 
-## Agenda
+# Agenda
+
+- Hello, Hugo!
+- Hugo Stay Static Sample Site - Posts, Pages, Datafiles
+- Markdown Madness - Markdown Extensions n Goodies
+- HTML Template Options in Go
+- Demo - Go Live - Free (Static) Site Hosting Options
+- Why Static?
+- Best of "Both Worlds"
+- Thanks - Stay Static
 
 
 
-## Dynamic (Web)Site Generators
+# Dynamic (Web)Site Generators
 
 **The Biggies** (PHP Rules!)
 
@@ -24,7 +33,7 @@ merges templates, etc.
 
 
 
-## Static (Web)Site Generators / Builders
+# Static (Web)Site Generators / Builders
 
 On your live production site requires
 
@@ -38,23 +47,24 @@ host your site on a web service e.g. Amazon S3 (Simple Storage Service).
 
 You build the complete site, that is, **all pages** "ahead-of-time"
 on a "build" machine. You will end-up with a bunch of (static) ready-to-use
-HTML, CSS and JS files (and media files e.g. images, etc.).
-Upload to production site and you're live
+HTML, CSS and JS files (*). Upload to production site and you're live
 w/ a kind of "super cache".
 
+(*) and media files e.g. graphics, music recordings, etc.
 
-## Static (Web)Site Generators / Builders
+
+# Static (Web)Site Generators / Builders
 
 **The Biggies** in 1999
 
-1. MacroMedia Dreamweaver
+1. Macromedia Dreamweaver
 2. Microsoft FrontPage
 3. Netscape Composer
 
 And today?
 
 
-## Hello, Hugo!
+# Hello, Hugo!
 
 by Steve Francia, Bjørn Erik Pedersen et al (★10 186) -
 web: [`gohugo.io`](https://gohugo.io),
@@ -63,7 +73,7 @@ github: [`spf13/hugo`](https://github.com/spf13/hugo)
 ![](i/staticgen-hugo.png)
 
 
-## News Flash - New Hugo Release v0.16 on June 6th, 2016
+# News Flash - New Hugo Release v0.16 on June 6th, 2016
 
 Over 550 contributions by over 110 contributors to the main Hugo codebase.
 Since last release (on November 25th, 2015)
@@ -79,7 +89,7 @@ What's news?
 See [Release Notes](http://gohugo.io/meta/release-notes).
 
 
-## Getting Started w/ Hugo
+# Getting Started w/ Hugo
 
 Hugo is an all-in-one single-file binary (e.g. ~15 Megs)
 Download the package (e.g. ~4 Megs) from the [release page](https://github.com/spf13/hugo/releases)
@@ -167,7 +177,7 @@ Shows how-to-use:
 
 
 
-## Hugo Stay Static Site - File Structure
+# Hugo Stay Static Site - File Structure
 
 ```
 │   config.toml
@@ -198,9 +208,9 @@ Shows how-to-use:
 
 
 
-## Hugo Stay Static Site - Pages n Posts with Front Matter
+# Hugo Stay Static Site - Pages n Posts with Front Matter
 
-**Hugo** - TOML + Markdown
+TOML + Markdown
 
 ```
 +++
@@ -223,10 +233,7 @@ See an example [beer map for Austria](http://openbeer.github.io/maps/at)
 
 
 
-
-## Markdown Madness
-
-Markdown Library Options in Go
+# Markdown Madness - Markdown Library Options in Go
 
 - No (Official) Standard Markdown Library
 
@@ -235,7 +242,7 @@ Markdown Library Options in Go
    - An extension of Blackfriday; adds (even) more markdown goodies e.g. titleblocks, parts, asides, callouts and much more
 
 
-## Markdown Goodies / Extensions
+# Markdown Madness - Markdown Goodies / Extensions
 
 - Tables
 - Fenced Code Blocks ("GitHub"-Style)
@@ -248,7 +255,7 @@ Markdown Library Options in Go
 - No Intra-Word Emphasis
 
 
-## Markdown Goodies - Tables
+# Markdown Madness - Markdown Goodies - Tables
 
 ```
 Feature                  | Hugo
@@ -266,13 +273,13 @@ Feature                  | Hugo
 ------------------------ | ------------
 Settings / Configuration | TOML
 Front Matter / Meta Data | TOML
-| Datafiles              | TOML
+Datafiles                | TOML
 HTML Templates           | Go Templates
 HTML "Shortcodes"        | Markdown
 
 
 
-## Markdown Goodies - Fenced Code Blocks
+# Markdown Madness - Markdown Goodies - Fenced Code Blocks
 
     ```
     func markdownRender(ctx *RenderingContext) []byte {
@@ -281,7 +288,7 @@ HTML "Shortcodes"        | Markdown
     }
     ```
 
-## Markdown Goodies - Footnotes
+# Markdown Madness - Markdown Goodies - Footnotes
 
 ```
 This is a footnote.[^1]
@@ -297,7 +304,7 @@ This is a footnote. <sup>1</sup>
 
 
 
-## Markdown Goodies - Typography
+# Markdown Madness - Markdown Goodies - Typography
 
 **Smart Quotes**
 
@@ -320,7 +327,7 @@ Hugo says ‘Stay Static!’
 
 
 
-## Markdown Goodies - Definition Lists
+# Markdown Madness - Markdown Goodies - Definition Lists
 
 ```
 Markup
@@ -344,7 +351,7 @@ becomes
 
 
 
-## Markdown Goodies
+# Markdown Madness - Markdown Goodies
 
 **Strikethrough**
 
@@ -368,6 +375,7 @@ becomes
 
 This is _emphasized_.<br>
 And this say_stay_static method is not.
+
 
 
 
@@ -456,7 +464,7 @@ url   = "https://github.com/openmundi"
 
 
 
-## HTML Template Options in Go
+# HTML Template Options in Go
 
 Standard Go Template Language
 
@@ -467,7 +475,7 @@ Standard Go Template Language
     (e.g. knows HTML, CSS, JavaScript, and URIs.)
 
 
-## HTML Standard Go Template
+# HTML Standard Go Template
 
 New in Go 1.6 - Blocks, Blocks, Blocks
 
@@ -523,7 +531,7 @@ New in Go 1.6 - Blocks, Blocks, Blocks
 ```
 
 
-## HTML Shortcodes
+# HTML Shortcodes
 
 Usage:
 
@@ -554,7 +562,7 @@ becomes
 ```
 
 
-##  HTML Shortcodes  - Figure (Image w/ Caption)
+# HTML Shortcodes  - Figure (Image w/ Caption)
 
 ```
 <figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
@@ -576,7 +584,7 @@ becomes
 ```
 
 
-## HTML Template Options in Go - Alternatives
+# HTML Template Options in Go - Alternatives
 
 Inspired by Haml, Slim, Jade and Friends
 
@@ -613,7 +621,7 @@ languageCode = "en-us"
 
 
 
-# Hugo -  Summary
+# Hugo - Summary
 
 |  -                       | Hugo         |
 | ------------------------ | ------------ |
@@ -677,7 +685,7 @@ File Structure in `/public`:
 
 
 
-## Going Live - Free (Static) Site Hosting Options
+# Going Live - Free (Static) Site Hosting Options
 
 - GitHub Pages      -- use git push  
 - GitLab Pages      -- use git push
@@ -687,7 +695,7 @@ File Structure in `/public`:
 
 
 
-## Options for Adding Comments
+# Options for Adding Comments
 
 - Disqus
 - Facebook Comments
@@ -700,7 +708,7 @@ Do-it-yourself (DIY) "Server-less" Example - [Lambda Comments](https://jimpick.c
 
 
 
-## Why Static? - Static is the New Dynamic
+# Why Static? - Static is the New Dynamic
 
 - Fast, Faster, Fastest
 
@@ -713,7 +721,7 @@ Bonus: Secure e.g. just a bunch of (static) files on your server.
 
 
 
-## Why Static? - Static is the New Dynamic (Cont.)
+# Why Static? - Static is the New Dynamic (Cont.)
 
 Some Articles:
 
@@ -730,7 +738,7 @@ by Aaron Autrand, May 2016; Netlify
 
 
 
-## Best of "Both Worlds"
+# Best of "Both Worlds"
 
 Example: Let's use WordPress and Hugo. How?
 
@@ -773,7 +781,7 @@ And some more.
 
 
 
-## Appendix: Spread the JAM! - A New TLA (Three-Letter Acronym)
+# Appendix: Spread the JAM! - A New TLA (Three-Letter Acronym)
 
 Rebranding "Static"? Why not?
 
@@ -787,14 +795,14 @@ More [`jamstack.org`](http://jamstack.org)
 
 
 
-## Appendix: Static Site Builders / Generators
+# Appendix: Static Site Builders / Generators
 
 StaticGen.com
 
 ![](i/site-staticgen-com.png)
 
 
-## Appendix: Vienna.html - Join Us - No Database Required
+# Appendix: Vienna.html - Join Us - No Database Required
 
 Next meetup (last before the summer). Free. Everyone Welcome.
 
