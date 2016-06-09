@@ -38,24 +38,25 @@ host your site on a web service e.g. Amazon S3 (Simple Storage Service).
 
 You build the complete site, that is, **all pages** "ahead-of-time"
 on a "build" machine. You will end-up with a bunch of (static) ready-to-use
-HTML, CSS and JS files (and media files e.g. images, etc.). 
+HTML, CSS and JS files (and media files e.g. images, etc.).
 Upload to production site and you're live
 w/ a kind of "super cache".
 
 
 ## Static (Web)Site Generators / Builders
 
-**The Biggies**
+**The Biggies** in 1999
 
-1. ?
-2. ?
-3. ?
+1. MacroMedia Dreamweaver
+2. Microsoft FrontPage
+3. Netscape Composer
 
+And today?
 
 
 ## Hello, Hugo!
 
-by Steve Francia, Bjørn Erik Pedersen et al (★10 166) -
+by Steve Francia, Bjørn Erik Pedersen et al (★10 186) -
 web: [`gohugo.io`](https://gohugo.io),
 github: [`spf13/hugo`](https://github.com/spf13/hugo)
 
@@ -70,7 +71,7 @@ Hugo has gained 3500 stars, 90 contributors and 23 additional themes.
 
 What's news?
 
-- Partial Builds
+- Partial Builds e.g. now even faster on rebuilds
 - Template Improvements e.g. now w/ blocks and many more
   new template functions (e.g. countwords, jsonify, md5, readFile, etc.);
 - And Much More
@@ -80,8 +81,8 @@ See [Release Notes](http://gohugo.io/meta/release-notes).
 
 ## Getting Started w/ Hugo
 
-Hugo is an all-in-one single-file binary (e.g. ~15 Megs) 
-Download the package from the [release page](https://github.com/spf13/hugo/releases) 
+Hugo is an all-in-one single-file binary (e.g. ~15 Megs)
+Download the package (e.g. ~4 Megs) from the [release page](https://github.com/spf13/hugo/releases)
 and unpack the Hugo binary. That's it.
 
 > Linux Tip: Hugo has become part of the official Debian and Ubuntu repositories since January 2016!
@@ -158,39 +159,42 @@ Use "hugo [command] --help" for more information about a command.
 
 Shows how-to-use:
 
-- Posts (e.g. Blog Posts with Published Dates)
+- Posts (e.g. Blog News 'n' Updates Posts with Dates)
 - Pages  (e.g. About Page)
-- Datafiles (e.g. Bookmarks n Links)
+- Datafiles (e.g. Links 'n' Bookmarks)
 
 ![](i/staystatic-samplesite.png)
 
 
 
-## Hugo Stay Static site - File Structure
+## Hugo Stay Static Site - File Structure
 
+```
+│   config.toml
+├───content/
+│   │   about.md
+│   └───post/
+│           new-build-system.md
+│           new-repo-maps.md
+│           new-season.md
+├───data/
+│       links.toml
+├───layouts/
+│   │   index.html
+│   ├───partials/
+│   │       footer.html
+│   │       head.html
+│   │       header.html
+│   ├───post/
+│   │       single.html
+│   └───_default/
+│           single.html
+└───static/
+    └───css/
+            style.css
+```
 
-
-
-# Hugo Stay Static Site - HTML Templates
-
-**Hugo** - Go Template Language
-
-~~~
-<!DOCTYPE html>
-<html>
-  <%%= partial "partials/head" %>
-  <body>
-    <%%= partial "partials/header" %>
-    <div class="main">
-      <%%= yield %>
-    </div>
-    <%%= partial "partials/footer" %>
-  </body>
-</html>
-~~~
-
-(Source: [`staystatic/middleman/layouts/layout.erb`](https://github.com/staystatic/middleman/blob/master/source/layouts/layout.erb))
-
+(Source: [`staystatic/hugo`](https://github.com/staystatic/hugo))
 
 
 
@@ -198,11 +202,11 @@ Shows how-to-use:
 
 **Hugo** - TOML + Markdown
 
-~~~
----
-layout: post
-title:  beer.db - New Repo /maps - Free Interactive Beer Maps w/ Brewery Listings
----
+```
++++
+date  = "2014-11-11T19:47:35+01:00"
+title = "beer.db - New Repo /maps - Free 'Full-Screen' Interactive Beer Maps w/ Brewery Listings"
++++
 
 The beer.db project - offering free public domain beer, brewery
 and brewpubs data - added a new repo, that is, `/maps`
@@ -213,9 +217,9 @@ See an example [beer map for Austria](http://openbeer.github.io/maps/at)
 [check the source](https://github.com/openbeer/maps) using the mapbox.js mapping library.
 
 ...
-~~~
+```
 
-(Source: [`staystatic/middleman/source/posts/2014-11-11-new-repo-maps.html.md`](https://github.com/staystatic/middleman/blob/master/source/posts/2014-11-11-new-repo-maps.html.md))
+(Source: [`staystatic/hugo/blob/master/content/post/new-repo-maps.md`](https://github.com/staystatic/hugo/blob/master/content/post/new-repo-maps.md))
 
 
 
@@ -226,9 +230,9 @@ Markdown Library Options in Go
 
 - No (Official) Standard Markdown Library
 
-1. Blackfriday  [Add star here] 1 858 by Russ Ross  (github: [russross/blackfriday](https://github.com/russross/blackfriday))
-2. Mmark  [Add star here] 84 by Miek Gieben (github: [miekg/mmark](https://github.com/miekg/mmark))
-   - A fork of Blackfriday; adds (even) more markdown extensions e.g. titleblocks, parts, asides, callouts and much more
+1. Blackfriday ★1 858 by Russ Ross  (github: [russross/blackfriday](https://github.com/russross/blackfriday))
+2. Mmark  ★84 by Miek Gieben (github: [miekg/mmark](https://github.com/miekg/mmark))
+   - An extension of Blackfriday; adds (even) more markdown goodies e.g. titleblocks, parts, asides, callouts and much more
 
 
 ## Markdown Goodies / Extensions
@@ -251,7 +255,7 @@ Feature                  | Hugo
 ------------------------ | ------------
 Settings / Configuration | TOML
 Front Matter / Meta Data | TOML
-| Datafiles              | TOML
+Datafiles                | TOML
 HTML Templates           | Go Templates
 HTML "Shortcodes"        | Markdown
 ```
@@ -298,19 +302,20 @@ This is a footnote. <sup>1</sup>
 **Smart Quotes**
 
 ```
-Hugo says "Hello, World!"   # e.g  ".." => “..”
-Hugo says 'Hello, World!'   # e.g. '..' => ‘..’
+Hugo says "Stay Static!"   # e.g  ".." => “..”
+Hugo says 'Stay Static!'   # e.g. '..' => ‘..’
 ```
 
 becomes
 
-Hugo says "Hello, World!" <br>
-Hugo says ‘Hello, World!’
+Hugo says “Stay Static!” <br>
+Hugo says ‘Stay Static!’
 
 
 **Smart Fractions**
 
-4/5 => <sup>4</sup>&frasl;<sub>5</sub>
+4/5 => <sup>4</sup>&frasl;<sub>5</sub> <br>
+1/1000 =>  <sup>1</sup>&frasl;<sub>1000</sub>
 
 
 
@@ -328,12 +333,13 @@ Markdown
 
 becomes
 
-Markup
-: the difference between the cost price and the selling price
-
-Markdown
-: a reduction in price, usually to encourage buying
-: the amount by which a price is reduced
+<dl>
+  <dt>Markup</dt>
+  <dd>the difference between the cost price and the selling price</dd>
+  <dt>Markdown</dt>
+  <dd>a reduction in price, usually to encourage buying</dd>
+  <dd>the amount by which a price is reduced</dd>
+</dl>
 
 
 
@@ -343,47 +349,51 @@ Markdown
 **Strikethrough**
 
 ```
-Markdown Madness 50% Off Now Only €199 was ~~€399~~ Buy Now!!!
+Markdown Madness 50% Off Now Only €199 Was ~~€399~~ Buy Now!!!
 ```
 
 becomes
 
-Markdown Madness 50% Off Now Only €199 was ~~€399~~ Buy Now!!!
+Markdown Madness 50% Off Now Only €199 Was ~~€399~~ Buy Now!!!
 
 
 **No Intra-Word Emphasis**
 
 ```
 This is _emphasized_.
-And this say_hello_world method is not.
+And this say_stay_static method is not.
 ```
 
 becomes
 
 This is _emphasized_.<br>
-And this say_hello_world method is not.
+And this say_stay_static method is not.
 
 
 
 # Hugo Stay Static Site - Datafiles
 
-**Hugo** - TOML
+**Datafile** - TOML (Tom's Obvious, Minimal Language)
 
-~~~
-#############################
+```
+############################
 #  Links 'n' Bookmarks
+#
 
-- title: football.db - Open Football Data
-  url:   https://github.com/openfootball
+[[links]]
+title = "football.db - Open Football Data"
+url   = "https://github.com/openfootball"
 
-- title: beer.db - Open Beer, Brewery 'n' Brewpub Data
-  url:   https://github.com/openbeer
+[[links]]
+title = "beer.db - Open Beer, Brewery 'n' Brewpub Data"
+url   = "https://github.com/openbeer"
 
-- title: world.db - Open World Data
-  url:   https://github.com/openmundi
-~~~
+[[links]]
+title = "world.db - Open World Data"
+url   = "https://github.com/openmundi"
+```
 
-(Source: [`staystatic/middleman/data/links.yml`](https://github.com/staystatic/middleman/blob/master/data/links.yml))
+(Source: [`staystatic/hugo/data/links.toml`](https://github.com/staystatic/hugo/blob/master/data/links.toml))
 
 
 
@@ -391,29 +401,58 @@ And this say_hello_world method is not.
 
 **Template** - Go Template Language
 
-~~~
+```
 <div>
   <b>Links 'n' Bookmarks</b>
-  <ul>
-    <%% data.links.each do |link| %>
-      <li><%%= link_to link.title, link.url %></li>
-    <%% end %>           
-  </ul>
+    <ul>
+        {{ range .Site.Data.links.links }}
+          <li><a href="{{ .url }}">{{ .title }}</a></li>
+        {{ end }}
+    </ul>
 </div>
-~~~
+```
 
-~~~
+```
 <div>
   <b>News 'n' Updates</b>
-  <ul>
-    <%% blog.articles.each do |article| %>
-      <li><%%= link_to article.title, article.url %></li>
-    <%% end %>
-  </ul>
+    <ul>
+        {{ range .Site.Pages }}
+        {{ if eq .Type "post" }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        {{ end }}
+    </ul>
 </div>
-~~~
+```
 
-(Source: [`staystatic/middleman/source/index.html.erb`](https://github.com/staystatic/middleman/blob/master/source/index.html.erb))
+(Source: [`staystatic/hugo/layouts/index.html`](https://github.com/staystatic/hugo/blob/master/layouts/index.html))
+
+
+
+
+# Hugo Stay Static Site - HTML Templates - Includes
+
+**Template** - Go Template Language
+
+```
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+
+    {{ partial "header.html" . }}
+
+    <div class="page">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </div>
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>
+```
+
+(Source: [`staystatic/hugo/layouts/_default/single.html`](https://github.com/staystatic/hugo/blob/master/layouts/_default/single.html))
 
 
 
@@ -422,21 +461,18 @@ And this say_hello_world method is not.
 Standard Go Template Language
 
 - [Text Template Package](https://golang.org/pkg/text/template) e.g. `import "text/template"`
-- [HTML Template Package](https://golang.org/pkg/html/template) e.g. `import "html/template"`--
-  same interface as text/template package but automatically
-  secures HTML output against certain attacks
-  (e.g. knows HTML, CSS, JavaScript, and URIs.)
+- [HTML Template Package](https://golang.org/pkg/html/template) e.g. `import "html/template"`
+  - same interface as text/template package but automatically
+    secures HTML output against certain attacks
+    (e.g. knows HTML, CSS, JavaScript, and URIs.)
 
 
-
-
-
-
-## HTML Standard Go template
+## HTML Standard Go Template
 
 New in Go 1.6 - Blocks, Blocks, Blocks
 
 `base.html`:
+
 ```
 <!DOCTYPE html>
 <html>
@@ -460,6 +496,7 @@ New in Go 1.6 - Blocks, Blocks, Blocks
 ```
 
 `list.html`:
+
 ```
 <!-- Note the lack of Go's context "dot" when defining blocks -->
 {{ define "main" }}
@@ -474,6 +511,7 @@ New in Go 1.6 - Blocks, Blocks, Blocks
 ```
 
 `single.html`:
+
 ```
 {{ define "title" }}
   {{ .Title }} &ndash; {{ .Site.Title }}
@@ -485,15 +523,16 @@ New in Go 1.6 - Blocks, Blocks, Blocks
 ```
 
 
-
 ## HTML Shortcodes
 
 Usage:
+
 ```
 {{< youtube 09jf3ow9jfw >}}
 ```
 
 "Macro":
+
 ```
 <div class="embed video-player">
 <iframe class="youtube-player" type="text/html" width="640" height="385"
@@ -537,14 +576,12 @@ becomes
 ```
 
 
-
-
 ## HTML Template Options in Go - Alternatives
 
 Inspired by Haml, Slim, Jade and Friends
 
-- **Amber** [add star here] 612 (github: [eknkc/amber](https://github.com/eknkc/amber)) by Ekin Koc et al
-- **Ace** [add star here] 474 (github: [yosssi/ace](https://github.com/yosssi/ace)) by Keiji Yoshida et al
+- **Amber** ★612 (github: [eknkc/amber](https://github.com/eknkc/amber)) by Ekin Koc et al
+- **Ace** ★474 (github: [yosssi/ace](https://github.com/yosssi/ace)) by Keiji Yoshida et al
 
 ```
 html
@@ -561,30 +598,26 @@ html
 
 
 
-# Hugo Stay Static Site - Configuration / Settings (Cont.)
+# Hugo Stay Static Site - Configuration / Settings
 
-**Hugo** - TOML
+TOML
 
-~~~
-title: 'Jekyll Stay Static Sample Site'
+```
+title = "Hugo Stay Static Site Sample"
 
-path:  '/sites/jekyll'
-url:   'http://staystatic.github.io/sites/jekyll'
+baseurl = "http://staystatic.github.io/sites/hugo/"
+languageCode = "en-us"
+```
 
-markdown: kramdown
+(Source: [`staystatic/hugo/config.toml`](https://github.com/staystatic/hugo/blob/master/config.toml))
 
-exclude:
-- README.md
-~~~
-
-(Source: [`staystatic/jekyll/_config.yml`](https://github.com/staystatic/jekyll/blob/master/_config.yml))
 
 
 # Hugo -  Summary
 
 |  -                       | Hugo         |
 | ------------------------ | ------------ |
-| GitHub Stars (+1s)       | ★5 026       |
+| GitHub Stars (+1s)       | ★10 186     |
 |  -                       |  -           |
 | Settings / Configuration | TOML         |
 | HTML Templates           | Go Templates |
@@ -598,24 +631,59 @@ exclude:
 (*) Use "External" Pipeline e.g. Preprocessor in JavaScript etc.
 
 
+
 # Hugo Stay Static Site Demo
 
 ```
-$ hugo build
+$ hugo
 ```
 
 results in
 
 ```
+0 draft content
+0 future content
+4 pages created
+0 paginator pages created
+0 tags created
+0 categories created
+in 466 ms
 ```
+
+
+# Hugo Stay Static Site Demo (Cont.)
+
+File Structure in `/public`:
+
+```
+│   404.html
+│   index.html
+│   index.xml
+│   sitemap.xml
+├───about/
+│       index.html
+├───css/
+│       style.css
+└───post/
+    │   index.html
+    │   index.xml
+    ├───new-build-system/
+    │       index.html
+    ├───new-repo-maps/
+    │       index.html
+    └───new-season/
+            index.html
+```
+
 
 
 ## Going Live - Free (Static) Site Hosting Options
 
-- GitHub Pages      - use git push  
-- GitLab Pages      - use git push
+- GitHub Pages      -- use git push  
+- GitLab Pages      -- use git push
+- Surge.sh  -- go live with six keystrokes - s u r g e [ENTER]
 - Google Firebase (Free Tier)   
-- Surge.sh  - Go live with six keystrokes - s u r g e [ENTER]
+- And Many More
 
 
 
@@ -666,18 +734,18 @@ by Aaron Autrand, May 2016; Netlify
 
 Example: Let's use WordPress and Hugo. How?
 
-[**WordPress <--> GitHub Sync**](https://github.com/mAAdhaTTah/wordpress-github-sync) by James DiGioia, Ben Balter et al
+[**WordPress <--> GitHub Sync**](https://github.com/mAAdhaTTah/wordpress-github-sync) ★312 by James DiGioia, Ben Balter et al
 
 A WordPress plugin to sync content with a GitHub repository.
 
 
-[**Wordpress to Hugo Exporter**](https://github.com/SchumacherFM/wordpress-to-hugo-exporter) by Cyrill Schumacher et al
+[**Wordpress to Hugo Exporter**](https://github.com/SchumacherFM/wordpress-to-hugo-exporter) ★89 by Cyrill Schumacher et al
 
 One-click WordPress plugin that converts all posts, pages, taxonomies, metadata,
 and settings to Markdown and YAML which can be dropped into Hugo.
 
 
-[**Hugo Sync**](https://github.com/hiproz/hugo-sync)
+[**Hugo Sync**](https://github.com/hiproz/hugo-sync) ★8
 
 Synchronize your WordPress or GitHub to Hugo website automatically
 
@@ -690,19 +758,22 @@ And some more.
 **Stay Static Sample Sites (Showcase)**
 
 - [Stay Static](http://staystatic.github.io)
-  - [`/middleman`](https://github.com/staystatic/middleman)
+  - [`/hugo`](https://github.com/staystatic/hugo)
   - [`/jekyll`](https://github.com/staystatic/jekyll)
+  - [`/middleman`](https://github.com/staystatic/middleman)
+  - [`/webgen`](https://github.com/staystatic/webgen)
+  - [`/metalsmith-handlebars`](https://github.com/staystatic/metalsmith-handlebars)
+  - [`/metalsmith-nunjucks`](https://github.com/staystatic/metalsmith-nunjucks)  
 
-**Static Times**  News Channel
+**Stay Up-To-Date - Follow Along**
 
-**Vienna.html**  Static Site Meetups
+- For Vienna.html News => Follow [@viennahtml](https://twitter.com/viennahtml)
+- For Static Site News => Follow [@statictimes](https://twitter.com/statictimes)
+- For Writing in Plain Text w/ Markdown News => Follow [@manuscriptsnews](https://twitter.com/manuscriptsnews)
 
 
 
-
-# Appendix
-
-## Spread the JAM! - A New TLA (Three-Letter Acronym)
+## Appendix: Spread the JAM! - A New TLA (Three-Letter Acronym)
 
 Rebranding "Static"? Why not?
 
@@ -716,29 +787,25 @@ More [`jamstack.org`](http://jamstack.org)
 
 
 
-## Static Site Builders / Generators
+## Appendix: Static Site Builders / Generators
 
 StaticGen.com
 
 ![](i/site-staticgen-com.png)
 
 
-## What's YAML? What's TOML?
+## Appendix: Vienna.html - Join Us - No Database Required
 
-YAML (YAML Ain't Markup Language) - <http://yaml.org>
+Next meetup (last before the summer). Free. Everyone Welcome.
 
-TOML (Tom's Obvious, Minimal Language) - <https://github.com/toml-lang/toml>
+Tuesday, **June 28th** starting at 18.30 @ sektor5 Coworking Café+Lobby
+
+Talks include:
+
+- Using PostCSS with Static Site Builders by Max Stoiber
+- Real World Static Site Showcase I - Inside ColorSnapper - Changelog Generation w/ Metalsmith.js and a Custom Plugin by Andrey Okonetchnikov
+- Real World Static Site Showcase II - Inside Contentful - Turn Your Blog Posts into Facebook Instant Articles w/ Middleman by Rouven Weßling (Contentful)
+- Real World Static Site Showcase III - Inside Chip Shop - Build Your Silicon Empire - Build A Cards Game w/ Jekyll (n Markdown) by Chris Ward
 
 
-
-## What's Markdown? What's Markup?
-
-Add link to Use Markdown for Websites, Books, Presentation etc. talk here
-
-
-
-## Vienna.html - Join Us - No Database Required
-
-Next meetup (last before the summer)
-
-Add data and talks here
+More info [`viennahtml.github.io »`](http://viennahtml.github.io)
