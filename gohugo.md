@@ -479,7 +479,7 @@ Standard Go Template Language
 
 New in Go 1.6 - Blocks, Blocks, Blocks
 
-`base.html`:
+`baseof.html`:
 
 ```
 <!DOCTYPE html>
