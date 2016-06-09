@@ -169,7 +169,7 @@ Use "hugo [command] --help" for more information about a command.
 
 Shows how-to-use:
 
-- Posts (e.g. Blog News 'n' Updates Posts with Dates)
+- Posts (e.g. Blog News 'n' Updates Posts Sorted by Date)
 - Pages  (e.g. About Page)
 - Datafiles (e.g. Links 'n' Bookmarks)
 
@@ -229,7 +229,7 @@ See an example [beer map for Austria](http://openbeer.github.io/maps/at)
 ...
 ```
 
-(Source: [`staystatic/hugo/blob/master/content/post/new-repo-maps.md`](https://github.com/staystatic/hugo/blob/master/content/post/new-repo-maps.md))
+(Source: [`staystatic/hugo/content/post/new-repo-maps.md`](https://github.com/staystatic/hugo/blob/master/content/post/new-repo-maps.md))
 
 
 
