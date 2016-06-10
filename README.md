@@ -1,4 +1,2 @@
-talks
-=====
 
-talks, talks, talks  (sources in Markdown or Textile)
+talks, talks, talks  (sources in Markdown)
