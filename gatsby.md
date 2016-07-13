@@ -102,8 +102,8 @@ Q: The Great Gatsby by ____ ?
 
 Q: Last Update In (Static Since) ______ ?
 
-- [ A ] 1854
-- [ B ] 1886
+- [ A ] 1855
+- [ B ] 1885
 - [ C ] 1925
 - [ D ] 2015
 
