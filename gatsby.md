@@ -181,3 +181,184 @@ $ gatsby develop
 
 And open the browser. Voila.
 
+
+# Gatsby Stay Static Sample Site
+
+Shows how-to-use:
+
+- Posts (e.g. Blog News 'n' Updates Posts Sorted by Date)
+- Pages  (e.g. About Page)
+- Datafiles (e.g. Links 'n' Bookmarks)
+
+![](i/staystatic-samplesite.png)
+
+
+
+# Gatsby In Action - Why Gatsby? Live Hot Reloading Demo
+
+No. 1 Selling Point - Hot (!) Reloading - Thanks to Webpack
+
+Works for:
+
+- React Web Components (Templates)
+- Your Writing (in Markdown) e.g. Posts / Pages
+- Styles
+- Configuration in config.toml e.g. Site Title, Author Name, etc.
+
+Does NOT Work for:
+
+- Adding New Files (Requires Server Restart - Sorry.)
+
+
+
+# Gatsby Stay Static Site - File Structure
+
+```
+│   config.toml
+|   html.js
+|   package.json
+├───components/
+│      Footer.js
+│      Header.js
+│      LinkList.js
+│      PostList.js
+├───css/
+|      style.css
+├───data/
+|      links.js
+├───pages/
+|   |  404.md
+|   |  index.js
+|   |  _template.js
+|   ├───pages/
+|   |      about.md
+|   └───posts/
+|          2014-11-11-new-repo-maps.md
+|          2014-12-12-new-build-system.md
+|          2015-08-25-new-season.md
+|          _template.js
+└───wrappers/
+      md.js
+```
+
+(Source: [`staystatic/gatsby`](https://github.com/staystatic/gatsby))
+
+
+
+# Gatsby Stay Static Site - Posts with Front Matter
+
+YAML + Markdown
+
+```
+---
+title: "beer.db - New Repo /maps - Free 'Full-Screen' Interactive Beer Maps w/ Brewery Listings"
+date:   2015-08-25
+layout: post
+path: "/posts/new-repo-maps/"
+---
+
+The beer.db project - offering free public domain beer, brewery
+and brewpubs data - added a new repo, that is, `/maps`
+for hosting 'full-screen' interactive beer maps with brewery listings.
+
+See an example [beer map for Austria](http://openbeer.github.io/maps/at)
+(~200 breweries n brewpubs) live or
+[check the source](https://github.com/openbeer/maps) using the mapbox.js mapping library.
+
+...
+```
+
+(Source: [`staystatic/gatsby/pages/posts/new-repo-maps.md`](https://github.com/staystatic/gatsby/blob/master/pages/posts/2014-11-11-new-repo-maps.md))
+
+
+
+# Gatsby Stay Static Site - Pages with Front Matter
+
+YAML + Markdown
+
+```
+---
+title: About
+path:  "/about/"
+---
+
+Gatsby Static Site Sample. Shows how to use:
+
+1. Pages (see `pages/pages/about.md`)
+2. Posts (see `pages/posts/*.md`)
+3. Custom Content Types (see `data/links.js`)
+```
+
+(Source: [`staystatic/gatsby/pages/pages/about.md`](https://github.com/staystatic/gatsby/blob/master/pages/pages/about.md))
+
+
+
+# Markdown Madness - Markdown Library Options in Gatsby
+
+**markdown-it** ★1 858 by Vitaly Puzrin, Alex Kocharin et al (github: [markdown-it/markdown-it](https://github.com/markdown-it/markdown-it))
+
+Markdown parser, done right. 100% CommonMark support, extensions, syntax plugins & high speed
+
+Extensions / Goodies Include:
+
+- Tables
+- Fenced Code Blocks ("GitHub"-Style)
+- Footnotes
+- And Much more
+
+[Try it live](https://markdown-it.github.io)
+
+
+
+# Markdown Madness - Markdown Goodies - Tables
+
+```
+Feature                  | Hugo
+------------------------ | ------------
+Settings / Configuration | TOML
+Front Matter / Meta Data | YAML
+Datafiles                | JavaScript
+HTML Templates           | JSX
+HTML "Shortcodes"        | Markdown
+```
+
+becomes
+
+Feature                  | Hugo
+------------------------ | ------------
+Settings / Configuration | TOML
+Front Matter / Meta Data | YAML
+Datafiles                | JavaScript
+HTML Templates           | JSX
+HTML "Shortcodes"        | Markdown
+
+
+
+# Markdown Madness - Markdown Goodies - Fenced Code Blocks
+
+    ```
+    // Enable everything
+    var md = require('markdown-it')({
+      html: true,
+      linkify: true,
+      typographer: true,
+    });
+    ```
+
+# Markdown Madness - Markdown Goodies - Footnotes
+
+```
+This is a footnote.[^1]
+
+[^1]: the footnote text.
+```
+
+becomes
+
+This is a footnote. <sup>1</sup>
+
+1. the footnote text. ↩
+
+
+
+
