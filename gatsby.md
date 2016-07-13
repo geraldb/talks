@@ -81,7 +81,7 @@ The world's 1st Gatsby site?
 **Bricolage** (web: [bricolage.io](https://bricolage.io), github: [KyleAMathews/blog](https://github.com/KyleAMathews/blog)) - a blog written
  by **Kyle Mathews** who lives and works in San Francisco building useful things.
 
- [](i/bricolage.png)
+![](i/bricolage.png)
 
 
 # Static in the "Real World"
