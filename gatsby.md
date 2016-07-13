@@ -362,3 +362,314 @@ This is a footnote. <sup>1</sup>
 
 
 
+
+
+
+# Gatsby Stay Static Site - Datafiles
+
+**Datafile** - JavaScript
+
+```
+//////////////////////////
+//  Links 'n' Bookmarks
+
+export default [
+ { title: "football.db - Open Football Data",
+   url:   "https://github.com/openfootball" },
+ { title: "beer.db - Open Beer, Brewery 'n' Brewpub Data",
+   url:   "https://github.com/openbeer" },
+ { title: "world.db - Open World Data",
+   url:   "https://github.com/openmundi" }
+]
+```
+
+(Source: [`staystatic/gatsby/data/links.js`](https://github.com/staystatic/gatsby/blob/master/data/links.js))
+
+
+
+# Gatsby Stay Static Site  - HTML Web Components - Loops
+
+**Templates** - React HTML Web Components
+
+```
+class LinkList extends React.Component {
+  render() {
+    const {links} = this.props;
+    return (
+      <ul>
+        {links.map( link => <li><a href={link.url}>{link.title}</a></li> )}
+      </ul>
+    )
+  }
+}
+
+// Use like:
+//   <LinkList links={links}/>
+```
+
+(Source: [`staystatic/gatsby/components/LinkList.js`](https://github.com/staystatic/gatsby/blob/master/components/LinkList.js))
+
+
+# Gatsby Stay Static Site  - HTML Web Components - Loops (Cont.)
+
+```
+import { Link } from 'react-router'
+import { prefixLink } from 'gatsby-helpers'
+
+class PostList extends React.Component {
+  render () {
+    const {posts} = this.props;
+    return (
+      <ul>
+        {posts.map( post => <li><Link to={prefixLink(post.path)}>{post.data.title}</Link></li> )}
+      </ul>
+    )
+  }
+}
+
+// Use like:
+//  <PostList posts={posts}/>
+```
+
+(Source: [`staystatic/gatsby/components/PostList.html`](https://github.com/staystatic/gatsby/blob/master/components/PostList.js))
+
+
+
+
+# Gatsby Stay Static Site - HTML Web Components - Includes
+
+**Templates** - React HTML Web Components
+
+```
+import Header from 'components/Header'
+import Footer from 'components/Footer'
+
+class MasterTemplate extends React.Component {
+  render() {
+    return (
+      <div>
+        <Header/>
+        <div>
+          {this.props.children}
+        </div>
+        <Footer/>
+      </div>
+    )
+  }
+```
+
+(Source: [`staystatic/gatsby/pages/_templates.js`](https://github.com/staystatic/gatsby/blob/master/pages/_template.js))
+
+
+
+# Gatsby Stay Static Site - HTML Web Components - Includes (Cont.)
+
+```
+class Footer extends React.Component {
+  render() {
+    return (
+      <div id="footer">
+          A <a href="http://staystatic.github.io">Stay Static</a> Sample Site
+      </div>
+      )
+  }
+}
+```
+
+(Source: [`staystatic/gatsby/components/Footer.js`](https://github.com/staystatic/gatsby/blob/master/components/Footer.js))
+
+
+```
+import { Link } from 'react-router'
+import { prefixLink } from 'gatsby-helpers'
+import { config } from 'config'
+
+
+export default class Header extends React.Component {
+  render() {
+    return (
+      <div id="header">
+        <table style={{width: "100%"}}>
+         <tbody>
+         <tr>
+           <td>
+            <Link to={prefixLink('/')}>{ config.siteTitle }</Link>
+           </td>
+           <td style={{textAlign: "right"}}>
+            <Link to={prefixLink('/about/')}>About</Link>
+           </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      )
+  }
+}
+```
+
+(Source: [`staystatic/gatsby/components/Header.js`](https://github.com/staystatic/gatsby/blob/master/components/Header.js))
+
+
+
+
+# Gatsby Stay Static Site - Configuration / Settings
+
+TOML
+
+```
+siteTitle  = "Gatsby Stay Static Site Sample"
+linkPrefix = "/sites/gatsby"
+```
+
+(Source: [`staystatic/gatsby/config.toml`](https://github.com/staystatic/gatsby/blob/master/config.toml))
+
+
+
+# Gatsby - Summary
+
+|  -                       | Gatsby       |
+| ------------------------ | ------------ |
+| GitHub Stars (+1s)       | ★3 072       |
+|  -                       |  -           |
+| Settings / Configuration | TOML         |
+| HTML Templates           | React        |
+| . Layouts                | React        |
+| . Includes               | React        |
+| Front Matter / Meta Data | YAML         |
+| Datafiles                | JavaScript   |
+| CSS Preprocessing        | PostCSS etc. |
+| HTML "Shortcodes"        | Markdown     |
+
+
+
+# Gatsby Stay Static Site Demo
+
+```
+$ gatsby build
+```
+
+results in
+
+```
+Generating CSS
+Generating Static HTML
+Compiling production bundle.js
+Copying assets
+```
+
+
+# Gatsby Stay Static Site Demo (Cont.)
+
+File Structure in `/public`:
+
+```
+|   404.html
+|   bundle.js
+|   bundle.js.map
+|   index.html
+|   styles.css
+├───about/
+|       index.html
+└───post/
+    ├───new-build-system/
+    |       index.html
+    ├───new-repo-maps/
+    |       index.html
+    |
+    └───new-season/
+            index.html
+```
+
+
+# Going Live - Free (Static) Site Hosting Options
+
+- GitHub Pages      -- use git push  
+- GitLab Pages      -- use git push
+- Surge.sh  -- go live with six keystrokes - s u r g e [ENTER]
+- Google Firebase (Free Tier)   
+- And Many More
+
+
+
+# Why Static? - Static is the New Dynamic
+
+- Fast, Faster, Fastest
+
+- Simple, Simpler, Simplest
+
+- Pretty, Prettier, Prettiest
+    - e.g. designer nirvana - do-it-yourself - full control over your design; use Bootstrap, Material, or what not.
+
+Bonus: Secure e.g. just a bunch of (static) files on your server.
+
+
+
+# Why Static? - Static is the New Dynamic (Cont.)
+
+Some Articles:
+
+- [**Why Static Website Generators Are The Next Big Thing**](https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing) by Mathias Biilmann Christensen, Nov 2015; Smashing Magazine
+- [**Seven Reasons to Use a Static Site Generator**](https://www.sitepoint.com/7-reasons-use-static-site-generator) by Craig Buckler, March 2016; Site Point
+- [**Nine Reasons Your Site Should Be Static**](https://www.netlify.com/blog/2016/05/18/9-reasons-your-site-should-be-static) by Aaron Autrand, May 2016; Netlify
+- [**Five Bullshit Reasons Not to Use a Static Generator**](https://www.netlify.com/blog/2016/05/24/5-bullst-reasons-not-to-use-a-static-generator)
+by Aaron Autrand, May 2016; Netlify
+  - I want good SEO!
+  - Updating content is too hard! I can't use a CMS!
+  - There's no way for users to interact with my content!
+  - There are too many choices!
+  - It takes too long to set up!  
+
+
+
+# Thanks - Stay Static
+
+**Stay Static Sample Sites (Showcase)**
+
+- [Stay Static](http://staystatic.github.io)
+  - [`/hugo`](https://github.com/staystatic/hugo)
+  - [`/jekyll`](https://github.com/staystatic/jekyll)
+  - [`/middleman`](https://github.com/staystatic/middleman)
+  - [`/webgen`](https://github.com/staystatic/webgen)
+  - [`/metalsmith-handlebars`](https://github.com/staystatic/metalsmith-handlebars)
+  - [`/metalsmith-nunjucks`](https://github.com/staystatic/metalsmith-nunjucks)  
+  - [`/gatsby`](https://github.com/staystatic/gatsby)
+
+**Stay Up-To-Date - Follow Along**
+
+- For Vienna.html News => Follow [@viennahtml](https://twitter.com/viennahtml)
+- For Static Site News => Follow [@statictimes](https://twitter.com/statictimes)
+- For Writing in Plain Text w/ Markdown News => Follow [@manuscriptsnews](https://twitter.com/manuscriptsnews)
+
+
+# Appendix: Static Site Builders / Generators
+
+StaticGen.com
+
+![](i/site-staticgen-com.png)
+
+
+# Appendix: More React.js Static Site Builders / Generators
+
+**Phenomic** (web: [phenomic.io](https://phenomic.io), github: [MoOx/phenomic](https://github.com/MoOx/phenomic)) ★823
+by Maxime Thirouin et al
+
+**Leo** (github: [superawesomelabs/leo](https://github.com/superawesomelabs/leo)) ★15
+by Christopher Biscardi et al
+
+And others.
+
+
+
+# Appendix: Vienna.html - Join Us - No Database Required
+
+Next meetup in fall 2016. Free. Everyone Welcome.
+
+Example talks from last July meetup include:
+
+- Using PostCSS with Static Site Builders by Max Stoiber
+- Real World Static Site Showcase I - Inside ColorSnapper - Changelog Generation w/ Metalsmith.js and a Custom Plugin by Andrey Okonetchnikov
+- Real World Static Site Showcase II - Inside Contentful - Turn Your Blog Posts into Facebook Instant Articles w/ Middleman by Rouven Weßling (Contentful)
+- Real World Static Site Showcase III - Inside Chip Shop - Build Your Silicon Empire - Build A Cards Game w/ Jekyll (n Markdown) by Chris Ward
+
+
+More info [`viennahtml.github.io »`](http://viennahtml.github.io)
