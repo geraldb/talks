@@ -313,7 +313,7 @@ Extensions / Goodies Include:
 # Markdown Madness - Markdown Goodies - Tables
 
 ```
-Feature                  | Hugo
+Feature                  | Gatsby
 ------------------------ | ------------
 Settings / Configuration | TOML
 Front Matter / Meta Data | YAML
@@ -324,7 +324,7 @@ HTML "Shortcodes"        | Markdown
 
 becomes
 
-Feature                  | Hugo
+Feature                  | Gatsby
 ------------------------ | ------------
 Settings / Configuration | TOML
 Front Matter / Meta Data | YAML
