@@ -67,7 +67,7 @@ And today?
 
 # Hello, Gatsby!
 
-by Kyle Mathews et al (★3 071) -
+by Kyle Mathews et al (★3 072) -
 github: [`gatsbyjs/gatsby`](https://github.com/gatsbyjs/gatsby)
 
 ![](i/staticgen-gatsby.png)
@@ -91,7 +91,7 @@ The world's 1st Gatsby site?
 - Newspapers
 - etc.
 
-### Trivia Quiz
+### World Classics Trivia Quiz
 
 Q: The Great Gatsby by ____ ?
 
@@ -108,11 +108,23 @@ Q: Last Update In (Static Since) ______ ?
 - [ D ] 2015
 
 
+# World Classics Triva Quiz (Cont.) - Answers
+
+![](i/greatgatsby.png)
+
+The Great Gatsby is a **1925** novel written by American author
+**Francis Scott Fitzgerald** ...
+a portrait of the Jazz Age or the Roaring Twenties that has been described
+as a cautionary tale regarding the American Dream.
+
+(Source: [Wikipedia - The Great Gatsby](https://en.wikipedia.org/wiki/The_Great_Gatsby))
+
+
 
 # Getting Started w/ Gatsby
 
-Gatsby is JavaScript package using Webpack, React, React-Router,
-Markdown (w/ ) and more to let you build static (web)sites.
+Gatsby is a JavaScript package using Webpack, React, React-Router,
+Markdown and more to let you build static (web)sites.
 Use npm to install e.g.:
 
 ```
@@ -120,7 +132,7 @@ $ npm install -g gatsby
 ```
 
 
-# Getsby Commands
+# Gatsby Commands
 
 Try:
 
@@ -485,7 +497,7 @@ import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 
 
-export default class Header extends React.Component {
+class Header extends React.Component {
   render() {
     return (
       <div id="header">
