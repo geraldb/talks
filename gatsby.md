@@ -656,7 +656,7 @@ by Aaron Autrand, May 2016; Netlify
 
 StaticGen.com
 
-![](i/site-staticgen-com.png)
+![](i/site-staticgen-com-2016.png)
 
 
 # Appendix: More React.js Static Site Builders / Generators
