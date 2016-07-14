@@ -67,7 +67,7 @@ And today?
 
 # Hello, Gatsby!
 
-by Kyle Mathews et al (★3 072) -
+by Kyle Mathews et al (★3 071) -
 github: [`gatsbyjs/gatsby`](https://github.com/gatsbyjs/gatsby)
 
 ![](i/staticgen-gatsby.png)
@@ -110,12 +110,11 @@ Q: Last Update In (Static Since) ______ ?
 
 # World Classics Triva Quiz (Cont.) - Answers
 
-![](i/greatgatsby.png)
+![](i/greatgatsby.jpg)
 
 The Great Gatsby is a **1925** novel written by American author
 **Francis Scott Fitzgerald** ...
-a portrait of the Jazz Age or the Roaring Twenties that has been described
-as a cautionary tale regarding the American Dream.
+a portrait of the Jazz Age or the Roaring Twenties ...
 
 (Source: [Wikipedia - The Great Gatsby](https://en.wikipedia.org/wiki/The_Great_Gatsby))
 
@@ -541,7 +540,7 @@ linkPrefix = "/sites/gatsby"
 
 |  -                       | Gatsby       |
 | ------------------------ | ------------ |
-| GitHub Stars (+1s)       | ★3 072       |
+| GitHub Stars (+1s)       | ★3 071       |
 |  -                       |  -           |
 | Settings / Configuration | TOML         |
 | HTML Templates           | React        |
