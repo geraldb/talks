@@ -115,10 +115,10 @@ including Microformats, RDFa and eRDF.
 
 # Microformat Mashups Demos
 
-# geo Microformat + Google Maps
-# rel-tag Microformat + Flickr
-# hCalendar Microformat + Google Calendar
-# hCard Microformat +  Contact Adress Book Export/Import
+1. geo Microformat + Google Maps
+2. rel-tag Microformat + Flickr
+3. hCalendar Microformat + Google Calendar
+4. hCard Microformat +  Contact Adress Book Export/Import
 
 
 # Mashup #1 w/ Maps  - Geo Microformat
