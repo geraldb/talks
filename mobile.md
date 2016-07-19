@@ -8,17 +8,13 @@ gradient: top_bottom blue navy
 %%%%%%%%%%%%%
 % Slides Start Here
 
-h1. Create Mobile Web Apps with the iUI JavaScript Library 
+# Create Mobile Web Apps with the iUI JavaScript Library 
 
-"Gerald Bauer":http://geraldbauer.ca @ "MobileCampVancouver2":http://barcamp.org/MobileCampVancouver2, Vancouver, British Columbia, September 2008
-
----
-("Source":http://slideshow.rubyforge.org/svn/samples/mobile.textile)
-
-{{help}}
+[Gerald Bauer](http://geraldbauer.ca) @ [MobileCampVancouver2](http://barcamp.org/MobileCampVancouver2), Vancouver, British Columbia, September 2008
 
 
-h1. What's the Mobile Web?
+
+# What's the Mobile Web?
 
 The mobile web is just like the regular web but you access it on the go using mobile devices 
 such as mobile phones, mobile music/media players, mobile internet tablets etcetera.
@@ -34,15 +30,15 @@ One Web =  Use "classic" HTML, CSS, JavaScript, etcetera on the mobile web.
 No need for different "standards".
 
 
-h1. Why does the mobile web matter?
+# Why does the mobile web matter?
 
 * Billions of mobile phones. 
 * More and more "smart" phones have built-in industry-strength browsers.
 
 
-h1. How does the mobile web differ from the "classic" web?
+# How does the mobile web differ from the "classic" web?
 
-h3. Usually smaller screen
+### Usually smaller screen
 
 e.g. Apple's iPhone screen size is 320x480 pixel or 480x320 pixel.
 
@@ -50,50 +46,50 @@ Note, iPhone's browser lets you zoom in and zoom out. By default for non-mobile
 web screen size optimized sites iPhone will zoom out 
 to make the screen appear to have a size of 980 pixels (instead of the actual 320).
 
-h3. Limited keyboard for text entry and limited clicking (no mouse)
+### Limited keyboard for text entry and limited clicking (no mouse)
 
 Use accesskey for links allowing you to "click" links using your phone key numbers (
 such as 1,2,3,4,5,etc.)
 
-h3. Limited connectivity/offline
+### Limited connectivity/offline
 
-h3. Special links for phone numbers
+### Special links for phone numbers
 
-{{{
+```
 <a href="tel:1-604-555-5555">1-604-555-5555</a>
-}}}
+```
 
 
-h1. What's iUI?
+# What's iUI?
 
-iUI is an open-source framework (really just one @iui.js@ - JavaScript file,
-one @iui.css@ - style sheet and many graphics)
+iUI is an open-source framework (really just one `iui.js` - JavaScript file,
+one `iui.css` - style sheet and many graphics)
 created by Joe Hewitt (of Firebug fame) and now working at Facebook (and responsible for - surprise, surprise - the mobile web version of Facebook).
 
-* "iUI Project Site":http://code.google.com/p/iui
-* "iUI Intro":http://www.joehewitt.com/blog/introducing_iui.php  by Joe Hewitt  
+* [iUI Project Site](http://code.google.com/p/iui)
+* [iUI Intro](http://www.joehewitt.com/blog/introducing_iui.php)  by Joe Hewitt  
 
 
-h1. iUI Design
+# iUI Design
 
 * Single-Page Web Application (Clicking on link fires off an Ajax/JavaScript request -> Page gets updated  w/ animation effect!)
-* Ajax/JavaScript Machinery Hidden - Just use plain HTML list tags (@ul@, [@li@]), links ([@a@]) and it works; no JavaScript coding required.
+* Ajax/JavaScript Machinery Hidden - Just use plain HTML list tags (`ul`, `li`), links (`a`) and it works; no JavaScript coding required.
 * Back button still works.
 
-h1. iUI - Getting Started in Three Minutes
+# iUI - Getting Started in Three Minutes
 
-Step 1: Download and Unzip iUI Package @ "code.google.com/p/iui":http://code.google.com/p/iui
+Step 1: Download and Unzip iUI Package @ [code.google.com/p/iui](http://code.google.com/p/iui)
 
 Step 2: Try the Music Example or the Theaters Search Example (Open Up Page in a WebKit Browser)
 
 That's it. No Developer $$$ Fee. No F!?#!ing Non-Disclosure Agreement (NDA).
 
 
-h1. iUI - Lists
+# iUI - Lists
 
-!iui-hoods.png!
+![](i/iui-hoods.png)
 
-{{{
+```
 <ul title="Neighbourhoods">               
   <li><a href='/hood/1'>Commercial Drive</a>
     <span class='small'>Eastside</span>
@@ -108,15 +104,16 @@ h1. iUI - Lists
     <span class='small'>Downtown</span>
   </li>                 
 </ul>
-}}}
+```
 
-(Source: "Roomienator":http://rubybook.ca/2008/02/12/iui)
+(Source: [Roomienator](http://rubybook.ca/2008/02/12/iui))
 
-h1. iUI - Groups and Lists
 
-!iui-home.png!
+# iUI - Groups and Lists
 
-{{{
+![](i/iui-home.png)
+
+```
 <ul title="RoomieNATOR" selected="true">
 
   <li class="group">Browse</li>
@@ -131,32 +128,32 @@ h1. iUI - Groups and Lists
     <li><a href="#help">Help</a></li>
     <li><a href="#about">About</a></li>
 </ul>
-}}}
+```
 
-Add @class='group'@ to mark list item for grouping. That's it.
+Add `class='group'` to mark list item for grouping. That's it.
 
-h1. iUI - Panels
+# iUI - Panels
 
-!iui-panel.png!
+![](i/iui-panel.png)
 
-{{{
+```
 <div id="about" title="About" class="panel">
   <h2>About RoomieNATOR</h2>
   <p>Sample Mobile Web App using the iUI JavaScript Library w/ Ruby on Rails</p>
 </div>
-}}}
+```
 
-Add @class='panel'@ to mark @div@ block as a panel. That's it.
+Add `class='panel'` to mark `div` block as a panel. That's it.
 
-h1. iUI - Link Types
+# iUI - Link Types
 
-* Intra-Page iUI Link (@#artists@)
-* iUI Link  (@/stats@)
-* Plain Old Link (Reload New Page) (@target='_self'@)
+* Intra-Page iUI Link (`#artists`)
+* iUI Link  (`/stats`)
+* Plain Old Link (Reload New Page) (`target='_self'`)
 
-!iui-links.png!
+![](i/iui-links.png)
 
-{{{
+```
 <ul id="home" title="Music" selected="true">
   <li><a href="#artists">Artists</a></li>
   <li><a href="#settings">Settings</a></li>
@@ -164,13 +161,13 @@ h1. iUI - Link Types
   <li><a href="http://code.google.com/p/iui/" target="_self">About</a></li>
   <li>Nothing</li>
 </ul>
-}}}
+```
 
-h1. Intra-Page iUI Links
+# Intra-Page iUI Links
 
 Browse Lists and Pages without Network Access
 
-{{{
+```
 <ul id="artists" title="Artists">
   <li class="group">B</li>
     <li><a href="#TheBeatles">The Beatles</a></li>
@@ -191,13 +188,13 @@ Browse Lists and Pages without Network Access
   <li><a href="#songs">The Life Pursuit</a></li>
 </ul>
 ...
-}}}
+```
 
-h1. iUI - Forms
+# iUI - Forms
 
-!iui-form.png!
+![](i/iui-form.png)
 
-{{{
+```
 <form title="Login" class="panel" action="/login" method="POST">
 
 <h2>Welcome to RoomieNATOR</h2>
@@ -214,15 +211,16 @@ h1. iUI - Forms
 </fieldset>
 <a class="whiteButton" type="submit" href="#">Login</a>
 </form>
-}}}
+```
 
-Mark @div@ block with @class='row'@ for form rows and submit button with @class='whiteButton'@.
+Mark `div` block with `class='row'` for form rows and submit button with `class='whiteButton'`.
 
-h1. All Together Now
+
+# All Together Now
 
 * Single-Page Web Application (Clicking on link fires off an Ajax/JavaScript request -> Page gets updated  w/ animation effect)
 
-{{{
+```
 <html>
   <head>
     <title>RoomieNATOR</title>
@@ -241,7 +239,7 @@ h1. All Together Now
 
   </body>
 </html>
-}}}
+```
 
 * Include iUI Style Sheet
 * Include iUI JavaScript Library
@@ -249,11 +247,11 @@ h1. All Together Now
 
 That's it.
 
-h1. iUI - Lists and Ruby 
+# iUI - Lists and Ruby 
 
-!iui-hoods.png!
+![](i/iui-hoods.png)
 
-{{{
+```
 <ul title="Neighbourhoods">               
   <%% for hood in @neighbourhoods do %>
     <li><%%= link_to hood.name, hood %>
@@ -261,11 +259,11 @@ h1. iUI - Lists and Ruby
     </li>                 
   <%% end %>
 </ul>
-}}}
+```
 
 Generates
 
-{{{
+```
 <ul title="Neighbourhoods">               
   <li><a href='/hood/1'>Commercial Drive</a>
     <span class='small'>Eastside</span>
@@ -280,21 +278,21 @@ Generates
     <span class='small'>Downtown</span>
   </li>                 
 </ul>
-}}}
+```
 
 
-h1. Alternatives
+# Alternatives
 
 * CiUI (CNet iUI)
-** "Project Site":http://code.google.com/p/ciui-dev
-** "CNET Example":http://iphone.cnet.com
+  * [Project Site](http://code.google.com/p/ciui-dev)
+  * [CNET Example](http://iphone.cnet.com)
 
 and others
 
-!ciui.png!
+![](i/ciui.png)
 
 
-h1. The Browser Players - WebKit, WebKit, WebKit
+# The Browser Players - WebKit, WebKit, WebKit
 
 Good news. Microsoft's Internet Explorer Web Browser is an also ran.
 
@@ -313,26 +311,30 @@ Other mobile browser include:
 * Mozilla Firefox Mobile (Fennec) (Open Source)
 
 
-h1. Browser Innovation in WebKit
+# Browser Innovation in WebKit
 
 * Better & More Web Markup Functionality (HTML5)
-** more form functionality (datepickers, required, repeat, etc.)
-** standard audio, video tags 
-** new tags such as header, footer, nav, aside, figure, dialog, m (mark), time, meter, progress 
-** much more
+  * more form functionality (datepickers, required, repeat, etc.)
+  * standard audio, video tags 
+  * new tags such as header, footer, nav, aside, figure, dialog, m (mark), time, meter, progress 
+  * much more
+
+<!-- -->
 
 * Better & More Scripting Functionality (JavaScript)
-** 2D & 3D graphics using JavaScript (Canvas) built into browser (no Flash plugin required!)
-** standard HTTP request service (also known as Ajax)
-** offline storage 
-** much more
+  * 2D & 3D graphics using JavaScript (Canvas) built into browser (no Flash plugin required!)
+  * standard HTTP request service (also known as Ajax)
+  * offline storage 
+  * much more
+
+<!-- -->
 
 * Better & More Cascading Style Stylesheet Functionality
-** rounded borders, animation, etc.
-** much more
+  * rounded borders, animation, etc.
+  * much more
 
 
-h1. About Web Kit
+# About Web Kit
 
 History/Beginnings:
 
@@ -343,8 +345,8 @@ Building Blocks: KHTML, KJS
 Instead of building the browser for the Apple OS X
 from scratch Apple decides to build on/reuse the open source KHTML/KJS core.
 
-* "Web Kit Open Source Project Site":http://webkit.org
-* "Planet Web Kit":http://planet.webkit.org
+* [Web Kit Open Source Project Site](http://webkit.org)
+* [Planet Web Kit](http://planet.webkit.org)
 
 Desktop Browsers Using WebKit
 
@@ -353,12 +355,12 @@ Desktop Browsers Using WebKit
 * Adobe Integrated Runtime (AIR)
 * Linux KDE Browser
 
-h1. More Mobile Web Links
 
-* "Official W3C Mobile Web Site":http://w3.org/Mobile
-* "Official W3C Mobile Web Best Practices":http://w3.org/TR/mobile-bp
-* "Planet Mobile Web":http://w3.org/Mobile/planet
+# More Mobile Web Links
 
-h1. That's It. Thank You.
+* [Official W3C Mobile Web Site](http://w3.org/Mobile)
+* [Official W3C Mobile Web Best Practices](http://w3.org/TR/mobile-bp)
+* [Planet Mobile Web](http://w3.org/Mobile/planet)
 
-{{ google_analytics :code => 'UA-397343-10' }}
+# That's It. Thank You.
+
