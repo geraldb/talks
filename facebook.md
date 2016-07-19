@@ -9,6 +9,8 @@ gradient-colors: #0e1f5b #3b5998
 * Name your two top (recommended) Facebook apps
 * Why? Fun? Utility? Other?
 
+<!-- -->
+
 * Have you already developed a Facebook app? In PHP, Ruby, Java, C#.NET, Python?
 
 Sample:
