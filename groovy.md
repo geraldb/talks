@@ -191,6 +191,8 @@ Java is a programming language for (hard-core) systems development.
 * **Embedabble** (Scripting Power for Your Apps)
 * **Interactive** (Create, View, Change Objects At Run-Time)
 
+<!-- -->
+
 * **50 % less code**
 * **2 to 3 times higher productivity (that is, less development time)**
  
@@ -498,6 +500,7 @@ times
 ```
 1000.times { println "Groovy rocks big time!" }
 ```
+
 
 
 # What is a Closure (Code Block/Anonymous Function)? 
