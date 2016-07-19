@@ -6,7 +6,7 @@ title: Tagging & Tag Clouds Made Easy
 %%%%%%%%%%%%%
 % Slides Start Here
 
-h1. Tagging & Tag Clouds Made Easy
+# Tagging & Tag Clouds Made Easy
 
 Agenda
 
@@ -19,7 +19,7 @@ Agenda
 * Rails Tagging Plugin Choices
 
 
-h1. Tags, Tag Clouds, Folksonomy - Glossary
+# Tags, Tag Clouds, Folksonomy - Glossary
 
 Tags - Quick & Easy Free-Style Keywords
 
@@ -27,7 +27,7 @@ Tag Clouds - Listing of Most Popular Tags - More Popular Tags Usually Shown in B
 
 Folksonomy - Self-organizing non-hierarchical cataloging/classification system using free-style keywords (also known as tags)
 
-h3. Web 1.0/3.0 - Web 2.0
+### Web 1.0/3.0 - Web 2.0
 
 Category != Tag
 
@@ -36,39 +36,40 @@ Taxonomy != Folksonomy
 Tag == Label, Keyword, Category (?)
 
 
-h1. Tag Clouds in the Wild
+# Tag Clouds in the Wild
 
-* "Delicious Bookmark Tag Cloud":http://del.icio.us/tag
-* "Flickr Photo Tag Cloud":http://flickr.com/photos/tags
-* "LibraryThing Book Tag Cloud":http://www.librarything.com/tagcloud.php
-* "WordPress Blog Posting Tag Cloud":http://wordpress.com/tags
+* [Delicious Bookmark Tag Cloud](http://del.icio.us/tag)
+* [Flickr Photo Tag Cloud](http://flickr.com/photos/tags)
+* [LibraryThing Book Tag Cloud](http://www.librarything.com/tagcloud.php)
+* [WordPress Blog Posting Tag Cloud](http://wordpress.com/tags)
 
-h1. Why? Share. Tag. Discover.
+# Why? Share. Tag. Discover.
 
 Tagging Examples
 
 * Location: burnaby gastown yaletown granville ubc stanleypark
 * Events: northernvoice groovyvan vanrb barcampvancouver vanajax
-* Ratings: <code>*</code> (1 Star) <code>**</code> (2 Star) <code>***</code> (3 Star) <code>****</code> (4 Star) <code>*****</code> (5 Star)
+* Ratings: `*` (1 Star) `**` (2 Star) `***` (3 Star) `****` (4 Star) `*****` (5 Star)
 
 Discover Examples
 
-* "Latest Bookmarks About Rails":http://del.icio.us/tag/rails
-* "Most Popular Bookmarks About Rails":http://del.icio.us/popular/rails
-* "Latest Blog Posts Tagged Vancouver":http://wordpress.com/tag/vancouver
-* "Latest Photos Tagged Vancouver":http://flickr.com/photos/tags/vancouver
+* [Latest Bookmarks About Rails](http://del.icio.us/tag/rails)
+* [Most Popular Bookmarks About Rails](http://del.icio.us/popular/rails)
+* [Latest Blog Posts Tagged Vancouver](http://wordpress.com/tag/vancouver)
+* [Latest Photos Tagged Vancouver](http://flickr.com/photos/tags/vancouver)
 * Discover Related Tags and much more
 
-h1. Wikipedia Tagging Related Terms Tag Cloud
+# Wikipedia Tagging Related Terms Tag Cloud
 
-<a href="http://en.wikipedia.org/wiki/Tag_(metadata)">Tag (metadata)</a>
-"Tag Cloud":http://en.wikipedia.org/wiki/Tag_cloud
-"Social Bookmarking":http://en.wikipedia.org/wiki/Social_bookmarking
-"Folksonomy":http://en.wikipedia.org/wiki/Folksonomy
-"Taxonomy":http://en.wikipedia.org/wiki/Taxonomy
-"Web 2.0":http://en.wikipedia.org/wiki/Web_2.0
-"Web 3.0":http://en.wikipedia.org/wiki/Web_3.0
-"Semantic Web":http://en.wikipedia.org/wiki/Semantic_web 
+[Tag (metadata)](http://en.wikipedia.org/wiki/Tag_(metadata))
+[Tag Cloud](http://en.wikipedia.org/wiki/Tag_cloud)
+[Social Bookmarking](http://en.wikipedia.org/wiki/Social_bookmarking)
+[Folksonomy](http://en.wikipedia.org/wiki/Folksonomy)
+[Taxonomy](http://en.wikipedia.org/wiki/Taxonomy)
+[Web 2.0](http://en.wikipedia.org/wiki/Web_2.0)
+[Web 3.0](http://en.wikipedia.org/wiki/Web_3.0)
+[Semantic Web](http://en.wikipedia.org/wiki/Semantic_web)
+
 
 h1. Add Tags To Your Web App
 
