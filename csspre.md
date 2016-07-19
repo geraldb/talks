@@ -336,7 +336,7 @@ $ lessc styles.less > styles.css
 
 # "Official" CSS3 Variables
 
-Upcoming Module for CSS3 Variables => [`dev.w3.org/csswg/css-variables](http://dev.w3.org/csswg/css-variables)
+Upcoming Module for CSS3 Variables => [`dev.w3.org/csswg/css-variables`](http://dev.w3.org/csswg/css-variables)
 
 Example:
 
