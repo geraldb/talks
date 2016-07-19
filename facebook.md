@@ -2,7 +2,7 @@ title: Why Facebook Matters - Stats, Numbers, Web OS vs. Desktop OS, News
 gradient-colors: #0e1f5b #3b5998
 
 
-h1. Facebook Profile Questions - Ice Breakers
+# Facebook Profile Questions - Ice Breakers
 
 * Are you on Facebook?
 * How many apps have you installed on Facebook? Zero? Less than Five? Five+? Ten+?
@@ -18,7 +18,7 @@ Sample:
 * Five+ / WordPress, Twitter / Utility
 
 
-h1. What's Facebook?
+# What's Facebook?
 
 * Facebook is "Addictive"
 * Facebook is "So, Distracting, Companies Must Ban It"
@@ -31,7 +31,7 @@ h1. What's Facebook?
 Source: Adonomics - Why Facebook Is Worth $100 Billion
 
 
-h1. Facebook Stats
+# Facebook Stats
 
 * More than 70+ million active users
 * More than 200,000+ new registrations/day since January 2007
@@ -40,10 +40,10 @@ h1. Facebook Stats
 * More than 14 million photos uploaded/day
 * More than 6 million active user groups
 
-Source: "Facebook Statistics":http://www.facebook.com/press/info.php?statistics
+Source: [Facebook Statistics](http://www.facebook.com/press/info.php?statistics)
 
 
-h1. Canadian Facebook Stats
+# Canadian Facebook Stats
 
 More than 8+ million Facebookers (top outside the US followed by 8+ in the UK)
 
@@ -61,10 +61,10 @@ Canadian University Networks
 * University of Victoria (UVic) - 16,416 Facebookers
 * University of Toronto (UofT) - 57,360 Facebookers
 
-Source: "Facebook Networks":http://www.facebook.com/networks/networks.php (Apr/14/2008)
+Source: [Facebook Networks](http://www.facebook.com/networks/networks.php) (Apr/14/2008)
 
 
-h1. Facebook vs. MySpace
+# Facebook vs. MySpace
 
 Facebook:
 
@@ -78,7 +78,7 @@ MySpace (100+ Million Profiles):
 
 
 
-h1. Facebook Apps
+# Facebook Apps
 
 * 20,000+ apps
 * 100+ new apps/day added
@@ -95,27 +95,28 @@ More Categories
 
 Education (1600+), Dating (1500+), Music (1100+), Events (900+), Business (900+), Money (300+) and many more
 
-Source: "Facebook Application Catalog":http://www.facebook.com/apps
-
-h1. Best of the West - Top Facebook Apps Made in British Columbia
-
-# Scratch and Win (Backstage) / 449,900 / 71,984 (16%)
-# Hockey Pool (Ben Nevile) / 347,793 / 48,691 (14%)
-# Are You Normal? (Kinzin) / 572,300 / 5,723 (1%)
-# I'm Reading (Garth Shoemaker) / 61,400 / 614 (1%) 
-# Hockey Pool Pro (Jason Bailey, $uper Rewards) / 20,300 / 203 (1%)
-# The Snow Report (Jeremy Holland and Dean Halford ) / 18,200 / 182 (1%)
-# Eat-A-Rama (ActiveState) / 17,800 / 30 (0%)
-# Green Gifts (Social Signal) / 7,400 / 74 (1%)
-# These Are My Kids (Kinzin) / 4,200 / 126 (3%)
-# Mixx Maker (Project Opus/Donat Group) / 1,000 / 20 (2%) 
-
-Source: "Vancouver Ajax & Web 2.0 (3.0) Developer Group":http://vanajax.com
-
-"Adonomics Chart - Scratch and Win / Are You Normal? / Hockey Pool":http://adonomics.com/display/5274916578+2389617504+5173067945
+Source: [Facebook Application Catalog](http://www.facebook.com/apps)
 
 
-h1. Facebook Developers
+# Best of the West - Top Facebook Apps Made in British Columbia
+
+ 1. Scratch and Win (Backstage) / 449,900 / 71,984 (16%)
+ 2. Hockey Pool (Ben Nevile) / 347,793 / 48,691 (14%)
+ 3. Are You Normal? (Kinzin) / 572,300 / 5,723 (1%)
+ 4. I'm Reading (Garth Shoemaker) / 61,400 / 614 (1%) 
+ 5. Hockey Pool Pro (Jason Bailey, $uper Rewards) / 20,300 / 203 (1%)
+ 6. The Snow Report (Jeremy Holland and Dean Halford ) / 18,200 / 182 (1%)
+ 7. Eat-A-Rama (ActiveState) / 17,800 / 30 (0%)
+ 8. Green Gifts (Social Signal) / 7,400 / 74 (1%)
+ 9. These Are My Kids (Kinzin) / 4,200 / 126 (3%)
+10. Mixx Maker (Project Opus/Donat Group) / 1,000 / 20 (2%) 
+
+Source: [Vancouver Ajax & Web 2.0 (3.0) Developer Group](http://vanajax.com)
+
+[Adonomics Chart - Scratch and Win / Are You Normal? / Hockey Pool](http://adonomics.com/display/5274916578+2389617504+5173067945)
+
+
+# Facebook Developers
 
 * More than 300,000+ Facebook Developers World Wide
 * Vancouver Facebook (& Social Network) Developers Group (200+)
@@ -125,18 +126,18 @@ Facebook Developer Garage Events Around the World:
 San Francisco, New York, Boston, Toronto, Vancouver, London, Singapore, Sydney
  and in many more cities (Source: Facebook Developer Garage Calendar)
 
-* "Vancouver's 1st Facebook Developer Garage":http://barcamp.org/FacebookCampVancouver2007
-* "Vancouver's 2nd Facebook Developer Garage":http://barcamp.org/FacebookCampVancouver2008
+* [Vancouver's 1st Facebook Developer Garage](http://barcamp.org/FacebookCampVancouver2007)
+* [Vancouver's 2nd Facebook Developer Garage](http://barcamp.org/FacebookCampVancouver2008)
 
 
-h1. Facebook App Analytics / Stats - Adonomics Leaderboard
+# Facebook App Analytics / Stats - Adonomics Leaderboard
 
 * There are 886,320,511 installs across 21,822 apps on Facebook with over 200,000 developers currently evaluating the platform.
-* These applications were used 34,175,797 times in the last 24 hours and have a combined valuation of $428,182,197..
+* These applications were used 34,175,797 times in the last 24 hours and have a combined valuation of $428,182,197.
 
-h3.  Top Facebook Applications
+### Top Facebook Applications
 
-"Adonomics Facebook Application Leaderboard":http://adonomics.com/leaderboard/apps
+[Adonomics Facebook Application Leaderboard](http://adonomics.com/leaderboard/apps)
 
 Metrics:
 
@@ -145,25 +146,25 @@ Metrics:
 * Valuation (Estimated) in $$$
 
 
-h1.  Graphical OS vs. Social OS
+# Graphical OS vs. Social OS
 
 Windows OS vs. Facebook OS / Desktop OS vs Web OS
 
-h3. Founders
+### Founders
 
 Harvard drop-out and his former roommate
 vs.
 Harvard drop-out and his former roommate
 
-h3. Initial Launch
+### Initial Launch
 
 1984 vs. 2004
 
-h3. Critical Mass Achieved
+### Critical Mass Achieved
 
 1995 vs. 2007
 
-h3. Competitors
+### Competitors
 
 Digital Research's GEM, IBM's OS/2 Presentation Manager, VisiCorp's VisiON, Sun xWindows, Apple's Mac
 
@@ -172,7 +173,7 @@ vs.
 MySpace, LinkedIn, Orkut, Friendster, OpenSocial
 
 
-h3. Focus
+### Focus
 
 * Windows SDK à Developers / Developers / Developers!!!
 * 80,000 employees
@@ -184,7 +185,7 @@ vs.
 * 450 employees
 * 200,000+ 3rd party developers
 
-h3. Lock-in
+### Lock-in
 
 OEM PC companies bundled Windows; Developers' apps and API knowledge; Consumer investment in apps, file system and user interface
 
@@ -192,7 +193,7 @@ vs.
 
 Consumer investment in Profile Data, Notes, Photos, e-Mail history, Groups, Apps, and Friend Network; developers' apps and API knowledge
 
-h3. Killer Apps
+### Killer Apps
 
 Word, Excel, Powerpoint, Access, Outlook, Browser
 
@@ -206,9 +207,9 @@ Source: Adonomics - Why Facebook is Worth $100 Billion
 
 
 
-h1.  Web Site Registration vs. Facebook App Install
+# Web Site Registration vs. Facebook App Install
 
-h3. User Actions Required to Accomplish Registration
+### User Actions Required to Accomplish Registration
 
 Select Registration Button, Enter E-mail, Enter & Re-Enter Password, Enter other app related profile data
 
@@ -216,7 +217,7 @@ vs.
 
 Select Add Application, Select Continue
 
-h3. Source of New Users
+### Source of New Users
 
 Cost Per Click Advertising (typically $0.25 to $1.00 to get a visitor), Cost Per Impression Advertising, Search Engine Optimization, PR, Offline Advertising, Blogs
 
@@ -225,13 +226,13 @@ vs.
 Friend Invites, Friend Newsfeeds
 
 
-h3. Site Reminders
+### Site Reminders
 
 Bookmarking (<1%)
 vs.
 Profile page
 
-h3. Post Registration Marketing Methods
+### Post Registration Marketing Methods
 
 e-mail
 
@@ -239,7 +240,7 @@ vs.
 
 e-mail, newsfeed, profile page, friends' interactions
 
-h3. Hurdles to Re-using Site/App
+### Hurdles to Re-using Site/App
 
 Remember e-mail/password
 vs.
@@ -247,13 +248,14 @@ Find app/icon on Profile Page and Click
 
 Source: Adonomics - Why Facebook is Worth $100 Billion
 
-h1. Tracking Facebook News
+
+# Tracking Facebook News
 
 Facebook Blogs/News
 
-* "All Facebook Blog":http://allfacebook.com
-* "Inside Facebook Blog":http://insidefacebook.com
+* [All Facebook Blog](http://allfacebook.com)
+* [Inside Facebook Blog](http://insidefacebook.com)
 
 Facebook Blogs/News in and around Vancouver, B.C.
 
-* "Vancouver Ajax & Web 2.0 (3.0) Developer Blog":http://vanajax.com
+* [Vancouver Ajax & Web 2.0 (3.0) Developer Blog](http://vanajax.com)
