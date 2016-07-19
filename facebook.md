@@ -113,8 +113,7 @@ Source: [Facebook Application Catalog](http://www.facebook.com/apps)
  9. These Are My Kids (Kinzin) / 4,200 / 126 (3%)
 10. Mixx Maker (Project Opus/Donat Group) / 1,000 / 20 (2%) 
 
-Source: [Vancouver Ajax & Web 2.0 (3.0) Developer Group](http://vanajax.com)
-
+Source: [Vancouver Ajax & Web 2.0 (3.0) Developer Group](http://vanajax.com), 
 [Adonomics Chart - Scratch and Win / Are You Normal? / Hockey Pool](http://adonomics.com/display/5274916578+2389617504+5173067945)
 
 
@@ -241,6 +240,7 @@ e-mail
 vs.
 
 e-mail, newsfeed, profile page, friends' interactions
+
 
 ### Hurdles to Re-using Site/App
 
