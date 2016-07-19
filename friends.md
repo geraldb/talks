@@ -1,47 +1,38 @@
 title: Adding Semantics to Your Web Site - RDF, RDFa, Microformats - Web 3.0 in Action
 gradient-colors: green lime
 
-h1. Adding Semantics to Your Web Site - RDF, RDFa, Microformats - Web 3.0 in Action 
+# Adding Semantics to Your Web Site - RDF, RDFa, Microformats - Web 3.0 in Action 
 
-"Gerald Bauer":http://geraldbauer.ca @ "RDF Vancouver/Semantic Web Group":http://rdfvancouver.org,
+[Gerald Bauer](http://geraldbauer.ca) @ [RDF Vancouver/Semantic Web Group](http://rdfvancouver.org),
 Vancouver, B.C., November 2008
 
-<hr>
-("Source":http://slideshow.rubyforge.org/svn/samples/friends.textile)
 
-*Slide Show Keyboard Controls (Help)*
-
-| Action | Key |
-| Go to next slide | Space Bar, Right Arrow, Down Arrow, Page Down |
-| Go to previous slide | Left Arrow, Up Arrow, Page Up |
-| Toggle between slideshow and outline view (&#216;) | T |
-| Show/hide slide controls (&#216; &laquo; &raquo;) | C, Move mouse to bottom right corner |
-
-
-h1. Agenda
+# Agenda
 
 * Part I: Contact Info/Business Card
-** Plain Old "Classic" Web Markup
-** Using RDF
-** Using Microformats
-** Using RDFa - RDF The Microformats Way, Sort Of
+  * Plain Old "Classic" Web Markup
+  * Using RDF
+  * Using Microformats
+  * Using RDFa - RDF The Microformats Way, Sort Of
+
+<!-- -->
 
 * Part II: Adding Friends
-** Using RDF
-** Using Microformats
+  * Using RDF
+  * Using Microformats
 
 
-h1. Contact Info/Business Card
+# Contact Info/Business Card
 
 Example:
 
-{{{
+```
 Gerald Bauer
 Internet Professional
 Vancouver, B.C.
 Web: GeraldBauer.ca
 Email: gerald@vanbeta.com
-}}}
+```
 
 What?
 * Name
@@ -50,12 +41,12 @@ What?
 * Web Site
 * Email
 
-h1. Plain Old "Classic" Web Markup
+# Plain Old "Classic" Web Markup
 
-Web markup tags such as @h2@ (heading2) and @p@ (paragraph) and @br@ (break)
+Web markup tags such as `h2` (heading2) and `p` (paragraph) and `br` (break)
 are kind of meaningless (without semantics).
 
-{{{
+```
 <h2>Gerald Bauer</h2>
 
 <p>Internet Professional <br>
@@ -64,7 +55,7 @@ Vancouver, B.C.<br>
 <em>Web: GeraldBauer.ca</em> <br>
 <em>Email: gerald@vanbeta.com</em>
 </p>
-}}}
+```
 
 <div style='background: white; color: black; border: 1px solid black; padding: 2em;'>
 <h2>Gerald Bauer</h2>
@@ -75,7 +66,7 @@ Vancouver, B.C. <br><br>
 </p>
 </div>
 
-h1. Semantic Web - Web 3.0 
+# Semantic Web - Web 3.0 
 
 Semantic Web - add semantics to your web page by marking up events, people, locations, resumes, listings, feeds and much more.
 
@@ -85,11 +76,11 @@ proposes new extension to web markup such as Resource Description Framework(RDF)
 The "pragmatic" semantic web led by the Microformats initiative proposes - let's just use conventions and best practices for today's web markup and today's browsers.
 
 
-h1. Using RDF (Resouce Description Framework) plus Friend of a Friend (FOAF) Vocabulary
+# Using RDF (Resouce Description Framework) plus Friend of a Friend (FOAF) Vocabulary
 
-@gerald.rdf@:
+`gerald.rdf`:
 
-{{{
+```
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:foaf="http://xmlns.com/foaf/0.1/">
   <foaf:Person>
@@ -100,13 +91,13 @@ h1. Using RDF (Resouce Description Framework) plus Friend of a Friend (FOAF) Voc
     <foaf:mbox rdf:resource="mailto:gerald@vanbeta.com" />
   </foaf:Person>
 </rdf:RDF>
-}}}
+```
 
 Add to your web page header:
 
-{{{
+```
 <link rel="meta" type="application/rdf+xml" title="FOAF" href="gerald.rdf" />
-}}}
+```
 
 What's different?
 
@@ -116,23 +107,23 @@ What's different?
 
 
 
-h1. FOAF Tools - FOAF-a-matic, FOAF Explorer
+# FOAF Tools - FOAF-a-matic, FOAF Explorer
 
 FOAF-a-matic:
 
-Fill out a form to create your FOAF file using "FOAF-a-matic":http://www.ldodds.com/foaf/foaf-a-matic.html
+Fill out a form to create your FOAF file using [FOAF-a-matic](http://www.ldodds.com/foaf/foaf-a-matic.html)
 
 FOAF Explorer:
 
-Browse and explore FOAF data displayed as web pages using "FOAF Explorer":http://xml.mfd-consult.dk/foaf/explorer
+Browse and explore FOAF data displayed as web pages using [FOAF Explorer](http://xml.mfd-consult.dk/foaf/explorer)
 
 
 
-h1. Using Microformats and hCard 
+# Using Microformats and hCard 
 
 Plain Old "Classic" Web Markup:
 
-{{{
+```
 <h2>Gerald Bauer</h2>
 
 <p>Internet Professional <br>
@@ -141,11 +132,11 @@ Vancouver, B.C.<br>
 <em>Web: GeraldBauer.ca</em> <br>
 <em>Email: gerald@vanbeta.com</em>
 </p>
-}}}
+```
 
 Adding Semantics Using Microformats:
 
-{{{
+```
 <div class="vcard">
  <h2 class="fn">Gerald Bauer</h2>
  <p>
@@ -159,7 +150,7 @@ Adding Semantics Using Microformats:
  Email: <span class="email">gerald@vanbeta.com</span>
  </p>
 </div>
-}}}
+```
 
 <div class="vcard" style='background: white; color: black; border: 1px solid black; padding: 2em;'>
  <h2 class="fn">Gerald Bauer</h2>
@@ -175,7 +166,8 @@ Adding Semantics Using Microformats:
  </p>
 </div> 
 
-h1. Using Microformats and hCard Continued
+
+# Using Microformats and hCard Continued
 
 What's different?
 
@@ -190,22 +182,24 @@ vs. Using RDF (Resouce Description Framework) plus Friend of a Friend (FOAF) Voc
 * Requires Namespaces
 * Standalone Document (Web Feed-like)
 
-h1. Microformats Tools - hCard-o-matic, Operator
+
+# Microformats Tools - hCard-o-matic, Operator
 
 hCard-o-matic:
 
-Fill out a form to create your hCard markup using "hCard-o-matic":http://microformats.org/code/hcard/creator
+Fill out a form to create your hCard markup using [hCard-o-matic](http://microformats.org/code/hcard/creator)
 
 Operator:
 
 Free, open source browser addon lets you add hCards to Yahoo address book or
-export hCards as vCards and much more - "Install Operator Firefox Browser Addon":https://addons.mozilla.org/en-US/firefox/addon/4106  
+export hCards as vCards and much more - [Install Operator Firefox Browser Addon](https://addons.mozilla.org/en-US/firefox/addon/4106)
 
-h1. Using RDFa - RDF The Microformats Way, Sort Of
 
-Classic RDF - @gerald.rdf@:
+# Using RDFa - RDF The Microformats Way, Sort Of
 
-{{{
+Classic RDF - `gerald.rdf`:
+
+```
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:foaf="http://xmlns.com/foaf/0.1/">
   <foaf:Person>
@@ -216,11 +210,11 @@ Classic RDF - @gerald.rdf@:
     <foaf:mbox rdf:resource="mailto:gerald@vanbeta.com" />
   </foaf:Person>
 </rdf:RDF>
-}}}
+```
 
 RDFa Version:
 
-{{{
+```
 <html xmlns:foaf="http://xmlns.com/foaf/0.1/">
 ...
 <div typeof="foaf:Person">
@@ -233,19 +227,19 @@ RDFa Version:
  Web: <a rel="foaf:weblog" href="http://geraldbauer.ca">GeraldBauer.ca</a>
  </p>
 </div>
-}}}
+```
 
 
-h1. Using RDFa - RDF The Microformats Way
+# Using RDFa - RDF The Microformats Way
 
 What's different (vs. Microformats)?
 
 * Namespace required
-* New web markup extensions required (@typeof@, @property@)
+* New web markup extensions required (`typeof`, `property`)
 
 RDFa Version:
 
-{{{
+```
 <html xmlns:foaf="http://xmlns.com/foaf/0.1/">
 ...
 <div typeof="foaf:Person">
@@ -258,11 +252,11 @@ RDFa Version:
  Web: <a rel="foaf:weblog" href="http://geraldbauer.ca">GeraldBauer.ca</a><br>
  </p>
 </div>
-}}}
+```
 
 Microformats Version:
 
-{{{
+```
 <div class="vcard">
  <h2 class="fn">Gerald Bauer</h2>
  <p>
@@ -276,29 +270,29 @@ Microformats Version:
  Email: <span class="email">gerald@vanbeta.com</span>
  </p>
 </div>
-}}}
+```
 
 
-h1. Using RDF (Resouce Description Framework) plus Friend of a Friend (FOAF) Vocabulary
+# Using RDF (Resouce Description Framework) plus Friend of a Friend (FOAF) Vocabulary
 
 Adding Friends
 
-@jim.rdf@:
+`jim.rdf`:
 
-{{{
+```
 <foaf:Person>
   <foaf:name>Jim Pick</foaf:name>
   <foaf:title>Freelance Software Developer</foaf:title>
   <foaf:mbox rdf:resource="mailto:jim@jimpick.com" />
 </foaf:Person>
-}}}
+```
 
-Use unique identifier (such as @mbox@, @mbox_sha1sum@, @weblog@)
-plus @seeAlso@ with link to FOAF file.
+Use unique identifier (such as `mbox`, `mbox_sha1sum`, `weblog`)
+plus `seeAlso` with link to FOAF file.
 
-@gerald.rdf@:
+`gerald.rdf`:
 
-{{{
+```
 <foaf:Person>
   <foaf:name>Gerald Bauer</foaf:name>
   <foaf:knows>
@@ -309,31 +303,31 @@ plus @seeAlso@ with link to FOAF file.
   </foaf:knows>
 </foaf:Person>
 </rdf:RDF>
-}}}
+```
 
 
 
-h1. Using Microformats and XFN (XHTML Friends Network)
+# Using Microformats and XFN (XHTML Friends Network)
 
-Just add a link with a relationship (@rel@) value of @contact@ from your site to your friends site.
+Just add a link with a relationship (`rel`) value of `contact` from your site to your friends site.
 Sample:
 
-{{{
+```
 <a href="http://jimpick.com" rel="contact">Jim Pick</a>
-}}}
+```
 
 
-h1. Links - Learn More
+# Links - Learn More
 
-* FOAF (Friend of a Friend) - "foaf-project.org":http://foaf-project.org
-* Microformats - "microformats.org":http://microformats.org
-* RDF Vancouver - "rdfvancouver.org":http://rdfvancouver.org
+* FOAF (Friend of a Friend) - [foaf-project.org](http://foaf-project.org)
+* Microformats - [microformats.org](http://microformats.org)
+* RDF Vancouver - [rdfvancouver.org](http://rdfvancouver.org)
 
-h1. That's it - Thanks
+# That's it - Thanks
 
 Questions? Comments?
 
-Send them along to the "Vancouver Ajax & Web 3.0 Developer Forum/Mailing List":http://forum.vanajax.com.
+Send them along to the [Vancouver Ajax & Web 3.0 Developer Forum/Mailing List](http://forum.vanajax.com).
 Thanks!
 
 
