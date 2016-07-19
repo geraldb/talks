@@ -441,7 +441,7 @@ list = 1..100
 sub  = list[1..20]
 sub  = list[-5..-1]
 sub  = list[1,5..10,15]
-```}
+```
 
 Operator Overloading
 
