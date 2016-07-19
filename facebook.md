@@ -102,15 +102,15 @@ Source: [Facebook Application Catalog](http://www.facebook.com/apps)
 
 # Best of the West - Top Facebook Apps Made in British Columbia
 
- 1. Scratch and Win (Backstage) / 449,900 / 71,984 (16%)
- 2. Hockey Pool (Ben Nevile) / 347,793 / 48,691 (14%)
- 3. Are You Normal? (Kinzin) / 572,300 / 5,723 (1%)
- 4. I'm Reading (Garth Shoemaker) / 61,400 / 614 (1%) 
- 5. Hockey Pool Pro (Jason Bailey, $uper Rewards) / 20,300 / 203 (1%)
- 6. The Snow Report (Jeremy Holland and Dean Halford ) / 18,200 / 182 (1%)
- 7. Eat-A-Rama (ActiveState) / 17,800 / 30 (0%)
- 8. Green Gifts (Social Signal) / 7,400 / 74 (1%)
- 9. These Are My Kids (Kinzin) / 4,200 / 126 (3%)
+1. Scratch and Win (Backstage) / 449,900 / 71,984 (16%)
+2. Hockey Pool (Ben Nevile) / 347,793 / 48,691 (14%)
+3. Are You Normal? (Kinzin) / 572,300 / 5,723 (1%)
+4. I'm Reading (Garth Shoemaker) / 61,400 / 614 (1%) 
+5. Hockey Pool Pro (Jason Bailey, $uper Rewards) / 20,300 / 203 (1%)
+6. The Snow Report (Jeremy Holland and Dean Halford ) / 18,200 / 182 (1%)
+7. Eat-A-Rama (ActiveState) / 17,800 / 30 (0%)
+8. Green Gifts (Social Signal) / 7,400 / 74 (1%)
+9. These Are My Kids (Kinzin) / 4,200 / 126 (3%)
 10. Mixx Maker (Project Opus/Donat Group) / 1,000 / 20 (2%) 
 
 Source: [Vancouver Ajax & Web 2.0 (3.0) Developer Group](http://vanajax.com), 
