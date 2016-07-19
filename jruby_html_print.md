@@ -26,6 +26,7 @@ title: (J)Ruby in Action: Generating PDF Documents from HTML Templates
 * What? Python? Groovy? Ruby?
 * Why? / What for? -> Production? Testing? Configuration? Templates? Other?
 
+<!-- -->
 
 * Bonus: Have you developed a web application in a scripting language on a Java infrastructure/stack?
  (e.g. JRuby on Rails, Google App Engine w/ Groovy, etc.)
@@ -33,11 +34,11 @@ title: (J)Ruby in Action: Generating PDF Documents from HTML Templates
 
 Sample:
 
-%% todo: check why redcarpet uses list item (li) wrapped in paragraph (p) for some items
-
 * Yes / Many
 * Ruby, Groovy
 * Production, Templates, Testing
+
+<!-- -->
 
 * No / Zero
 * 10000 % Java!! Java Rules!! Java Java
