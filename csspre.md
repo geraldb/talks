@@ -1,11 +1,11 @@
 title: CSS Next - CSS Preprocessors
 
-h1. CSS Next - CSS Preprocessors
+# CSS Next - CSS Preprocessors
 
 Lightning Talk, May 2012 - Gerald Bauer
 
 
-h1. What's CSS?
+# What's CSS?
 
 CSS => Cascading Style Sheets 
 
@@ -16,7 +16,7 @@ Ice Breakers:
 
 
 
-h1. Dynamic CSS
+# Dynamic CSS
 
 CSS preprocessors extend "standard" CSS with:
 
@@ -27,49 +27,49 @@ CSS preprocessors extend "standard" CSS with:
 * And much more (Interpolation, Conditionals, Looping, Imports, Keyword Arguments, etc.)
 
 
-h1. CSS Variables
+# CSS Variables
 
 Define variables:
 
-{{{
+```
 $bingo-text:         white;
 $bingo-background:   green;
-}}}
+```
 
 Use variables:
 
-{{{
+```
 .bingo {
     background-color: $bingo-background;
     color:            $bingo-text;
 }
-}}}
+```
 
 Becomes (compiled to "standard" CSS):
 
-{{{
+```
 .bingo {
     background-color: white;
     color:            green;
 }
-}}}
+```
 
 Not just colors:
 
-{{{
+```
 $base-font-size:   18px;
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}}}
+```
 
 
 
-h1. CSS Functions and Operations
+# CSS Functions and Operations
 
 Yes, you can. Use standard math operations (+, -, *, /, and %) for numbers - even with units.
 For colors, use functions for changing the lightness, hue, saturation, and more.
 
 
-{{{
+```
 #navbar {
   $navbar-width: 800px;
   $navbar-items: 5;
@@ -88,11 +88,11 @@ For colors, use functions for changing the lightness, hue, saturation, and more.
     }
   }
 }
-}}}
+```
 
 Becomes (compiled to "standard" CSS):
 
-{{{
+```
 #navbar {
   width: 800px;
   border-bottom: 2px solid #ce4dd6;
@@ -105,13 +105,13 @@ Becomes (compiled to "standard" CSS):
 }
 
 #navbar li:hover { background-color: #d976e0; }
-}}}
+```
 
 
 
-h1. CSS Nested Rules
+# CSS Nested Rules
 
-{{{
+```
 #header {
   h1 {
     font-size: 26px;
@@ -123,11 +123,11 @@ h1. CSS Nested Rules
     }
   }
 }
-}}}
+```
 
 Becomes (compiled to "standard" CSS):
 
-{{{
+```
 #header h1 {
   font-size: 26px;
   font-weight: bold;
@@ -141,12 +141,12 @@ Becomes (compiled to "standard" CSS):
 #header p a:hover {
   border-width: 1px;
 }
-}}}
+```
 
 
-h1. CSS Mixins
+# CSS Mixins
 
-{{{
+```
 .slide { 
   background-image: -webkit-linear-gradient(top left, #FFFFFF 0%, #00A3EF 100%);  /* Webkit (Chrome 11+) */
   background-image:    -moz-linear-gradient(top left, #FFFFFF 0%, #00A3EF 100%);  /* Mozilla Firefox     */
@@ -154,19 +154,19 @@ h1. CSS Mixins
   background-image:      -o-linear-gradient(top left, #FFFFFF 0%, #00A3EF 100%);  /* Opera               */
   background-image:         linear-gradient(top left, #FFFFFF 0%, #00A3EF 100%);  /* Proposed W3C Markup */
 }
-}}}
+```
 
 Use mixin for vendor "prefix-free" code:
 
-{{{
+```
 .slide {
   @include linear-gradient(top left, #FFFFFF, #00A3EF);
 }
-}}}
+```
 
 Define mixin for reuse:
 
-{{{
+```
 @mixin linear-gradient($pos, $start-color, $end-color) {
   background-image:  -webkit-linear-gradient($pos, $start-color 0%, $end-color 100%); 
   background-image:     -moz-linear-gradient($pos, $start-color 0%, $end-color 100%); 
@@ -174,10 +174,10 @@ Define mixin for reuse:
   background-image:       -o-linear-gradient($pos, $start-color 0%, $end-color 100%); 
   background-image:          linear-gradient($pos, $start-color 0%, $end-color 100%); 
 }
-}}}
+```
 
 
-h1. Reuse - yes you can. Use pre-built Mixin libraries
+# Reuse - yes you can. Use pre-built Mixin libraries
 
 Bourbon includes pre-built mixins for:
 
@@ -199,15 +199,15 @@ Bourbon includes pre-built mixins for:
 
 What is Bourbon?
 
-Bourbon is a free, open source mixin library (see "@github.com/thoughtbot/bourbon@":https://github.com/thoughtbot/bourbon).
+Bourbon is a free, open source mixin library (see [`github.com/thoughtbot/bourbon`](https://github.com/thoughtbot/bourbon)).
 
 
 
-h1. Imports
+# Imports
 
-Use @import@ directive to include libraries or your own stylesheets. Example:
+Use `import` directive to include libraries or your own stylesheets. Example:
 
-{{{
+```
 @import "bourbon";    // 3rd party css mixin library 
 
 @import "settings";   // global color settings using variables
@@ -218,14 +218,14 @@ Use @import@ directive to include libraries or your own stylesheets. Example:
 @import "breadcrumb";
 
 ...
-}}}
+```
 
 
-h1. Yes, you can. CSS Programming 
+# Yes, you can. CSS Programming 
 
 Simple Button:
 
-{{{
+```
 @mixin simple($base-color, $grayscale: false) {
   $color:         hsl(0, 0, 100%);
   $border:        adjust-color($base-color, $saturation:  9%,  $lightness: -14%);
@@ -287,101 +287,97 @@ Simple Button:
     @include box-shadow (inset 0 0 8px 4px $inset-shadow-active, inset 0 0 8px 4px $inset-shadow-active, 0 1px 1px 0 #eee);
   }
 }
-}}}
+```
 
 
 
-h1. Alternative CSS Preprocessors
+# Alternative CSS Preprocessors
 
-* Sass   =>  "@sass-lang.com@":http://sass-lang.com
+* Sass   =>  [`sass-lang.com`](http://sass-lang.com)
 
-* Less   =>  "@lesscss.org@":http://lesscss.org
+* Less   =>  [`lesscss.org`](http://lesscss.org)
 
-* Stylus  => "@learnboost.github.com/stylus@":http://learnboost.github.com/stylus
+* Stylus  => [`learnboost.github.com/stylus`](http://learnboost.github.com/stylus)
 
 * Others
 
 
 
-h1. Usage - Server Side and Client Side
+# Usage - Server Side and Client Side
 
-h3. Server
+### Server
 
-{{{
+```
 $ sass styles.sass styles.css
-}}}
+```
 
 or
 
-{{{
+```
 $ lessc styles.less > styles.css
-}}}
+```
 
 
-h3. Browser (Client-Side)
+### Browser (Client-Side)
 
-1) Link @.less@ stylesheets with the @rel@ set to @stylesheet/less@:
+1) Link `.less` stylesheets with the `rel` set to `stylesheet/less`:
 
-{{{
+```
 <link rel="stylesheet/less" type="text/css" href="styles.less">
-}}}
+```
 
-2) Add @less.js@ library:
+2) Add `less.js` library:
 
-{{{
+```
 <script src="less.js" type="text/javascript"></script>
-}}}
+```
 
 
 
+# "Official" CSS3 Variables
 
-
-
-
-h1. "Official" CSS3 Variables
-
-Upcoming Module for CSS3 Variables => "@dev.w3.org/csswg/css-variables@":http://dev.w3.org/csswg/css-variables
+Upcoming Module for CSS3 Variables => [`dev.w3.org/csswg/css-variables](http://dev.w3.org/csswg/css-variables)
 
 Example:
 
 Define variables:
 
-{{{
+```
 :root  { var-color: blue; }
 div    { var-color: green; }
 #alert { var-color: red; }
-}}}
+```
 
 
 Use variables:
 
-{{{
+```
 * { color: var(color); }
-}}}
+```
 
 Includes calculations:
 
-{{{
+```
 one   { var-foo: 10px; }
 two   { var-bar: calc(var(foo) + 10px); }
 three { var-foo: calc(var(bar) + 10px); }
-}}}
+```
 
 
 
-h1. Examples in the Wild
+# Examples in the Wild
 
-* Twitter Bootstrap  (HTML/CSS/JS Templates) => "@twitter.github.com/bootstrap@":http://twitter.github.com/bootstrap
+* Twitter Bootstrap  (HTML/CSS/JS Templates) => [`twitter.github.com/bootstrap`](http://twitter.github.com/bootstrap)
   
-See "Using LESS with Bootstrap Page":http://twitter.github.com/bootstrap/less.html
+See [Using LESS with Bootstrap Page](http://twitter.github.com/bootstrap/less.html)
 
 
 * Wettpool
 
-See "Style Page":http://wettpool.herokuapp.com/style
+See [Style Page](http://wettpool.herokuapp.com/style)
 
 
 
-h1. The End - Thank You
+# The End - Thank You
 
 Questions? Comments?
