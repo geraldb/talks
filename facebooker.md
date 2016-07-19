@@ -1,22 +1,22 @@
 title: Facebook App Development w/ Ruby on Rails
 gradient-colors: #0e1f5b #3b5998
 
-h1. Q: How can I create a Friends Badge using the Facebook API?
+# Q: How can I create a Friends Badge using the Facebook API?
 
-!rfacebook-friendsbadge.png!
+![](i/rfacebook-friendsbadge.png)
 
-* Step 1: Get your friends' ids (calling the @friends.get@ Facebook API using rfacebook).
-* Step 2: Get all your friends' square profile pic links (calling @users.getInfo@ asking for the @pic_square@ field).
+* Step 1: Get your friends' ids (calling the `friends.get` Facebook API using rfacebook).
+* Step 2: Get all your friends' square profile pic links (calling `users.getInfo` asking for the `pic_square` field).
 
-h3. "Facebook API Test Console":http://developer.facebook.com/tools.php?api - Demo
+### [Facebook API Test Console](http://developer.facebook.com/tools.php?api) - Demo
 
 
-h1. Q: How can I create a Friends Badge using the Facebook API? Continued
+# Q: How can I create a Friends Badge using the Facebook API? Continued
 
-* Step 1: Get your friends' ids (calling the @friends.get@ Facebook API using rfacebook).
-* Step 2: Get all your friends' square profile pic links (calling @users.getInfo@ asking for the @pic_square@ field).
+* Step 1: Get your friends' ids (calling the `friends.get` Facebook API using rfacebook).
+* Step 2: Get all your friends' square profile pic links (calling `users.getInfo` asking for the `pic_square` field).
 
-{{{
+```
 def badge
 
   # get your friends' ids
@@ -34,13 +34,13 @@ def badge
   end  
 
 end
-}}}
+```
 
-h1. Q: How can I create a Friends Badge using the Facebook API? Continued
+# Q: How can I create a Friends Badge using the Facebook API? Continued
 
 And add a matching view (web page template):
 
-{{{
+```
 <h3>Open Web Friends Badge Sample</h3>
 
 <style type="text/css">
@@ -56,52 +56,52 @@ img.badge  { border-bottom: thin solid black;
 <% end %>
 
 </div>
-}}}
+```
 
 That's all.
 
-!rfacebook-friendsbadge.png!
+![](i/rfacebook-friendsbadge.png)
 
 
-h1. 10-Minute Quick Start Guide for Facebooker
+# 10-Minute Quick Start Guide for Facebooker
 
 Create a Facebook app in 7 easy steps from scratch
-displaying a Twitter-like “What are you doing?” status message.
+displaying a Twitter-like "What are you doing?" status message.
 
-# Create a Rails application
-# Install the Facebooker Rails plugin
-# Log on to Facebook and set up a new application
-# Add your API key and secret to the @facebooker.yml@ configuration file
-# Create Rails controller (and view scaffolds)
-# Configure default route and remove public/index.html page
-# Use Facebooker to get your name, profile pic and status
+1. Create a Rails application
+2. Install the Facebooker Rails plugin
+3. Log on to Facebook and set up a new application
+4. Add your API key and secret to the `facebooker.yml` configuration file
+5. Create Rails controller (and view scaffolds)
+6. Configure default route and remove public/index.html page
+7. Use Facebooker to get your name, profile pic and status
 
 
-h1.  Step 1: Create a Rails application
+# Step 1: Create a Rails application
 
-Note: Facebook applications require unique names. This Quick Start Guide uses @openweb@.
-Replace @openweb@ everywhere with your own unique name.
+Note: Facebook applications require unique names. This Quick Start Guide uses `openweb`.
+Replace `openweb` everywhere with your own unique name.
 
 Use Rails to create your web application. Type on the command line:
 
-{{{
+```
 $ rails openweb
-}}}
+```
 
-h1. Step 2: Install the Facebooker Rails plugin
+# Step 2: Install the Facebooker Rails plugin
 
 To turn your Rails application into a Facebook application
 add the Facebooker Rails plugin. Change into your Rails folder and type on the command line:
 
-{{{
+```
 $ cd railsadvance
 $ script/plugin install http://facebooker.rubyforge.org/svn/trunk/facebooker/
-}}}
+```
 
-h1. Step 3: Log on to Facebook and set up a new application
+# Step 3: Log on to Facebook and set up a new application
 
 Log on to Facebook and set up your new application. Browse to the Facebook Developers
-page (@facebook.com/developers@) and click "Set Up New Application".
+page (`facebook.com/developers`) and click "Set Up New Application".
 
 Fill in the new application form:
 
@@ -111,45 +111,45 @@ Fill in the new application form:
 * Set the Canvas Page URL to http://apps.facebook.com/openweb/
 * We build a web application using inline frames (iframe). Check (X) Use iframe and (X) Website for Application Type.
 
-!rfacebook-config2.png!
+![](i/rfacebook-config2.png)
 
 That's it. Hit submit to get your API key and secret created.
 Write down your API key and secret for the next step.
 
-* API Key: @47013ae80a97cc151707961fc03bc9bf@
-* Secret: @7f296d598f9c79a5f439289e1240dc69@
+* API Key: `47013ae80a97cc151707961fc03bc9bf`
+* Secret: `7f296d598f9c79a5f439289e1240dc69`
 
 
-h1. Step 4: Add your API key and secret to the facebooker.yml configuration file
+# Step 4: Add your API key and secret to the facebooker.yml configuration file
 
-The Facebooker plugin creates the @facebooker.yml@ configuration file during installation
-in the config folder. Open the @config/facebooker.yml@ file and add your own API key, secret
+The Facebooker plugin creates the `facebooker.yml` configuration file during installation
+in the config folder. Open the `config/facebooker.yml` file and add your own API key, secret
 and canvas page name:
 
-{{{
+```
 development:
     key: 47013ae80a97cc151707961fc03bc9bf
     secret: 7f296d598f9c79a5f439289e1240dc69
     canvas_page_name: /openweb/
-}}}
+```
 
 
-h1.  Step 5: Create Rails controller and (view scaffolds)
+# Step 5: Create Rails controller and (view scaffolds)
 
 Lets create a Rails controller with an index action/view. Type on the command line:
 
-{{{
+```
 $ script/generate controller workshop index
-}}}
+```
 
-h1. Step 7: Use Facebooker to get your name, profile pic and status
+# Step 7: Use Facebooker to get your name, profile pic and status
 
-Add some code to our workshop controller and views. Add a @ensure_authenticated_to_facebook@
+Add some code to our workshop controller and views. Add a `ensure_authenticated_to_facebook`
 to the top of your workshop controller to ask Facebookers using your application to login.
 
-@app/controllers/workshop_controller.rb@:
+`app/controllers/workshop_controller.rb`:
 
-{{{
+```
 class WorkshopController < ApplicationController
 
   ensure_authenticated_to_facebook
@@ -158,60 +158,60 @@ class WorkshopController < ApplicationController
   end
 
 end
-}}}
+```
 
 
-h1. Step 7 Continued: Tap into Facebook using the API
+# Step 7 Continued: Tap into Facebook using the API
 
 Facebooker hides all the Facebook API requests.
 To get your name, profile pic and status using the Facebook API
 just store a referene to the Facebooker user from the Facebook session
-in <code>@user</code> in your controller
+in `@user` in your controller
 
-@app/controllers/workshop_controller.rb@:
+`app/controllers/workshop_controller.rb`:
 
-{{{
+```
 def index
   @user = session[:facebook_session].user
 end
-}}}
+```
 
-and use <code>@user.name</code>, <code>@user.pic_square</code> and <code>@user.status.message</code> in your view
+and use `@user.name`, `@user.pic_square` and `@user.status.message` in your view
 
 
-@app/views/workshop/index.html.erb@:
+`app/views/workshop/index.html.erb`:
 
-{{{
+```
 <h1>What are you doing?</h1>
 
 <%= image_tag @user.pic_square, :align => 'left' %>
 
 <b><%= @user.name %></b>
 <%= @user.status.message %>
-}}}
+```
 
 
-h1. That's it - Log in to the Open Web Facebook application
+# That's it - Log in to the Open Web Facebook application
 
-Start up your web server (@script/server@)
-and surf with your browser to @http://localhost:3000/@.
+Start up your web server (`script/server`)
+and surf with your browser to `http://localhost:3000/`.
 If all works you will get redirected to Facebook asking you to login to your Facebook application.
 
-!rfacebook-login.png! 
+![](i/rfacebook-login.png) 
 
 To have your inline frame Facebook application hosted inside Facebook
-surf to @http://apps.facebook.com/openweb@ Voila! 
+surf to `http://apps.facebook.com/openweb` Voila! 
 
-!rfaceboo-status.png!
+![](i/rfaceboo-status.png)
 
 
-h1. Facebook and Ruby
+# Facebook and Ruby
 
 What's rfacebook? What's Facebooker?
 
 Open-Source Ruby libraries/gems for using the Facebook API
 
-h3. What's the difference between rfacebook and Facebooker?
+### What's the difference between rfacebook and Facebooker?
 
 In a nutshell rfacebook is more or less a straight Ruby port of the Facebook PHP client libraries. Facebooker wraps the Facebook API into classes and methods with the goal of designing an API that follows the Ruby Way and is, thus, more intuitive for a typical Ruby developer to pick up and work with than a straight port from PHP.
 
@@ -222,22 +222,25 @@ Paul Prescod of (Are You Normal? fame) comments: I prefer the rfacebook design b
 * It makes it crystal clear exactly which methods are doing network transactions, and network transactions are really, really expensive (especially into Facebook!).
 * It is easy to read Facebook's documentation and see exactly how that applies to rfacebook. It isn't as clear for Facebooker.
 
-Source: "facebook for ruby // questions & answers / more site":http://rfacebook.wordpress.com
+Source: [facebook for ruby // questions & answers / more site](http://rfacebook.wordpress.com)
 
 
-h1. Facebook Application Types
+# Facebook Application Types
 
 * Web Applications
-** Running Inside Inline Frames (iframes) using "Classic" HTML/JavaScript/CSS
-** Running Inside Facebook Canvas using FBML (Facebook Markup Language) and FBJS (Facebook JavaScript)
+  * Running Inside Inline Frames (iframes) using "Classic" HTML/JavaScript/CSS
+  * Running Inside Facebook Canvas using FBML (Facebook Markup Language) and FBJS (Facebook JavaScript)
+
+<!-- -->
 
 * Desktop Applications
 
-h1. What's FBML?
+
+# What's FBML?
 
 FBML = Facebook Markup Language
 
-{{{
+```
 <fb:dashboard>
    <fb:create-button href="<%= url_for(
      :controller => 'notes', :action => "new", :only_path => true) %>">
@@ -257,43 +260,43 @@ FBML = Facebook Markup Language
      <fb:message><%= flash[:notice] %></fb:message>
   </fb:success>
 <% end %>
-}}}
+```
 
-!showgoal.png!
+![](i/showgoal.png)
 
-h1. What's FBJS? What's FQL?
+
+# What's FBJS? What's FQL?
 
 FBJS = Facebook JavaScript (Sandboxed JavaScript)
 
 FQL = Facebook Query Language (SQL-like Database Query Language)
 
-{{{
+```
 SELECT name, pic FROM user WHERE uid=211031 OR uid=4801660
-}}}
+```
 
 
-h1. Learn more about Facebook Development w/ Ruby
+# Learn more about Facebook Development w/ Ruby
 
 Online Tutorials
 
 * Facebooker Tutorial on Facebook by David Clements
-* More see @rfacebook.wordpress.com@
+* More see `rfacebook.wordpress.com`
 
 Books
 
-* Pragmatic Programmer Book (Available in Beta - PDF Download) Developing Facebook Apps
-with Rails (Facebooker) by Michael J. Mangino
+* Pragmatic Programmer Book (Available in Beta - PDF Download) Developing Facebook Apps with Rails (Facebooker) by Michael J. Mangino
 
 Getting Help
 
-* "Facebook for Ruby Forum/Mailing List":http://groups.google.com/group/rfacebook
-* "Facebooker Mailing List on RubyForge":http://rubyforge.org/mailman/listinfo/facebooker-talk
-* "Official Facebook Forum":http://forum.developers.facebook.com
+* [Facebook for Ruby Forum/Mailing List](http://groups.google.com/group/rfacebook)
+* [Facebooker Mailing List on RubyForge](http://rubyforge.org/mailman/listinfo/facebooker-talk)
+* [Official Facebook Forum](http://forum.developers.facebook.com)
 
 
-h1. What's Bebo?
+# What's Bebo?
 
-"Bebo":http://bebo.com is (another) social network that has licensed the Facebook API.
+[Bebo](http://bebo.com) is (another) social network that has licensed the Facebook API.
 Thus, Facebook widgets run on Bebo with little change.
 
 What's Beboist? 
@@ -301,7 +304,7 @@ What's Beboist?
 Open-Source Ruby library/gem for using the Facebook API w/ Bebo
 
 
-h1. What's Lovd by Less? What's Insoshi?
+# What's Lovd by Less? What's Insoshi?
 
 What's Lovd by Less?
 
@@ -312,15 +315,16 @@ What's Insoshi
 Another Open Source Social Network based originally on the RailsSpace
 book and code. Now a venture funded startup.
 
-h1. That's it. Thanks.
+
+# That's it. Thanks.
 
 Questions? Comments?  
 
 See Facebook applications live in action at today's App Nite starting at 5ish
- including British Columbia's #1 Facebook hit Scratch and Win.
+including British Columbia's #1 Facebook hit Scratch and Win.
 
-The $uper Rewards folks invite you to free beer[1] at the 
+The $uper Rewards folks invite you to free beer (1) at the 
 Vancouver Facebook Developers Pub Nite @ Steamworks Brewery. 
 
-fn1. Redeem your Hockey Pool Pro Puck Points or sign-up for Win a Free 
+1: Redeem your Hockey Pool Pro Puck Points or sign-up for Win a Free 
 Wii Contest or install the Glitterati Toolbar to qualify. Just kidding ;-)   
