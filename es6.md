@@ -1,4 +1,4 @@
-title: ES6, ES7, ES8 - The New New JavaScript / EMCAScript
+title: ES6, ES7, ES8 - The New New JavaScript / ECMAScript
 
 
 # The New New JavaScript - What's News?
@@ -59,7 +59,7 @@ And much more
 
 
 
-# JavaScript (JS), EMCAScript (ES), ES5, ES6, ES7, ES8, ES2015, ES2016, ES2017
+# JavaScript (JS), ECMAScript (ES), ES5, ES6, ES7, ES8, ES2015, ES2016, ES2017
 
 First appeared on May 23, 1995 -- 21 years ago
 
@@ -462,7 +462,7 @@ GET`http://foo.org/bar?a=${a}&b=${b}
 
 # JavaScript in Action - Did you know?
 
-- **GitHub Atom** (web: [atom.io](https://atom.io))is built (coded) in JavaScript (and HTML and CSS) w/ Electron and Node.js
+- **GitHub Atom** (web: [atom.io](https://atom.io)) is built (coded) in JavaScript (and HTML and CSS) w/ Electron and Node.js
 
 - **Microsoft Visual Studio Code** (web: [code.visualstudio.com](https://code.visualstudio.com)) is built (coded) in JavaScript (and HTML and CSS) w/ Electron and Node.js
 
