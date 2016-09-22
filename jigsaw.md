@@ -112,7 +112,7 @@ github: [`tightenco/jigsaw`](https://github.com/tightenco/jigsaw)
 
 
 
-# Why Jigsaw? Why (yet) another static site builder? - History
+# Why Jigsaw? Why (yet) another static site builder?
 
 Build for Laravel (PHP) developers!
 
@@ -130,7 +130,7 @@ to build static (web)sites too.
 # Why Blade? Why (yet) another PHP template language?
 
 Plain PHP Templates - Isn't PHP the (best) template language?
-Does PHP a (new) template language?
+Does PHP need a (new) template language?
 
 Why Blade?
 
