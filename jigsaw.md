@@ -370,7 +370,6 @@ And use like (in templates):
 </head>
 ```
 
+And much more.
 
 # To be continued
-
-And much more.
