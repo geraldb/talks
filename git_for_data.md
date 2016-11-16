@@ -3,7 +3,7 @@ title: factbook.json - Using Git (and GitHub) for (Publishing) Data
 
 # 1st Impression  
 
-A Git Repo(sitory) is the "new" Zip Archive
+A Git Repo(sitory) is the "New" Zip Archive
 
 ![](i/factbook-json.png)
 
@@ -28,11 +28,11 @@ Browse the Datasets (Files)
 # 4th Impression
 
 "Built-in" (static) HTTP JSON API / Web Service -
-incl. Cross-origin resource sharing (CORS).
+incl. Cross-origin resource sharing (CORS). Example:
 
-Example:
-
+```
 $ curl https://raw.githubusercontent.com/opendatajson/factbook.json/master/europe/au.json
+```
 
 ```
 {
@@ -98,6 +98,8 @@ Use a GitHub Org for Datasets - Data Portal / Hub
 
 Comma-Separated Values (CSV) View / Display - Includes Search / Filter
 
+Example - `codes.csv`:
+
 ```
 Name,GEC,A3,A2,NUM,STANAG,INTERNET
 Afghanistan,AF,AF,AFG,004,AFG,.af
@@ -135,6 +137,8 @@ Belgium,BE,BE,BEL,056,BEL,.be
 
 Maps (w/ OpenStreetMap) from .geojson - Includes Zoom In / Zoom Out, Custom Markers n More
 
+Example - `at.geojson`:
+
 ```
 {
   "type": "Feature",
@@ -159,5 +163,5 @@ Maps (w/ OpenStreetMap) from .geojson - Includes Zoom In / Zoom Out, Custom Mark
  ...
 ```
 
-![](i/beermap-at.ppng)
+![](i/beermap-at.png)
 
