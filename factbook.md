@@ -28,7 +28,7 @@ Q: How many "countries" in the world?
 A: 261
 
 - 195 sovereign countries
-- 52 terretories n dependencies
+- 52 territories n dependencies
 - 6 miscellaneous
 - 2 others
 - 5 oceans
@@ -46,13 +46,14 @@ Burma (bm) not renamed to Myanmar - new name NOT recognized by the US.
 
 European Union (ee) included in others.
 
+And much more.
 
 
 # World Factbook - Divide n Conquer - Continents n Regions Trivia (Taxonomy)
 
 Q: How many "continents/regions" in the world?
 
-A: 10
+A: 11
 
 - North America (7)
 - Central America & Caribbean (33)
