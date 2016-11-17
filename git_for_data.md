@@ -12,6 +12,16 @@ title: factbook.json - Using Git (and GitHub) for (Publishing) Data
   - Data Portal / Hub
   - (Built-in) Tabular Data View
   - (Built-in) Map View
+- Git and GitHub for (Open) Data
+- Showcase 
+  - (Core) Datasets and datapackage.json
+  - Open Data Projects using GitHub
+- Why use Git (for Data)?  
+- Appendix
+  - What's Git?
+  - Learning Git
+  - Git "Visual" Tooling
+
 
 
 # 1st Impression - Git - The "New" Zip Archive
@@ -177,4 +187,97 @@ Example - `at.geojson`:
 ```
 
 ![](i/beermap-at.png)
+
+
+
+# Git and GitHub for (Open) Data
+
+Article: [Git (and Github) for Data](http://blog.okfn.org/2013/07/02/git-and-github-for-data/) (July 2013)
+by Rufus Pollock (Open Knowledge Int'l)
+
+> given the maturity and power of the tooling – and its likely evolution –
+> and the fact that so much data is small we think this approach is very attractive.
+
+![](i/git-and-github-for-data.png)
+
+(Source: [blog.okfn.org/2013/07/02/git-and-github-for-data](http://blog.okfn.org/2013/07/02/git-and-github-for-data/))
+
+
+# Showcase - (Core) Datasets and datapackage.json
+
+![](i/github-datasets.png)
+
+(Source: [github.com/datasets](https://github.com/datasets))
+
+
+
+# (Official) Showcase - Open Data Projects using GitHub
+
+![](i/github-opendata.png)
+
+(Source: [github.com/showcases/open-data](https://github.com/showcases/open-data))
+
+
+
+# Why use Git (for Data)?  
+
+1. Data is Code?
+2. Code is Text?
+3. Data is Text?
+
+=> Yes, Yes, Yes
+
+Why Text? - The Past, Present 'n' Future of Writing 'n' Publishing
+
+
+
+# Appendix - What's Git?
+
+- Small and fast version control.
+- Distributed is the new centralized.
+- Everything is local.
+- Branching and merging (incl. local branching on-the-cheap.)
+- Any workflow (shared repository, blessed repository w/ integration manager or dictator and lieutenants, etc.)
+- Datas assuarance - every file and commit is checksummed (with a cryptographic hash).
+- Every clone is a backup.
+- Free and open source.
+
+![](i/git-site.png)
+
+(Source: [git-scm.com](https://git-scm.com))
+
+
+# Appendix - Learning Git - Comic by xkcd
+
+![](i/xkcd1597.png)
+
+(Source: [xkcd.com/1597](https://xkcd.com/1597))
+
+
+
+# Appendix - Git "Visual" Tooling
+
+![](i/git-clients.png)
+
+And many more.
+
+(Source: [git-scm.com/downloads/guis](https://git-scm.com/downloads/guis))
+
+
+# Appendix - Learning Git - Links
+
+_Free (Online) Books_
+
+- [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial) by Michael Hartl
+- [Pro Git, 2nd Edtion](https://git-scm.com/book/en/v2) by Scott Chacon and Ben Straub
+
+_Free (Online) Interactive Courses_
+
+- [Try Git in 15 Minutes](https://try.github.io)
+
+and many more.
+
+> Git gets easier once you get the basic idea that branches are homeomorphic endofunctors
+> mapping submanifolds of a Hilbert space.
+
 
