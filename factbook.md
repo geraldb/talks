@@ -1,6 +1,28 @@
 title:  factbook.json - Turn the World Factbook into Open (Structured) Data
 
 
+# Agenda
+
+- What's the World Factbook?
+- Country Profile Example - Austria (au) :: Europe
+- Country Trivia (Taxonomy)
+- Countries - Politics Trivia
+- Divide n Conquer - Continents n Regions Trivia (Taxonomy)
+- Europe Trivia (Taxonomy)
+- Facts - Did You Know?
+- History - Milestones 
+- History - Let's welcome factbook.json!
+- factbook.json - Example
+- Country Profiles - What's Included?
+- Inside factbook.json - How it works 
+  - Step 1: Beautiful HTML 
+  - Step 2: Convert HTML to JSON
+- factbook.json - Philosophy
+- Case Study - How to use?
+  - World Alamanc 
+  - factbook.sql 
+
+
 #  What's the World Factbook?
 
 The World Factbook [1][2] published by the Central Intelligence Agency (CIA)
