@@ -23,7 +23,7 @@ A Git Repo(sitory) is the "New" Zip Archive - All-In-One Package for Data, Docs,
 
 # 2nd Impression - Download Zip Archive
 
-Download Zip Archive - Click on the Blue "Clone or Download" Button
+Download Zip Archive - Click on the Green "Clone or Download" Button
 
 ![](i/factbook-json-zip.png)
 
