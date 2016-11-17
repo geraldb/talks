@@ -4,7 +4,7 @@ title: factbook.json - Using Git (and GitHub) for (Publishing) Data
 # Agenda
 
 - First Impressions
-  - The "New" Zip Archive
+  - Git - The "New" Zip Archive
   - Download Zip Archive
   - Browse Online
   - (Built-in) HTTP JSON API
@@ -14,7 +14,7 @@ title: factbook.json - Using Git (and GitHub) for (Publishing) Data
   - (Built-in) Map View
 
 
-# 1st Impression - The "New" Zip Archive
+# 1st Impression - Git - The "New" Zip Archive
 
 A Git Repo(sitory) is the "New" Zip Archive - All-In-One Package for Data, Docs, Script 'n' More
 
