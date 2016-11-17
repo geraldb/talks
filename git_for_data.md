@@ -1,33 +1,46 @@
 title: factbook.json - Using Git (and GitHub) for (Publishing) Data
 
 
-# 1st Impression  
+# Agenda
 
-A Git Repo(sitory) is the "New" Zip Archive
+- First Impressions
+  - The "New" Zip Archive
+  - Download Zip Archive
+  - Browse Online
+  - (Built-in) HTTP JSON API
+  - Single-File SQLite Database Downloads
+  - Data Portal / Hub
+  - (Built-in) Tabular Data View
+  - (Built-in) Map View
+
+
+# 1st Impression - The "New" Zip Archive
+
+A Git Repo(sitory) is the "New" Zip Archive - All-In-One Package for Data, Docs, Script 'n' More
 
 ![](i/factbook-json.png)
 
 
-# 2nd Impression
+# 2nd Impression - Download Zip Archive
 
-Download (Zip) Archive
+Download Zip Archive - Click on the Blue "Clone or Download" Button
 
 ![](i/factbook-json-zip.png)
 
 Or Clone, Fork, Push, Pull, etc.
 
 
-# 3rd Impression
+# 3rd Impression - Browse Online
 
-Browse the Datasets (Files)
+Browse Files incl. Datasets Online
 
 ![](i/factbook-json-au.png)
 
 
 
-# 4th Impression
+# 4th Impression - (Built-in) HTTP JSON API
 
-"Built-in" (static) HTTP JSON API / Web Service -
+(Built-in) HTTP JSON API / Web Service -
 incl. Cross-origin resource sharing (CORS). Example:
 
 ```
@@ -79,24 +92,24 @@ $ curl https://raw.githubusercontent.com/opendatajson/factbook.json/master/europ
     ...
 ```
 
-# 5th Impression
+# 5th Impression - Single-File SQLite Database Downloads
 
-Package up your datasets as single-file SQLite databases
+Package up your datasets as single-file SQLite databases for "binary" release downloads
 e.g. `factbook.db`
 
 ![](i/factbook-db.png)
 
 
-# 6th Impression
+# 6th Impression - Data Portal / Hub
 
 Use a GitHub Org for Datasets - Data Portal / Hub
 
 ![](i/opendata-json.png)
 
 
-# 7th Impression
+# 7th Impression - (Built-in) Tabular Data View
 
-Comma-Separated Values (CSV) View / Display - Includes Search / Filter
+Comma-Separated Values (CSV) View - Includes Search / Filter
 
 Example - `codes.csv`:
 
@@ -133,9 +146,9 @@ Belgium,BE,BE,BEL,056,BEL,.be
 ![](i/factbook-codes.png)
 
 
-# 8th Impression
+# 8th Impression - (Built-in) Map View
 
-Maps (w/ OpenStreetMap) from .geojson - Includes Zoom In / Zoom Out, Custom Markers n More
+Maps (w/ OpenStreetMap) for `.geojson` - includes Zoom In / Zoom Out, Custom Markers (Size, Color, etc.) 'n' More
 
 Example - `at.geojson`:
 
