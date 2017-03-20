@@ -138,7 +138,7 @@ Try Babel online => [`babeljs.io/repl`](http://babeljs.io/repl)
 
 
 
-# Inside React Web Components Continued
+# Inside React Web Components (Continued)
 
 ``` jsx
 function Message( props ) {
@@ -167,7 +167,7 @@ function HelloWorld() {
 ```
 
 
-# Inside React Web Components Continued
+# Inside React Web Components (Continued)
 
 ``` jsx
 function LinkList( props ) {
@@ -203,6 +203,66 @@ function LinkList(props) {
 }
 ```
 
+# Classes, Classes, Classes - Extends React.Component
+
+
+Use Classes for more "advanced" components. Example:
+
+``` jsx
+function HelloWorld() {
+  return <h1>Hello, World!</h1>;
+}
+```
+
+is the same as:
+
+
+``` jsx
+class HelloMessage extends React.Componet {
+
+  render() {
+    return <h1>Hello, World!</h1>;
+  }
+}
+```
+
+
+# Classes, Classes, Classes - Seconds Elapsed: 47 (Continued)
+
+
+Lifecyle (mount e.g. component turned on, unmount e.g. component turned off) 
+and State e.g. secondsElapsed a variable holding a number / counter,
+for example.
+
+
+``` jsx
+class Timer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {secondsElapsed: 0};
+  }
+
+  tick() {
+    this.setState((prevState) => ({
+      secondsElapsed: prevState.secondsElapsed + 1
+    }));
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  render() {
+    return (
+      <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
+    );
+  }
+}
+```
 
 
 
