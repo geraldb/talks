@@ -44,6 +44,12 @@ function HelloWorld() {
 }
 ```
 
+and (again) use it like:
+
+```
+<HelloWorld/>
+```
+
 
 # For Each Loops in your Component Template - It's "Just" JavaScript 
 
