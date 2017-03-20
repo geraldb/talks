@@ -218,7 +218,7 @@ is the same as:
 
 
 ``` jsx
-class HelloMessage extends React.Componet {
+class HelloWorld extends React.Componet {
 
   render() {
     return <h1>Hello, World!</h1>;
@@ -231,7 +231,10 @@ class HelloMessage extends React.Componet {
 
 
 Lifecyle (mount e.g. component turned on, unmount e.g. component turned off) 
-and State e.g. secondsElapsed a variable holding a number / counter,
+
+and
+
+State e.g. secondsElapsed - a variable holding a number / counter,
 for example.
 
 
