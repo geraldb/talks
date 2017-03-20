@@ -47,12 +47,74 @@ function HelloWorld() {
 
 # For Each Loops in your Component Template - It's "Just" JavaScript 
 
-No New Template Language - Use JavaScript 6+
+No New Template Language - Use JavaScript 6+:
+
+```
+links.map( link => 
+ <li><a href={link.url}>{link.title}</a></li> 
+)
+```
 
 Example:
 
 ```
+function LinkList( props ) {
+  const {links} = this.props;
+  return 
+      <ul>
+        {links.map( link => <li><a href={link.url}>{link.title}</a></li> )}
+      </ul>;   
+}
 ```
+
+and use it like
+
+```
+const links =
+[
+ { title: "football.db - Open Football Data",
+   url:   "https://github.com/openfootball" },
+ { title: "beer.db - Open Beer, Brewery 'n' Brewpub Data",
+   url:   "https://github.com/openbeer" },
+ { title: "world.db - Open World Data",
+   url:   "https://github.com/openmundi" }
+];
+...
+
+<LinkList links={links}/>
+```
+
+
+# "Generic" Placeholder / Containers - Add Any Components / Children
+
+```
+function Page( props ) {
+  return 
+     <div>
+        <Header/>
+        <div>
+          {props.children}
+        </div>
+        <Footer/>
+      </div>
+};
+```
+
+and use it like:
+
+```
+<Page>
+  <div>
+    <b>News 'n' Updates</b>
+    <PostList posts={posts}/>
+  </div>
+  <div>
+    <b>Links 'n' Bookmarks</b>
+    <LinkList links={links}/>
+  </div>  
+</Page>
+```
+
 
 
 
