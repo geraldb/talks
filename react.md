@@ -60,10 +60,10 @@ Example:
 ```
 function LinkList( props ) {
   const {links} = this.props;
-  return 
+  return( 
       <ul>
         {links.map( link => <li><a href={link.url}>{link.title}</a></li> )}
-      </ul>;   
+      </ul>);   
 }
 ```
 
@@ -89,15 +89,15 @@ const links =
 
 ```
 function Page( props ) {
-  return 
+  return( 
      <div>
         <Header/>
         <div>
           {props.children}
         </div>
         <Footer/>
-      </div>
-};
+      </div>);
+}
 ```
 
 and use it like:
@@ -113,6 +113,94 @@ and use it like:
     <LinkList links={links}/>
   </div>  
 </Page>
+```
+
+
+# Inside React Web Components
+
+
+```
+function HelloWorld() {
+  return <h1>Hello, World!</h1>;
+}
+```
+
+gets converted to "plain vanilla" JavaScript:
+
+```
+function HelloWorld() {
+  return React.createElement( "h1", null, "Hello, World!" );
+}
+
+```
+
+Try Babel online => [`babeljs.io/repl`](http://babeljs.io/repl) 
+
+
+
+# Inside React Web Components Continued
+
+``` jsx
+function Message( props ) {
+  return <span>{"Hello, "+props.name+"!"}</span>;
+}
+
+function HelloWorld() {
+  return <h1><Message name="World"/></h1>;
+}
+```
+
+gets converted to "plain vanilla" JavaScript:
+
+``` js
+function Message(props) {
+  return React.createElement( "span", null, "Hello, " + props.name + "!" );
+}
+
+function HelloWorld() {
+  return React.createElement(
+    "h1",
+    null,
+    React.createElement(Message, { name: "World" })
+  );
+}
+```
+
+
+# Inside React Web Components Continued
+
+``` jsx
+function LinkList( props ) {
+  const {links} = props;
+  return (
+      <ul>
+        {links.map( link => <li><a href={link.url}>{link.title}</a></li> )}
+      </ul>);   
+}
+```
+
+gets converted to "plain vanilla" JavaScript:
+
+``` js
+function LinkList(props) {
+  var links = props.links;
+
+  return React.createElement(
+    "ul",
+    null,
+    links.map(function (link) {
+      return React.createElement(
+        "li",
+        null,
+        React.createElement(
+          "a",
+          { href: link.url },
+          link.title
+        )
+      );
+    })
+  );
+}
 ```
 
 
