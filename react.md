@@ -13,7 +13,7 @@ title: Web Components (w/ React) - Past, Present, Future
   - Extends `React.Component`
   - State & Lifecycle - Seconds Elapsed: 47 
 - High Speed Batched Updates - 60 Frames/Second (60 FPS)
-  - Diffing Element Trees 
+  - Diffing Trees 
 - React @ Facebook - "Enterprise" React
   - GraphQL, Relay, Flow 'n' Friends
 - What's Next? 
@@ -25,12 +25,18 @@ title: Web Components (w/ React) - Past, Present, Future
 
 
 
-# Intro `<HelloWorld/>`
+# What's React.js?
+
+React ★62400 is a (small) JavaScript library for building user interfaces.
+Declarative. Efficient. Flexible.
+
+
+# `<HelloWorld/>` - First Web Component w/ React
 
 Let's make a `<HelloWorld/>` web component / element / tag.
 
 
-The simplest (React) web component - 
+The simplest web component w/ React - 
 a function returning a web snippet (HTML block)
 
 ```
@@ -367,22 +373,32 @@ Why Fun(ctional)?
 
 # IV) What's Next? Going Mobile - React Native for Android, iOS Apps
 
-Use React Native ★45909 (and JavaScript) to build native phone apps for Android an iOS.
+Use React Native ★45909 (and JavaScript) to build "real" phone apps for Android an iOS.
 Example:
 
 ```
 import React, { Component } from 'react';
-import { AppRegistry, Text } from 'react-native';
+import { Image, ScrollView, Text } from 'react-native';
 
-class HelloWorldApp extends Component {
+class AwkwardScrollingImageWithText extends Component {
   render() {
     return (
-      <Text>Hello world!</Text>
+      <ScrollView>
+        <Image source={{uri: 'https://i.chzbgr.com/full/7345954048/h7E2C65F9/'}} />
+        <Text>
+          On iOS, a React Native ScrollView uses a native UIScrollView.
+          On Android, it uses a native ScrollView.
+
+          On iOS, a React Native Image uses a native UIImageView.
+          On Android, it uses a native ImageView.
+
+          React Native wraps the fundamental native components, giving you
+          the performance of a native app, plus the clean design of React.
+        </Text>
+      </ScrollView>
     );
   }
 }
-
-AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 ```
 
 
