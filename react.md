@@ -85,9 +85,9 @@ and use it like
 ```
 const links =
 [
- { title: "football.db - Open Football Data",              url:   "https://github.com/openfootball" },
- { title: "beer.db - Open Beer, Brewery 'n' Brewpub Data", url:   "https://github.com/openbeer"     },
- { title: "world.db - Open World Data",                    url:   "https://github.com/openmundi"    }
+ { title: "football.db - Open Football Data",              url: "https://github.com/openfootball" },
+ { title: "beer.db - Open Beer, Brewery 'n' Brewpub Data", url: "https://github.com/openbeer"     },
+ { title: "world.db - Open World Data",                    url: "https://github.com/openmundi"    }
 ];
 ...
 
@@ -162,10 +162,6 @@ function HelloWorld() {
 gets converted to "plain vanilla" JavaScript:
 
 ``` js
-function Message(props) {
-  return React.createElement( "span", null, "Hello, " + props.name + "!" );
-}
-
 function Message(_ref) {
   var name = _ref.name;
   return React.createElement( "span", null, "Hello, " + name + "!" );
