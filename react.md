@@ -64,8 +64,8 @@ end
 No New Template Language. Use JavaScript 6+:
 
 ```
-links.map( link => 
- <li><a href={link.url}>{link.title}</a></li> 
+links.map( 
+  link => <li><a href={link.url}>{link.title}</a></li> 
 )
 ```
 
