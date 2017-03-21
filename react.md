@@ -85,12 +85,9 @@ and use it like
 ```
 const links =
 [
- { title: "football.db - Open Football Data",
-   url:   "https://github.com/openfootball" },
- { title: "beer.db - Open Beer, Brewery 'n' Brewpub Data",
-   url:   "https://github.com/openbeer" },
- { title: "world.db - Open World Data",
-   url:   "https://github.com/openmundi" }
+ { title: "football.db - Open Football Data",              url:   "https://github.com/openfootball" },
+ { title: "beer.db - Open Beer, Brewery 'n' Brewpub Data", url:   "https://github.com/openbeer"     },
+ { title: "world.db - Open World Data",                    url:   "https://github.com/openmundi"    }
 ];
 ...
 
@@ -144,7 +141,6 @@ gets converted to "plain vanilla" JavaScript:
 function HelloWorld() {
   return React.createElement( "h1", null, "Hello, World!" );
 }
-
 ```
 
 Try Babel online => [`babeljs.io/repl`](http://babeljs.io/repl) 
@@ -201,11 +197,13 @@ function LinkList(_ref) {
   var links = _ref.links;
 
   return React.createElement( "ul", null,
-    links.map(function (link) {
+    links.map( function(link) {
       return React.createElement( "li", null,
-               React.createElement( "a",{ href: link.url }, link.title ));
+               React.createElement( "a", { href: link.url }, link.title ));
     }));
-}```
+}
+```
+
 
 # Classes, Classes, Classes - Extends React.Component
 
@@ -231,15 +229,10 @@ class HelloWorld extends React.Componet {
 ```
 
 
-# Classes, Classes, Classes - Seconds Elapsed: 47 (Continued)
+# Classes, Classes, Classes (Continued) - Seconds Elapsed: 47 
 
-
-Lifecyle (mount e.g. component turned on, unmount e.g. component turned off) 
-
-and
-
-State e.g. secondsElapsed - a variable holding a number / counter,
-for example.
+- Lifecyle e.g. `mount` - component turned on - and `unmount` - component turned off
+- State e.g. `secondsElapsed` - a variable holding a number / counter, for example
 
 
 ``` jsx
