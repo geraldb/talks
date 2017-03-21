@@ -261,8 +261,143 @@ class Timer extends React.Component {
 ```
 
 
+# High Speed Batched Updates - 60 Frames/Second (60 FPS)
+
+React keeps a copy of the DOM (Document Object Model) in memory
+like a "frame buffer";
+uses a diffing algorithm 
+to calculate changes (in the two trees) and batches
+updates together in 60 frames per second.
 
 
+
+# React @ Facebook - "Enterprise" React
+
+- GraphQL & Relay  - Data Queries & Binding
+- Flow             - Built-Time (Static) Data Flow Analysis & Type Checking
+- ReasonML         - "Better" Objective Functional Language (Compiles to JavaScript)
+
+and more.
+
+
+
+
+
+# I) What's Next?  Web Components Built-In Browser APIs
+
+New Web Standard Building Blocks
+
+
+### Custom Elements 
+
+(`<element>`) - [W3C Spec](http://www.w3.org/TR/custom-elements)
+
+### Shadow DOM
+
+(hide DOM subtrees under shadow roots - `createShadowRoot()`) - [W3C Spec](http://www.w3.org/TR/shadow-dom)
+
+### HTML Imports
+
+(include and reuse HTML documents) - [W3C Spec](http://www.w3.org/TR/html-imports)
+
+### HTML Templates
+
+(`<template>`) - [W3C Spec](http://www.w3.org/TR/html-templates)
+
+
+
+# II) What's Next? JavaScript w/ Types
+
+Biggies
+
+- TypeScript (by Microsoft) -  JavaScript Extended w/ Types 
+- Flow (by Facebook)        -  Add Annotations for Type Checking
+- Dart (by Google)          -  New Language w/ (Optional) Types 
+
+And Others.
+
+
+# III) What's Next? More Fun - Fun(ctional) Languages
+
+Biggies
+
+- Elm (by Evan Czaplicki 'n' friends) - Small (Pure) Functional Language for the Web
+  - Based on Haskell (Simplified) 
+- ReasonML (by Facebook) - Larger (Pragmatic) Functional Language
+  - Based on OCaml (New ReasonML Syntax Closer to JavaScript)
+
+And Others.
+
+Why Fun(ctional)?
+
+- "Stronger" Types
+  - No Null and No Undefined Possible
+    - e.g. Elm Uses Maybe types with Just a and Nothing and Tuple Units e.g. `()`)
+  - Lists must always be of the same type
+  - If expressions must always return the same type (in if and else branch)
+  - Case expressions must always cover all possible branches / values
+  - And so on
+- Immutability 
+  - Cannot change/overwrite variables (change will always create a new variable)
+  - Great for "high-speed" diffing web component/element trees ("just" compare node references)
+  - Great for "time travel" debugging e.g. save or restore any state in time
+
+
+# IV) What's Next? Going Mobile - React Native for Android, iOS Apps
+
+Use React Native (and JavaScript) to build native phone apps for Android an iOS.
+Example:
+
+```
+import React, { Component } from 'react';
+import { AppRegistry, Text } from 'react-native';
+
+class HelloWorldApp extends Component {
+  render() {
+    return (
+      <Text>Hello world!</Text>
+    );
+  }
+}
+
+AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
+```
+
+
+# Community - Meetups & Conferences
+
+
+Meetups In Vienna, Austria
+
+- [React Vienna Meetup](https://meetup.com/ReactVienna) FREE - Monthly @ sektor5
+- [Reason Vienna Meetup](https://meetup.com/Reason-Vienna) FREE  - Starting Up
+- [Elm Vienna Meetup](https://www.meetup.com/Vienna-Elm-Meetup) FREE - Starting Up
+
+
+Conferences
+
+- [React Conf](http://conf.reactjs.org) (by Facebook)
+   - 2017 - March 13 & 14 - in Santa Clara, CA
+   - 2016 - February 22 & 23 - in San Francisco, CA
+   - 2015 - January 28 & 29 - Facebook HQ, CA
+
+In Europe
+
+- [ReactEurope](https://www.react-europe.org)
+  - 2017 - May 18 & 19 in Paris, France
+  - 2016 - June 2 & 3 in Paris, France
+  - 2015 - July 2 & 3 in Paris, France
+
+Regional in 2017
+
+- [React London 2017](https://react.london) - March 28
+- [React Amsterdam 2017](https://react.amsterdam) - April 21
+- [React.js Day 2017](http://2017.reactjsday.it) - October 6 in Verona, Italy
+- [State.js React Conference 2017](https://statejs.com) - October 13 in Stockholm, Sweden
+- [React Native Europe 2017](https://react-native.eu) - September 6 & 7 in Wroclaw, Poland
+
+
+More [Upcoming Conferences »](https://facebook.github.io/react/community/conferences.html)
 
 
 
