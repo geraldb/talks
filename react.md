@@ -417,7 +417,7 @@ Regional in 2017
 - [React Native Europe 2017](https://react-native.eu) - September 6 & 7 in Wroclaw, Poland
 - [React.js Day 2017](http://2017.reactjsday.it) - October 6 in Verona, Italy
 - [State.js React Conference 2017](https://statejs.com) - October 13 in Stockholm, Sweden
-- [Reactive Conf](https://reactiveconf.com) - October 25t-27 in Bratislava, Slovakia
+- [Reactive Conf 2017](https://reactiveconf.com) - October 25-27 in Bratislava, Slovakia
 
 
 More [Upcoming Conferences »](https://facebook.github.io/react/community/conferences.html)
