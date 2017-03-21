@@ -1,6 +1,27 @@
 title: Web Components (w/ React) - Past, Present, Future
 
 
+# Agenda
+
+- Intro
+  - `<HelloWorld/>`
+  - Components in Components in Components
+  - It's "Just" JavaScript - For Each Loops in Your Component Templates 
+  - "Generic" Placeholder / Containers - Add Any Components / Children
+- Inside React Web Components
+- Classes, Classes, Classes 
+  - Extends `React.Component`
+  - State & Lifecycle - Seconds Elapsed: 47 
+- High Speed Batched Updates - 60 Frames/Second (60 FPS)
+  - Diffing Element Trees 
+- React @ Facebook - "Enterprise" React
+  - GraphQL, Relay, Flow 'n' Friends
+- What's Next? 
+  - I) Built-In Web Components Browser APIs
+  - II) JavaScript w/ Types
+  - III) More Fun - Fun(ctional) Languages
+  - IV) Going Mobile - React Native for Android, iOS Apps
+- Community - Meetups & Conferences
 
 
 
@@ -283,9 +304,9 @@ and more.
 
 
 
-# I) What's Next?  Web Components Built-In Browser APIs
+# I) What's Next? Built-In  Web Components Browser APIs
 
-New Web Standard Building Blocks
+New (Upcoming) Web Standard Building Blocks
 
 
 ### Custom Elements 
@@ -296,13 +317,14 @@ New Web Standard Building Blocks
 
 (hide DOM subtrees under shadow roots - `createShadowRoot()`) - [W3C Spec](http://www.w3.org/TR/shadow-dom)
 
+### HTML Templates
+
+(`<template>`) - [W3C Spec](http://www.w3.org/TR/html-templates)
+
 ### HTML Imports
 
 (include and reuse HTML documents) - [W3C Spec](http://www.w3.org/TR/html-imports)
 
-### HTML Templates
-
-(`<template>`) - [W3C Spec](http://www.w3.org/TR/html-templates)
 
 
 
@@ -310,9 +332,9 @@ New Web Standard Building Blocks
 
 Biggies
 
-- TypeScript (by Microsoft) -  JavaScript Extended w/ Types 
-- Flow (by Facebook)        -  Add Annotations for Type Checking
-- Dart (by Google)          -  New Language w/ (Optional) Types 
+- TypeScript ★20098 (by Microsoft) -  JavaScript Extended w/ Types 
+- Flow ★10693 (by Facebook)        -  Add Annotations for Type Checking
+- Dart ★1038 (by Google)           -  New Language w/ (Optional) Types 
 
 And Others.
 
@@ -321,9 +343,9 @@ And Others.
 
 Biggies
 
-- Elm (by Evan Czaplicki 'n' friends) - Small (Pure) Functional Language for the Web
+- Elm ★3706 (by Evan Czaplicki 'n' friends) - Small (Pure) Functional Language for the Web
   - Based on Haskell (Simplified) 
-- ReasonML (by Facebook) - Larger (Pragmatic) Functional Language
+- ReasonML ★2467 (by Facebook) - Larger (Pragmatic) Functional Language
   - Based on OCaml (New ReasonML Syntax Closer to JavaScript)
 
 And Others.
@@ -345,7 +367,7 @@ Why Fun(ctional)?
 
 # IV) What's Next? Going Mobile - React Native for Android, iOS Apps
 
-Use React Native (and JavaScript) to build native phone apps for Android an iOS.
+Use React Native ★45909 (and JavaScript) to build native phone apps for Android an iOS.
 Example:
 
 ```
@@ -369,9 +391,9 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 
 Meetups In Vienna, Austria
 
-- [React Vienna Meetup](https://meetup.com/ReactVienna) FREE - Monthly @ sektor5
-- [Reason Vienna Meetup](https://meetup.com/Reason-Vienna) FREE  - Starting Up
-- [Elm Vienna Meetup](https://www.meetup.com/Vienna-Elm-Meetup) FREE - Starting Up
+- [React Vienna Meetup](https://meetup.com/ReactVienna) (FREE) - Monthly @ sektor5
+- [Reason Vienna Meetup](https://meetup.com/Reason-Vienna) (FREE)  - Starting Up
+- [Elm Vienna Meetup](https://www.meetup.com/Vienna-Elm-Meetup) (FREE) - Starting Up
 
 
 Conferences
