@@ -72,7 +72,7 @@ and (again) use it like:
 ```
 
 
-# It's "Just" JavaScript - For Each Loops in your Component Template 
+# It's "Just" JavaScript - For Each Loops in Your Component Templates 
 
 In Pseudo Code:
 
@@ -405,7 +405,7 @@ Conferences
 
 In Europe
 
-- [ReactEurope](https://www.react-europe.org)
+- [React Europe](https://www.react-europe.org)
   - 2017 - May 18 & 19 in Paris, France
   - 2016 - June 2 & 3 in Paris, France
   - 2015 - July 2 & 3 in Paris, France
@@ -414,9 +414,10 @@ Regional in 2017
 
 - [React London 2017](https://react.london) - March 28
 - [React Amsterdam 2017](https://react.amsterdam) - April 21
+- [React Native Europe 2017](https://react-native.eu) - September 6 & 7 in Wroclaw, Poland
 - [React.js Day 2017](http://2017.reactjsday.it) - October 6 in Verona, Italy
 - [State.js React Conference 2017](https://statejs.com) - October 13 in Stockholm, Sweden
-- [React Native Europe 2017](https://react-native.eu) - September 6 & 7 in Wroclaw, Poland
+- [Reactive Conf](https://reactiveconf.com) - October 25t-27 in Bratislava, Slovakia
 
 
 More [Upcoming Conferences »](https://facebook.github.io/react/community/conferences.html)
