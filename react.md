@@ -35,8 +35,8 @@ Nesting of Web Components => Web Component Trees
 Example:
 
 ```
-function Message( props ) {
-  return <span>{"Hello, "+props.name+"!"}</span>;
+function Message( {name} ) {
+  return <span>{ `Hello, ${name}!` }</span>;
 }
 
 function HelloWorld() {
@@ -51,9 +51,17 @@ and (again) use it like:
 ```
 
 
-# For Each Loops in your Component Template - It's "Just" JavaScript 
+# It's "Just" JavaScript - For Each Loops in your Component Template 
 
-No New Template Language - Use JavaScript 6+:
+In Pseudo Code:
+
+```
+for link in links
+  <li><a href={link.url}>{link.title}</a></li> 
+end
+```
+
+No New Template Language. Use JavaScript 6+:
 
 ```
 links.map( link => 
@@ -64,8 +72,7 @@ links.map( link =>
 Example:
 
 ```
-function LinkList( props ) {
-  const {links} = this.props;
+function LinkList( {links} ) {
   return( 
       <ul>
         {links.map( link => <li><a href={link.url}>{link.title}</a></li> )}
@@ -94,12 +101,12 @@ const links =
 # "Generic" Placeholder / Containers - Add Any Components / Children
 
 ```
-function Page( props ) {
+function Page( {children} ) {
   return( 
      <div>
         <Header/>
         <div>
-          {props.children}
+          {children}
         </div>
         <Footer/>
       </div>);
@@ -147,8 +154,8 @@ Try Babel online => [`babeljs.io/repl`](http://babeljs.io/repl)
 # Inside React Web Components (Continued)
 
 ``` jsx
-function Message( props ) {
-  return <span>{"Hello, "+props.name+"!"}</span>;
+function Message( {name} ) {
+  return <span>{ `Hello, ${name}!` }</span>;
 }
 
 function HelloWorld() {
@@ -163,11 +170,14 @@ function Message(props) {
   return React.createElement( "span", null, "Hello, " + props.name + "!" );
 }
 
+function Message(_ref) {
+  var name = _ref.name;
+  return React.createElement( "span", null, "Hello, " + name + "!" );
+}
+
 function HelloWorld() {
-  return React.createElement(
-    "h1",
-    null,
-    React.createElement(Message, { name: "World" })
+  return React.createElement("h1", null,
+           React.createElement(Message, { name: "World" })
   );
 }
 ```
@@ -176,8 +186,7 @@ function HelloWorld() {
 # Inside React Web Components (Continued)
 
 ``` jsx
-function LinkList( props ) {
-  const {links} = props;
+function LinkList( {links} ) {
   return (
       <ul>
         {links.map( link => <li><a href={link.url}>{link.title}</a></li> )}
@@ -188,26 +197,15 @@ function LinkList( props ) {
 gets converted to "plain vanilla" JavaScript:
 
 ``` js
-function LinkList(props) {
-  var links = props.links;
+function LinkList(_ref) {
+  var links = _ref.links;
 
-  return React.createElement(
-    "ul",
-    null,
+  return React.createElement( "ul", null,
     links.map(function (link) {
-      return React.createElement(
-        "li",
-        null,
-        React.createElement(
-          "a",
-          { href: link.url },
-          link.title
-        )
-      );
-    })
-  );
-}
-```
+      return React.createElement( "li", null,
+               React.createElement( "a",{ href: link.url }, link.title ));
+    }));
+}```
 
 # Classes, Classes, Classes - Extends React.Component
 
