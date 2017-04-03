@@ -1,16 +1,5 @@
 title: Using Web Feeds to Build Planet Sites in Ruby
 
-%css
-
-pre {
-  padding: 4px 4px 4px 4px;
-  border-top: #bbb 1px solid;
-  border-bottom: #bbb 1px solid;
-  background: #f3f3f3;
-}
-
-%end
-
 
 # Using Web Feeds to Build Planet Sites in Ruby
 
@@ -382,14 +371,14 @@ ATOM:
 
 Uniform title, link, summary, content, etc. (for standard case):
 
-~~~
-require 'feedutils'
+``` ruby
+require 'feedparser'
 require 'open-uri'
 
 xml = open( 'http://www.1stfloorgraphics.nl/blog/feed' ).read 
 # xml = open( 'http://www.1stfloorgraphics.nl/blog/feed/atom' ).read
 
-feed = FeedUtils::Parser.parse( xml )
+feed = FeedParser::Parser.parse( xml )
 
 puts "feed.class.name: #{feed.class.name}"
 
@@ -400,8 +389,7 @@ feed.items.each do |item|
   puts "  (#{item.url})"
   puts
 end
-
-~~~
+```
 
 
 
@@ -409,8 +397,8 @@ end
 
 Prints:
 
-~~~
-feed.class.name: FeedUtils::Feed
+```
+feed.class.name: FeedParser::Feed
 
 == Floor Drees » blog ==
 
@@ -418,11 +406,11 @@ feed.class.name: FeedUtils::Feed
   (http://www.1stfloorgraphics.nl/2013/10/23/devfest-vienna-day-1-2-talks-presentations-and-hacking/)
 
 ...
-~~~
+```
 
 More Ruby gems feed options:
 
-- [feedutils](http://rubygems.org/gems/feedutils)
+- [feedparser](http://rubygems.org/gems/feedparser)
 - [feed-normalizer](http://rubygems.org/gems/feed-normalizer)
 - [simple-rss](http://rubygems.org/gems/simple-rss)
 - [feedzirra](http://rubygems.org/gems/feedzirra)
@@ -436,7 +424,7 @@ More Ruby gems feed options:
 
 ~~~
 require 'open-uri'
-require 'feedutils'
+require 'feedparser'
 require 'erb'
   
 # step 1) read a list of web feeds
@@ -452,7 +440,7 @@ FEED_URLS = [
 items = []
 
 FEED_URLS.each do |url|
-  feed = FeedUtils::Parser.parse( open( url ).read )
+  feed = FeedParser::Parser.parse( open( url ).read )
   items += feed.items
 end
 
