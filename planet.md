@@ -1,17 +1,6 @@
 title: New Horizons - Build Your Own (Static) Planet News Site w/ Pluto (and Ruby)
 
 
-%css
-
-pre {
-  padding: 4px 4px 4px 4px;
-  border-top: #bbb 1px solid;
-  border-bottom: #bbb 1px solid;
-  background: #f3f3f3;
-}
-
-%end
-
 # Agenda
 
 - Lets Build a Planet News Site in Ruby
