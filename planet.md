@@ -1,4 +1,4 @@
-title: Build Your Own (Static) Planet News Site w/ Ruby (and Pluto)
+title: New Horizons - Build Your Own (Static) Planet News Site w/ Pluto (and Ruby)
 
 
 
@@ -28,10 +28,26 @@ Example: [xkcd.com/atom.xml](https://xkcd.com/atom.xml)
 </feed>
 ```
 
+# Let's Welcome the Microservices Vienna Meetup
+
+What's a web feed?  - Architecture Astronauts Edition ;-)
+
+The Facebook news feed is a centralized monolith!
+
+A planet news feed is a distributed (micro)service architecture!
+
+- Uses publish & subscribe (PubSub) channels
+- Uses open formats with hypermedia as the engine of application state (HATEOS)
+- Uses evolutionary future forward design   
+- Runs on Amazon S3 or other "server-less" storage (micro)services
+- 100 % certified representational state transfer (REST) style e.g. works with the web e.g. HTTP, proxies, caches, etc. not yet another abstraction layer or strategy factory
+- Free vendor-neutral royalty-free industry standard
+
+
+
 # Reading Web Feeds in Ruby - Options
 
-Module RSS - Standard (Built-In) Web Feed Reader & Writer Library
-
+Module RSS - Standard (built-In) web feed reader & writer library.
 The doc reads:
 
 > RSS reading and writing
@@ -226,19 +242,20 @@ Prints:
 
 # Production-Ready? Real-World Planet Feed Reader? Almost
 
-1) Cache (Store) Feed Items in Database
+(1) Cache (Store) Feed Items in Database
 
 e.g. lets you use `items.latest.limit(24)` and so on (SQL queries)
 
-2) Use Conditional GETs When Fetching Feeds
+(2) Use Conditional GETs When Fetching Feeds
 
 e.g. use HTTP Header `If-Modified-Since` for last modified dates and `If-None-Match` for etags
 
-3) Schedule Feed Auto Update Every Hour
+(3) Schedule Feed Auto Update Every Hour
 
 e.g. use `rake update`  w/ cron job, for example
 
 And so on. All goodies (and much more) ready for (re)use in pluto gem.
+
 
 
 # What's Planet Pluto?  
@@ -261,6 +278,15 @@ Q: The Mass of (Former) Planet Pluto is ... ?
 - (C) 0.01 (1/100) Earth
 - (D) 0.002 (1/500) Earth
 
+
+Pluto Facts - Did you know?
+
+Pluto was discovered in 1930 and the named after the god of the underworld
+proposed by a eleven-year-old schoolgirl in Oxford, England,
+who was interested in classical mythology.
+Thanks Venetia Burney!
+
+![](i/plutoplanet.png)
 
 
 # Planet Ruby - Step 1 - Add Your Web Feeds
@@ -325,7 +351,12 @@ See [Planets @ NASA Solar System](https://solarsystem.nasa.gov/planets/)
 
 [`blogs.openstreetmap.org`](https://blogs.openstreetmap.org)
 
-add pic here
+![](i/osmblogs1.png)
+
+or
+
+![](i/osmblogs2.png)
+
 
 
 # OpenStreetMap Blogs - Step 1 - Add Your Web Feeds
@@ -395,7 +426,9 @@ Q: Pluto the Pup is the pet of ...?
 - (C) Mickey Mouse
 - (D) Minnie Mouse
 
-add pluto the pub pic here
+
+![](i/plutothepup.png)
+
 
 
 # OpenStreetMap Blogs - Design Your Own Templates
@@ -437,7 +470,16 @@ Q: Cosmographia Trivia Quiz - How many planets in our system?
 - (D) Planet 9 (II) w/ Hypothetical Planet X
   - Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune Planet X
 
-See [Planets @ NASA Solar System](https://solarsystem.nasa.gov/planets/)
+Planet Nine Facts - A New Planet?
+
+> Astronomers used mathematics to predict the existence of the object
+> they nicknamed "Planet Nine."
+>
+> "Planet Nine," could have a mass about 10 times that of Earth and
+> orbit about 20 times farther from the sun on average than Neptune. It may take between 10,000 and
+> 20,000 Earth years to make one full orbit around the sun.
+
+(Source: [Planets @ NASA Solar System](https://solarsystem.nasa.gov/planets/))
 
 
 # Design Your Own Planet Pluto Templates / Themes
@@ -502,7 +544,7 @@ See the [pluto.live.starter](https://github.com/plutolive/pluto.live.starter) re
 
 # Planet Pluto Trivia Quiz V
 
-Q: What planet does NOT run on ruby?
+Q: What planet scripts do NOT run on ruby?
 
 - (A) Planet Mars -- by Sam Ruby et al
 - (B) Planet Venus -- by Sam Ruby et al
@@ -511,7 +553,8 @@ Q: What planet does NOT run on ruby?
 
 
 
-# One More Thing ;-) - Jekyll Pluto Planet Addon
+# One More Thing ;-) - Jekyll Planet Pluto Addon / Importer
+
 
 Let's you (auto-)add articles / blog posts to your
 (static) website. Example:
@@ -553,15 +596,35 @@ Questions? Comments?
 
 # Planet Pluto Trivia Quiz VI
 
+Q:  How many moons / natural satellites has Pluto?
 
-# Planet Pluto Trivia Quiz VII
+- (A) 0 - Zero
+- (B) 1 - One
+- (C) 3 - Three
+- (D) 5 - Five
+
+
+Pluto Facts - Did you know?  Identity Crisis
+
+> Pluto has five known moons: Charon (the largest, with a diameter just over half that of Pluto),
+> Styx, Nix, Kerberos, and Hydra.
+> Pluto and Charon are sometimes considered a binary system because the barycenter of their orbits > does not lie within either body. The  International Astronomical Union (IAU) has not formalized
+> a definition for binary dwarf planets,
+> and Charon is officially classified as a moon of Pluto.
+
+(Source: [Pluto - Wikipedia](https://en.wikipedia.org/wiki/Pluto))
+
+
+![](i/plutomoons.jpg)
+
 
 
 # Bonus:  Planet Ruby - What's News?
 
 - Planet Ruby
-  - 150+ Sources; see
+  - 150+ Sources; see [`planetruby/sources`](http://planetruby.herokuapp.com/sources)
 - Planet Vienna.rb / Austria  -- Relaunch / Update - Why? Why not?
+
 
 <!-- -->
 - Rubyland News                  - by Jonathan Rochkind (runs on rubyland.news rails app)
@@ -587,7 +650,28 @@ Some ideas:
 Lesson from Facebook (Social Networks)?
 Add Profile Pics. Example:
 
-Planet Gnome (First Planet Planet Still Running Today)
-See Hackergotchis
+Planet Gnome ([`planet.gnome.org`](http://planet.gnome.org)) - First Planet Planet Still Running Today
 
-add pic here
+See [Hackergotchis](http://planet.gnome.org/heads/):
+
+![](i/hackergotchis.png)
+
+
+
+# Planet Pluto Trivia Quiz VII
+
+Q: What is NOT a classification of Pluto?
+
+- (A) King of the Kuiper Belt
+- (B) Outer Solar System Object
+- (C) Trans-Neptunian Object
+- (D) Planet
+
+
+> I think the whole Solar System joins me in saying,"Good riddance!" to that whiney little ball of ice.
+> That trespasser better stop spewing nonsense from those cryovolcanoes of his,
+> or I'll kick his night side all the way to Alpha Centauri.
+>
+> -- Neptune, Pluto Nemesis
+
+(Source: [The Pluto Diaries - confessions of a former ninth planet](http://www.theplutodiaries.com))
