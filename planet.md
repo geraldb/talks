@@ -1,6 +1,43 @@
 title: New Horizons - Build Your Own (Static) Planet News Site w/ Pluto (and Ruby)
 
 
+%css
+
+pre {
+  padding: 4px 4px 4px 4px;
+  border-top: #bbb 1px solid;
+  border-bottom: #bbb 1px solid;
+  background: #f3f3f3;
+}
+
+%end
+
+# Agenda
+
+- Lets Build a Planet News Site in Ruby
+  - What's a Web Feed?
+- Reading Web Feeds in Ruby - Options
+  - Module RSS - Standard (Built-In) Web Feed Reader & Writer Library
+  - Hello, feedparser gem!
+- Planet Feed Reader in 20 Lines of Ruby
+- What's Planet Pluto?
+  - Planet Ruby - Step 1 - Add Your Web Feeds
+  - Planet Ruby - Step 2 - Build Your Planet News Site
+- OpenStreetMap Blogs (blogs.openstreetmap.org)
+  - Step 1 - Add Your Web Feeds
+  - Step 2 - Build Planet News Site
+  - How-to Auto-Update Planet News Site Every Hour
+  - Design Your Own Templates
+- Design Your Own Planet Pluto Templates / Themes
+- Planet Pluto - Stay Static or Go Dynamic?
+- Jekyll Planet Pluto Addon / Importer
+- Bonus
+  - Planet Ruby - What's Happening in the Ruby Universe?
+  - Planet Pluto - What's Next? Plans & Ideas
+  - Tip - Add Profile Pics (Hacker Gotchis)
+
+
+
 
 # Lets Build a Planet News Site in Ruby
 
@@ -608,7 +645,8 @@ Pluto Facts - Did you know?  Identity Crisis
 
 > Pluto has five known moons: Charon (the largest, with a diameter just over half that of Pluto),
 > Styx, Nix, Kerberos, and Hydra.
-> Pluto and Charon are sometimes considered a binary system because the barycenter of their orbits > does not lie within either body. The  International Astronomical Union (IAU) has not formalized
+> Pluto and Charon are sometimes considered a binary system because the barycenter of their orbits
+> does not lie within either body. The  International Astronomical Union (IAU) has not formalized
 > a definition for binary dwarf planets,
 > and Charon is officially classified as a moon of Pluto.
 
