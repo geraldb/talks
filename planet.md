@@ -372,6 +372,9 @@ in km (circumference, that is, 2pi × r)?
 
 See [Planets @ NASA Solar System](https://solarsystem.nasa.gov/planets/)
 
+![](i/plutoplanetkm.jpg)
+
+
 
 # OpenStreetMap Blogs (`blogs.openstreetmap.org`)
 
