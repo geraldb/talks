@@ -178,6 +178,10 @@ Wed April 30th, 2014 -
 
 ## 2013
 
+Mon Oct 7th, 2013 -
+[**(J)Ruby in Action - Web Apps w/ Rails n Jetty"**](jruby_web_apps.md)
+@ JUG Austria
+
 Fri May 3rd, 2013 @ [Linuxwochen Wien '13](http://www.linuxwochen.at/Wien)
 
 **football.db - Using Open Football Data**
