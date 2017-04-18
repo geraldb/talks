@@ -52,8 +52,25 @@ Wed July 13rd, 2016 -
 @ [React Vienna Meetup](https://meetup.com/ReactVienna/events/232438531)
 
 
+Sat April 30th, 2016 @ [Linuxwochen Wien '16](http://www.linuxwochen.at/Wien)
+
+I) [The New HTML - Markdown - Use Plain Text for Websites, Presentations and Books](markdown.md)
+
+A free plain text alternative to Word, Pages, LibreOffice, KeyNote, Powerpoint, LaTeX, etc.
+
+Use the free plain text markup formatting conventions united under the markdown umbrella - offering an easy-to-write and 
+easy-to-read format - to author and build web site, presentations, books and more. Markdown is the "new HTML" and offers a free alternative to Word, Pages, LibreOffice, KeyNote, Powerpoint, and more.
+
+II) Building Web Sites, Single-Page Apps or Online Books w/ Static Site Builders / Generators
+
+Metalsmith - Jekyll - Middleman - Hugo
+
+In 2016 you can get pretty far with just HTML, JS and CSS. The talk shows how to use (free, open source) static site builders / generators (such as Metalmsith (JavaScript/Node.js), Jekyll, Middleman (Ruby) or Hugo (Go) to build static (web) sites or (single-page web) apps or books.
+
+
+
 Thu March 3rd, 2016 -
-[**Stay Static - Jekyll vs. Middleman — Build Static Websites with Ruby**](jekyll_vs_middleman.md)
+[**Stay Static - Jekyll vs. Middleman - Build Static Websites with Ruby**](jekyll_vs_middleman.md)
 @ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/228656812)
 
 
