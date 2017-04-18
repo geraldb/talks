@@ -60,13 +60,17 @@ Part II) [**factbook.json - Using Git (and GitHub) for (Publishing) Data**](git_
 
 
 Thu Sept 22nd, 2016 -
-[**Building Static (Web)Sites with Jigsaw 'n' Blade (in PHP)**](jigsaw.md)
+[**Building Static Websites with Jigsaw 'n' Blade (in PHP)**](jigsaw.md)
 @ [Vienna PHP Meetup](https://meetup.com/viennaphp/events/232763541)
+
+Wed Aug 31rd, 2016 -
+[**Building static websites with the Great Gatsby and React.js web components**](gatsby.md)
+@ [Vienna.js Meetup](https://meetup.com/viennajs/events/230515294)
 
 Thu Aug 11th, 2016 -
 Part I) [**Building static websites with Metalsmith**](metalsmith2.md)
 Part II) [**Building static websites with Gatsby**](gatsby.md)
-@ [Stahlstadt.js](https://meetup.com/stahlstadt-js/events/232729094)
+@ [Stahlstadt.js Linz Meetup](https://meetup.com/stahlstadt-js/events/232729094)
 
 Wed July 20th, 2016 -
 [**The New New JavaScript / ECMAScript (ES6, ES7, ES8)**](es6.md) @ Inhouse (Private) 
@@ -158,6 +162,12 @@ II) **Open Football - The State of Open Data for the World Cup in Brazil**
 
 The world's biggest (sport) event happens in a couple of weeks in Brazil. 
 What's the state of open data for the World Cup? And football in general? What open data offers the FIFA? What other sources are available? What about Wikipedia? Wikidata? DBPedia, etc. Join to learn more and discuss the state of open data.
+
+
+Wed April 30th, 2014 -
+[**Using Open Football Data - Get Ready for the World Cup in Brazil w/ JavaScript**](open_data_world_cup_with_js.md)
+@ [Vienna.js Meetup](https://meetup.com/viennajs/events/126159362)
+
 
 
 ## 2013
