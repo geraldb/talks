@@ -32,9 +32,14 @@ Wed March 15th, 2017 -
 
 ## 2016
 
+Thu Nov 17th, 2016 - 
+Part I) [factbook.json - Turn the World Factbook into Open (Structured) Data](factbook.md)  
+Part II) [factbook.json - Using Git (and GitHub) for (Publishing) Data](git_for_data.md)
+@ [Vienna Open Data Meetup](https://meetup.com/Open-Knowledge-Oesterreich/events/233208866)
+
 Thu Aug 11th, 2016 -
-I) [**Building static websites with Metalsmith**](metalsmith2.md)
-II) [**Building static websites with Gatsby**](gatsby.md)
+Part I) [**Building static websites with Metalsmith**](metalsmith2.md)
+Part II) [**Building static websites with Gatsby**](gatsby.md)
 @ [Stahlstadt.js](https://meetup.com/stahlstadt-js/events/232729094)
 
 Wed July 13rd, 2016 -
