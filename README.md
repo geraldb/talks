@@ -109,6 +109,14 @@ Wed March 2nd, 2016 -
 
 ## 2015
 
+Thu Oct 15, 2015 -
+[**Dr. Jekyll and Mr. Hyde: The Missing Package Manager**](drjekyll.md)
+@ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/225097350)
+
+Wed Sept 30, 2015 -
+[**Add (Deep) Anchor Links to Your Website**](anchor.md)
+@ [Vienna.js Meetup](https://meetup.com/viennajs/events/220339170)
+
 Fri May 8th, 2015 @ [Linuxwochen Wien '15](http://www.linuxwochen.at/Wien)
 
 I) **Building Web Sites, Blogs, Books w/ Static Site Generators**
