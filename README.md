@@ -68,6 +68,9 @@ Part I) [**Building static websites with Metalsmith**](metalsmith2.md)
 Part II) [**Building static websites with Gatsby**](gatsby.md)
 @ [Stahlstadt.js](https://meetup.com/stahlstadt-js/events/232729094)
 
+Wed July 20th, 2016 -
+[**The New New JavaScript / ECMAScript (ES6, ES7, ES8)**](es6.md) @ Inhouse (Private) 
+
 Wed July 13rd, 2016 -
 [**Stay Static - Build Single Page Sites with the Great Gatsby**](gatsby.md)
 @ [React Vienna Meetup](https://meetup.com/ReactVienna/events/232438531)
