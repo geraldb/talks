@@ -95,3 +95,30 @@ Thu March 3rd, 2016 -
 @ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/228656812)
 
 
+## 2015
+
+Frit May 8th, 2015 @ [Linuxwochen Wien '15](http://www.linuxwochen.at/Wien)
+
+I) **Building Web Sites, Blogs, Books w/ Static Site Generators**
+
+Static is the New Dynamic
+
+Use static site generators (such as Github Pages w/ Jekyll, Middleman, etc.) and a wiki-style markup language that’s easy-to-write and 
+easy-to-read - to author and build web sites, blogs, books and more. 
+Learn about Markdown syntax and formatting and tools for websites (incl. blogs), and books. Examples will include websites 
+such as the Open Football Project and others and books such as the The Free World Beer Books and others.
+
+II) **Open Austria, Open Beer, Open Football - The State of Open Data - Tools & Projects**
+
+The talk will cover the state of open football and beer data for Austria and beyond. 
+Join to learn more and discuss the state of open data with a focus on practical tools and open data projects you can use today.
+
+The talk will cover the state of open data for Austrian localities? Where to get a list of all counties (Bezirke), municipalities (Gemeinden), cities (Orte), zipcodes, etc. for example? 
+What about all Austrian breweries and beers? What open data about football? 
+What open data offers the FIFA? Or the UEFA? Or the ÖFB?
+
+What alternative sources if any are available? What about Wikipedia? Wikidata? DBPedia and friends?
+
+Join to learn more and discuss the state of open data with a focus on practical tools and open data projects you can use today.
+
+
