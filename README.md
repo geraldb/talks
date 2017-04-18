@@ -149,6 +149,12 @@ Join to learn more and discuss the state of open data with a focus on practical 
 
 ## 2014
 
+Wed Aug 27th, 2014 -
+[**Building Your Own Web Components (Tags / Elements)**](webcomponents2.md)
+@ [Vienna.js Meetup](https://meetup.com/viennajs/events/135052012)
+
+
+
 Sat May 10th, 2014 @ [Linuxwochen Wien '14](http://www.linuxwochen.at/Wien)
 
 I) **Use Markdown for Website, Presentations and Books**
