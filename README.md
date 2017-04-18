@@ -97,7 +97,7 @@ Thu March 3rd, 2016 -
 
 ## 2015
 
-Frit May 8th, 2015 @ [Linuxwochen Wien '15](http://www.linuxwochen.at/Wien)
+Fri May 8th, 2015 @ [Linuxwochen Wien '15](http://www.linuxwochen.at/Wien)
 
 I) **Building Web Sites, Blogs, Books w/ Static Site Generators**
 
@@ -111,6 +111,7 @@ such as the Open Football Project and others and books such as the The Free Worl
 II) **Open Austria, Open Beer, Open Football - The State of Open Data - Tools & Projects**
 
 The talk will cover the state of open football and beer data for Austria and beyond. 
+
 Join to learn more and discuss the state of open data with a focus on practical tools and open data projects you can use today.
 
 The talk will cover the state of open data for Austrian localities? Where to get a list of all counties (Bezirke), municipalities (Gemeinden), cities (Orte), zipcodes, etc. for example? 
@@ -120,5 +121,37 @@ What open data offers the FIFA? Or the UEFA? Or the ÖFB?
 What alternative sources if any are available? What about Wikipedia? Wikidata? DBPedia and friends?
 
 Join to learn more and discuss the state of open data with a focus on practical tools and open data projects you can use today.
+
+
+## 2014
+
+Sat May 10th, 2014 @ [Linuxwochen Wien '14](http://www.linuxwochen.at/Wien)
+
+I) **Use Markdown for Website, Presentations and Books**
+
+Markdown is a wiki-style markup language that’s easy-to-write and easy-to-read
+
+Use Markdown - a wiki-style markup language that’s easy-to-write and 
+easy-to-read - to author and build web site, presentations (slide shows) and books. Learn about Markdown syntax and formatting and tools for websites (incl. blogs), presentations and books. Examples will include websites such as the Open Beer Project and others and the books such as the The Free World Beer Books and others.
+
+II) **Open Football - The State of Open Data for the World Cup in Brazil**
+
+The world's biggest (sport) event happens in a couple of weeks in Brazil. 
+What's the state of open data for the World Cup? And football in general? What open data offers the FIFA? What other sources are available? What about Wikipedia? Wikidata? DBPedia, etc. Join to learn more and discuss the state of open data.
+
+
+## 2013
+
+Fri May 3rd, 2013 @ [Linuxwochen Wien '13](http://www.linuxwochen.at/Wien)
+
+**football.db - Using Open Football Data**
+
+Bundesliga, Champions League, World Cup
+
+Introduction to football.db - A free open public domain football database & schema for use in any (programming) language. 
+Tournaments include: World Cup, Confederations Cup, Champions League, Europa League, Bundesliga and many more.
+
+Learn how to add more teams, tournaments, games, players and more or how to use football.db data in JavaScript or Ruby, 
+for web apps or mobile apps for fun and profit, for example. All data, code and sample is public domain (free & open source).
 
 
