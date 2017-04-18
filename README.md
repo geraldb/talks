@@ -94,7 +94,9 @@ Metalsmith - Jekyll - Middleman - Hugo
 
 In 2016 you can get pretty far with just HTML, JS and CSS. The talk shows how to use (free, open source) static site builders / generators (such as Metalmsith (JavaScript/Node.js), Jekyll, Middleman (Ruby) or Hugo (Go) to build static (web) sites or (single-page web) apps or books.
 
-
+Tue March 8th, 2016 - 
+[**Building Static Websites with Metalsmith (+Handelbars/Nunjucks)**](metalsmith2.md)
+@ [Node.js Vienna Meetup](https://meetup.com/nodejs-vienna/events/228638709)
 
 Thu March 3rd, 2016 -
 [**Stay Static - Jekyll vs. Middleman - Build Static Websites with Ruby**](jekyll_vs_middleman.md)
