@@ -75,6 +75,9 @@ Wed July 13rd, 2016 -
 [**Stay Static - Build Single Page Sites with the Great Gatsby**](gatsby.md)
 @ [React Vienna Meetup](https://meetup.com/ReactVienna/events/232438531)
 
+Thu June 9th, 2016 -
+[**Stay Static - Build Static (Web)sites with Hugo and the Go Template Language**](gohugo.md)
+@ [Vienna Golang Meetup](https://meetup.com/Vienna-Golang-Meetup/events/230458823)
 
 Sat April 30th, 2016 @ [Linuxwochen Wien '16](http://www.linuxwochen.at/Wien)
 
@@ -99,7 +102,7 @@ Thu March 3rd, 2016 -
 
 
 Wed March 2nd, 2016 -
-[**Docker for Java Enterprise Architects, Designerns 'n' Coders**](docker_java.md.md) @ Inhouse (Private) 
+[**Docker for Java Enterprise Architects, Designerns 'n' Coders**](docker_java.md) @ Inhouse (Private) 
 
 
 ## 2015
