@@ -33,9 +33,14 @@ Wed March 15th, 2017 -
 ## 2016
 
 Thu Nov 17th, 2016 - 
-Part I) [factbook.json - Turn the World Factbook into Open (Structured) Data](factbook.md)  
-Part II) [factbook.json - Using Git (and GitHub) for (Publishing) Data](git_for_data.md)
+Part I) [**factbook.json - Turn the World Factbook into Open (Structured) Data**](factbook.md)  
+Part II) [**factbook.json - Using Git (and GitHub) for (Publishing) Data**](git_for_data.md)
 @ [Vienna Open Data Meetup](https://meetup.com/Open-Knowledge-Oesterreich/events/233208866)
+
+
+Thu Sept 22nd, 2016 -
+[**Building Static (Web)Sites with Jigsaw 'n' Blade (in PHP)**](jigsaw.md)
+@ [Vienna PHP Meetup](https://meetup.com/viennaphp/events/232763541)
 
 Thu Aug 11th, 2016 -
 Part I) [**Building static websites with Metalsmith**](metalsmith2.md)
@@ -47,6 +52,8 @@ Wed July 13rd, 2016 -
 @ [React Vienna Meetup](https://meetup.com/ReactVienna/events/232438531)
 
 
-
+Thu March 3rd, 2016 -
+[**Stay Static - Jekyll vs. Middleman — Build Static Websites with Ruby**](jekyll_vs_middleman.md)
+@ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/228656812)
 
 
