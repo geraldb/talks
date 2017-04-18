@@ -98,6 +98,10 @@ Thu March 3rd, 2016 -
 @ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/228656812)
 
 
+Wed March 2nd, 2016 -
+[**Docker for Java Enterprise Architects, Designerns 'n' Coders**](docker_java.md.md) @ Inhouse (Private) 
+
+
 ## 2015
 
 Fri May 8th, 2015 @ [Linuxwochen Wien '15](http://www.linuxwochen.at/Wien)
