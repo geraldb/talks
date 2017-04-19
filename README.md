@@ -195,3 +195,53 @@ Learn how to add more teams, tournaments, games, players and more or how to use 
 for web apps or mobile apps for fun and profit, for example. All data, code and sample is public domain (free & open source).
 
 
+
+## More
+
+[**Almost Sinatra in Six Lines of Ruby - A Breakdown**](almost_sinatra.md)
+
+[**beer.db - Using Open Beer & Brewery Data in Ruby**](beer_db_intro.md)
+
+[**CSS Next - CSS Preprocessors**](csspre.md)
+
+[**Why Facebook Matters - Stats, Numbers, Web OS vs. Desktop OS, News**](facebook.md)
+
+[**Facebook App Development with Ruby on Rails**](facebooker.md)
+
+[**football.db - Using Open Football Data in JavaScript**](football_db_intro.md)
+
+[**Adding Semantics to Your Web Site - RDF, RDFa, Microformats - Web 3.0 in Action**](friends.md)
+
+[**Building Web Services (HTTP APIs) with Go**](go_http_api.md)
+
+[**Groovy - Java for the 21st Century - Do More With Less (Code)**](groovy.md)
+
+[**Haskell, Haskell, Haskell**](haskell.md)
+
+[**Java and the End of History - Learn Some New Languages and Concepts**](java_end_of_history.md)
+
+[**(J)Ruby in Action: Generating PDF Documents from HTML Templates**](jruby_html_print.md)
+
+[**Microformats - Adding Semantics to Your Web Site - Web 3.0 in Action**](microformats.md)
+
+[**Create Mobile Web Apps with the iUI JavaScript Library**](mobile.md)
+
+[**Using Open Football Data - Get Ready for the World Cup in Brazil 2014 with Ruby**](open_data_world_cup.md)
+
+[**Keep it Simple - Embedded Jetty, Embedded SQLite, Embedded Ruby**](simple_simple_simple.md)
+
+[**Building Web Services (HTTP APIs) with Ruby (and Sinatra)**](sinatra_http_api.md)
+
+[**Building Web Services (HTTP APIs) with Ruby (and Sinatra) V2**](sinatra_http_api2.md)
+
+[**Static is the New Dynamic - Jekyll, Octopress, GitHub Pages 'n' Friends**](static.md)
+
+[**The World's Greatest (Free) Static Site Builders / Generators**](staticgen.md)
+
+[**Tagging & Tag Clouds Made Easy with Ruby**](tagging.md)
+
+[**Building Your Own Tags / Elements / Web Components V1**](webcomponents.md)
+
+[**Using Web Feeds to Build Planet Sites in Ruby**](webfeeds.md)
+
+
