@@ -6,7 +6,7 @@ sources in plain text w/ markdown formatting
 ## 2017
 
 Wed May 17th, 2017 - 
-[**Building Static (Web)Sites with Jigsaw 'n' Blade (in PHP)**](jigsaw.md) 
+[**Building Static Websites with Jigsaw 'n' Blade (in PHP)**](jigsaw.md) 
 @ [Laravel Vienna Meetup](https://meetup.com/Laravel-Frameworkers-Vienna/events/237725787)
 
 Fri May 5th, 2017 -
@@ -24,7 +24,7 @@ Trivia Question: No. #1 country in the world with the largest proven crude oil r
 
 
 Wed April 19th, 2017 -
-[**Building Webcomponents with React.js - Past, Present, Future**](react.md) 
+[**Building Web Components with React.js - Past, Present, Future**](react.md) 
 @ Inhouse (Private)
 
 
@@ -76,11 +76,11 @@ Wed July 20th, 2016 -
 [**The New New JavaScript / ECMAScript (ES6, ES7, ES8)**](es6.md) @ Inhouse (Private) 
 
 Wed July 13rd, 2016 -
-[**Stay Static - Build Single Page Sites with the Great Gatsby**](gatsby.md)
+[**Stay Static - Build Single-Page Websites with the Great Gatsby**](gatsby.md)
 @ [React Vienna Meetup](https://meetup.com/ReactVienna/events/232438531)
 
 Thu June 9th, 2016 -
-[**Stay Static - Build Static (Web)sites with Hugo and the Go Template Language**](gohugo.md)
+[**Stay Static - Build Static Websites with Hugo and the Go Template Language**](gohugo.md)
 @ [Vienna Golang Meetup](https://meetup.com/Vienna-Golang-Meetup/events/230458823)
 
 Sat April 30th, 2016 @ [Linuxwochen Wien '16](http://www.linuxwochen.at/Wien)
@@ -92,7 +92,7 @@ A free plain text alternative to Word, Pages, LibreOffice, KeyNote, Powerpoint, 
 Use the free plain text markup formatting conventions united under the markdown umbrella - offering an easy-to-write and 
 easy-to-read format - to author and build web site, presentations, books and more. Markdown is the "new HTML" and offers a free alternative to Word, Pages, LibreOffice, KeyNote, Powerpoint, and more.
 
-II) **Building Web Sites, Single-Page Apps or Online Books w/ Static Site Builders / Generators**
+II) **Building Websites, Single-Page Apps or Online Books w/ Static Site Builders / Generators**
 
 Metalsmith - Jekyll - Middleman - Hugo
 
@@ -114,7 +114,7 @@ Wed March 2nd, 2016 -
 ## 2015
 
 Thu Oct 15, 2015 -
-[**Dr. Jekyll and Mr. Hyde: The Missing Package Manager**](drjekyll.md)
+[**Dr. Jekyll and Mr. Hyde: The Missing Theme Package Manager & Quick Start Script Wizard**](drjekyll.md)
 @ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/225097350)
 
 Wed Sept 30, 2015 -
@@ -123,7 +123,7 @@ Wed Sept 30, 2015 -
 
 Fri May 8th, 2015 @ [Linuxwochen Wien '15](http://www.linuxwochen.at/Wien)
 
-I) **Building Web Sites, Blogs, Books w/ Static Site Generators**
+I) **Building Websites, Blogs, Books w/ Static Site Generators**
 
 Static is the New Dynamic
 
@@ -157,7 +157,7 @@ Wed Aug 27th, 2014 -
 
 Sat May 10th, 2014 @ [Linuxwochen Wien '14](http://www.linuxwochen.at/Wien)
 
-I) **Use Markdown for Website, Presentations and Books**
+I) **Use Markdown for Websites, Presentations and Books**
 
 Markdown is a wiki-style markup language that’s easy-to-write and easy-to-read
 
@@ -188,7 +188,7 @@ Fri May 3rd, 2013 @ [Linuxwochen Wien '13](http://www.linuxwochen.at/Wien)
 
 Bundesliga, Champions League, World Cup
 
-Introduction to football.db - A free open public domain football database & schema for use in any (programming) language. 
+Introduction to football.db - a free open public domain football database & schema for use in any (programming) language. 
 Tournaments include: World Cup, Confederations Cup, Champions League, Europa League, Bundesliga and many more.
 
 Learn how to add more teams, tournaments, games, players and more or how to use football.db data in JavaScript or Ruby, 
