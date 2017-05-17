@@ -88,12 +88,12 @@ Q: Built with _____?
 
 PHP - The Right Way is built with...  Ruby (and Jekyll).
 
-**Jekyll** ★26 960 ([jekyllrb.com](http://jekyllrb.com)) - a popular static (web)site builder -
+**Jekyll** ★29 707 ([jekyllrb.com](http://jekyllrb.com)) - a popular static (web)site builder -
 it's built into GitHub and includes free hosting and more.
 
 PHP - The Wrong Way is built with... Haskell (and Pandoc).
 
-**Pandoc** ★7 153 (web: [pandoc.org](http://pandoc.org)) - a popular plain text (e.g. markdown)
+**Pandoc** ★8 687 (web: [pandoc.org](http://pandoc.org)) - a popular plain text (e.g. markdown)
 to hypertext (e.g. markup) converter
 includes templating too - thus, it's another (great) static (web)site builder.
 
@@ -104,7 +104,7 @@ Q: Any static (web)site builders in PHP?
 
 # Hello, Jigsaw!
 
-by Adam Wathan et al (★472) -
+by Adam Wathan, Keith Damiani et al (★624) -
 web: [jigsaw.tighten.co](http://jigsaw.tighten.co),
 github: [`tightenco/jigsaw`](https://github.com/tightenco/jigsaw)
 
@@ -116,10 +116,10 @@ github: [`tightenco/jigsaw`](https://github.com/tightenco/jigsaw)
 
 Build for Laravel (PHP) developers!
 
-Started in April 2016 (this year) -
+Started in April 2016 -
 see
 ["Introducing Jigsaw, a Static Site Generator for Laravel Developers"](https://blog.tighten.co/introducing-jigsaw-a-static-site-generator-for-laravel-developers)
-by Matt Stauffer (the Laravel lead)
+by Matt Stauffer
 
 Q: Do you use (know) Laravel's Blade templating language?
 
@@ -167,7 +167,7 @@ $ jigsaw
 prints
 
 ```
-Jigsaw version 0.4.0
+Jigsaw version 1.0.1
 
 Usage:
   command [options] [arguments]
@@ -262,6 +262,30 @@ build_local/
 </html>
 ```
 
+# Jigsaw Stay Static Site - HTML Templates - Includes
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+     ...
+  </head>
+  <body>
+    @include('_includes.github')
+    @include('_includes.header')
+    <div class="main">
+       @yield('body')
+    </div>
+    @include('_includes.footer')
+  </body>
+</html>
+
+``` 
+
+(Source: [staystatic/jigsaw/source/_layouts/master.blade.php](https://github.com/staystatic/staystatic/blob/master/jigsaw/source/_layouts/master.blade.php))
+
+
+
 
 # Pages in HTML - Example: index.blade.php
 
@@ -272,6 +296,7 @@ build_local/
 <h1>Hello world!</h1>
 @endsection
 ```
+
 
 # Pages in Markdown - Example: about.md
 
@@ -317,6 +342,41 @@ Or try
 ```
 
 
+# Markdown Madness - Parsedown  
+
+Jigsaw uses Parsedown (out-of-the-box).
+
+What's Parsdown?
+
+Markdown Parser in PHP. One File  //  Super Fast  //  Extensible  //  GitHub Flavored
+
+
+```
+$Parsedown = new Parsedown();
+echo $Parsedown->text('Hello _Parsedown_!');
+
+```
+
+See [`parsedown.org`](http://parsedown.org)
+
+
+
+# Markdown Madness - Parsedown Cont.
+
+Includes GitHub Flavored Markdown Extensions e.g.
+
+- Fenced Code Blocks
+- Tables
+- and more
+
+Includes Markdown Extra Extension e.g.
+
+- Footnotes
+- Definition Lists
+- and more
+
+
+
 # Pages in Markdown w/ Custom Front Matter - Example: layouts/page.blade.php + history.md
 
 layouts/page.blade.php:
@@ -326,7 +386,7 @@ layouts/page.blade.php:
 
 @section('body')
     <div class="page">
-        <h2>{{ $pageTitle }}</h2>
+        <h2>{{ $page->title }}</h2>
     </div>
     @yield('page-body')
 @endsection
@@ -338,7 +398,7 @@ history.md:
 ---
 extends:   _layouts.page
 section:   page-body
-pageTitle: The History of Jigsaw
+title:     The History of Jigsaw
 ---
 
 Build for Laravel (PHP) developers!
@@ -352,7 +412,7 @@ by Matt Stauffer (the Laravel lead)
 # Global site-wide variables - Example: config.php
 
 Add global site-wide variables
-to the config.php:
+to the `config.php`:
 
 ```
 <?php
@@ -366,10 +426,165 @@ And use like (in templates):
 
 ```
 <head>
-  <title>{{ $site_title }}</title>
+  <title>{{ $page->site_title }}</title>
 </head>
 ```
 
-And much more.
 
-# To be continued
+# Collections
+
+Added to Jigsaw in 1.0 in April 2017. Yeah!
+
+
+[Article: Supercharged Static Sites: Introducing Jigsaw Collections](https://blog.tighten.co/supercharged-static-sites-introducing-jigsaw-collections) by Keith Damiani (Tighten Co)
+
+
+Add collections to `config.php`. Example:
+
+```
+<?php
+
+return [
+    'collections' => [
+        'posts' => [
+            'path' => 'blog/{date|Y-m-d}/{filename}',  // output path
+            'sort' => 'date',         
+        ],
+        'people' => [
+            'path' => 'people',
+            'sort' => 'last_name',
+        ],
+    ],
+];
+```
+
+# Collections Cont.
+
+
+`posts` collects all document in `_posts` folder e.g.:
+
+
+```
+_posts/
+   new-build-system.md
+   new-repo-maps.md
+   new-season.md
+```
+
+`people` collects all document in `_people` folder e.g.:
+
+
+```
+_people/
+   adam-wathan.md
+   dan-sheetz.md
+   dave-hicking.md
+   keith-damiani.md
+   matt-stauffer.md
+   
+```
+
+
+# Jigsaw Stay Static Site - HTML Templates - Loops 
+
+
+```
+<div>
+  <b>News 'n' Updates</b>
+  <ul class="news">
+    @foreach($posts as $post)
+        <li><a href="{{ $page->baseUrl }}{{ $post->getPath() }}">{{ $post->title }}</a></li>
+    @endforeach
+  </ul>
+</div>
+```
+
+(Source: [staystatic/jigsaw/source/index.blade.php](https://github.com/staystatic/staystatic/blob/master/jigsaw/source/index.blade.php))
+
+
+
+# Datafiles
+
+
+Added assoc arrays to `config.php`. Example:
+
+```
+<?php
+return [
+    'links'  => [
+       [ 'title' => "football.db - Open Football Data",
+         'url'   => "https://github.com/openfootball",
+       ],
+       [ 'title' => "beer.db - Open Beer, Brewery 'n' Brewpub Data",
+         'url'   => "https://github.com/openbeer",
+       ],
+       [ 'title' => "world.db - Open World Data",
+         'url'   => "https://github.com/openmundi",
+       ]
+    ],
+```
+
+(Source: [staystatic/jigsaw/config.php](https://github.com/staystatic/staystatic/blob/master/jigsaw/config.php))
+
+
+
+# Jigsaw Stay Static Site - HTML Templates - Loops
+
+
+```
+<div>
+  <b>Links 'n' Bookmarks</b>
+  <ul class="links">
+    @foreach($page->links as $link)
+      <li><a href="{{ $link->url }}">{{ $link->title }}</a></li>
+    @endforeach
+  </ul>
+</div>
+```
+
+(Source: [staystatic/jigsaw/source/index.blade.php](https://github.com/staystatic/staystatic/blob/master/jigsaw/source/index.blade.php))
+
+
+
+# Jigsaw - Summary
+
+|  -                       | Jigsaw         |
+| ------------------------ | ------------ |
+| GitHub Stars (+1s)       | ★624     |
+|  -                       |  -           |
+| Settings / Configuration | PHP          |
+| HTML Templates           | Blade        |
+| . Layouts                | Yes          |
+| . Includes               | Yes          |
+| Front Matter / Meta Data | Yaml         |
+| Datafiles                | PHP          |
+| CSS Preprocessing        | No (*)       |
+| HTML "Shortcodes"        | Markdown     |
+
+(*) Use "External" Pipeline e.g. Preprocessor in JavaScript (Node.js) etc.
+
+
+
+# Thanks - Stay Static
+
+**Stay Static Sample Sites (Showcase)**
+
+- [Stay Static](http://staystatic.github.io)
+  - [`/jigsaw`](https://github.com/staystatic/staystatic/tree/master/jigsaw)
+  - [`/hugo`](https://github.com/staystatic/staystatic/tree/master/hugo)
+  - [`/jekyll`](https://github.com/staystatic/staystatic/tree/master/jekyll)
+  - [`/middleman`](https://github.com/staystatic/staystatic/tree/master/middleman)
+  - [`/metalsmith-handlebars`](https://github.com/staystatic/staystatic/tree/master/metalsmith-handlebars)
+  - [`/metalsmith-nunjucks`](https://github.com/staystatic/staystatic/tree/master/metalsmith-nunjucks)  
+  - [`/gatsby`](https://github.com/staystatic/staystatic/tree/master/gatsby)
+
+And more.
+
+
+
+# Bonus: More Jigsaw Sample Sites
+
+- [Jigsaw Site](http://jigsaw.tighten.co) [(Source)](https://github.com/tightenco/jigsaw-site)
+- [Jigsaw Collections Demo](https://tightenco.github.io/jigsaw-collections-demo) [(Source)](https://github.com/tightenco/jigsaw-collections-demo)
+
+
