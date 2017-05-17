@@ -1,5 +1,17 @@
 title: Building Static (Web)sites with Jigsaw and Laravel Blade (in PHP)
 
+%css
+
+pre {
+  padding: 4px 4px 4px 4px;
+  border-top: #bbb 1px solid;
+  border-bottom: #bbb 1px solid;
+  background: #f3f3f3;
+}
+
+%end
+
+
 
 # Dynamic (Web)Site Generators
 
@@ -280,7 +292,7 @@ build_local/
   </body>
 </html>
 
-``` 
+```
 
 (Source: [staystatic/jigsaw/source/_layouts/master.blade.php](https://github.com/staystatic/staystatic/blob/master/jigsaw/source/_layouts/master.blade.php))
 
@@ -386,7 +398,7 @@ layouts/page.blade.php:
 
 @section('body')
     <div class="page">
-        <h2>{{ $page->title }}</h2>
+        <h2>{{{ $page->title }}</h2>
     </div>
     @yield('page-body')
 @endsection
@@ -426,7 +438,7 @@ And use like (in templates):
 
 ```
 <head>
-  <title>{{ $page->site_title }}</title>
+  <title>{{{ $page->site_title }}</title>
 </head>
 ```
 
@@ -481,11 +493,11 @@ _people/
    dave-hicking.md
    keith-damiani.md
    matt-stauffer.md
-   
+
 ```
 
 
-# Jigsaw Stay Static Site - HTML Templates - Loops 
+# Jigsaw Stay Static Site - HTML Templates - Loops
 
 
 ```
@@ -493,7 +505,7 @@ _people/
   <b>News 'n' Updates</b>
   <ul class="news">
     @foreach($posts as $post)
-        <li><a href="{{ $page->baseUrl }}{{ $post->getPath() }}">{{ $post->title }}</a></li>
+        <li><a href="{{{ $page->baseUrl }}{{{ $post->getPath() }}">{{{ $post->title }}</a></li>
     @endforeach
   </ul>
 </div>
@@ -536,7 +548,7 @@ return [
   <b>Links 'n' Bookmarks</b>
   <ul class="links">
     @foreach($page->links as $link)
-      <li><a href="{{ $link->url }}">{{ $link->title }}</a></li>
+      <li><a href="{{{ $link->url }}">{{{ $link->title }}</a></li>
     @endforeach
   </ul>
 </div>
@@ -586,5 +598,3 @@ And more.
 
 - [Jigsaw Site](http://jigsaw.tighten.co) [(Source)](https://github.com/tightenco/jigsaw-site)
 - [Jigsaw Collections Demo](https://tightenco.github.io/jigsaw-collections-demo) [(Source)](https://github.com/tightenco/jigsaw-collections-demo)
-
-
