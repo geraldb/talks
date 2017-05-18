@@ -1,17 +1,5 @@
 title: Building Static (Web)sites with Jigsaw and Laravel Blade (in PHP)
 
-%css
-
-pre {
-  padding: 4px 4px 4px 4px;
-  border-top: #bbb 1px solid;
-  border-bottom: #bbb 1px solid;
-  background: #f3f3f3;
-}
-
-%end
-
-
 
 # Dynamic (Web)Site Generators
 
@@ -265,10 +253,10 @@ build_local/
             Static Site Sample
         </header>
 
-        @yield('contents')
+        @yield('body')
 
         <footer>
-            <p>Built w/ Jigsaw</p>
+            Built with Jigsaw
         </footer>
     </body>
 </html>
@@ -327,7 +315,7 @@ Hello, Jigsaw!
 Welcome to markdown madness. We hope you **really** enjoy using good old text for writing.
 
 Just type some [markdown](http://en.wikipedia.org/wiki/Markdown)
-and Jigsaw (w/ ) will automatically turn it into hypertext markup language (HTML).
+and Jigsaw (w/ Parsedown) will automatically turn it into hypertext markup language (HTML).
 *Simple as that.*
 
 > Quote goes here.
@@ -381,7 +369,7 @@ Includes GitHub Flavored Markdown Extensions e.g.
 - Tables
 - and more
 
-Includes Markdown Extra Extension e.g.
+Includes Markdown Extra Extensions e.g.
 
 - Footnotes
 - Definition Lists
@@ -417,7 +405,7 @@ Build for Laravel (PHP) developers!
 
 Started in April 2016 (this year) -
 see ["Introducing Jigsaw, a Static Site Generator for Laravel Developers"](https://blog.tighten.co/introducing-jigsaw-a-static-site-generator-for-laravel-developers)
-by Matt Stauffer (the Laravel lead)
+by Matt Stauffer
 ```
 
 
