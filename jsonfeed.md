@@ -242,18 +242,6 @@ Why?
 see [scripting.com/rss.xml](http://scripting.com/rss.xml), for an example.
 
 
-
-# Why (another) feed format?
-
-Feed format sounds boring!? How about:
-
-A Univeral Server-less Head-less Microservice
-Content Management HTTP JSON API.
-
-Easy. Free. Simple.
-
-
-
 # Why (another) feed format? Cont.
 
 More than "just" JSON versions of RSS or Atom.
@@ -272,6 +260,16 @@ More than "just" JSON versions of RSS or Atom.
   and banner and featured images. Feed readers should not have to search
   and scrape to guess at these things.
 - A simple way to add extensions.
+
+
+# Why (another) feed format? Cont.
+
+Feed format sounds boring!? How about:
+
+A Univeral Server-less Head-less Microservice
+Content Management HTTP JSON API.
+
+Easy. Free. Simple.
 
 
 
@@ -431,7 +429,7 @@ Manton Reece? - I know that guy!
 Brent Simmons built the NetNewsWire  more than 10+ years ago;
 was first (most popular) news reader for Apple Mac OS X.
 
-Blogs at [inessential.com](http://inessential.com)  
+Blogs at [inessential.com](http://inessential.com)
 with [feed.json](http://inessential.com/feed.json) ;-)
 
 
