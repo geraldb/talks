@@ -1,5 +1,27 @@
-
 title: Meet Jason Feed - The New Web Feed & Syndication Guy
+
+
+# Agenda
+
+- The Future of Online News - The Future of Facebook & Co
+- Triva Quiz - What's RSS?
+- Content Modeling is Easy
+  - Jason Fried? I know that guy.
+  - League Quick Starter Sample - Mauritius Premier League
+- Content Modeling is Hard
+- Meet Jason Feed - A New Feed Format in JSON - feed.json
+- Rules for Standard Makers - Evolve or Die ;-) - Break Things - Many Worlds Possible
+- Why (another) feed format? - JSON is the new XML ;-)
+- Add JSON Feed to Your Site
+- JSON Feed in Action
+  - JSON Feed Viewer
+  - RSS or Atom to JSON Feed
+  - Build Your Own News Web Component w/ React
+- Bonus
+  - JSON Feed Podcast Example
+  - JSON Feed - Who's Who - Meet Brent Simmons n Manton Reece
+  - Let's "fix" JSON - What's wrong or missing in JSON 1.0?
+    - SON Feed? JSON5 Feed? HJSON Feed?
 
 
 # The Future of Online News - The Future of Facebook & Co
@@ -19,9 +41,11 @@ title: Meet Jason Feed - The New Web Feed & Syndication Guy
 
 # Triva Quiz - What's RSS?
 
-- [ A ] RDF Site Summary
-- [ B ] Rich Site Summary
-- [ C ] Really Simple Syndication
+Q: What's RSS?
+
+- (A) RDF Site Summary
+- (B) Rich Site Summary
+- (C) Really Simple Syndication
 
 RDF = Resource Description Framework
 
@@ -354,7 +378,7 @@ render() {
  return(
     <div className="list">
   		{ feed.items.map( item => (
-<div style={{
+<div style={{{
   padding: 10,
   margin: 10,
   background: 'white',
@@ -364,7 +388,7 @@ render() {
     <h3>
        <a href="{item._url}">{item.title}</a>
     </h3>
-    <div dangerouslySetInnerHTML={{__html: item.content_html}} />
+    <div dangerouslySetInnerHTML={{{__html: item.content_html}} />
   </div>
 </div>
      )) }
