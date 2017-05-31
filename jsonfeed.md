@@ -218,10 +218,15 @@ Note: "Full" content might just be:
 
 
 
-
 # Why (another) feed format?
 
 JSON is the new XML ;-)  Easier. Free. Simpler.
+
+![](i/google-trends-xml-json.png)
+
+
+
+# Why (another) feed format? - JSON is the new XML ;-) (Cont.)
 
 RSS and Atom feed formats in XML. No "official" JSON versions (§).
 
@@ -238,12 +243,9 @@ see [scripting.com/rss.xml](http://scripting.com/rss.xml), for an example.
 
 
 
-
 # Why (another) feed format?
 
-Feed format sounds boring!?
-
-How about:
+Feed format sounds boring!? How about:
 
 A Univeral Server-less Head-less Microservice
 Content Management HTTP JSON API.
@@ -294,24 +296,32 @@ Open Source, see [github.com/maximevaillancourt/json-feed-viewer](https://github
 
 - uses Node.js with Express and Pug (formerly Jade) templates
 
+![](i/jsonfeed-viewer.png)
 
-# JSON Feed in Action - RSS/Atom to JSONFeed
+
+
+# JSON Feed in Action - RSS or Atom to JSON Feed
 
 [feed2json.org]() by Andrew Chilton
 
-Convert RSS/Atom feed to JSONFeed
+Convert RSS or Atom feed to JSON Feed
 
 Open Source, see
 [github.com/appsattic/feed2json.org](https://github.com/appsattic/feed2json.org)
 
 - uses Node.js with Express and feedparser (for RSS/Atom)
 
+![](i/feed2json.png)
 
 
-# Build Your Own News Web Component w/ React - <NewsApp>
+# Build Your Own News Web Component w/ React
 
 See the [Feeds News Reader Sample](https://playhtml.github.io/feeds/react) in Action.
 
+![](i/playhtml-feeds.png)
+
+
+# Build Your Own News Web Component w/ React - NewsApp
 
 Step 1: Fetch the JSON feed
 
@@ -330,7 +340,7 @@ componentDidMount() {
 (Source: [github.com/playhtml/feeds/react/src/NewsApp.js](https://github.com/playhtml/feeds/blob/master/react/src/NewsApp.js))
 
 
-# Build Your Own News Web Component w/ React - <Feed>
+# Build Your Own News Web Component w/ React - Feed
 
 Step 2: Diplay the JSON feed in HTML
 
