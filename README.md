@@ -5,6 +5,10 @@ sources in plain text w/ markdown formatting
 
 ## 2017
 
+Wed May 31st, 2017 -
+[**Meet Jason Feed - The New Web Feed & Syndication Guy (JavaScript Edition)**](jsonfeed.md)
+@ [Vienna.js Meetup](https://meetup.com/viennajs/events/236300238)
+
 Wed May 17th, 2017 - 
 [**Building Static Websites with Jigsaw 'n' Blade (in PHP)**](jigsaw.md) 
 @ [Laravel Vienna Meetup](https://meetup.com/Laravel-Frameworkers-Vienna/events/237725787)
