@@ -1,5 +1,30 @@
 title: Meet Jason Feed - The New Web Feed & Syndication Guy
 
+- The Future of Online News - The Future of Facebook & Co
+- What's a Web Feed?
+  - News Feeds in 2017 - Vienna.rb (@viennarb)
+  - News Feeds in 2020 - viennarb.json5
+  - Triva Quiz - News Feeds in 2009 - What's RSS?
+  - Web Feed Formats - XML, JSON, YAML, HTML, TXT
+    - Triva Quiz - The Wonders of RSS 2.0 - Find the Content
+- Meet Jason Feed - A New Feed Format in JSON - feed.json
+  - Why JSON? Why not XML?
+- Reading JSON Feed - Ruby One-Liner - Ruby Loves JSON - JSON.parse  
+- Reading XML in Ruby - What's the state of the art in 2017?
+- Rules for Standard Makers - Evolve or Die ;-) - Break Things - Many Worlds Possible
+  - One gem to rule them all! All your base are blong to feedparser.
+- What's the feedparser gem?
+  - Reading feed.json
+  - Reading feeds in HTML w/ Microformats
+- Add JSON Feed to Your Site - Jekyll Template
+- Add Feed.TXT to Your Site  - Jekyll Template
+- Bonus
+  - JSON Feed Podcast Example
+  - JSON Feed - Who's Who - Meet Brent Simmons n Manton Reece
+  - Let's "fix" JSON - What's wrong or missing in JSON 1.0?
+    - SON Feed? JSON5 Feed? HJSON Feed?
+  - What's Feed.TXT? 
+
 
 
 # The Future of Online News - The Future of Facebook & Co
