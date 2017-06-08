@@ -5,6 +5,10 @@ sources in plain text w/ markdown formatting
 
 ## 2017
 
+Thu June 8th, 2017 -
+[**Meet Jason Feed - The New Web Feed & Syndication Guy (Ruby Edition)**](webfeeds2.md)
+@ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/239689512)
+
 Wed May 31st, 2017 -
 [**Meet Jason Feed - The New Web Feed & Syndication Guy (JavaScript Edition)**](jsonfeed.md)
 @ [Vienna.js Meetup](https://meetup.com/viennajs/events/236300238)
