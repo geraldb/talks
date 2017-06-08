@@ -72,25 +72,25 @@ and that
   title: "vienna.rb",
   description: "Aggregation of Ruby relevant topics in Vienna and Austria and organizing meetups while we're at it. http://vienna-rb.at/",
   author: { name: "vienna.rb" },
-  item: [
+  items: [
     {
       content_text: "Oh hi! Our next meetup will take place on Thursday the 8th of June! 💎 Got a talk you'd like to give? Get in touch! https://meetup.com/vienna-rb/events/239689512",
       date_published: "2017-05-17T05:26",
       url: "http://vienna-rb.at/status/864819337416388608",
-      id:  "http://vienna-rb.at/status/864819337416388608",
+      id:  "http://vienna-rb.at/status/864819337416388608"
     },
     {
       content_text: "Baboom! 2ish months of our picks up 😱 Check'em out! http://www.vienna-rb.at/",
-      date_published: "2017-05-11T0:12",
+      date_published: "2017-05-11T00:12",
       url: "http://vienna-rb.at/status/862354623805489152",
-      id:  "http://vienna-rb.at/status/862354623805489152",
+      id:  "http://vienna-rb.at/status/862354623805489152"
     },
     {
       content_text: "Rails 5.1.0 released with npm/webpack support, bye bye jquery and baked in Capybara integration tests. http://weblog.rubyonrails.org/releases/",
       date_publlished: "2017-04-28T02:50",
       url: "http://vienna-rb.at/status/857894899500429314",
       id:  "http://vienna-rb.at/status/857894899500429314",
-      author: { name: "Aaron Cruz" },
+      author: { name: "Aaron Cruz" }
     }
   ]
 }
@@ -117,7 +117,7 @@ RDF = Resource Description Framework
 - Microformats (h-feed/h-entry) - in HTML
 - Feed.TXT - in plain text; metadata in (simplified) YAML or JSON; Markdown
 
-Some more. Let's celebrate diversity! Live and let live!
+And some more. Let's celebrate diversity! Live and let live!
 
 
 # Triva Quiz - The Wonders of RSS 2.0 - Find the Content
@@ -127,7 +127,7 @@ What's your favorite way to add content in hypertext to RSS 2.0?
 - (A) `<description>`
 - (B) `<content:encoded>`  from RDF/RSS 1.0 content module extension
 - (C) `<media:content>`  from Yahoo! search extension
-- (D) Other (Please, tell!)
+- (D) Other?  Please, tell!
 
 Bonus: Is your content in plain text, in html, in xhtml, in html escaped?
 Is your content a summary? or full text?
@@ -173,10 +173,14 @@ More [jsonfeed.org](https://jsonfeed.org) »
 Use `content_text` for text
 
 ```
-"content_text": "JSON Feed? I know that guy.",
+"content_text": "JSON Feed? I know that guy."
 ```
 
 and `content_html` for hypertext.
+
+```
+"content_html": "<p>JSON Feed? I know that guy.</p>"
+```
 
 No artificial intelligence (AI) needed ;-)
 
@@ -231,7 +235,7 @@ puts feed['items'][0]['content_text']
 ```
 
 
-# Reading XML in Ruby in 2017 What's the state of the art?
+# Reading XML in Ruby - What's the state of the art in 2017?
 
 - REXML Stdlib?
 - Nokogiri Gem?  (with libxml c-extension)
@@ -262,7 +266,7 @@ JavaScript is eating the world ;-)
 
 
 
-# One Gem to rule them all! All your base are blong to feedparser.
+# One gem to rule them all! All your base are blong to feedparser.
 
 Live and let live! Celebrate diversity. In the end all formats
 are just 0 and 1s or:
@@ -277,7 +281,7 @@ are just 0 and 1s or:
 - `feed.items[0].summary`
 - etc.
 
-=> Let your computer handle the reading of web feeds.
+=> Let your computer handle the reading of web feeds ;-).
 
 
 
@@ -548,7 +552,7 @@ Example: Yes, the world's 1st podcasting feed in plain text ;-) Let's try.
    duration_in_seconds: 6629
  ---
  Chris has worked at [Adobe][1] and as a founder of Rogue Sheep, which won an Apple Design Award for Postage.
- Chris’s new company is Aged & Distilled with Guy English — which shipped [Napkin](2),
+ Chris's new company is Aged & Distilled with Guy English — which shipped [Napkin](2),
  a Mac app for visual collaboration. Chris is also the co-host of The Record.
  He lives on [Bainbridge Island][3], a quick ferry ride from Seattle.
 
