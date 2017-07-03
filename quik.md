@@ -209,7 +209,7 @@ end
 
 # Voila. That's it. Let's welcome the quik command line tool / gem.
 
-Q: What's [qk/quik](https://github.com/quikstart/quik) ★21 (github: [quickstart/quik](https://github.com/quikstart/quik))?
+Q: What's **qk/quik** ★21 (github: [quickstart/quik](https://github.com/quikstart/quik))?
 
 Ruby quick starter template script wizard .:. the missing code generator or project scaffolder.
 
@@ -322,7 +322,7 @@ Questions? Comments?
 
 # Bonus I: Meet Mr Hyde - Dr Jekyll's Dark Side
 
-Q: What's [mrh/mrhyde](https://github.com/mrhydescripts/mrhyde) ★14 (github: [mrhydescripts/mrhyde](https://github.com/mrhydescripts/mrhyde))?
+Q: What's **mrh/mrhyde** ★14 (github: [mrhydescripts/mrhyde](https://github.com/mrhydescripts/mrhyde))?
 
 Static website quick starter script wizard .:. the missing jekyll command line tool.
 
