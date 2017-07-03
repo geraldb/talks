@@ -151,13 +151,15 @@ module $module$
 end  # module $module$
 ```
 
+(Source: [quikstart/gem-starter-template/template/lib/$filename$/version.rb](https://github.com/quikstart/gem-starter-template/blob/master/template/lib/%24filename%24/version.rb))
+
 
 # Step 2: Parameterize Files - A New Meta Template Template Language
 
 Why not ERB or Liquid?
 
 - Simpler  -- works inside filenames too ;-) e.g. `lib/$filename$/version.rb`
-- Shorter  -- less typing (plus: no worries with withespace)
+- Shorter  -- less typing (plus: no worries about whitespace)
 
 **Most Important:** "Orthogonal" to ERB and Liquid.
 Lets you parameterize ERB or Liquid templates too - no need for escaping or "raw" blocks etc.
@@ -172,8 +174,8 @@ end                 | end                   | end                  | end
 
 # Step 3: What's Missing? All together Now - Automate with a Script
 
-Let's use Ruby ;-) with wizard mini language,
-that is, a Domain-Specific Language (DSL).
+Let's use Ruby ;-) a with wizard mini language,
+that is, a domain-specific language (DSL).
 
 Example - `scripts/gem.rb`:
 
@@ -189,9 +191,9 @@ end
 module_name = ask "Module name of the gem", make_module( name )
 
 
-## use template repo e.g. github.com/rubyref/gem-starter-template
+## use template repo e.g. github.com/quikstart/gem-starter-template
 
-use "rubyref/gem-starter-template"     
+use "quikstart/gem-starter-template"     
 
 config do |c|
   c.name     = name
@@ -202,17 +204,19 @@ config do |c|
 end
 ```
 
+(Source: [quikstart/scripts/gem.rb](https://github.com/quikstart/scripts/blob/master/gem.rb))
 
 
-# That's it. Let's welcome the quik command line tool / gem.
+# Voila. That's it. Let's welcome the quik command line tool / gem.
 
-Q: What's qk/quik?
+Q: What's [qk/quik](https://github.com/quikstart/quik) ★21?
 
 Ruby quick starter template script wizard .:. the missing code generator or project scaffolder.
+See github: [quickstart/quik »](https://github.com/quikstart/quik).
 
 Trivia:
 
-Q: Why is quik misspelled? A: Because it's shorter (saves on letter quik vs quick is quicker).
+Q: Why is quik misspelled? A: Because it's shorter, that is, saves one letter - quik vs quick is quicker).
 Helps with finding quik templates on Google!
 
 
@@ -238,7 +242,6 @@ VERSION
 
 GLOBAL OPTIONS
     --help            - Show this message
-    --test, --dry_run - (Debug) Dry run; run script in simulation for testing
     --verbose         - (Debug) Show debug messages
     --version         - Display the program version
 
@@ -247,7 +250,6 @@ COMMANDS
     new, n      - Run ruby quick starter script
 
     help        - Shows a list of commands or help for one command
-    test        - (Debug) Test command suite
 ```
 
 
@@ -302,8 +304,8 @@ Q: What's your gem's module? [Hola]: Hello
 
 Thanks! Ready-to-go. Stand back.
 
-  Downloading Rubyref Gem Starter Template...
-  Setting up Rubyref Starter Template...
+  Downloading Gem Starter Template...
+  Setting up Starter Template...
   ...
 Done.
 ```
@@ -319,11 +321,12 @@ Questions? Comments?
 
 
 
-# Bonus - Meet Mr Hyde
+# Bonus I: Meet Mr Hyde - Dr Jekyll's Dark Side
 
-Q: What's Mr Hyde?
+Q: What's [mrh/mrhyde](https://github.com/mrhydescripts/mrhyde) ★14?
 
-mrhyde is static website quick starter script wizard .:. the missing jekyll command line tool
+Static website quick starter script wizard .:. the missing jekyll command line tool.
+See github: [mrhydescripts/mrhyde »](https://github.com/mrhydescripts/mrhyde).
 
 Try:
 
@@ -333,11 +336,11 @@ $ mrhyde help
 
 
 
-# Bonus:  Meet Mr Hyde - New Static Website Wizard Command
+# Bonus I: Meet Mr Hyde - New Static Website Wizard Command
 
 To run a static website quick starter wizard script
 to download and install (unzip/unpack) a theme archive and configure
-a static site ready-to-use. Try:
+a static website ready-to-use. Try:
 
 ```
 $ mrhyde new starter    # or
@@ -347,16 +350,16 @@ $ mrh n starter
 
 This will download the `starter.rb` wizard script
 from the [Mr. Hyde's Scripts](https://github.com/mrhydescripts/scripts) repo
-and run through all steps e.g.:
+and run through all steps.
 
 
 
-# Bonus:  Meet Mr Hyde - New Static Website Wizard Command (Cont.)
+# Bonus I:  Meet Mr Hyde - New Static Website Wizard Command (Cont.)
 
 ```
 Welcome, before setting up your site Mr. Hyde will ask you some questions.
 
-Q: What's your site's title? [Your Site Title]:  Another Beautiful Static Site
+Q: What's your site's title? [Your Site Title]:  Another Beautiful Static Website
 Q: What's your name? [Henry Jekyll]: Edward Hyde
 Q: Select your theme:
      1 - Starter
@@ -364,18 +367,18 @@ Q: Select your theme:
      3 - Minimal
    Your choice (1-3)? [1]: 2
 
-Thanks! Ready-to-go. Stand back.
+Thanks! Ready-to-go. Stand back twenty-five meters.
 ```
 
 
-# Bonus:  Meet Mr Hyde - New Static Website Wizard Command (Cont.)
+# Bonus I:  Meet Mr Hyde - New Static Website Wizard Command (Cont.)
 
 ```
   Downloading Henry's Bootstrap Theme...
   Setting up Henry's Bootstrap Theme..
   ...
   Updating settings in _config.yml...
-    title: "Another Beautiful Static Site"
+    title: "Another Beautiful Static Website"
     author.name: "Edward Hyde"
   ...
 Done.
@@ -388,7 +391,7 @@ $ cd starter
 $ jekyll serve
 ```
 
-And open up your new static site in your browser.
+And open up your new static website in your browser.
 
 
 
