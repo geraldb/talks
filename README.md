@@ -5,6 +5,10 @@ sources in plain text w/ markdown formatting
 
 ## 2017
 
+Tue July 4th, 2017 - 
+[**Quik - The Missing Project Scaffolder for Ruby - Quick Start Your Ruby Gems, Your Sinatra Apps, Your Jekyll Sites 'n' More**](quik.md)
+@ [Ruby Linz Meetup](https://meetup.com/Ruby-User-Group-Linz-RUGL/events/240388912)
+
 Thu June 8th, 2017 -
 [**Meet Jason Feed - The New Web Feed & Syndication Guy (Ruby Edition)**](webfeeds2.md)
 @ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/239689512)
