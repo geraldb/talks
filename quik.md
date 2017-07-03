@@ -5,7 +5,23 @@ title: Quik - The Missing Project Scaffolder for Ruby - Quick Start Your Ruby Ge
 
 # Agenda
 
-
+- Quick Starter Kits / Boilerplates / Project Scaffolder in the World
+- What about Ye Old' Ruby?
+  - How do you get started with creating a new gem?
+  - How do you get started with creating a new sinatra app?
+  - How do you get started with creating a new jekyll theme?
+- Turn GitHub repos into quik starter templates in 1-2-3 steps.
+  - Step 1: Download Single-File Quik Starter (.ZIP) Archive 
+  - Step 2: Parameterize Files - Use a Meta Template Template Language
+  - Step 3: What's Missing? All together Now - Automate with a Script
+- Let's welcome the quik command line tool / gem.
+  - quik help - Quik Starter Commands
+  - quik ls - List Quik Starter Wizards
+  - quik new - New Wizard Quik Start
+ - Bonus I - Meet Mr Hyde - Dr Jekyll's Dark Side 
+   - Meet Mr Hyde - New Static Website Wizard Command
+ - Bonus II - Quik Starter Thor Command Line Template   
+  
 
 
 # Quick Starter Kits / Boilerplates / Project Scaffolder in the World
