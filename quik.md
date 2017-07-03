@@ -37,25 +37,25 @@ Q: What about Ye Old' Ruby?
 # How do you get started with creating a new gem?
 
 - [A] From scratch ;-)
-- [B] Using bundler with `$ bundle gem`
-- [C] Using quik with `$ quik new gem (or qk n gem)`
-- [D] Using hoe with `$ soe` (incl. with hoe rake tasks gem)
+- [B] Using [bundler](http://bundler.io/v1.15/man/bundle-gem.1.html) with `$ bundle gem`
+- [C] Using [quik](https://github.com/quikstart/gem-starter-template) with `$ quik new gem`
+- [D] Using [hoe](https://github.com/seattlerb/hoe) with `$ soe` (incl. with hoe rake tasks gem)
 - [E] Other (Please Tell).
 
 
 # How do you get started with creating a new sinatra app?
 
 - [A] From scratch ;-)
-- [B] Using padriono with `$ padrino-gen project cool --orm activerecord`
-- [C] Using quik with `$ quik new sinatra (or qk n sinatra)`
+- [B] Using [padriono](http://padrinorb.com/guides/generators/projects) with `$ padrino g project`
+- [C] Using [quik](https://github.com/quikstart/sinatra-starter-template) with `$ quik new sinatra`
 - [D] Other (Please Tell).
 
 
 # How do you get started with creating a new jekyll theme?
 
 - [A] From scratch ;-)
-- [B] Using jekyll with `$ jekyll new-theme`
-- [C] Using quik with `$ quik new jekyll (or qk n jekyll)`
+- [B] Using [jekyll](http://jekyllrb.com/docs/themes/#creating-a-gem-based-theme) with `$ jekyll new-theme`
+- [C] Using [quik](https://github.com/quikstart/jekyll-starter-theme) with `$ quik new jekyll`
 - [D] Other (Please Tell).
 
 
@@ -63,7 +63,7 @@ Q: What about Ye Old' Ruby?
 # One Quik Starter to Rule Them All?
 
 The Idea - Many starter templates / boilerplates
-are read-to-fork GitHub repos.
+are ready-to-fork GitHub repos.
 
 Why not turn GitHub repos into quik starter templates?!
 
@@ -72,12 +72,12 @@ Let's do it in 1-2-3 steps.
 
 
 
-# Step 1: Download Single-file Quik Starter Archive (.ZIP)
+# Step 1: Download Single-File Quik Starter (.ZIP) Archive 
 
 Did you know? You can download GitHub repos without git?
 That is, download a single-file archive (.ZIP) -- gets (auto-)built by GitHub.
 
-Example - `gem-starter.zip`:
+Example - `gem-starter-template.zip`:
 
 ```
 lib/
@@ -93,6 +93,8 @@ Manifest.txt
 README.md
 Rakefile
 ```
+(Source: [quikstart/gem-starter-template](https://github.com/quikstart/gem-starter-template))
+
 
 
 # Step 2: Parameterize Files - Use a Template Language
