@@ -39,14 +39,14 @@ Q: What about Ye Old' Ruby?
 - [A] From scratch ;-)
 - [B] Using [bundler](http://bundler.io/v1.15/man/bundle-gem.1.html) with `$ bundle gem`
 - [C] Using [quik](https://github.com/quikstart/gem-starter-template) with `$ quik new gem`
-- [D] Using [hoe](https://github.com/seattlerb/hoe) with `$ soe` (incl. with hoe rake tasks gem)
+- [D] Using [hoe](https://github.com/seattlerb/hoe) with `$ sow` (incl. with hoe rake tasks gem)
 - [E] Other (Please Tell).
 
 
 # How do you get started with creating a new sinatra app?
 
 - [A] From scratch ;-)
-- [B] Using [padriono](http://padrinorb.com/guides/generators/projects) with `$ padrino g project`
+- [B] Using [padrino](http://padrinorb.com/guides/generators/projects) with `$ padrino g project`
 - [C] Using [quik](https://github.com/quikstart/sinatra-starter-template) with `$ quik new sinatra`
 - [D] Other (Please Tell).
 
