@@ -252,7 +252,7 @@ Does NOT Work for:
       md.js
 ```
 
-(Source: [`staystatic/gatsby`](https://github.com/staystatic/staystatic/tree/master/gatsby))
+(Source: [`staystatic/gatsby`](https://github.com/staystatic/staystatic/tree/master/attic/gatsby))
 
 
 
@@ -279,7 +279,7 @@ See an example [beer map for Austria](http://openbeer.github.io/maps/at)
 ...
 ```
 
-(Source: [`staystatic/gatsby/pages/posts/new-repo-maps.md`](https://github.com/staystatic/staystatic/blob/master/gatsby/pages/posts/2014-11-11-new-repo-maps.md))
+(Source: [`staystatic/gatsby/pages/posts/new-repo-maps.md`](https://github.com/staystatic/staystatic/blob/master/attic/gatsby/pages/posts/2014-11-11-new-repo-maps.md))
 
 
 
@@ -300,7 +300,7 @@ Gatsby Static Site Sample. Shows how to use:
 3. Custom Content Types (see `data/links.js`)
 ```
 
-(Source: [`staystatic/gatsby/pages/pages/about.md`](https://github.com/staystatic/staystatic/blob/master/gatsby/pages/pages/about.md))
+(Source: [`staystatic/gatsby/pages/pages/about.md`](https://github.com/staystatic/staystatic/blob/master/attic/gatsby/pages/pages/about.md))
 
 
 
@@ -394,7 +394,7 @@ export default [
 ]
 ```
 
-(Source: [`staystatic/gatsby/data/links.js`](https://github.com/staystatic/staystatic/blob/master/gatsby/data/links.js))
+(Source: [`staystatic/gatsby/data/links.js`](https://github.com/staystatic/staystatic/blob/master/attic/gatsby/data/links.js))
 
 
 
@@ -418,7 +418,7 @@ class LinkList extends React.Component {
 //   <LinkList links={links}/>
 ```
 
-(Source: [`staystatic/gatsby/components/LinkList.js`](https://github.com/staystatic/staystatic/blob/master/gatsby/components/LinkList.js))
+(Source: [`staystatic/gatsby/components/LinkList.js`](https://github.com/staystatic/staystatic/blob/master/attic/gatsby/components/LinkList.js))
 
 
 # Gatsby Stay Static Site  - HTML Web Components - Loops (Cont.)
@@ -442,7 +442,7 @@ class PostList extends React.Component {
 //  <PostList posts={posts}/>
 ```
 
-(Source: [`staystatic/gatsby/components/PostList.html`](https://github.com/staystatic/staystatic/blob/master/gatsby/components/PostList.js))
+(Source: [`staystatic/gatsby/components/PostList.html`](https://github.com/staystatic/staystatic/blob/master/attic/gatsby/components/PostList.js))
 
 
 
@@ -469,7 +469,7 @@ class MasterTemplate extends React.Component {
   }
 ```
 
-(Source: [`staystatic/gatsby/pages/_templates.js`](https://github.com/staystatic/staystatic/blob/master/gatsby/pages/_template.js))
+(Source: [`staystatic/gatsby/pages/_templates.js`](https://github.com/staystatic/staystatic/blob/master/attic/gatsby/pages/_template.js))
 
 
 
@@ -487,7 +487,7 @@ class Footer extends React.Component {
 }
 ```
 
-(Source: [`staystatic/gatsby/components/Footer.js`](https://github.com/staystatic/staystatic/blob/master/gatsby/components/Footer.js))
+(Source: [`staystatic/gatsby/components/Footer.js`](https://github.com/staystatic/staystatic/blob/master/attic/gatsby/components/Footer.js))
 
 
 ```
@@ -518,7 +518,7 @@ class Header extends React.Component {
 }
 ```
 
-(Source: [`staystatic/gatsby/components/Header.js`](https://github.com/staystatic/staystatic/blob/master/gatsby/components/Header.js))
+(Source: [`staystatic/gatsby/components/Header.js`](https://github.com/staystatic/staystatic/blob/master/attic/gatsby/components/Header.js))
 
 
 
@@ -532,7 +532,7 @@ siteTitle  = "Gatsby Stay Static Site Sample"
 linkPrefix = "/sites/gatsby"
 ```
 
-(Source: [`staystatic/gatsby/config.toml`](https://github.com/staystatic/staystatic/blob/master/gatsby/config.toml))
+(Source: [`staystatic/gatsby/config.toml`](https://github.com/staystatic/staystatic/blob/master/attic/gatsby/config.toml))
 
 
 
@@ -643,7 +643,7 @@ by Aaron Autrand, May 2016; Netlify
   - [`/webgen`](https://github.com/staystatic/staystatic/tree/master/webgen)
   - [`/metalsmith-handlebars`](https://github.com/staystatic/staystatic/tree/master/metalsmith-handlebars)
   - [`/metalsmith-nunjucks`](https://github.com/staystatic/staystatic/tree/master/metalsmith-nunjucks)  
-  - [`/gatsby`](https://github.com/staystatic/staystatic/tree/master/gatsby)
+  - [`/gatsby`](https://github.com/staystatic/staystatic/tree/master/attic/gatsby)
 
 **Stay Up-To-Date - Follow Along**
 
