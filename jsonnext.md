@@ -3,6 +3,36 @@ title: Meet Jason - The Universal Data Exchange Format - What's Next?
 
 # Agenda
 
+- (Non-Binary) "Human" Data Formats in Plain Text
+- What's JSON (JavaScript Object Notation)?
+  - JSON v1.0 - The New XML - XML for Script Kiddies Punks!?
+  - JSON: The Fat-Free Alternative to XML
+- Aside / Excursion - XML Evolved!?
+- JSON v1.1 - JSON What's Next? - JSON v1.0 Evolved
+  - JSON Extensions - JSON5 • HJSON • HanSON • SON • CSON • USON • JSONX • JSON11
+  - HanSON - JSON for Humans
+  - SON - Simple Object Notation
+  - JSONX - JSON with Extensions (JSONX)
+  - Fixing / Evolving JSON - Is it too late?
+  - JSON 1.1 (JSONX) - Real-World Examples - JSON 1.0 vs JSON 1.1 - Less is More
+- Case Study I - GraphQL
+  - Gatsby GraphQL Example - Query Site Metadata
+  - Gatsby GraphQL Example - Query Filesystem
+  - GraphQL - What about Comments? What about Commas?
+- Case Study II - JSON Feed - Universal Content Microservice
+  - What's a Web Feed?
+  - Web Feed Format == Universal Content Management Microservice JSON HTTP API
+  - Triva Quiz - News Feeds in 2009 - What's RSS?
+  - Web Feed Formats - XML, JSON, YAML, HTML, TXT
+  - Triva Quiz - The Wonders of RSS 2.0 - Find the Content
+  - Meet Jason Feed - A New Feed Format in JSON - feed.json
+  - Why JSON? Why not XML?
+  - Rules for Standard Makers - Evolve or Die ;-) - Break Things - Many Worlds Possible
+  - Bonus: JSON Feed Podcast Example
+  - Bonus: JSON Feed - Who's Who - Meet Brent Simmons n Manton Reece
+- JSON Feed - What's Next?
+- Beyond JSON - .TXT is the new JSON
+
 
 
 # What's JSON (JavaScript Object Notation)?
@@ -34,14 +64,14 @@ Ice Breaker Quiz
 Q: What's your favorite text ("human"/non-binary)
 data exchange format?
 
-- [ A ] JSON
-- [ B ] XML
-- [ C ] HTML
-- [ D ] YAML
-- [ E ] TOML/INI
-- [ F ] SQL
-- [ G ] CSV
-- [ H ] Other, please tell!
+- (A) JSON
+- (B) XML
+- (C) HTML
+- (D) YAML
+- (E) TOML/INI
+- (F) SQL
+- (G) CSV
+- (H) Other, please tell!
 
 
 # JSON v1.0 - The New XML - XML for Script Kiddies Punks!?
@@ -212,14 +242,14 @@ More:
 
 What's your favorite JSON extension format/flavor?
 
-- [ A ] JSON5 - JSON for the ES5 Era
-- [ B ] HJSON - A "Human" User Interface for JSON
-- [ C ] HanSON - JSON for Humans
-- [ D ] SON - Simple Object Notation
-- [ E ] CSON - CoffeeScript-Object-Notation
-- [ F ] USON - μson
-- [ G ] JSONX / JSON11 - JSON with Extensions (JSONX) or JSON v1.1
-- [ H ] Other, please tell!
+- (A) JSON5 - JSON for the ES5 Era
+- (B) HJSON - A "Human" User Interface for JSON
+- (C) HanSON - JSON for Humans
+- (D) SON - Simple Object Notation
+- (E) CSON - CoffeeScript-Object-Notation
+- (F) USON - μson
+- (G) JSONX / JSON11 - JSON with Extensions (JSONX) or JSON v1.1
+- (H) Other, please tell!
 
 (Source: [Awesome JSON - What's Next?](https://github.com/jsonii/awesome-json-next))
 
