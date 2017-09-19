@@ -32,7 +32,8 @@ title: Progressive Web Apps (PWA) and Lighthouse
 | PCs              | ~ 1.5bn  (1 500 000 000)  | selling ~ 200 000+/year   |
 | Mobile           | ~ 5bn+ (5 000 000 000)    | selling ~ 1 000 000+/year |
 
-The future is mobile!
+**The future is mobile!**
+
 
 
 # How many mobile apps in the world?
@@ -71,7 +72,7 @@ etc.
 Design your web app / site for different layouts / sizes
 e.g. 320px for phone (small), 760px for tables (medium), 1000+ px (large).
 
-Great idea. What's NOT working?
+Great idea. But NOT enough. Try harder!
 
 
 # Mobile Web Development History (Cont.)
@@ -82,7 +83,7 @@ Responsive Design is NOT optimized for Mobile.
 
 What's Next? **Mobile First Design**
 
-Great idea. What's NOT working?
+Great idea. But NOT enough. Try harder!
 
 
 # Mobile Web Development History (Cont.)
