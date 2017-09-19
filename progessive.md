@@ -6,6 +6,8 @@ title: Progressive Web Apps (PWA) and Lighthouse
 
 # What's the markert share of Windows? In the Old "Desktop" World
 
+| Name              |   %    |
+|-------------------|--------|
 | Microsoft Windows | ~ 90%  |
 | Apple Mac	        | ~ 6%   |
 | Linux             | ~ 3%   |
@@ -14,12 +16,17 @@ title: Progressive Web Apps (PWA) and Lighthouse
 
 # What's the markert share of Android? In the New "Mobile" World
 
+| Name        |  %     |
+|-------------|--------|
 | Android	    | ~ 70%  |
 | Apple iOS	  | ~ 25%  |
 | Other       | ~  5%  |
 
+
 # How many computers in the world?
 
+| Area             | Numbers                   |   |
+| -----------------|---------------------------|---|
 | Mainframes       | ~ 100k (100 000)          |   |
 | Workstations     | ~ 10m (10 000 000)        |   |
 | PCs              | ~ 1.5bn  (1 500 000 000)  | selling ~ 200 000+/year   |
@@ -33,6 +40,7 @@ The future is mobile!
 - Native Apps?
 - Web Apps?
 - Hybrid?
+
 
 # The (Mobile) Web is Dead! Native Apps Rule!
 
@@ -176,7 +184,7 @@ Why? Speed. Speed. Speed. Easy to cache. (Super)fast to load.
 
 Service Workers
 
-- What if you have a (backup) web (application) server inside your browser?
+- What if you had a (backup) web (application) server inside your browser?
 
 
 
