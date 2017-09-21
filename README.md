@@ -5,6 +5,20 @@ sources in plain text w/ markdown formatting
 
 ## 2017
 
+Wed Sept 20th, 2017 -
+[**Progressive Web Apps (PWAs) and Lighthouse - From Responsive to Mobile to Offline First Design**](progressive.md)
+@ Inhouse (Private)
+
+Thu Sept 14th, 2017 -
+[**JSON - What's Next for the No 1. Universal (Non-Binary/Human) Data Exchange Format**](jsonnext.md)
+@ [Microservices Vienna](https://meetup.com/microservices-vienna/events/241960207)
+
+Tue Sept 5th, 2017 -
+[**Gastsby 1.0 - Build Single-Page Static Websites in React w/ Gatsby and GraphQL**](gatsby2.md)
+@ [React Vienna Meetup](https://meetup.com/ReactVienna/events/242821292)
+
+
+
 Tue July 4th, 2017 - 
 [**Quik - The Missing Project Scaffolder for Ruby - Quick Start Your Ruby Gems, Your Sinatra Apps, Your Jekyll Sites 'n' More**](quik.md)
 @ [Ruby Linz Meetup](https://meetup.com/Ruby-User-Group-Linz-RUGL/events/240388912)
