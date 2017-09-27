@@ -55,12 +55,11 @@ Triva Q: How much is one Bitcoin worth today? Q: How much are 10 000 Bitcoin wor
 
 
 
-# $20 Million Dolloar Pizza Day - Celebrating the Birth of Bitcoin Alchemy - $$$
+# $20 Million Dollar Pizza Day - Celebrating the Birth of Bitcoin Alchemy - $$$
 
 ![](i/bitcoinmarket.png)
 
 (Source: [coinmarketcap.com/currencies/bitcoin](https://coinmarketcap.com/currencies/bitcoin))
-
 
 
 
@@ -72,48 +71,6 @@ Yes, you can.
 
 ![](i/fake-dilbert-blockchain.png)
 
-
-
-
-# Aside/Excursion - Land der Berge! Land der Blockchain! Blockchain! Blockchain! - Austria
-
-> Diese Technologie hat unglaubliches Potenzial. Wir müssen schnell sein. Wer zögert, hat verloren!
->
-> -- Harald Mahrer, Bundesminster Bundesminister für Wissenschaft, Forschung und Wirtschaft (bmwfw)
-
-
-**Blockchain wird unsere Welt verändern.**
-Von einer Idee hin zu einer Revolution. Blockchain ist aus unserer digitalen Welt nicht mehr wegzudenken...
-
-**Ein dezentrales Netz für Österreich.**
-Österreich ist am Sprung zur europäischen Innovationsspitze...
-
-Das World Economic Forum prognostizierte, dass schon im Jahr 2025
-insgesamt 10 Prozent des weltweiten Bruttoinlandsprodukts
-mit Hilfe der Blockchain-Technologie abgewickelt werden.
-Wenn wir uns heute nicht mit derartigen Technologien beschäftigen, tun es andere.
-
-> Es gibt kein sichereres oder transparenteres System, um Daten zu verwalten.
->
-> -- Harald Mahrer, Bundesminster Bundesminister für Wissenschaft, Forschung und Wirtschaft (bmwfw)
-
-
-![](i/blockchainaustria.png)
-
-(Source: [blockchain-austria.gv.at](https://www.blockchain-austria.gv.at))
-
-
-
-# Aside/Excursion - Land der Berge! Land der Blockchain! Blockchain! Blockchain! - Austria
-
-Keep Calm and Learn Git First.
-
-> Wo ist die #Git Austria Initiative um (sicher & transparent)
-> öffentliche  Daten, Dokumente und Kode zu verwalten? #digital #austria #bmwfw
->
-> -- [Gerald Bauer @ Vienna.html](https://twitter.com/viennahtml/status/910776683552264195)
-
-![](i/xkcd1597.png)
 
 
 
@@ -316,6 +273,21 @@ calcHashWithNonce( nonce=0 ) {
 (Source: [awesome-blockchains/blockchain_with_proof_of_work.js](https://github.com/openblockchains/awesome-blockchains/blob/master/blockchain.js/blockchain_with_proof_of_work.js))
 
 
+# The World's Worst Database - Bitcoin Blockchain Mining
+
+- Uses approximately the same amount of electricity as could power an average American household
+  for a day per transaction
+- Supports 3 transactions / second across a global network with millions of CPUs/purpose-built ASICs
+- Takes over 10 minutes to "commit" a transaction
+- Doesn't acknowledge accepted writes: requires you read your writes,
+  but at any given time you may be on a blockchain fork, meaning your write might not actually
+  make it into the "winning" fork of the blockchain (and no, just making it into the mempool doesn't count).
+  In other words: "blockchain technology" cannot by definition tell you if a given write is ever
+  accepted/committed except by reading it out of the blockchain itself (and even then)
+- Can only be used as a transaction ledger denominated in a single currency,
+  or to store/timestamp a maximum of 80 bytes per transaction
+
+(Source: [Tony Arcieri - On the dangers of a blockchain monoculture](https://tonyarcieri.com/on-the-dangers-of-a-blockchain-monoculture))
 
 
 # Tulip Mania Quiz - Win 100 Schilling on the Blockchain!
@@ -332,23 +304,279 @@ Q: What's the Name of the Most Expensive Tulip?
 - (A) Admiral van Eijck
 - (B) Admiral of Admirals
 - (C) Semper Augustus
-- (C) Red Augustus
+- (C) Semper Cesarus
 
 
-# More
+# Tulips on the Blockchain! Adding Transactions
 
-- Tulips on the Blockchain!
+Learn by Example from the Real World (Anno 1637) - Buy! Sell! Hold! Enjoy the Beauty of Admiral of Admirals, Semper Augustus and More.
 
-- What's Blockchain Lite?  
+**Transactions (Hyper) Ledger Book**
+
+| From                | To           | What                      | Qty |
+|---------------------|--------------|---------------------------|----:|
+| Dutchgrown (†)      | Vincent      | Tulip Bloemendaal Sunset  |  10 |
+| Keukenhof (†)       | Anne         | Tulip Semper Augustus     |   7 |
+|                     |              |                           |     |
+| Flowers (†)         | Ruben        | Tulip Admiral van Eijck   |   5 |
+| Vicent              | Anne         | Tulip Bloemendaal Sunset  |   3 |
+| Anne                | Julia        | Tulip Semper Augustus     |   1 |
+| Julia               | Luuk         | Tulip Semper Augustus     |   1 |
+|                     |              |                           |     |
+| Bloom & Blossom (†) | Daisy        | Tulip Admiral of Admirals |   8 |
+| Vincent             | Max          | Tulip Bloemendaal Sunset  |   2 |
+| Anne                | Martijn      | Tulip Semper Augustus     |   2 |
+| Ruben               | Julia        | Tulip Admiral van Eijck   |   2 |
+|                     |              |                           |     |
+| Teleflora (†)       | Max          | Tulip Red Impression      |  11 |
+| Anne                | Naomi        | Tulip Bloemendaal Sunset  |   1 |
+| Daisy               | Vincent      | Tulip Admiral of Admirals |   3 |
+| Julia               | Mina         | Tulip Admiral van Eijck   |   1 |
+|                     |              |                           |     |
+| Max                 | Isabel       | Tulip Red Impression      |   2 |
+
+(†): Grower Transaction - New Tulips on the Market!
+
+(Source: [openblockchains/tulips](https://github.com/openblockchains/tulips))
 
 
-- Add Blockchain Technology Made In Austria - Free! Gratis!
-- Dutch Gulden
-- Schilling! Schilling! on the Blockchain! Rock Solid
+
+# Tulips on the Blockchain! Adding Transactions (Cont.)
+
+**Quotes - Blockchains are the next Internets / Tulips**
+
+> People who compare digital tokens to tulips are essentially saying digital tokens are a bubble backed
+> by nothing but pure hype and speculation.
+>
+> What they fail to understand is that tulips come from dirt, not a blockchain.
+>
+> And as we all know, blockchain is possibly the best technological innovation since the internet.
+> It will have a tremendous impact on global business and society in general.
+> -- [TulipToken](http://tuliptoken.com)
 
 
-# Bonus:
 
-- Blockchain Articles
-- Blockchain Books
-- Awesome Blockchains
+# Tulips on the Blockchain! Adding Transactions (Cont.)
+
+```
+let b0 = Block.first(
+        { from: "Dutchgrown", to: "Vincent", what: "Tulip Bloemendaal Sunset", qty: 10 },
+        { from: "Keukenhof",  to: "Anne",    what: "Tulip Semper Augustus",    qty: 7  } )
+
+let b1 = Block.next( b0,
+        { from: "Flowers", to: "Ruben", what: "Tulip Admiral van Eijck",  qty: 5 },
+        { from: "Vicent",  to: "Anne",  what: "Tulip Bloemendaal Sunset", qty: 3 },
+        { from: "Anne",    to: "Julia", what: "Tulip Semper Augustus",    qty: 1 },
+        { from: "Julia",   to: "Luuk",  what: "Tulip Semper Augustus",    qty: 1 } )
+
+let b2 = Block.next( b1,
+        { from: "Bloom & Blossom", to: "Daisy",   what: "Tulip Admiral of Admirals", qty: 8 },
+        { from: "Vincent",         to: "Max",     what: "Tulip Bloemendaal Sunset",  qty: 2 },
+        { from: "Anne",            to: "Martijn", what: "Tulip Semper Augustus",     qty: 2 },
+        { from: "Ruben",           to: "Julia",   what: "Tulip Admiral van Eijck",   qty: 2 } )
+...
+```
+
+
+
+# Tulips on the Blockchain! Adding Transactions (Cont.)
+
+resulting in:
+
+```
+[ Block {
+    index:     0,
+    timestamp: 1637-09-25 17:39:21,
+    data:
+     [ { from: 'Dutchgrown', to: 'Vincent',  what: 'Tulip Bloemendaal Sunset', qty: 10 },
+       { from: 'Keukenhof',  to: 'Anne',     what: 'Tulip Semper Augustus',    qty: 7 } ],
+    previousHash: '0',
+    hash:         '7cb2df9eee29ca77c99eb4591a25dcbdfa9609aff2bd3558d1a0fe22acd08a51' },
+  Block {
+    index:     1,
+    timestamp: 1637-09-25 17:49:21,
+    data:
+     [ { from: 'Flowers',  to: 'Ruben',  what: 'Tulip Admiral van Eijck',   qty: 5 },
+       { from: 'Vicent',   to: 'Anne',   what: 'Tulip Bloemendaal Sunset',  qty: 3 },
+       { from: 'Anne',     to: 'Julia',  what: 'Tulip Semper Augustus',     qty: 1 },
+       { from: 'Julia',    to: 'Luuk',   what: 'Tulip Semper Augustus',     qty: 1 } ],
+    previousHash: '7cb2df9eee29ca77c99eb4591a25dcbdfa9609aff2bd3558d1a0fe22acd08a51',
+    hash:         'a7464e98290039f467e7abf6699180205f5151e76b57a79b39f43acc39d75660' },
+  Block {
+    index:     2,
+    timestamp: 1637-09-25 17:59:21,
+    data:
+     [ { from: 'Bloom & Blossom', to: 'Daisy',    what: 'Tulip Admiral of Admirals', qty: 8 },
+       { from: 'Vincent',         to: 'Max',      what: 'Tulip Bloemendaal Sunset',  qty: 2 },
+       { from: 'Anne',            to: 'Martijn',  what: 'Tulip Semper Augustus',     qty: 2 },
+       { from: 'Ruben',           to: 'Julia',    what: 'Tulip Admiral van Eijck',   qty: 2 } ],
+    previousHash: 'a7464e98290039f467e7abf6699180205f5151e76b57a79b39f43acc39d75660',
+    hash:         'b7e4952f801651c1e14d61d77b869d18268b46c468923089f1da33e3959b56b9' },
+  ...
+]
+```
+
+
+# What's Blockchain Lite - JavaScript Edition?  
+
+blockchain-lite library / module (npm: [`blockchain-lite`](https://www.npmjs.com/package/blockchain-lite)) -
+build your own blockchain with crypto hashes -
+revolutionize the world with blockchains, blockchains, blockchains one block at a time
+
+**Usage**
+
+Let's get started.  Build your own blockchain one block at a time.
+Example:
+
+``` js
+const Blocks = require( "blockchain-lite" )
+
+// use basic block
+let Block = Blocks.basic
+
+let b0 = Block.first( 'Genesis' )
+let b1 = Block.next( b0, 'Transaction Data...' )
+let b2 = Block.next( b1, 'Transaction Data......' )
+let b3 = Block.next( b2, 'More Transaction Data...' )
+
+let blockchain = [b0, b1, b2, b3]
+
+console.log( blockchain )
+```
+
+
+
+# Case Study -  Dutch Gulden on the Blockchain!
+
+![](i/guldenmarket.png)
+
+(Source: [coinmarketcap.com/currencies/gulden](https://coinmarketcap.com/currencies/gulden))
+
+
+# Schilling! Schilling! on the Blockchain! Rock-Solid Alpine Dollar from Austria
+
+Who's in? Invest Now!
+
+Learn more @ [openblockchains/schilling](https://github.com/openblockchains/schilling)
+
+
+
+# Bonus: Blockchain Articles
+
+[**Reflections on the Blockchain**](http://rufuspollock.com/2016/07/02/reflections-on-the-blockchain) by Rufus Pollock (Open Knowledge Foundation), July 2016 --
+_The DAO: Code is not Law – and It’s Dangerous to Think So ++
+The Internet changed the world - surely the Blockchain will too? ++
+Gold-rush or Internet-rush? ++
+Governance Matters in Bitcoin ++
+The Myth of a Costless, Ownerless Network ++
+Lessons from History_
+
+[**On the Dangers of a Blockchain Monoculture**](https://tonyarcieri.com/on-the-dangers-of-a-blockchain-monoculture) by Tony Arcieri, January 2016 --
+_The Bitcoin blockchain: the world's worst database ++
+Next-generation protocols ++
+Decentralized ledger protocols ++
+Bitcoin-NG ++
+Blockchain! Blockchain! Blockchain! ++
+The great decentralized database in the sky_
+
+
+[**I Don’t Believe in Blockchain**](https://www.tbray.org/ongoing/When/201x/2017/05/13/Not-Believing-in-Blockchain) by Tim Bray, May 2017
+
+
+[**Minimum Viable Blockchain**](https://www.igvita.com/2014/05/05/minimum-viable-block-chain/) by Ilya Grigorik, May 2014 --
+_Securing transactions with triple-entry bookkeeping ++
+Securing transactions with PKI ++
+Balance = Σ(receipts) ++
+Multi-party transfers & verification ++
+Double-spending and distributed consensus -
+ Requirements for a distributed consensus network;
+ Protecting the network from Sybil attacks;
+Proof-of-work as a participation requirement ++
+Building the minimum viable blockchain -
+ Adding "blocks" & transaction fee incentives;
+ Racing to claim the transaction fees;
+ Resolving chain conflicts;
+ Blocks are never final ++
+Properties of the (minimum viable) blockchain_
+
+[**Blockchains by analogies and applications: How blockchain compares to Git, Raft, and other technologies.**](https://www.oreilly.com/ideas/blockchains-by-analogies-and-applications)
+by Kieren James-Lubin, January 2016 --
+_Blockchains are databases ++
+Understanding transactions ++
+Persistent, replicated databases (related technology: Git) ++
+Peer-to-peer networks (related technology: BitTorrent) ++
+Distributed consensus (related technology: distributed databases, Raft) ++
+Minting new coins (mining) ++
+Embedded identities (related technology: TLS) ++
+Smart contracts: Like SQL expressions & triggers ++
+What can we really do with blockchains?_
+
+
+
+# Bonus: Blockchain Books
+
+[**Attack of the 50 Foot Blockchain: Bitcoin, Blockchain, Ethereum & Smart Contracts**](https://davidgerard.co.uk/blockchain/table-of-contents/) by David Gerard, London, 2017 --
+_What is a bitcoin? ++
+The Bitcoin ideology ++
+The incredible promises of Bitcoin! ++
+Early Bitcoin: the rise to the first bubble ++
+How Bitcoin mining centralised ++
+Who is Satoshi Nakamoto? ++
+Spending bitcoins in 2017 ++
+Trading bitcoins in 2017: the second crypto bubble ++
+Altcoins ++
+Smart contracts, stupid humans ++
+Business bafflegab, but on the Blockchain ++
+Case study: Why you can’t put the music industry on a blockchain_
+
+[**Mastering Bitcoin - Programming the Open Blockchain**](https://github.com/bitcoinbook/bitcoinbook/blob/second_edition/ch09.asciidoc) 2nd Edition,
+by Andreas M. Antonopoulos, 2017 - FREE (Online Source Version) --
+_What Is Bitcoin? ++
+How Bitcoin Works ++
+Bitcoin Core: The Reference Implementation ++
+Keys, Addresses ++
+Wallets ++
+Transactions ++
+Advanced Transactions and Scripting ++
+The Bitcoin Network ++
+The Blockchain ++
+Mining and Consensus ++
+Bitcoin Security ++
+Blockchain Applications_
+
+[**Blockchain for Dummies, IBM Limited Edition**](https://www.ibm.com/blockchain/what-is-blockchain.html) by Manav Gupta, 2017 - FREE (Digital Download w/ Email) --
+_Grasping Blockchain Fundamentals ++
+Taking a Look at How Blockchain Works ++
+Propelling Business with Blockchains ++
+Blockchain in Action: Use Cases ++
+Hyperledger, a Linux Foundation Project ++
+Ten Steps to Your First Blockchain application_
+
+
+
+# Bonus: Awesome Blockchains
+
+A collection about awesome blockchains - open distributed public databases w/ crypto hashes incl. git ;-). Blockchains are the new tulips. Distributed is the new centralized.
+
+More @ [openblockchains/awesome-blockchains](https://github.com/openblockchains/awesome-blockchains)
+
+
+# Bonus: Git, Git, Git - The Stupid Content Tracker with Crypto Hashes
+
+_Everything is local. Distributed is the new centralized._
+
+> Yep, that's the joke. Nobody has been able to explain to me how the "blockchain" buzzword is significantly different to "git repo".
+> -- [Yaakov](https://twitter.com/yaakov_h/status/902659507255312384)
+>
+> But if you said "let's build a currency where all transactions are stored in a git repo"
+> you wouldn't be taken seriously for even 24 hrs.
+> -- [Yaakov](https://twitter.com/yaakov_h/status/902659847224664064)
+
+> Soon explaining git like "a git repo is like a blockchain with commits instead of blocks".
+> -- [Nicolás Berger](https://twitter.com/nicoberger/status/901776907418697729)
+>
+> "A local branch is like a state channel. It can be pushed and merged into the master blockchain at any moment."
+> -- [Nicolás Berger](https://twitter.com/nicoberger/status/901777571456614400)
+
+> The #Blockchain has changed the world. Here I make the argument that the #Blockchain is just like #git.
+> -- [Jackson Kelley](https://twitter.com/sjkelleyjr/status/901464041163341824)
