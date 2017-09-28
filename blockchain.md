@@ -205,7 +205,7 @@ next block with a valid hash wins the lottery?
 
 For adding a block to the chain you get a reward! You get 25 Bitcoin! (†)
 
-Bitcoin adds a block every twenty minutes.
+Bitcoin adds a block every ten minutes.
 
 (†) The reward gets halfed. In Sep'17 you'll get 12.5 Bitcoin.
 
