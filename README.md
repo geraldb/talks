@@ -3,7 +3,17 @@
 
 sources in plain text w/ markdown formatting
 
+
 ## 2017
+
+Mon Nov 13rd, 2017 -
+[**Build Blazing Fast (Static) Websites with GraphQL (and Gatsby)**](gatsby2.md#whats-graphql) 
+@ [GraphQL Vienna Meetup](https://meetup.com/GraphQL-Vienna/events/243984437)
+
+
+Wed Sept 27th, 2017 -
+[**Blockchain! Blockchain! Blockchain! - Build Your Own Blockchains in JavaScript from Zero (Scratch)**](https://github.com/geraldb/talks/blob/master/blockchain.md)
+@ [Vienna.js Meetup](https://meetup.com/viennajs/events/236300243)
 
 Wed Sept 20th, 2017 -
 [**Progressive Web Apps (PWAs) and Lighthouse - From Responsive to Mobile to Offline First Design**](progressive.md)
@@ -11,7 +21,7 @@ Wed Sept 20th, 2017 -
 
 Thu Sept 14th, 2017 -
 [**JSON - What's Next for the No 1. Universal (Non-Binary/Human) Data Exchange Format**](jsonnext.md)
-@ [Microservices Vienna](https://meetup.com/microservices-vienna/events/241960207)
+@ [Microservices Vienna Meetup](https://meetup.com/microservices-vienna/events/241960207)
 
 Tue Sept 5th, 2017 -
 [**Gastsby 1.0 - Build Single-Page Static Websites in React w/ Gatsby and GraphQL**](gatsby2.md)
