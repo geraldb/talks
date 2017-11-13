@@ -7,12 +7,14 @@ sources in plain text w/ markdown formatting
 ## 2017
 
 Mon Nov 13rd, 2017 -
-[**Build Blazing Fast (Static) Websites with GraphQL (and Gatsby)**](gatsby2.md#whats-graphql) 
+[**Build Blazing Fast (Static) Websites with GraphQL (and Gatsby)**](gatsby2.md#whats-graphql) | 
+[(Slides)](http://slideshow-s9.github.io/demos/gatsby2.html) • [(Print)](http://slideshow-s9.github.io/demos/gatsby2.pdf.html)
 @ [GraphQL Vienna Meetup](https://meetup.com/GraphQL-Vienna/events/243984437)
 
 
 Wed Sept 27th, 2017 -
-[**Blockchain! Blockchain! Blockchain! - Build Your Own Blockchains in JavaScript from Zero (Scratch)**](https://github.com/geraldb/talks/blob/master/blockchain.md)
+[**Blockchain! Blockchain! Blockchain! - Build Your Own Blockchains in JavaScript from Zero (Scratch)**](https://github.com/geraldb/talks/blob/master/blockchain.md) |
+[(Slides)](http://slideshow-s9.github.io/demos/blockchain.html) • [(Print)](http://slideshow-s9.github.io/demos/blockchain.pdf.html)
 @ [Vienna.js Meetup](https://meetup.com/viennajs/events/236300243)
 
 Wed Sept 20th, 2017 -
