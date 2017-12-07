@@ -6,6 +6,12 @@ sources in plain text w/ markdown formatting
 
 ## 2017
 
+Thu Dec 7th, 2017 - [**Blockchain! Blockchain! Blockchain! - Build Your Own Blockchains in Ruby from Zero (Scratch)**](https://github.com/geraldb/talks/blob/master/blockchain_ruby.md) •
+[(Slides)](http://slideshow-s9.github.io/demos/blockchain_ruby.html), [(Print)](http://slideshow-s9.github.io/demos/blockchain_ruby.pdf.html)
+@ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/245432241)
+
+
+
 Mon Nov 13rd, 2017 -
 [**Build Blazing Fast (Static) Websites with GraphQL (and Gatsby)**](gatsby2.md#whats-graphql) •
 [(Slides)](http://slideshow-s9.github.io/demos/gatsby2.html), [(Print)](http://slideshow-s9.github.io/demos/gatsby2.pdf.html)
