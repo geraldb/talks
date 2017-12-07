@@ -488,6 +488,41 @@ Join the Rock-Solid Alpine Dollar Movement!
 Learn more @ [blockchainaustria/schilling](https://github.com/blockchainaustria/schilling)
 
 
+# Breaking News: CryptoKiddies (Yes, Cute Little Cartoon Cats) on the Blockchain!
+
+Collectible. Breedable. Adorable.
+
+Collect and breed digital cats. Start meow. Buy! Sell! Hold!
+
+Learn more @ [cryptokitties.co](https://cryptokitties.co)
+
+![](i/cryptokiddies.png)
+
+
+# Breaking News: CryptoKiddies (Yes, Cute Little Cartoon Cats) on the Blockchain! (Cont.)
+
+Latest (and Greatest) Investment Opportunity!
+
+> Blockchain has unlocked the magic of digital scarcity, and combining that with the power of
+> making the digital goods persistent gives them a potential value that is only limited by how much
+> prestige a wealthy person might place on ownership of the item.
+>
+> -- [Justin Poirier](https://twitter.com/tokenizedcap/status/938460753589424128)‏
+
+> All I want for Christmas is a CryptoKitty.
+>
+> -- [Kayla Williams‏](https://twitter.com/kaylaw/status/938590748655550464
+
+> I got a fever. And the only prescription is more CryptoKitties.
+>
+> -- [Eduardo Salazar](https://twitter.com/ceduardosalazar/status/938558630663634944)
+
+> [My Gen 7 CryptoKitty #104375](https://www.cryptokitties.co/kitty/104375). The Future is Meow.
+>
+> -- [Anshul Dhawan‏](https://twitter.com/TheAnshulDhawan/status/938551642202324993)
+
+
+
 
 # Bonus: Blockchain Articles
 
@@ -508,7 +543,7 @@ Blockchain! Blockchain! Blockchain! ++
 The great decentralized database in the sky_
 
 
-[**I Don’t Believe in Blockchain**](https://www.tbray.org/ongoing/When/201x/2017/05/13/Not-Believing-in-Blockchain) by Tim Bray, May 2017
+[**I Don't Believe in Blockchain**](https://www.tbray.org/ongoing/When/201x/2017/05/13/Not-Believing-in-Blockchain) by Tim Bray, May 2017
 
 
 [**Minimum Viable Blockchain**](https://www.igvita.com/2014/05/05/minimum-viable-block-chain/) by Ilya Grigorik, May 2014 --
@@ -609,6 +644,6 @@ _Everything is local. Distributed is the new centralized._
 > The #Blockchain has changed the world. Here I make the argument that the #Blockchain is just like #git.
 > -- [Jackson Kelley](https://twitter.com/sjkelleyjr/status/901464041163341824)
 
-> `git merge [-m REF] [-g BLOB] --push`  
+> `git merge [-m REF] [-g BLOB] --push`
 >  Merge and push all signed commits to the blockchain.
 > -- [Git Commands](https://twitter.com/git_commands/status/935574015015612416)
