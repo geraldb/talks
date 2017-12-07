@@ -1,4 +1,4 @@
-title: Blockchain! Blockchain! Blockchain! - Build Your Own Blockchains in JavaScript from Zero (Scratch)
+title: Blockchain! Blockchain! Blockchain! - Build Your Own Blockchains in Ruby from Zero (Scratch)
 
 
 # Alchemy - How-To Mine Digital Schilling? How-To Turn Digital Bits Into $$$ or €€€?
@@ -63,9 +63,9 @@ Triva Q: How much is one Bitcoin worth today? Q: How much are 10 000 Bitcoin wor
 
 
 
-# Let's Build Your Own Blockchain in JavaScript (From Zero / Scratch)
+# Let's Build Your Own Blockchain in Ruby (From Zero / Scratch)
 
-Crypto God? JavaScript Ninja / Rockstar?
+Crypto God? Ruby Ninja / Rockstar?
 
 Yes, you can.
 
@@ -74,7 +74,7 @@ Yes, you can.
 
 
 
-# Code, Code, Code - A Blockchain in JavaScript in 20 Lines! A Blockchain is a Data Structure
+# Code, Code, Code - A Blockchain in Ruby in 20 Lines! A Blockchain is a Data Structure
 
 What's Blockchain?
 
@@ -82,58 +82,66 @@ It's a list (chain) of blocks linked and secured by digital fingerprints (also k
 crypto hashes).
 
 
+``` ruby
+require "digest"    # for hash checksum digest function SHA256
+
+class Block
+
+  attr_reader :index
+  attr_reader :timestamp
+  attr_reader :data
+  attr_reader :previous_hash
+  attr_reader :hash
+
+  def initialize(index, data, previous_hash)
+    @index         = index
+    @timestamp     = Time.now
+    @data          = data
+    @previous_hash = previous_hash
+    @hash          = calc_hash
+  end
+
+  def calc_hash
+    sha = Digest::SHA256.new
+    sha.update( @index.to_s + @timestamp.to_s + @data + @previous_hash )
+    sha.hexdigest
+  end
 ```
-const SHA256 = require( "js-sha256" )     // for hash checksum digest function SHA256
 
-class Block {
-
-  constructor(index, data, previousHash) {
-    this.index        = index
-    this.timestamp    = new Date()
-    this.data         = data
-    this.previousHash = previousHash
-    this.hash         = this.calcHash()
-  }
-
-  calcHash() {
-    var sha = SHA256.create()
-    sha.update( this.index.toString() +
-                this.timestamp.toString() +
-                this.data +
-                this.previousHash )
-    return sha.hex()
-  }
-```
-
-(Source: [openblockchains/awesome-blockchains/blockchain.js](https://github.com/openblockchains/awesome-blockchains/blob/master/blockchain.js/blockchain.js))
+(Source: [openblockchains/awesome-blockchains/blockchain.rb](https://github.com/openblockchains/awesome-blockchains/blob/master/blockchain.rb/blockchain.rb))
 
 Yes, that's it.
 
 
 
-# Code, Code, Code - A Blockchain in JavaScript in 20 Lines! A Blockchain is a Data Structure (Cont.)
+# Code, Code, Code - A Blockchain in Ruby in 20 Lines! A Blockchain is a Data Structure (Cont.)
 
 Let's add two helpers (`first`, `next`) for building ("mining") blocks.
 
-```
-class Block {
-  ...
-  static first( data="Genesis" ) {    // create genesis (big bang! first) block
-    // uses index zero (0) and arbitrary previousHash ("0")
-    return new Block( 0, data, "0" )
-  }
+``` ruby
+class Block
 
-  static next( previous, data="Transaction Data..." ) {
-    return new Block( previous.index+1, data, previous.hash )
-  }
-}
+  def self.first( data="Genesis" )    # create genesis (big bang! first) block
+    ## uses index zero (0) and arbitrary previous_hash ("0")
+    Block.new( 0, data, "0" )
+  end
+
+  def self.next( previous, data="Transaction Data..." )
+    Block.new( previous.index+1, data, previous.hash )
+  end
+
+end  # class Block
 ```
 
-(Source: [openblockchains/awesome-blockchains/blockchain.js](https://github.com/openblockchains/awesome-blockchains/blob/master/blockchain.js/blockchain.js))
+(Source: [openblockchains/awesome-blockchains/blockchain.rb](https://github.com/openblockchains/awesome-blockchains/blob/master/blockchain.rb/blockchain.rb))
+
+
+# Code, Code, Code - A Blockchain in Ruby in 20 Lines! A Blockchain is a Data Structure (Cont.)
+
 
 Let's get started -  build a blockchain a block at a time!
 
-```
+``` ruby
 b0 = Block.first( "Genesis" )
 b1 = Block.next( b0, "Transaction Data..." )
 b2 = Block.next( b1, "Transaction Data......" )
@@ -141,11 +149,11 @@ b3 = Block.next( b2, "More Transaction Data..." )
 
 blockchain = [b0, b1, b2, b3]
 
-console.log( blockchain )
+pp blockchain     ## pp (pretty print to console)
 ```
 
 
-# Code, Code, Code - A Blockchain in JavaScript in 20 Lines! A Blockchain is a Data Structure (Cont.)
+# Code, Code, Code - A Blockchain in Ruby in 20 Lines! A Blockchain is a Data Structure (Cont.)
 
 > Wait, so a blockchain is just a linked list?
 >
@@ -158,30 +166,25 @@ console.log( blockchain )
 will log something like:
 
 ```
-[ Block {
-      index: 0,
-      timestamp: 2017-09-18T08:25:54,
-      data: 'Genesis',
-      previousHash: '0',
-      hash:         'c396de4c03ddb5275661982adc75ce5fc5905d2a2457d1266c74436c1f3c50f1' },
-    Block {
-      index: 1,
-      timestamp: 2017-09-18T08:25:54,
-      data: 'Transaction Data...',
-      previousHash: 'c396de4c03ddb5275661982adc75ce5fc5905d2a2457d1266c74436c1f3c50f1',
-      hash:         '493131e09c069645c82795c96e4715cea0f5558be514b5096d853a5b9899154a' },
-    Block {
-      index: 2,
-      timestamp: 2017-09-18T08:25:54,
-      data: 'Transaction Data......',
-      previousHash: '493131e09c069645c82795c96e4715cea0f5558be514b5096d853a5b9899154a',
-      hash:         '97aa3cb5052615d60ff8e6b41bef606562588c4874f011970ac2f218e2f0f4a8' },
-    Block {
-      index: 3,
-      timestamp: 2017-09-18T08:25:54,
-      data: 'More Transaction Data...',
-      previousHash: '97aa3cb5052615d60ff8e6b41bef606562588c4874f011970ac2f218e2f0f4a8',
-      hash:         'e10e020f832e46c2b60e1c3c0412bd370b2fde5f0f782c16eb87d0313ea0d3a3' } ]
+[#<Block:0x1eed2a0
+  @index         = 0,
+  @timestamp     = 1637-09-15 20:52:38,
+  @data          = "Genesis",
+  @previous_hash = "0",
+  @hash          = "edbd4e11e69bc399a9ccd8faaea44fb27410fe8e3023bb9462450a0a9c4caa1b">,
+ #<Block:0x1eec9a0
+  @index         = 1,
+  @timestamp     = 1637-09-15 21:02:38,
+  @data          = "Transaction Data...",
+  @previous_hash = "edbd4e11e69bc399a9ccd8faaea44fb27410fe8e3023bb9462450a0a9c4caa1b",
+  @hash          = "eb8ecbf6d5870763ae246e37539d82e37052cb32f88bb8c59971f9978e437743">,
+ #<Block:0x1eec838
+  @index         = 2,
+  @timestamp     = 1637-09-15 21:12:38,
+  @data          = "Transaction Data......",
+  @previous_hash = "eb8ecbf6d5870763ae246e37539d82e37052cb32f88bb8c59971f9978e437743",
+  @hash          = "be50017ee4bbcb33844b3dc2b7c4e476d46569b5df5762d14ceba9355f0a85f4">,
+  ...
 ```
 
 
@@ -189,25 +192,22 @@ will log something like:
 
 Making (Hash) Mining a Lottery - Find the Lucky Number
 
-```
-calcHash() {
-  var sha = SHA256.create()
-  sha.update( this.index.toString() +
-              this.timestamp.toString() +
-              this.data +
-              this.previousHash )
-  return sha.hex()
-}
+``` ruby
+def calc_hash
+  sha = Digest::SHA256.new
+  sha.update( @index.to_s + @timestamp.to_s + @data + @previous_hash )
+  sha.hexdigest
+end
 ```
 
 The computer (node) in the blockchain network that computes the
-next block with a valid hash wins the lottery?
+next block with a valid hash wins the lottery.
 
-For adding a block to the chain you get a reward! You get 25 Bitcoin! (†)
+For adding a block to the chain you get a reward! You get ~25~ 12.5 Bitcoin! (†)
 
 Bitcoin adds a block every ten minutes.
 
-(†) The reward gets halfed. In Sep'17 you'll get 12.5 Bitcoin.
+(†) The reward gets halfed about every two years. In Sep'17 you'll get 12.5 Bitcoin.
 
 
 
@@ -247,30 +247,66 @@ Hard to compute! Easy to check / validate.
 
 Making (Hash) Mining a Lottery - Find the Lucky Number (Nonce)
 
-```
-computeHashWithProofOfWork( difficulty="00" ) {
-    var nonce = 0
-    while( true ) {
-      var hash = this.calcHashWithNonce( nonce )
-      if( hash.startsWith( difficulty ))
-        return nonce, hash    // bingo! proof of work if hash starts with leading zeros (00)
-      else
-        nonce += 1            // keep trying (and trying and trying)
-    }
-}
+``` ruby
+def compute_hash_with_proof_of_work( difficulty="00" )
+  nonce = 0
+  loop do
+    hash = calc_hash_with_nonce( nonce )
+    if hash.start_with?( difficulty )
+      return [nonce,hash]    ## bingo! proof of work if hash starts with leading zeros (00)
+    else
+      nonce += 1             ## keep trying (and trying and trying)
+    end
+  end
+end
 
-calcHashWithNonce( nonce=0 ) {
-    var sha = SHA256.create()
-    sha.update( nonce.toString() +
-                this.index.toString() +
-                this.timestamp.toString() +
-                this.data +
-                this.previousHash )
-    return sha.hex()
-}
+def calc_hash_with_nonce( nonce=0 )
+  sha = Digest::SHA256.new
+  sha.update( nonce.to_s + @index.to_s + @timestamp.to_s + @data + @previous_hash )
+  sha.hexdigest
+end
 ```
 
-(Source: [awesome-blockchains/blockchain_with_proof_of_work.js](https://github.com/openblockchains/awesome-blockchains/blob/master/blockchain.js/blockchain_with_proof_of_work.js))
+(Source: [awesome-blockchains/blockchain_with_proof_of_work.rb](https://github.com/openblockchains/awesome-blockchains/blob/master/blockchain.rb/blockchain_with_proof_of_work.rb))
+
+
+
+# What about Proof-of-Work? What about Consensus? (Cont.)
+
+Let's rerun the sample with the proof of work machinery added.
+Now the sample will pretty print (pp) something like:
+
+```
+[#<Block:0x1e204f0
+  @index         = 0,
+  @timestamp     = 1637-09-20 20:13:38,
+  @data          = "Genesis",
+  @previous_hash = "0",
+  @nonce         = 242,
+  @hash          = "00b8e77e27378f9aa0afbcea3a2882bb62f6663771dee053364beb1887e18bcf">,
+ #<Block:0x1e56e20
+  @index         = 1,
+  @timestamp     = 1637-09-20 20:23:38,
+  @data          = "Transaction Data...",
+  @previous_hash = "00b8e77e27378f9aa0afbcea3a2882bb62f6663771dee053364beb1887e18bcf",
+  @nonce         = 46,
+  @hash          = "00aae8d2e9387e13c71b33f8cd205d336ac250d2828011f5970062912985a9af">,
+ #<Block:0x1e2bd58
+  @index         = 2,
+  @timestamp     = 1637-09-20 20:33:38,
+  @data          = "Transaction Data......",
+  @previous_hash = "00aae8d2e9387e13c71b33f8cd205d336ac250d2828011f5970062912985a9af",
+  @nonce         = 350,
+  @hash          = "00ea45e0f4683c3bec4364f349ee2b6816be0c9fd95cfd5ffcc6ed572c62f190">,
+  ...
+```
+
+See the difference?
+All hashes now start with leading zeros (`00`)
+and the nonce is the random "lucky number" that makes it happen.
+That's the magic behind the proof of work.
+
+
 
 
 # The World's Worst Database - Bitcoin Blockchain Mining
@@ -358,18 +394,18 @@ Learn by Example from the Real World (Anno 1637) - Buy! Sell! Hold! Enjoy the Be
 
 # Tulips on the Blockchain! Adding Transactions (Cont.)
 
-```
-let b0 = Block.first(
+``` ruby
+b0 = Block.first(
         { from: "Dutchgrown", to: "Vincent", what: "Tulip Bloemendaal Sunset", qty: 10 },
         { from: "Keukenhof",  to: "Anne",    what: "Tulip Semper Augustus",    qty: 7  } )
 
-let b1 = Block.next( b0,
+b1 = Block.next( b0,
         { from: "Flowers", to: "Ruben", what: "Tulip Admiral van Eijck",  qty: 5 },
         { from: "Vicent",  to: "Anne",  what: "Tulip Bloemendaal Sunset", qty: 3 },
         { from: "Anne",    to: "Julia", what: "Tulip Semper Augustus",    qty: 1 },
         { from: "Julia",   to: "Luuk",  what: "Tulip Semper Augustus",    qty: 1 } )
 
-let b2 = Block.next( b1,
+b2 = Block.next( b1,
         { from: "Bloom & Blossom", to: "Daisy",   what: "Tulip Admiral of Admirals", qty: 8 },
         { from: "Vincent",         to: "Max",     what: "Tulip Bloemendaal Sunset",  qty: 2 },
         { from: "Anne",            to: "Martijn", what: "Tulip Semper Augustus",     qty: 2 },
@@ -384,64 +420,52 @@ let b2 = Block.next( b1,
 resulting in:
 
 ```
-[ Block {
-    index:     0,
-    timestamp: 1637-09-25 17:39:21,
-    data:
-     [ { from: 'Dutchgrown', to: 'Vincent',  what: 'Tulip Bloemendaal Sunset', qty: 10 },
-       { from: 'Keukenhof',  to: 'Anne',     what: 'Tulip Semper Augustus',    qty: 7 } ],
-    previousHash: '0',
-    hash:         '7cb2df9eee29ca77c99eb4591a25dcbdfa9609aff2bd3558d1a0fe22acd08a51' },
-  Block {
-    index:     1,
-    timestamp: 1637-09-25 17:49:21,
-    data:
-     [ { from: 'Flowers',  to: 'Ruben',  what: 'Tulip Admiral van Eijck',   qty: 5 },
-       { from: 'Vicent',   to: 'Anne',   what: 'Tulip Bloemendaal Sunset',  qty: 3 },
-       { from: 'Anne',     to: 'Julia',  what: 'Tulip Semper Augustus',     qty: 1 },
-       { from: 'Julia',    to: 'Luuk',   what: 'Tulip Semper Augustus',     qty: 1 } ],
-    previousHash: '7cb2df9eee29ca77c99eb4591a25dcbdfa9609aff2bd3558d1a0fe22acd08a51',
-    hash:         'a7464e98290039f467e7abf6699180205f5151e76b57a79b39f43acc39d75660' },
-  Block {
-    index:     2,
-    timestamp: 1637-09-25 17:59:21,
-    data:
-     [ { from: 'Bloom & Blossom', to: 'Daisy',    what: 'Tulip Admiral of Admirals', qty: 8 },
-       { from: 'Vincent',         to: 'Max',      what: 'Tulip Bloemendaal Sunset',  qty: 2 },
-       { from: 'Anne',            to: 'Martijn',  what: 'Tulip Semper Augustus',     qty: 2 },
-       { from: 'Ruben',           to: 'Julia',    what: 'Tulip Admiral van Eijck',   qty: 2 } ],
-    previousHash: 'a7464e98290039f467e7abf6699180205f5151e76b57a79b39f43acc39d75660',
-    hash:         'b7e4952f801651c1e14d61d77b869d18268b46c468923089f1da33e3959b56b9' },
-  ...
-]
+[#<Block:0x2da3da0
+  @hash="32bd169baebba0b70491b748329ab631c85175be15e1672f924ca174f628cb66",
+  @index=0,
+  @previous_hash="0",
+  @timestamp=1637-09-25 17:39:21,
+  @transactions=
+   [{:from=>"Dutchgrown", :to=>"Vincent", :what=>"Tulip Bloemendaal Sunset", :qty=>10},
+    {:from=>"Keukenhof",  :to=>"Anne",    :what=>"Tulip Semper Augustus",    :qty=>7}],
+  @transactions_count=2>,
+ #<Block:0x2da2ff0
+  @hash="57b519a8903e45348ac8a739c788815e2bd90423663957f87e276307f77f1028",
+  @index=1,
+  @previous_hash=
+   "32bd169baebba0b70491b748329ab631c85175be15e1672f924ca174f628cb66",
+  @timestamp=1637-09-25 17:49:21,
+  @transactions=
+   [{:from=>"Flowers", :to=>"Ruben", :what=>"Tulip Admiral van Eijck",  :qty=>5},
+    {:from=>"Vicent",  :to=>"Anne",  :what=>"Tulip Bloemendaal Sunset", :qty=>3},
+    {:from=>"Anne",    :to=>"Julia", :what=>"Tulip Semper Augustus",    :qty=>1},
+    {:from=>"Julia",   :to=>"Luuk",  :what=>"Tulip Semper Augustus",    :qty=>1}],
+  @transactions_count=4>,
+...
 ```
 
 
-# What's Blockchain Lite - JavaScript Edition?  
+# What's Blockchain Lite - Ruby Edition?
 
-blockchain-lite library / module (npm: [`blockchain-lite`](https://www.npmjs.com/package/blockchain-lite)) -
+blockchain-lite library (gem: [`blockchain-lite`](https://rubygems.org/gems/blockchain-lite)) -
 build your own blockchain with crypto hashes -
 revolutionize the world with blockchains, blockchains, blockchains one block at a time
 
 **Usage**
 
 Let's get started.  Build your own blockchain one block at a time.
-Example:
 
-``` js
-const Blocks = require( "blockchain-lite" )
+``` ruby
+require 'blockchain-lite'
 
-// use basic block
-let Block = Blocks.basic
+b0 = Block.first( 'Genesis' )
+b1 = Block.next( b0, 'Transaction Data...' )
+b2 = Block.next( b1, 'Transaction Data......' )
+b3 = Block.next( b2, 'More Transaction Data...' )
 
-let b0 = Block.first( 'Genesis' )
-let b1 = Block.next( b0, 'Transaction Data...' )
-let b2 = Block.next( b1, 'Transaction Data......' )
-let b3 = Block.next( b2, 'More Transaction Data...' )
+blockchain = [b0, b1, b2, b3]
 
-let blockchain = [b0, b1, b2, b3]
-
-console.log( blockchain )
+pp blockchainconsole.log( blockchain )
 ```
 
 
@@ -455,7 +479,11 @@ console.log( blockchain )
 
 # Schilling! Schilling! on the Blockchain! Rock-Solid Alpine Dollar from Austria
 
-Who's in? Invest Now!
+Who's in? Invest now!
+
+Crypto #Schilling on the #Blockchain in 324 Days 7 Hours 30 Minutes!
+
+Join the Rock-Solid Alpine Dollar Movement!
 
 Learn more @ [blockchainaustria/schilling](https://github.com/blockchainaustria/schilling)
 
@@ -580,3 +608,7 @@ _Everything is local. Distributed is the new centralized._
 
 > The #Blockchain has changed the world. Here I make the argument that the #Blockchain is just like #git.
 > -- [Jackson Kelley](https://twitter.com/sjkelleyjr/status/901464041163341824)
+
+> `git merge [-m REF] [-g BLOB] --push`  
+>  Merge and push all signed commits to the blockchain.
+> -- [Git Commands](https://twitter.com/git_commands/status/935574015015612416)
