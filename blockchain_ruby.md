@@ -488,7 +488,7 @@ Join the Rock-Solid Alpine Dollar Movement!
 Learn more @ [blockchainaustria/schilling](https://github.com/blockchainaustria/schilling)
 
 
-# Breaking News: CryptoKiddies (Yes, Cute Little Cartoon Cats) on the Blockchain!
+# Breaking News: CryptoKitties (Yes, Cute Little Cartoon Cats) on the Blockchain!
 
 Collectible. Breedable. Adorable.
 
@@ -496,10 +496,10 @@ Collect and breed digital cats. Start meow. Buy! Sell! Hold!
 
 Learn more @ [cryptokitties.co](https://cryptokitties.co)
 
-![](i/cryptokiddies.png)
+![](i/cryptokitties.png)
 
 
-# Breaking News: CryptoKiddies (Yes, Cute Little Cartoon Cats) on the Blockchain! (Cont.)
+# Breaking News: CryptoKitties (Yes, Cute Little Cartoon Cats) on the Blockchain! (Cont.)
 
 Latest (and Greatest) Investment Opportunity!
 
@@ -511,7 +511,7 @@ Latest (and Greatest) Investment Opportunity!
 
 > All I want for Christmas is a CryptoKitty.
 >
-> -- [Kayla Williams‏](https://twitter.com/kaylaw/status/938590748655550464
+> -- [Kayla Williams](https://twitter.com/kaylaw/status/938590748655550464)
 
 > I got a fever. And the only prescription is more CryptoKitties.
 >
@@ -520,6 +520,9 @@ Latest (and Greatest) Investment Opportunity!
 > [My Gen 7 CryptoKitty #104375](https://www.cryptokitties.co/kitty/104375). The Future is Meow.
 >
 > -- [Anshul Dhawan‏](https://twitter.com/TheAnshulDhawan/status/938551642202324993)
+
+
+![](i/cryptokitty46.png)
 
 
 
