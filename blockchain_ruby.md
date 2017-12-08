@@ -447,7 +447,7 @@ resulting in:
 
 # What's Blockchain Lite - Ruby Edition?
 
-blockchain-lite library (gem: [`blockchain-lite`](https://rubygems.org/gems/blockchain-lite)) -
+blockchain-lite library (github: [`openblockchains/blockchain.lite.rb`](https://github.com/openblockchains/blockchain.lite.rb), gem: [`blockchain-lite`](https://rubygems.org/gems/blockchain-lite)) -
 build your own blockchain with crypto hashes -
 revolutionize the world with blockchains, blockchains, blockchains one block at a time
 
@@ -465,7 +465,7 @@ b3 = Block.next( b2, 'More Transaction Data...' )
 
 blockchain = [b0, b1, b2, b3]
 
-pp blockchainconsole.log( blockchain )
+pp blockchain
 ```
 
 
