@@ -68,14 +68,14 @@ Usage:
 
 Step 1 - Add the plugin to your config(uration)
 
-```
+``` yaml
 plugins:
 - jekyll-remote-theme
 ```
 
 Step 2 - Add the github repo
 
-```
+``` yaml
 remote_theme: benbalter/retlab
 ```
 
@@ -94,7 +94,7 @@ How does it work?
 
 [`_config.yml`](https://github.com/RubyHabits/rubyhabits.github.io/blob/master/_config.yml):
 
-```
+``` yaml
 plugins:
 - jekyll-remote-theme
 
@@ -120,11 +120,11 @@ Note: Book == (user) manual == (project) documentation ...
 
 # Three Octobook Real-World Examples - 1) World Classics
 
-1) World Classics - Strange Case of Dr Jekyll and Mr Hyde by Robert Louis Stevenson (1886), see <http://worldclassics.github.io/dr-jekyll-and-mr-hyde>.
+Strange Case of Dr Jekyll and Mr Hyde by Robert Louis Stevenson (1886), see <http://worldclassics.github.io/dr-jekyll-and-mr-hyde>.
 
 [`_config.yml`](https://github.com/worldclassics/worldclassics.github.io/blob/master/_config.yml):
 
-```
+``` yaml
 plugins:
 - jekyll-remote-theme
 
@@ -148,7 +148,7 @@ dr-jekyll-and-mr-hyde/
 
 Step 2: Add [`book.yml`](https://github.com/worldclassics/worldclassics.github.io/blob/master/_data/dr_jekyll_and_mr_hyde/book.yml) - Book (Meta) Info and (Table of) Contents
 
-```
+``` yaml
 title:  Strange Case of Dr. Jekyll and Mr. Hyde
 year:   1886
 author:
@@ -166,7 +166,7 @@ contents:
 
 Step 3: Add book page - [`dr-jekyll-and-mr-hyde.html`](https://github.com/worldclassics/worldclassics.github.io/blob/master/dr-jekyll-and-mr-hyde.html)
 
-```
+``` yaml
 ---
 layout: book_classics
 book:   dr_jekyll_and_mr_hyde   ## book id used for site.data[ page.book ] lookups
@@ -180,14 +180,12 @@ That's it.
 
 # Three Octobook Real-World Examples - 2) Project Documentation
 
-2) Project Documentation  
-
 - Slideshow (S9) - Write Your Slides in Plain Text w/ Markdown Formatting Conventions, see <http://slideshow-s9.github.io>.
 - Pluto - Planet (Static) Website Generator - Auto-Build Web Pages From Published Web Feeds, see <http://feedreader.github.io>.
 
 [`_config.yml`](https://github.com/slideshow-s9/slideshow-s9.github.io/blob/master/_config.yml):
 
-```
+``` yaml
 plugins:
 - jekyll-remote-theme
 
@@ -212,7 +210,7 @@ slideshow-s9/docs/
 
 Step 2: Add [`book.yml`](https://github.com/slideshow-s9/slideshow-s9.github.io/blob/master/_data/slideshow/book.yml) - Book (Meta) Info and (Table of) Contents
 
-```
+``` yaml
 title:    Slide Show (S9) Guide (Book Edition)
 subtitle: Write Your Slides in Plain Text w/ Markdown Formatting Conventions
 author:
@@ -237,7 +235,7 @@ contents:
 
 Step 3: Add book page - [`index.html`](https://github.com/slideshow-s9/slideshow-s9.github.io/blob/master/index.html)
 
-```
+``` yaml
 ---
 layout: book
 book:   slideshow      ## book id used for site.data[ page.book ] lookups
@@ -250,7 +248,7 @@ That's it.
 
 # Three Octobook Real-World Examples - 3) Bookshelf
 
-3) Yuki & Moto Press Bookshelf - Free (Online) Books about Ruby & Friends, see <http://yukimotopress.github.io>.
+Yuki & Moto Press Bookshelf - Free (Online) Books about Ruby & Friends, see <http://yukimotopress.github.io>.
 
 Titles include:
 
@@ -263,7 +261,7 @@ Titles include:
 
 [`_config.yml`](https://github.com/yukimotopress/yukimotopress.github.io/blob/master/_config.yml):
 
-```
+``` yaml
 plugins:
 - jekyll-remote-theme
 
