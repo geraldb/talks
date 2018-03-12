@@ -4,6 +4,19 @@
 sources in plain text w/ markdown formatting
 
 
+## 2018
+
+Mon Mar 12th, 2018 -  [**Build (Online) Presentations / Talks (and Handout Notes) with (Structured) Text with Formatting in Markdown Markup Conventions and (Off-the-Shelf Open Free) Slide Design Themes (Reveal.js, Bespoke.js, Impress.js, Shower.js, S6, ...) and the Jekyll (Static) Website Compiler**](https://github.com/geraldb/talks/blob/master/slideshow-s9.md)
+@ [Austria.TXT Meetup](https://github.com/austriacodes/austria.txt)
+
+
+Thu Mar 8th, 2018 - [**Build (Online) Books and Documentation with Markdown and Octobook Themes and the Jekyll (Static) Website Compiler - Incl. Yuki & Moto Press Bookshelf Case Study**](https://github.com/geraldb/talks/blob/master/octobook.md)
+@ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/247811456)
+
+
+
+
+
 ## 2017
 
 Thu Dec 7th, 2017 - [**Blockchain! Blockchain! Blockchain! - Build Your Own Blockchains in Ruby from Zero (Scratch)**](https://github.com/geraldb/talks/blob/master/blockchain_ruby.md) •
