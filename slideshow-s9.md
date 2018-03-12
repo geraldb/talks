@@ -7,7 +7,7 @@ title: Build Presentations / Talks with (Structured) Text
 
 with (Structured) Text with Formatting in Markdown Markup Conventions and
 
-(Off-the-Shelf Open Free) Slide Design Themes (Bespoke.js, Reveal.js, Impress.js, Shower.js, S6, ...) and
+(Off-the-Shelf Open Free) Slide Design Themes (Reveal.js, Bespoke.js, Impress.js, Shower.js, S6, ...) and
 
 the Jekyll (Static) Website Compiler
 
