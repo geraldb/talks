@@ -1,4 +1,4 @@
-title: Inside (Hyper) Ledger Lite - Add Transactions One Block at a Time and Balance the Accounts (Books)
+title: Blockchain vs (Hyper) Ledger -- Inside (Hyper) Ledger Lite - Add Transactions One Block at a Time and Balance the Accounts (Books)
 
 
 
@@ -198,7 +198,7 @@ alias :transfer :send
 
 Hyper - Ledger (book) for the distributed blockchain internet era
 
-Coinbase! Create money out of ... nothing one block at a time!
+Coinbase! Create money out of ... nothing one block at a time! (†)
 
 ``` ruby
 Ledger.configure do |config|
@@ -218,6 +218,9 @@ def send( from, to, amount )
   end
 end  # method send
 ```
+
+(†): Yes, I know. Creating money out of nothing is not new :-). One block at a time every ten minutes with a lottery might.
+
 
 
 # Inside Ledger Lite - Currencies, Commodities, Collectibles, Assets and More
