@@ -57,9 +57,7 @@ Triva Q: How much is one Bitcoin worth today? Q: How much are 10 000 Bitcoin wor
 
 # $20 Million Dollar Pizza Day - Celebrating the Birth of Bitcoin Alchemy - $$$
 
-!! update chart !!!
-
-![](i/bitcoinmarket.png)
+![](i/bitcoinmarket-apr-2018.png)
 
 (Source: [coinmarketcap.com/currencies/bitcoin](https://coinmarketcap.com/currencies/bitcoin))
 
@@ -90,11 +88,12 @@ package main
 import "..."
 
 type Block struct {
-  Time int64       // seconds since (unix) epoch (1970-01-01)
-  Data string
-  Prev string
-  Hash string  
+  Timestamp int64       // seconds since (unix) epoch (1970-01-01)
+  Data      string
+  PrevHash  string
+  Hash      string  
 }
+
 
 func calcHash( data string ) string {
   hashed := sha256.Sum256( []byte(data) )
@@ -102,11 +101,11 @@ func calcHash( data string ) string {
 }
 
 
-func NewBlock(data string, prev string) Block {
-  t    := time.Now().Unix()
-  hash := calcHash( intToStr(t) + prev + data )
+func NewBlock(data string, prevHash string) Block {
+  timestamp := time.Now().Unix()
+  hash      := calcHash( intToStr(timestamp) + prevHash + data )
 
-  return Block { t, data, prev, hash }
+  return Block { timestamp, data, prevHash, hash }
 }
 ```
 
@@ -138,10 +137,10 @@ func main() {
 > No. A linked list is only required to have a reference to the previous element,
 > a block must have an identifier depending on the previous block's identifier,
 > meaning that you cannot replace a block without recomputing every single block that comes after.
-> In this implementation that happens as the previous digest is input in the calc_hash method.
+> In this example that happens as the previous digest is input in the calcHash method.
 
 
-will log something like:
+Will print something like:
 
 ``` go
 fmt.Println( b0 )
@@ -150,7 +149,7 @@ fmt.Println( b0 )
 //    d85da0f449ff9ddc2c5ba638b23b9524381811227eb463b8c9e0be40dc1b1a8a}
 fmt.Println( len( b0.Hash ))
 // => 64
-fmt.Println( len( b0.Prev ))
+fmt.Println( len( b0.PrevHash ))
 // => 64
 
 fmt.Println( b1 )
@@ -159,7 +158,7 @@ fmt.Println( b1 )
 //     e48ba730165d88e15435483fc3a60714be526096a0c9a71ad10623340e33c7e3}
 fmt.Println( len( b1.Hash ))
 // => 64
-fmt.Println( len( b1.Prev ))
+fmt.Println( len( b1.PrevHash ))
 // => 64
 
 fmt.Println( blockchain )
@@ -177,8 +176,7 @@ fmt.Println( blockchain )
 Making (Hash) Mining a Lottery - Find the Lucky Number
 
 ``` go
-t    := time.Now().Unix()
-hash := calcHash( intToStr(t) + prev + data )
+hash := calcHash( intToStr(timestamp) + prevHash + data )
 ```
 
 The computer (node) in the blockchain network that computes the
@@ -261,18 +259,18 @@ Nonce == Number used once
 
 ``` go
 type Block struct {
-  Time  int64       // seconds since (unix) epoch (1970-01-01)
-  Data  string
-  Prev  string
-  Hash  string
-  Nonce int64       // number used once - lucky (mining) lottery number
+  Timestamp  int64       // seconds since (unix) epoch (1970-01-01)
+  Data       string
+  PrevHash   string
+  Hash       string
+  Nonce      int64       // number used once - lucky (mining) lottery number
 }
 
-func NewBlock( data string, prev string ) Block {
-  t           := time.Now().Unix()
-  nonce, hash := computeHashWithProofOfWork( intToStr(t) + prev + data )
+func NewBlock( data string, prevHash string ) Block {
+  timestamp   := time.Now().Unix()
+  nonce, hash := computeHashWithProofOfWork( intToStr(timestamp) + prevHash + data )
 
-  return Block { t, data, prev, hash, nonce }
+  return Block { timestamp, data, prevHash, hash, nonce }
 }
 ```
 
@@ -294,7 +292,7 @@ fmt.Println( b0 )
 //    42278}
 fmt.Println( len( b0.Hash ))
 // => 64
-fmt.Println( len( b0.Prev ))
+fmt.Println( len( b0.PrevHash ))
 // => 64
 
 fmt.Println( b1 )
@@ -455,10 +453,7 @@ fmt.Println( blockchain )
 
 # Case Study -  Dutch Gulden on the Blockchain!
 
-!! update chart !!
-
-
-![](i/guldenmarket.png)
+![](i/guldenmarket-apr-2018.png)
 
 (Source: [coinmarketcap.com/currencies/gulden](https://coinmarketcap.com/currencies/gulden))
 
@@ -473,11 +468,13 @@ Join the Rock-Solid Alpine Dollar Movement!
 
 Learn more @ [bitshilling/bitshilling](https://github.com/bitshilling)
 
+![](i/bitshilling.png)
+
 
 
 # What's Next? Beyond Currencies / Money
 
-Crypto Collectibles - Non Fungible Tokens (NFTs) - Unique Bits on the Blockchain
+Crypto Collectibles - Non Fungible Tokens (NFTs) - Unique Bits & Bytes on the Blockchain
 
 - Fun, Fun, Fun - Blockchain Gambling Casinos
   - Kitties, Puppies, Dragons, Lambos, ...
@@ -486,24 +483,38 @@ Crypto Collectibles - Non Fungible Tokens (NFTs) - Unique Bits on the Blockchain
   - Tickets, ...
 
 
+
 # CryptoKitties (Yes, Cute Little Cartoon Cats) on the Blockchain!
 
 Collectible. Breedable. Adorable.
 
-Collect and breed digital cats. Start meow. Buy! Sell! Hold!
+Collect and breed digital cats. Start meow. Buy! Sell! Hodl!
+
+> - Fabulous Persian Spock Gerbil Gold Cottoncandy - Extremely rare gen 5 swift virgin | 2.9 ETH
+> - Rarity: 0.00264% Gen 5 JAGUAR FABULOUS GOLD DALI!! VIRGIN!
+> - Rarity: 0.0015% Princess Bubblegum is now for sale! Gen 12 | Brisk | Virgin | Chartreux | Bubblegum | Otaku | Emeraldgreen | Saycheese | Mauveover | Spock - Starts ETH 20/Ends ETH 10
+> - Gold ducat, Gen 5, Virgin, Swift. Very cheap
+> - Cheap Gen 1 cute kittie with rare genes! Only 0.125 ETH
+> - UNIQUE Virgin Peach Googly Gold Mauveover gen:2 cooldown:1 0.87992% RARE
+> - SUPER CHEAP: Gerbil, Ragdoll, Scarlet, Chestnut, Cotton Candy!!! 0.02 ETH (~$14)
+> - I'm giving away a Gen 1 FAST Gold for free...
+>
+> -- [CrypoKittiesMarket](https://www.reddit.com/r/CryptoKittiesMarket)
 
 Learn more @ [cryptokitties.co](https://cryptokitties.co)
 
 ![](i/cryptokitties.png)
 
 
-# CryptoKittes & CryptoCollectibles
 
-- Awesome CryptoKitties                  @ CryptoCopycats
-- Awesome CryptoCollectibles (& Assets)  @ CryptoCopycats  
+# CryptoKittes & CryptoCollectibles - Buy! Sell! Hodl!
+
+- [Awesome CryptoKitties](https://github.com/cryptocopycats/awesome-cryptokitties)   @ [CryptoCopycats](https://github.com/cryptocopycats)
+- [Awesome CryptoCollectibles (& Assets)](https://github.com/cryptocopycats/awesome-cryptocollectibles) @ [CryptoCopycats](https://github.com/cryptocopycats)
 
 
-# Awesome Blockchains
+
+# Awesome Blockchains @ Open Blockchains
 
 A collection about awesome blockchains - open distributed public databases w/ crypto hashes incl. git ;-). Blockchains are the new tulips. Distributed is the new centralized.
 
@@ -523,21 +534,105 @@ Series by
 
 Thanks for your money! Thanks for holding the bag!
 
+![](i/tweet-hero-v.png)
+
+![](i/tweet-blocklancer-iii.png)
+
+More @ [austriacodes/blockchain-whitepapers](https://github.com/austriacodes/blockchain-whitepapers)
 
 
-# Case Study - Hero (PLAY) by Byte Heroes
+# Austrian Blockchain Token Case Study - Hero (PLAY) by Byte Heroes
+
+Token: Ethereum #20
+
+by Byte Heroes, Praterstraße 1/3 Space 32, 1020 Vienna, Austria
+
+![](i/tweet-hero.png)
+
+![](i/tweet-hero-iii.png)
+
+![](i/tweet-hero-ii.png)
+
+![](i/tweet-hero-iiii.png)
+
+![](i/tweet-hero-iib.png)
+
+![](i/tweet-hero-iiiib.png)
+
+
+More @ [austriacodes/blockchain-whitepapers](https://github.com/austriacodes/blockchain-whitepapers)
 
 
 
-# Case Study - Crowd (CRWD) by Conda Austria
+# Austrian Blockchain Token Case Study - Crowd (CRWD) by Conda Austria
+
+by Conda, Donau-City-Straße 6, 1220 Vienna, Austria
+
+![](i/tweet-conda-austria.png)
+
+Buyer beware! If it sounds too good to be true, - surprise, surprise - it is.
+The Future is Bright! Free Easy Money Bullshit (BS) Example - [Early Investors are making 50 000% returns on ICOs](https://hackernoon.com/investors-are-making-50-000-returns-on-icos-32432bc741d1) by Coin and Crypto.
+
+> Early investment is paying off big time
+>
+> The average return on the S&P is 10%. Over the last year bitcoin has seen unprecedented returns of 1000%. 
+> But savvy cryptocurrency investors are investing in initial coin offerings (ICOs) 
+> and making return on investments (ROIs) 
+> as high as 50 000%. Stop and think about that for a moment. That means for a $100 investment in early 2017
+> you could have netted $50 000. Not too shabby for a year of trading.
+> 
+> [..]
+>
+> The majority of startups fail, even well funded ones,
+> so be prepared to lose [all] what you invest [gamble], 
+> even if the landscape is optimistic. [To the moon! Thanks for your money and hodling the bag!] 
+
+
+More @ [austriacodes/blockchain-whitepapers](https://github.com/austriacodes/blockchain-whitepapers)
+
+
+# Austrian Blockchain Token Case Study - Pandos (PAN) by Bitpanda
+
+by Pantos, Burggasse 116/3+3A, 1070 Vienna, Austria
+
+![](i/tweet-bitpanda.png)
+
+Future-Proof!? For ALL Blockchains!?  -- Q: Just wondering - Can you predict the future? How many blockchains are out there now (and in the future)?
+
+More @ [austriacodes/blockchain-whitepapers](https://github.com/austriacodes/blockchain-whitepapers)
 
 
 
-# Case Study - Pandos by Bitpanda
+# Q: What's a Token Sale Scam?
+
+A: If you buy these digital tokens (on the blockchain) giving free money
+as a donation / gift to a company to revolutionize 
+the world one block at a time than everything is ok.
+
+If you buy these digital token (on the blockchain) trying to get rich (quick)
+by selling them at a higher price to a greater fool than - surprise, surprise - 
+you're getting scammed.
+
+Let's quote the fineprint from the "Legal FAQ" from the most serious / reputable
+token sale, that is, Pantos by Bitpanda:
+
+> Pantos - in whatever form – do NOT represent a claim on or against Bitpanda. 
+> Bitpanda may decide NOT to exchange Pantos - in whatever form - at ANY time at their sole discretion. 
+> [Thanks for the free money and holding the bag!] 
+>
+> -- Source: [Pantos Legal FAQ](https://pantos.io/pdf/pantos-ico-details.pdf)
+
+The point is ... you own binary bits (on the blockchain) and
+the value is ... excactly zero.  You say? Wait, but the token value is not (yet) excactly zero.
+HODL! HODL! How much richer are you today? 
+
+Ask yourself why should the company work hard, hard, hard to make you rich, rich, rich 
+when - surprise, surprise - the company already collected all the free money from greater fools 
+and  - surprise, surprise - you have zero legal claim to anything. 
+Welcome to the world of business! Buyer beware! 
 
 
-
-
+More @ [austriacodes/blockchain-whitepapers](https://github.com/austriacodes/blockchain-whitepapers)
 
 
 
