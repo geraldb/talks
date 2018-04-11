@@ -312,14 +312,76 @@ That's the magic behind the proof of work.
 
 # What's Your Hash Rate?
 
-!! add code benchmark !!
+``` go
+for factor := 1; factor++; factor <= 7  {
+   difficulty := strings.Repeat( "0", factor )
+   fmt.Printf( "\nDifficulty: %s (%d bits)\n", difficulty, len(difficulty)*4 )
 
+   fmt.Println( "Starting search..." )
+   t1 := time.Now()
+   nonce, _ := computeHashWithProofOfWork( "Hello, Cryptos!", difficulty )
+   t2 := time.Now()
+
+   delta := t2.Sub( t1 )
+   fmt.Printf( "Elapsed Time: %s, Hashes Calculated: %d\n", delta, nonce )
+
+   if delta.Seconds() > 0.001 {
+     hashrate := float64(nonce)/delta.Seconds()
+     fmt.Printf( "Hash Rate: %d hashes per second\n", int64(hashrate))
+   }
+}
+```
+
+(Source: [awesome-sha256/hashrate.go](https://github.com/openblockchains/awesome-sha256/blob/master/hashrate.go))
+
+
+# What's Your Hash Rate? (Cont.)
+
+Prints:
+
+```
+Difficulty: 0 (4 bits)
+Starting search...
+Elapsed Time: 0s, Hashes Calculated: 56
+
+Difficulty: 00 (8 bits)
+Starting search...
+Elapsed Time: 1.0001ms, Hashes Calculated: 143
+Hash Rate: 142985 hashes per second
+
+Difficulty: 000 (12 bits)
+Starting search...
+Elapsed Time: 5.0002ms, Hashes Calculated: 3834
+Hash Rate: 766769 hashes per second
+
+Difficulty: 0000 (16 bits)
+Starting search...
+Elapsed Time: 33.0019ms, Hashes Calculated: 26762
+Hash Rate: 810923 hashes per second
+
+Difficulty: 00000 (20 bits)
+Starting search...
+Elapsed Time: 137.0078ms, Hashes Calculated: 118592
+Hash Rate: 865585 hashes per second
+
+Difficulty: 000000 (24 bits)
+Starting search...
+Elapsed Time: 26.5378148s, Hashes Calculated: 21554046
+Hash Rate: 812201 hashes per second
+```
 
 
 
 # Triva Quiz: What's the Bitcoin Hash Rate?
 
-!! add chart !!
+A: About 25 million trillions of hashes per second (in April 2018)
+
+Estimated number of tera hashes per second (trillions of hashes per second)
+the Bitcoin network is performing.
+
+![](i/bitcoin-hashrate.png)
+
+(Source: [blockchain.info](https://blockchain.info/charts/hash-rate))
 
 
 
@@ -409,10 +471,9 @@ Learn by Example from the Real World (Anno 1637) - Buy! Sell! Hold! Enjoy the Be
 
 # Tulips on the Blockchain! Adding Transactions (Cont.)
 
+
 ``` go
-
   to be done
-
 ```
 
 
@@ -422,8 +483,9 @@ Learn by Example from the Real World (Anno 1637) - Buy! Sell! Hold! Enjoy the Be
 resulting in:
 
 ``` go
- to be done
+   to be done
 ```
+
 
 
 # What's Blockchain Lite - Go Edition?  (Upcoming)
@@ -521,12 +583,29 @@ A collection about awesome blockchains - open distributed public databases w/ cr
 More @ [openblockchains/awesome-blockchains](https://github.com/openblockchains/awesome-blockchains)
 
 
-# Articles - Build Your Own Blockchains from Scratch (Zero) in Go
+# Articles - Build / Code Your Own Blockchains from Scratch (Zero) in Go
 
-Series by
+Build / Code Your Own Blockchains in Go Series by [Ivan Kuznetsov](https://jeiwan.cc/tags/blockchain)
+
+- [Part 1: Basic Prototype](https://jeiwan.cc/posts/building-blockchain-in-go-part-1/)
+- [Part 2: Proof-of-Work](https://jeiwan.cc/posts/building-blockchain-in-go-part-2/)
+- [Part 3: Persistence and CLI](https://jeiwan.cc/posts/building-blockchain-in-go-part-3/)
+- [Part 4: Transactions 1](https://jeiwan.cc/posts/building-blockchain-in-go-part-4/)
+- [Part 5: Addresses](https://jeiwan.cc/posts/building-blockchain-in-go-part-5/)
+- [Part 6: Transactions 2](https://jeiwan.cc/posts/building-blockchain-in-go-part-6/)
+- [Part 7: Network](https://jeiwan.cc/posts/building-blockchain-in-go-part-7/)
 
 
-Series by
+Build / Code Your Own Blockchain in Go Series by Coral Health
+
+- [Part 1: Code your own blockchain in less than 200 lines of Go!](https://medium.com/@mycoralhealth/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc)
+- [Part 2: Blockchain networking](https://medium.com/@mycoralhealth/part-2-networking-code-your-own-blockchain-in-less-than-200-lines-of-go-17fe1dad46e1)
+- [Code your own blockchain mining algorithm!](https://medium.com/@mycoralhealth/code-your-own-blockchain-mining-algorithm-in-go-82c6a71aba1f)
+- [Learn how to store data through the blockchain using IPFS](https://medium.com/@mycoralhealth/learn-to-securely-share-files-on-the-blockchain-with-ipfs-219ee47df54c)
+- [Code your own proof of stake algorithm!](https://medium.com/@mycoralhealth/code-your-own-proof-of-stake-blockchain-in-go-610cd99aa658)
+
+
+and others.
 
 
 
@@ -677,8 +756,14 @@ Blockchain in Action: Use Cases ++
 Hyperledger, a Linux Foundation Project ++
 Ten Steps to Your First Blockchain application_
 
-
-!! add the truth machine !!!
+**The Truth Machine: The Blockchain and the Future of Everything** by Paul Vigna and Michael J. Casey, New York, 2018 --
+_A SocietyBuilding Tool ++
+The God Protocol ++
+Governing the Digital Economy ++
+Enabling the Fourth Industrial Revolution ++
+The Old Guards New Makeover ++
+A SelfSovereign Identity ++
+A New Constitution for the Digital Age_
 
 
 
@@ -707,4 +792,4 @@ _Everything is local. Distributed is the new centralized._
 > -- [Git Commands](https://twitter.com/git_commands/status/935574015015612416)
 
 
-!! add xkcd !!
+![](i/xkcd1597.png)
