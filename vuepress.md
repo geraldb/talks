@@ -93,7 +93,7 @@ And for Vue?
 # Hello, VuePress!
 
 by Evan You et al (★7 741) -
-github: [`gatsbyjs/gatsby`](https://github.com/gatsbyjs/gatsby)
+github: [`vuejs/vuepress`](https://github.com/vuejs/vuepress)
 
 
 ![](i/vuepress-website.png)
@@ -232,7 +232,7 @@ Then, add some scripts to package.json:
 ```
 {
   "scripts": {
-    "docs:dev": "vuepress dev docs",
+    "docs:dev":   "vuepress dev docs",
     "docs:build": "vuepress build docs"
   }
 }
@@ -265,7 +265,7 @@ To build / generate the (static) website run:
     │  Page-1.md
     │  Page-2.md
     │  README.md
-    └──.vupress/
+    └──.vuepress/
           config.js
 ```
 
@@ -297,7 +297,7 @@ module.exports = {
     │ Page-2.md
     │ README.md
     │
-    └── .vupress/
+    └── .vuepress/
         │ config.js
         └── components/
               NumberModifier.vue  
