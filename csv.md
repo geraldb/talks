@@ -70,7 +70,7 @@ JAHR;GCD;GEM_NAME;BEV_ABSOLUT;BEV_UNTER15;BEV_UEBER65;AUSL_STAATSB;...
 ...
 ```
 
-Note: The semicolon `;` is the value separator and 
+Note: The semicolon `;` is the value separator and for numbers
 the point `.` is the thousand separator (!) e.g. `13.101`
 and the comma `,` is the decimal separator/point e.g. `13,8` :-).
 
