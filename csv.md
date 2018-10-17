@@ -23,7 +23,7 @@ title: Mining for Gold Using the World's #1 and Most Popular Data Format
 
 1970s - Pre Personal Computer (PC) Age
 
-- [CSV = Comma-Separated Value)](https://en.wikipedia.org/wiki/Comma-separated_values)
+- [CSV = Comma-Separated Values](https://en.wikipedia.org/wiki/Comma-separated_values)
 - [TAB = Tab(ulator)](https://en.wikipedia.org/wiki/Tab_key)
 
 
@@ -90,7 +90,7 @@ JAHR; GCD;   GEM_NAME;                 BEV_ABSOLUT; BEV_UNTER15; BEV_UEBER65; AU
 # Triva Quiz: Who Invented the Space Character in Writing (and When)?
 
 - [ ] The Greeks before Alexander the Great
-- [ ] The Romans in the Empire
+- [ ] The Romans in the Empire (What have the romans ever done for us?)
 - [ ] The Irish Monks in the Middle Ages 
 - [ ] The Frankish Alchemists in the Charlemagne's Age (800-)
 
