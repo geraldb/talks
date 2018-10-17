@@ -145,8 +145,8 @@ JAHR; GCD;   GEM_NAME;                 BEV_ABSOLUT; BEV_UNTER15; BEV_UEBER65; AU
 
 # And the Winner is ... Lies, Damned Lies and Statistics
 
->  Statistics can be used to support anything - especially statisticians. 
+>  Statistics can be used to support anything - especially statisticians¹. 
 >
 > -- Franklin P. Jones
 
-
+¹: Or a (big) data gold mining scientist, of course :-).
