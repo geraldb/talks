@@ -77,8 +77,8 @@ and the comma `,` is the decimal separator/point :-).
 
 # Triva Quiz: Who Invented the Space Character in Writing (and When)?
 
-- [ ] The Greeks before Alexander the Great
-- [ ] The Romans in the Empire (What have the romans ever done for us?)
+- [ ] The Greeks in the Golden Age
+- [ ] The Romans in the Age of Empire (What have the Romans ever done for us?)
 - [ ] The Irish Monks in the Middle Ages 
 - [ ] The Frankish Alchemists in the Charlemagne's Age (800-)
 
@@ -89,8 +89,6 @@ and the comma `,` is the decimal separator/point :-).
 - [ ] [CSV v1.1](https://csv11.github.io) in 2018 :-)
 
 Still waiting :-). Yes, you can. Let's make it happen.
-
-
 Pretty printed version with space (CSV v1.1). Example:
 
 ```
