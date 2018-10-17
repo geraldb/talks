@@ -143,9 +143,10 @@ JAHR; GCD;   GEM_NAME;                 BEV_ABSOLUT; BEV_UNTER15; BEV_UEBER65; AU
 
 
 
-
 # And the Winner is ... Lies, Damned Lies and Statistics
 
->  I only believe in statistics that I doctored myself.
+>  Statistics can be used to support anything - especially statisticians. 
 >
-> -- Winston S. Churchill
+> -- Franklin P. Jones
+
+
