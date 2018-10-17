@@ -22,9 +22,9 @@ title: Mining for Gold Using the World's #1 and Most Popular Data Format
 # Data Formats @ Statistics Austria
 
 
-![](i/opendata-statistics-austria.png)
+![](i/opendata-statistik-austria.png)
 
-(Source: [data.statistik.gv.at](http://data.statistik.gv.at/web/catalog.jsp))
+(Source: [`data.statistik.gv.at`](http://data.statistik.gv.at/web/catalog.jsp))
 
 
 
@@ -32,7 +32,7 @@ title: Mining for Gold Using the World's #1 and Most Popular Data Format
 
 ![](i/opendata-austria-gov.png)
 
-(Source: [data.gv.at](https://www.data.gv.at/suche/))
+(Source: [`data.gv.at`](https://www.data.gv.at/suche/))
 
 
 
@@ -40,7 +40,7 @@ title: Mining for Gold Using the World's #1 and Most Popular Data Format
 
 ![](i/opendata-us-gov.png)
 
-(Source: [data.gov](https://catalog.data.gov/dataset))
+(Source: [`data.gov`](https://catalog.data.gov/dataset))
 
 
 
@@ -48,7 +48,7 @@ title: Mining for Gold Using the World's #1 and Most Popular Data Format
 
 ![](i/opendata-datahub.png)
 
-(Source: [data.gov](https://old.datahub.io/dataset))
+(Source: [`old.datahub.io`](https://old.datahub.io/dataset))
 
 
 
@@ -56,7 +56,7 @@ title: Mining for Gold Using the World's #1 and Most Popular Data Format
 
 ![](i/opendata-datahub-v2.png)
 
-(Source: [datahub.io](https://datahub.io/core/gold-prices))
+(Source: [`datahub.io`](https://datahub.io/core/gold-prices))
 
 
 
