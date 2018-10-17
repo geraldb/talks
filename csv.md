@@ -74,7 +74,24 @@ Note: The semicolon `;` is the value separator and
 the point `.` is the thousand separator (!)
 and the comma `,` is the decimal separator/point :-).
 
-CSV 1.1 pretty printed version with space:
+
+# Triva Quiz: Who Invented the Space Character in Writing (and When)?
+
+- [ ] The Greeks before Alexander the Great
+- [ ] The Romans in the Empire (What have the romans ever done for us?)
+- [ ] The Irish Monks in the Middle Ages 
+- [ ] The Frankish Alchemists in the Charlemagne's Age (800-)
+
+
+
+# Triva Quiz: Who Invented the Space Character in CSV (and When)?
+
+- [ ] [CSV v1.1](https://csv11.github.io) in 2018 :-)
+
+Still waiting :-). Yes, you can. Let's make it happen.
+
+
+Pretty printed version with space (CSV v1.1). Example:
 
 ```
 JAHR; GCD;   GEM_NAME;                 BEV_ABSOLUT; BEV_UNTER15; BEV_UEBER65; AUSL_STAATSB; ...
@@ -86,22 +103,6 @@ JAHR; GCD;   GEM_NAME;                 BEV_ABSOLUT; BEV_UNTER15; BEV_UEBER65; AU
 ...
 ```
 
-
-# Triva Quiz: Who Invented the Space Character in Writing (and When)?
-
-- [ ] The Greeks before Alexander the Great
-- [ ] The Romans in the Empire (What have the romans ever done for us?)
-- [ ] The Irish Monks in the Middle Ages 
-- [ ] The Frankish Alchemists in the Charlemagne's Age (800-)
-
-
-
-
-# Triva Quiz: Who Invented the Space Character in CSV (and When)?
-
-- [ ] [CSV v1.1](https://csv11.github.io) in 2018 :-)
-
-Still waiting :-). Yes, you can. Let's make it happen.
 
 
 
