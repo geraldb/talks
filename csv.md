@@ -149,4 +149,4 @@ JAHR; GCD;   GEM_NAME;                 BEV_ABSOLUT; BEV_UNTER15; BEV_UEBER65; AU
 >
 > -- Franklin P. Jones
 
-¹: Or a (big) data gold mining scientist, of course :-).
+¹: Or (big) data gold mining scientists, of course :-).
