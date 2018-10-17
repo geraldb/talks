@@ -3,7 +3,7 @@ title: Mining for Gold Using the World's #1 and Most Popular Data Format
 
 
 
-# Quiz - The World's Most Popular Data Format?
+# Trivia Quiz - The World's Most Popular Data Format?
 
 - [ ]  XML
 - [ ]  YAML
@@ -14,6 +14,38 @@ title: Mining for Gold Using the World's #1 and Most Popular Data Format
 - [ ]  PDF (!?)
 - [ ]  HTML
 - [ ]  Other, Please Tell
+
+
+
+
+# Data Format Timeline / History - Past, Present, Future
+
+
+1970s - Pre Personal Computer (PC) Age
+
+- [CSV = Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values)
+- [TAB = Tab(ulator)](https://en.wikipedia.org/wiki/Tab_key)
+
+
+1990s - Internet / Web Age
+
+- [PDF = Portable Document Format](https://adobe.com/pdf) - 1993¹-
+- [HTML = Hypertext Markup Language](https://www.w3.org/html/) - 1993-
+- [XML = Extensible Markup Language](https://www.w3.org/XML/) - 1996-
+
+2000s  
+
+- [JSON = JavaScript Object Notation](https://json.org)  - 2001-
+
+Now
+
+- [CSV ♥ JSON](https://github.com/csv11/csv-json) - 2018-
+
+
+Notes:
+
+¹: First release of PDF as an open standard on July 1, 2008.
+
 
 
 
