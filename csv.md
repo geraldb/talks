@@ -290,6 +290,9 @@ What about treating un-quoted and quoted values different?
 
 What about treating un-quoted and quoted leading and trailing spaces different?
 
+And so on and so forth.
+
+
 
 # CSV Basics - Type Inference and Data Converters
 
@@ -322,13 +325,46 @@ csvreader library:
 - CSV <3 YAML
 
 Database Export:
-  - PostgreSQL CSV
-  - PostgreSQL Text
-  - MySQL
+- PostgreSQL CSV
+- PostgreSQL Text
+- MySQL
 
 Or configure (or build) your own :-).
 
 ![](i/xkcd-standards.png)
+
+
+
+
+# CsvReader Library - Database Export Variants
+
+
+`Csv.mysql` uses:
+
+``` ruby
+ParserStrict.new( sep: "\t",
+                  quote: false,
+                  escape: true,
+                  null: "\\N" )
+```
+
+`Csv.postgres` or `Csv.postgresql` uses:
+
+``` ruby
+ParserStrict.new( doublequote: false,
+                  escape: true,
+                  null: "" )
+```
+
+`Csv.postgres_text` or `Csv.postgresql_text` uses:
+
+``` ruby
+ParserStrict.new( sep: "\t",
+                  quote: false,
+                  escape: true,
+                  null: "\\N" )
+```
+
 
 
 
@@ -630,16 +666,16 @@ See the [csvpack library »](https://github.com/csv11/csvpack)
 
 ```
 Country,	Gold production (metric tons),	Reserves (metric tons)
-China,	        440,  2 000
+China,         440,  2 000
 Australia,     300,  9 800
-Russia,   	    255,  5 500
-United States,	245,	 3 000
-Canada,       	180, 	2 200
-Peru,          155, 	2 300
-South Africa, 	145, 	6 000
-Mexico,       	110, 	1 400
-Uzbekistan,   	100,	 1 800
-Brazil,         85,	 2 400
+Russia,        255,  5 500
+United States, 245,	 3 000
+Canada,        180,  2 200
+Peru,          155,  2 300
+South Africa,  145,  6 000
+Mexico,        110,  1 400
+Uzbekistan,    100,  1 800
+Brazil,         85,  2 400
 ```
 
 Source: [List of countries by gold production](https://en.wikipedia.org/wiki/List_of_countries_by_gold_production)
