@@ -336,7 +336,7 @@ Or configure (or build) your own :-).
 
 
 
-# CsvReader Library - Database Export Variants
+# CsvReader Library - Database Export Variants Configuration
 
 
 `Csv.mysql` uses:
@@ -669,7 +669,7 @@ Country,	Gold production (metric tons),	Reserves (metric tons)
 China,         440,  2 000
 Australia,     300,  9 800
 Russia,        255,  5 500
-United States, 245,	 3 000
+United States, 245,  3 000
 Canada,        180,  2 200
 Peru,          155,  2 300
 South Africa,  145,  6 000
@@ -678,5 +678,5 @@ Uzbekistan,    100,  1 800
 Brazil,         85,  2 400
 ```
 
-Source: [List of countries by gold production](https://en.wikipedia.org/wiki/List_of_countries_by_gold_production)
+(Source: [List of countries by gold production](https://en.wikipedia.org/wiki/List_of_countries_by_gold_production))
 
