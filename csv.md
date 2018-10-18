@@ -181,8 +181,6 @@ Trivia Quiz: [What's meta/void?](https://en.wikipedia.org/wiki/VoID)
 
 
 
-
-
 # And the Winner is ... Lies, Damned Lies and Statistics
 
 >  Statistics can be used to support anything - especially statisticians¹. 
@@ -190,3 +188,148 @@ Trivia Quiz: [What's meta/void?](https://en.wikipedia.org/wiki/VoID)
 > -- Franklin P. Jones
 
 ¹: Or (big) data gold mining scientists, of course :-).
+
+
+
+
+
+# What's Comma-Separated Values (CSV) - One Format? Many Formats?
+
+Text format - all (string) values separated by comma.
+
+```
+a,b,c
+1,2,3
+```
+
+in ruby:
+
+``` ruby
+[["a","b","c"],
+ ["1","2","3"]]
+```
+
+
+
+# CSV Basics - What about commas in values?
+
+Wrap the value in double quotes (`"`):
+
+```
+a,b,c,"d,e"
+1,2,3,"4,5"
+```
+
+in ruby:
+
+``` ruby
+[["a","b","c","d,e"],
+ ["1","2","3","4,5"]]
+```
+
+
+
+# CSV Basics - What about quotes in quotes?
+
+Variant 1: Double the double quote (`""`):
+
+```
+"Hamlet says, ""Seems,"" madam! Nay it is; I know not ""seems."""
+```
+
+
+Variant 2: Use backslash escape (`\"`):
+
+```
+"Hamlet says, \"Seems,\" madam! Nay it is; I know not \"seems.\""
+```
+
+
+
+
+# CSV Basics - Many Formats / Dialects / Variants?
+
+That's it :-).
+Where's the controversy?
+What's the heated discussion all about?
+
+
+# CSV Basics - Edge Cases
+
+What about leading and/or trailing whitespaces?
+
+```
+1 , 2 , 3
+"a", "b", "c"
+```
+
+What about blank lines?
+
+```
+1,2,3
+
+4,5,6
+```
+
+What "stray" quotes?
+
+```
+Paris, 48°51'24"N,2°21'03"E
+```
+
+
+What about blank vs empty string?
+
+```
+,,"",""
+```
+
+What about nulls, not a number (nan), infinity, newlines,
+and more?
+
+What about treating un-quoted and quoted values different?
+
+What about treating un-quoted and quoted leading and trailing spaces different?
+
+
+# CSV Basics - Type Inference and Data Converters
+
+How to convert strings to:
+
+- numbers
+  - integers
+  - floats
+- booleans (true, false, no, yes, on, off, etc.)
+- nulls (null, nil, etc.)
+- dates
+- arrays (?)
+- structs (?)
+- etc.
+
+
+![](i/xkcd-date.png)
+
+
+
+# CSV Formats / Variants
+
+CSV Formats supported by the (new)
+csvreader library:
+
+- CSV "The Right Way"  
+- CSV "Strict"
+- CSV <3 Numeric
+- CSV <3 JSON
+- CSV <3 YAML
+
+Database Export:
+  - PostgreSQL CSV
+  - PostgreSQL Text
+  - MySQL
+
+Or configure (or build) your own :-).
+
+![](i/xkcd-standards.png)
+
+
+
