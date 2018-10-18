@@ -122,8 +122,7 @@ Note: [Offenerhaushalt.at](https://www.offenerhaushalt.at) (= Open Spending)
 17_424 (!) datasets (that, is ~85% of all datasets)
 for budgets (money, money, money) - all in CSV.
 
-2nd largest open data publisher - the city of Vienna
-- with 440 datasets (that is, ~2%).
+2nd largest open data publisher - the city of Vienna - with 440 datasets (that is, ~2%).
 
 Open (structured) data in JPEG (195), PNG (182), GIF (170) - really?!
 
@@ -332,4 +331,316 @@ Or configure (or build) your own :-).
 ![](i/xkcd-standards.png)
 
 
+
+
+# CsvReader Library Usage
+
+
+``` ruby
+txt <<=TXT
+1,2,3
+4,5,6
+TXT
+
+records = Csv.parse( txt )     ## or CsvReader.parse
+pp records
+# => [["1","2","3"],
+#     ["4","5","6"]]
+
+# -or-
+
+records = Csv.read( "values.csv" )   ## or CsvReader.read
+pp records
+# => [["1","2","3"],
+#     ["4","5","6"]]
+
+# -or-
+
+Csv.foreach( "values.csv" ) do |rec|    ## or CsvReader.foreach
+  pp rec
+end
+# => ["1","2","3"]
+# => ["4","5","6"]
+```
+
+
+# CsvReader Library Usage - What about type inference and data converters?
+
+Use the converters keyword option to (auto-)convert strings to nulls, booleans, integers, floats, dates, etc.
+Example:
+
+``` ruby
+txt <<=TXT
+1,2,3
+true,false,null
+TXT
+
+records = Csv.parse( txt, :converters => :all )     ## or CsvReader.parse
+pp records
+# => [[1,2,3],
+#     [true,false,nil]]
+```
+
+
+Built-in converters include:
+
+| Converter    | Comments          |
+|--------------|-------------------|
+| `:integer`   |   convert matching strings to integer |
+| `:float`     |   convert matching strings to float   |
+| `:numeric`   |   shortcut for `[:integer, :float]`   |
+| `:date`      |   convert matching strings to `Date` (year/month/day) |
+| `:date_time` |   convert matching strings to `DateTime` |
+| `:null`      |   convert matching strings to null (`nil`) |
+| `:boolean`   |   convert matching strings to boolean (`true` or `false`) |
+| `:all`       |   shortcut for `[:null, :boolean, :date_time, :numeric]` |
+
+
+Or add your own converters. Example:
+
+``` ruby
+Csv.parse( 'Ruby, 2020-03-01, 100', converters: [->(v) { Time.parse(v) rescue v }] )
+#=> [["Ruby", 2020-03-01 00:00:00 +0200, "100"]]
+```
+
+A custom converter is a method that gets the value passed in 
+and if successful returns a non-string type (e.g. integer, float, date, etc.)
+or a string (for further processing with all other converters in the "pipeline" configuration).
+
+
+
+# CsvReader Library Usage - What about Enumerable?
+
+Yes, every reader includes `Enumerable` and runs on `each`.
+Use `new` or `open` without a block
+to get the enumerator (iterator).
+Example:
+
+
+``` ruby
+csv = Csv.new( "a,b,c" )
+it  = csv.to_enum
+pp it.next  
+# => ["a","b","c"]
+
+# -or-
+
+csv = Csv.open( "values.csv" )
+it  = csv.to_enum
+pp it.next
+# => ["1","2","3"]
+pp it.next
+# => ["4","5","6"]
+```
+
+
+
+
+
+# CsvReader Library Usage - What about headers?
+
+Use the `CsvHash`
+if the first line is a header (or if missing pass in the headers
+as an array) and you want your records as hashes instead of arrays of strings.
+Example:
+
+``` ruby
+txt <<=TXT
+A,B,C
+1,2,3
+4,5,6
+TXT
+
+records = CsvHash.parse( txt )      ## or CsvHashReader.parse
+pp records
+
+# -or-
+
+txt2 <<=TXT
+1,2,3
+4,5,6
+TXT
+
+records = CsvHash.parse( txt2, headers: ["A","B","C"] )      ## or CsvHashReader.parse
+pp records
+
+# => [{"A": "1", "B": "2", "C": "3"},
+#     {"A": "4", "B": "5", "C": "6"}]
+
+# -or-
+
+records = CsvHash.read( "hash.csv" )     ## or CsvHashReader.read
+pp records
+# => [{"A": "1", "B": "2", "C": "3"},
+#     {"A": "4", "B": "5", "C": "6"}]
+
+# -or-
+
+CsvHash.foreach( "hash.csv" ) do |rec|    ## or CsvHashReader.foreach
+  pp rec
+end
+# => {"A": "1", "B": "2", "C": "3"}
+# => {"A": "4", "B": "5", "C": "6"}
+```
+
+
+# CsvReader Library Usage - What about symbol keys for hashes?
+
+Yes, you can use the header_converters keyword option.
+Use `:symbol` for (auto-)converting header (strings) to symbols.
+Note: the symbol converter will also downcase all letters and
+remove all non-alphanumeric (e.g. `!?$%`) chars
+and replace spaces with underscores.
+
+Example:
+
+``` ruby
+txt <<=TXT
+a,b,c
+1,2,3
+true,false,null
+TXT
+
+records = CsvHash.parse( txt, :converters => :all, :header_converters => :symbol )  
+pp records
+# => [{a: 1,    b: 2,     c: 3},
+#     {a: true, b: false, c: nil}]
+
+# -or-
+options = { :converters        => :all, 
+            :header_converters => :symbol }
+
+records = CsvHash.parse( txt, options )  
+pp records
+# => [{a: 1,    b: 2,     c: 3},
+#     {a: true, b: false, c: nil}]
+```
+
+Built-in header converters include:
+
+| Converter    | Comments            |
+|--------------|---------------------|
+| `:downcase`  |   downcase strings  |
+| `:symbol`    |   convert strings to symbols (and downcase and remove non-alphanumerics) |
+
+
+
+# CsvReader Library Usage - What about (typed) structs?
+
+See the [csvrecord library »](https://github.com/csv11/csvrecord)
+
+Example from the csvrecord docu:
+
+Step 1: Define a (typed) struct for the comma-separated values (csv) records. Example:
+
+```ruby
+require 'csvrecord'
+
+Beer = CsvRecord.define do
+  field :brewery        ## note: default type is :string
+  field :city
+  field :name
+  field :abv, Float     ## allows type specified as class (or use :float)
+end
+```
+
+or in "classic" style:
+
+```ruby
+class Beer < CsvRecord::Base
+  field :brewery
+  field :city
+  field :name
+  field :abv, Float
+end
+```
+
+
+Step 2: Read in the comma-separated values (csv) datafile. Example:
+
+```ruby
+beers = Beer.read( 'beer.csv' )
+
+puts "#{beers.size} beers:"
+pp beers
+```
+
+pretty prints (pp):
+
+```
+6 beers:
+[#<Beer:0x302c760 @values=
+   ["Andechser Klosterbrauerei", "Andechs", "Doppelbock Dunkel", 7.0]>,
+ #<Beer:0x3026fe8 @values=
+   ["Augustiner Br\u00E4u M\u00FCnchen", "M\u00FCnchen", "Edelstoff", 5.6]>,
+ #<Beer:0x30257a0 @values=
+   ["Bayerische Staatsbrauerei Weihenstephan", "Freising", "Hefe Weissbier", 5.4]>,
+ ...
+]
+```
+
+Or loop over the records. Example:
+
+``` ruby
+Beer.read( 'beer.csv' ).each do |rec|
+  puts "#{rec.name} (#{rec.abv}%) by #{rec.brewery}, #{rec.city}"
+end
+
+# -or-
+
+Beer.foreach( 'beer.csv' ) do |rec|
+  puts "#{rec.name} (#{rec.abv}%) by #{rec.brewery}, #{rec.city}"
+end
+```
+
+
+printing:
+
+```
+Doppelbock Dunkel (7.0%) by Andechser Klosterbrauerei, Andechs
+Edelstoff (5.6%) by Augustiner Bräu München, München
+Hefe Weissbier (5.4%) by Bayerische Staatsbrauerei Weihenstephan, Freising
+Rauchbier Märzen (5.1%) by Brauerei Spezial, Bamberg
+Münchner Dunkel (5.0%) by Hacker-Pschorr Bräu, München
+Hofbräu Oktoberfestbier (6.3%) by Staatliches Hofbräuhaus München, München
+```
+
+
+# CsvReader Library Usage - What about tabular data packages with pre-defined types / schemas?
+
+See the [csvpack library »](https://github.com/csv11/csvpack)
+
+
+
+
+# Triva Quiz - Mining for Gold - What's country with the biggest gold mining / production per year?
+
+
+- [ ] Russia
+- [ ] Peru
+- [ ] China
+- [ ] South Africa
+- [ ] Australia
+- [ ] Other, please tell.
+
+
+
+
+# Triva Quiz - Mining for Gold - What's country with the biggest gold mining / production per year?
+
+```
+Country,	Gold production (metric tons),	Reserves (metric tons)
+China,	        440,  2 000
+Australia,     300,  9 800
+Russia,   	    255,  5 500
+United States,	245,	 3 000
+Canada,       	180, 	2 200
+Peru,          155, 	2 300
+South Africa, 	145, 	6 000
+Mexico,       	110, 	1 400
+Uzbekistan,   	100,	 1 800
+Brazil,         85,	 2 400
+```
+
+Source: [List of countries by gold production](https://en.wikipedia.org/wiki/List_of_countries_by_gold_production)
 
