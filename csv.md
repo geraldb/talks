@@ -649,7 +649,7 @@ See the [csvpack library »](https://github.com/csv11/csvpack)
 
 
 
-# Triva Quiz - Mining for Gold - What's country with the biggest gold mining / production per year?
+# Triva Quiz - Mining for Gold - What's the country with the biggest gold mining / production per year today?
 
 
 - [ ] Russia
@@ -662,10 +662,10 @@ See the [csvpack library »](https://github.com/csv11/csvpack)
 
 
 
-# Triva Quiz - Mining for Gold - What's country with the biggest gold mining / production per year?
+# Triva Quiz - Mining for Gold - What's the country with the biggest gold mining / production per year today?
 
 ```
-Country,	Gold production (metric tons),	Reserves (metric tons)
+Country, Gold production (metric tons), Reserves (metric tons)
 China,         440,  2 000
 Australia,     300,  9 800
 Russia,        255,  5 500
