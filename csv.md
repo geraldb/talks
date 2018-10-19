@@ -702,8 +702,6 @@ See the [csvpack library »](https://github.com/csv11/csvpack)
 
 # Triva Quiz - Mining for Gold - What's the country with the biggest gold mining / production per year today?
 
-![](i/top5-gold-producers.png)
-
 ```
 Country, Gold production (metric tons), Reserves (metric tons)
 China,         440,  2 000
@@ -717,6 +715,9 @@ Mexico,        110,  1 400
 Uzbekistan,    100,  1 800
 Brazil,         85,  2 400
 ```
+
+![](i/top5-gold-producers.png)
+
 
 (Source: [List of countries by gold production](https://en.wikipedia.org/wiki/List_of_countries_by_gold_production))
 
