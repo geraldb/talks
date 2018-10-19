@@ -1,6 +1,46 @@
 title: Mining for Gold Using the World's #1 and Most Popular Data Format
 
 
+# Agenda
+
+- Q: The World's Most Popular Data Format?
+  - Data Format Timeline / History - Past, Present, Future
+  - Data Formats @ Statistics Austria
+    - Triva Quiz: Who Invented the Space Character in Writing (and When)?
+    - Triva Quiz: Who Invented the Space Character in CSV (and When)?
+  - Data Formats @ Open Gov Data Austria
+  - Data Formats @ Open Gov Data United States of America (U.S.A.)
+  - Data Formats @ DataHub v1
+    - Data Formats @ DataHub v2  - (Tabular) Data Packages
+  - And the Winner is ... Lies, Damned Lies and Statistics
+-  What's Comma-Separated Values (CSV) - One Format? Many Formats?
+   - CSV Basics - What about commas in values?
+   - CSV Basics - What about quotes in quotes?
+   - CSV Basics - Many Formats / Dialects / Variants?
+   - CSV Basics - Edge Cases
+   - CSV Basics - Type Inference and Data Converters
+- CSV Formats / Variants
+  - CSV "The Right Way"  
+  - CSV "Strict"
+  - CSV <3 Numeric
+  - CSV <3 JSON
+  - CSV <3 YAML
+  - Database Export
+    - PostgreSQL CSV
+    - PostgreSQL Text
+    - MySQL
+- CsvReader Library Usage
+  - What about type inference and data converters?
+  - What about Enumerable?
+  - What about headers?
+  - What about symbol keys for hashes?
+  - What about (typed) structs?
+  - What about tabular data packages with pre-defined types / schemas?
+- Triva Quiz - Mining for Gold - What's the country with the biggest gold mining / production per year today?
+
+
+
+
 
 
 # Trivia Quiz - The World's Most Popular Data Format?
@@ -270,7 +310,7 @@ What about blank lines?
 4,5,6
 ```
 
-What "stray" quotes?
+What about "stray" quotes?
 
 ```
 Paris, 48°51'24"N,2°21'03"E
@@ -335,9 +375,7 @@ Or configure (or build) your own :-).
 
 
 
-
-# CsvReader Library - Database Export Variants Configuration
-
+# Database Export Variants Configuration (CsvReader Library Ed.)
 
 `Csv.mysql` uses:
 
