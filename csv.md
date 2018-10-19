@@ -716,5 +716,7 @@ Uzbekistan,    100,  1 800
 Brazil,         85,  2 400
 ```
 
+![](i/top5-gold-producers.png)
+
 (Source: [List of countries by gold production](https://en.wikipedia.org/wiki/List_of_countries_by_gold_production))
 
