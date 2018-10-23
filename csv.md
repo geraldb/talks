@@ -80,8 +80,8 @@ title: Mining for Gold Using the World's #1 and Most Popular Data Format
 
 Now
 
-- [CSV ♥ JSON](https://github.com/csv11/csv-json) - 2018-  (3 days ago)
-- [CSV ♥ YAML](https://github.com/csv11/csv-yaml) - 2018-  (upcoming :-))
+- [CSV ♥ JSON](https://github.com/csvspecs/csv-json) - 2018-  (3 days ago)
+- [CSV ♥ YAML](https://github.com/csvspecs/csv-yaml) - 2018-  (upcoming :-))
 
 
 Notes:
@@ -127,7 +127,7 @@ and the comma `,` is the decimal separator/point e.g. `13,8` :-).
 
 # Triva Quiz: Who Invented the Space Character in CSV (and When)?
 
-- [ ] [CSV v1.1](https://csv11.github.io) in 2018 :-)
+- [ ] [CSV v1.1](https://github.com/csvspecs/csv-v11) in 2018 :-)
 
 Still waiting :-). Yes, you can. Let's make it happen.
 Pretty printed version with space (CSV v1.1). Example:
@@ -601,7 +601,7 @@ Built-in header converters include:
 
 # CsvReader Library Usage - What about (typed) structs?
 
-See the [csvrecord library »](https://github.com/csv11/csvrecord)
+See the [csvrecord library »](https://github.com/csvreader/csvrecord)
 
 Example from the csvrecord docu:
 
@@ -682,7 +682,7 @@ Hofbräu Oktoberfestbier (6.3%) by Staatliches Hofbräuhaus München, München
 
 # CsvReader Library Usage - What about tabular data packages with pre-defined types / schemas?
 
-See the [csvpack library »](https://github.com/csv11/csvpack)
+See the [csvpack library »](https://github.com/csvreader/csvpack)
 
 
 
@@ -716,8 +716,9 @@ Uzbekistan,    100,  1 800
 Brazil,         85,  2 400
 ```
 
+<!--
 ![](i/top5-gold-producers.png)
-
+-->
 
 (Source: [List of countries by gold production](https://en.wikipedia.org/wiki/List_of_countries_by_gold_production))
 
