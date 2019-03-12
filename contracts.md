@@ -3,6 +3,37 @@
 title: Contracts, Contracts, Contracts - Code Your Own (Crypto Blockchain) Contracts w/ Ruby (sruby), Universum & Co
 
 
+# Agenda
+
+- What's a (Smart) Contract?
+  - Code is Law?
+- Contract-Oriented Programming Languages
+  - Genesis - Bitcoin Script
+  - Ivy - Higher-Level Bitcoin Script
+  - History Corner - Bitcoin - The World's Worst Database for Everything? - Bitcoin Maximalism in Action
+  - Turing Complete and the Halting Problem
+  - Fees, Fees, Fees - $$$ - There's No Free Lunch
+  - What's the World's Most Popular Programming Language? Python? JavaScript?
+    - Solidity - JavaScript-like Contract-Oriented Programming Languages with (Static) Types
+    - Vyper - Python-like Contract-Oriented Programming Languages with (Static) Types (Python 3-Compatible Syntax)
+  - Why Not Just Ruby?
+    - Small, Smart, Secure, Safe, Solid & Sound (S6) Ruby - Yes, It's Just Ruby
+- 10 Contracts - Contracts by Example
+  - Hello, World! - Greeter
+  - Piggy Bank
+  - Simple Storage
+  - Simple Ponzi - King of Ether
+  - Ballot - Liquid / Delegative Democracy - Let's Vote
+  - Roll the (Satoshi) Dice - Win x65 000 (Casino Gambling)
+  - Tic-Tac-Toe
+  - Kick Start Your Project with a Crowd Funder
+  - PonzICO - Blockchain Performance Art
+  - Powerball Mega Millions Lottery
+  - New to (Secure) Ruby Contract Programming / Scripting?
+
+
+
+
 
 # What's a (Smart) Contract?
 
