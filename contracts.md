@@ -19,6 +19,15 @@ with every transaction and transaction receipt recorded tamper-proof
 "forever".
 
 
+# Code is Law?
+
+Discuss.
+
+
+[Reflections on the Blockchain](Reflections on the Blockchain by Rufus Pollock (Open Knowledge Foundation),
+by Rufus Pollock (Open Knowledge Foundation and Data Hub / Datopian, Inc.), July 2016 -- The DAO: Code is not Law - and It's Dangerous to Think So ++ The Internet changed the world - surely the Blockchain will too? ++ Gold-rush or Internet-rush? ++ Governance Matters in Bitcoin ++ The Myth of a Costless, Ownerless Network ++ Lessons from History
+
+
 
 # Contract-Oriented Programming Languages - Genesis - Bitcoin Script
 
@@ -29,18 +38,98 @@ called Bitcoin Script.
 Very limited?
 
 - "Stateless", that is, no storage.
-- No loops.
+- No loops. No jumps.
 - Can check signatures & time locks and not much more.
 
-Example - Freezing funds until a time in the future:
+Example 1 - Standard Transaction to Bitcoin address (pay-to-pubkey-hash)
 
 ```
-scriptPubKey: <expiry time> OP_CHECKLOCKTIMEVERIFY OP_DROP OP_DUP OP_HASH160 <pubKeyHash> OP_EQUALVERIFY OP_CHECKSIG
-scriptSig: <sig> <pubKey>
+input (scriptSig): <sig> <pubKey>
+
+scriptPubKey:
+  DUP                 ;; Top stack item is duplicated
+  HASH160             ;; Top stack item is hashed
+  PUSH <pubKeyHash>   ;; Constant added to the stack
+  EQUALVERIFY         ;; Equality is checked between the top two stack items
+  CHECKSIG            ;; Signature is checked for top two stack items
+```
+
+Example 2 - Freezing funds until a time in the future:
+
+```
+input (scriptSig): <sig> <pubKey>
+
+scriptPubKey:
+  PUSH <expiry time>     ;; Constant added to the stack
+  CHECKLOCKTIMEVERIFY    ;; Top stack item is checked against the current time or block height
+  DROP                   ;; Top stack item is removed
+  DUP                    ;; Top stack item is duplicated
+  HASH160                ;; Top stack item is hashed
+  PUSH <pubKeyHash>      ;; Constant added to the stack
+  EQUALVERIFY            ;; Equality is checked between the top two stack items
+  CHECKSIG               ;; Signature is checked for top two stack items
 ```
 (Source: [Script @ Bitcoin Wiki](https://en.bitcoin.it/wiki/Script))
 
 Why?
+
+
+
+# Contract-Oriented Programming Languages - Ivy - Higher-Level Bitcoin Script
+
+```
+contract LockWithMultisig(
+  pubKey1: PublicKey,
+  pubKey2: PublicKey,
+  pubKey3: PublicKey,
+  val: Value
+) {
+  clause spend(sig1: Signature, sig2: Signature) {
+    verify checkMultiSig([pubKey1, pubKey2, pubKey3], [sig1, sig2])
+    unlock val
+  }
+}
+```
+
+same as:
+
+```
+PUSH 0
+ROT
+ROT
+PUSH 2
+PUSH <pubKey3>
+PUSH <pubKey2>
+PUSH <pubKey1>
+PUSH 3
+CHECKMULTISIG
+```
+
+(Source: [Ivy Playground for Bitcoin](https://ivy-lang.org/bitcoin))
+
+
+# History Corner - Bitcoin - The World's Worst Database for Everything? - Bitcoin Maximalism in Action
+
+
+[NameCoin (formerly BitDNS)](https://en.wikipedia.org/wiki/Namecoin) - a decentralized domain name service (DNS) for a new top level (internet) domain,
+that is, `.bit`. built on top of bitcoin
+
+[MasterCoin](https://bitcoinmagazine.com/articles/mastercoin-a-second-generation-protocol-on-the-bitcoin-blockchain-1383603310/) - a new application "platform" or protocol layer running on top of bitcoin - like HTTP runs on top of TCP/IP
+
+[Colored Coins](https://en.bitcoin.it/wiki/Colored_Coins) - a class of methods for coding and managing real world assets on top of bitcoin
+
+and many more.
+
+FAIL. FAIL. FAIL.
+
+Why?
+
+
+Aside: What's Bitcoin Maximalism?
+
+See [Best of Bitcoin Maximalist - Scammers, Morons, Clowns, Shills & BagHODLers - Inside The New New Crypto Ponzi Economics](https://bitsblocks.github.io/bitcoin-maximalist) by Trolly McTrollface
+
+
 
 
 # Contract-Oriented Programming Languages - Turing Complete and the Halting Problem
@@ -79,8 +168,8 @@ and for extra safety there's a maximum limit of CPU cycle / bytecode instruction
 
 Python? JavaScript?
 
-Solidity - JavaScript-like (Static)
-Contract-Oriented Programming Languages with Types
+Solidity - JavaScript-like
+Contract-Oriented Programming Languages with (Static) Types
 
 ```
 contract GavToken
@@ -117,8 +206,8 @@ Compiles to Ethereum Virtual Machine (EVM) Bytecode
 
 Python? JavaScript?
 
-~~Serepent~~  Vyper - Python-like (Static)
-Contract-Oriented Programming Languages with Types (Python 3-Compatible Syntax)
+~~Serepent~~  Vyper - Python-like
+Contract-Oriented Programming Languages with (Static) Types (Python 3-Compatible Syntax)
 
 ```
 Transfer: event({_from: indexed(address), _to: indexed(address), _value: uint256})
@@ -300,9 +389,125 @@ puts greeter_es.greet
 
 # Contracts by Example - Piggy Bank
 
+``` ruby
+#############################
+# Piggy Bank Contract
+
+def setup
+  @owner    = msg.sender
+  @deposits = 0
+end
+
+def deposit               # payable
+  assert msg.value > 0    # check whether ether was actually sent
+  @deposits +=  1
+end
+
+def kill
+ assert msg.sender == @owner
+ selfdestruct( @owner )
+ # when the account which instantiated this contract calls it again, it terminates and sends back its balance
+end
+```
+
+(Source: [Universum Contract Samples](https://github.com/s6ruby/universum-contracts))
+
+
 # Contracts by Example - Simple Storage
 
+``` ruby
+###############################
+# Simple Store Contract
+
+def setup
+  @value = 0
+end
+
+def set( value )
+  @value = value
+end
+
+def get
+  @value
+end
+```
+
+(Source: [Universum Contract Samples](https://github.com/s6ruby/universum-contracts))
+
+
+
 # Contracts by Example - Simple Ponzi - King of Ether
+
+``` ruby
+#############################
+# Simple Ponzi Contract
+
+def initialize
+  @current_investor   = msg.sender   # type address - (hex) string starts with 0x
+  @current_investment = 0            # type uint
+end
+
+def receive    ## @payable default function
+  # note: new investments must be 10% greater than current
+  minimum_investment = @current_investment * 11/10
+  assert( msg.value > minimum_investment )
+
+  # record new investor
+  previous_investor   = @current_investor
+  @current_investor   = msg.sender
+  @current_investment = msg.value
+
+  # pay out previous investor
+  previous_investor.send( msg.value )
+end
+```
+
+(Source: [Programming Crypto Blockchain Contracts Step-by-Step Book / Guide](https://github.com/s6ruby/programming-cryptocontracts))
+
+
+
+# Contracts by Example - Simple Ponzi - Running on the Private (Local) Test Network
+
+``` ruby
+require 'universum'
+
+###
+# test contract
+
+## setup test accounts with starter balance
+Account[ '0x1111' ].balance = 0
+Account[ '0xaaaa' ].balance = 1_000_000
+Account[ '0xbbbb' ].balance = 1_200_000
+Account[ '0xcccc' ].balance = 1_400_000
+
+## pretty print (pp) all known accounts with balance
+pp Uni.accounts
+
+## genesis - create contract
+ponzi = Uni.send_transaction( from: '0x1111', data: './ponzi_simple' ).contract
+pp ponzi
+#=> #<SimplePonzi @current_investment=0, @current_investor="0x1111">
+
+Uni.send_transaction( from: '0xaaaa', to: ponzi, value: 1_000_000 )
+pp ponzi
+#=> #<SimplePonzi @current_investment=1000000, @current_investor="0xaaaa">
+
+Uni.send_transaction( from: '0xbbbb', to: ponzi, value: 1_200_000 )
+pp ponzi
+#=> #<SimplePonzi @current_investment=1200000, @current_investor="0xbbbb">
+
+Uni.send_transaction( from: '0xcccc', to: ponzi, value: 1_400_000 )
+pp ponzi
+#=> #<SimplePonzi @current_investment=1400000, @current_investor="0xcccc">
+
+## pretty print (pp) all known accounts with balance
+pp Uni.accounts
+#=> [#<Account @address="0x1111", @balance=1000000>,
+#    #<Account @address="0xaaaa", @balance=1200000>,
+#    #<Account @address="0xbbbb", @balance=1400000>,
+#    #<Account @address="0xcccc", @balance=0>]
+```
+
 
 # Contracts by Example - Ballot - Liquid / Delegative Democracy - Let's Vote
 
@@ -465,14 +670,15 @@ end
 # Tic Tac Toe Player vs Player Game Contract
 
 
-Winner = Enum.new( :none, :draw, :host, :challenger )
+enum :Winner, :none, :draw, :host, :challenger
 
-Game = Struct.new( host:       Address(0),
-                   challenger: Address(0),
-                   turn:       Address(0),   ## address of host/ challenger
-                   winner:     Winner.none,
-                   board:      Array.of( Integer, 3*3 )
-                 )
+struct :Game,
+  host:       Address(0),
+  challenger: Address(0),
+  turn:       Address(0),   ## address of host/ challenger
+  winner:     Winner.none,
+  board:      Array.of( Integer, 3*3 )
+
 
 def setup
   @games = Mapping.of( Address => Mapping.of( Address => Game ))
@@ -701,8 +907,8 @@ end
 
 
 # log event of successful investment/withdraw and address
-Investment = Event.new( :investor, :amount )
-Withdrawal = Event.new( :investor, :amount )
+event :Investment, :investor, :amount
+event :Withdrawal, :investor, :amount
 
 # constructor for initializing PonzICO.
 #  the owner is the genius who made this revolutionary smart contract
