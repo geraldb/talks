@@ -55,7 +55,7 @@ with every transaction and transaction receipt recorded tamper-proof
 Discuss.
 
 
-[Reflections on the Blockchain](Reflections on the Blockchain by Rufus Pollock (Open Knowledge Foundation),
+[Reflections on the Blockchain](https://rufuspollock.com/2016/07/02/reflections-on-the-blockchain/),
 by Rufus Pollock (Open Knowledge Foundation and Data Hub / Datopian, Inc.), July 2016 -- The DAO: Code is not Law - and It's Dangerous to Think So ++ The Internet changed the world - surely the Blockchain will too? ++ Gold-rush or Internet-rush? ++ Governance Matters in Bitcoin ++ The Myth of a Costless, Ownerless Network ++ Lessons from History
 
 
