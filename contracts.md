@@ -9,13 +9,13 @@ title: Contracts, Contracts, Contracts - Code Your Own (Crypto Blockchain) Contr
   - Code is Law?
 - Contract-Oriented Programming Languages
   - Genesis - Bitcoin Script
-  - Ivy - Higher-Level Bitcoin Script
-  - History Corner - Bitcoin - The World's Worst Database for Everything? - Bitcoin Maximalism in Action
+    - Ivy - Higher-Level Bitcoin Script
+    - History Corner - Bitcoin - The World's Worst Database for Everything? - Bitcoin Maximalism in Action
   - Turing Complete and the Halting Problem
-  - Fees, Fees, Fees - $$$ - There's No Free Lunch
+    - Fees, Fees, Fees - $$$ - There's No Free Lunch
   - What's the World's Most Popular Programming Language? Python? JavaScript?
-    - Solidity - JavaScript-like Contract-Oriented Programming Languages with (Static) Types
-    - Vyper - Python-like Contract-Oriented Programming Languages with (Static) Types (Python 3-Compatible Syntax)
+    - Solidity - JavaScript-like Contract-Oriented Programming Language with (Static) Types
+    - Vyper - Python-like Contract-Oriented Programming Language with (Static) Types - Python 3-Compatible Syntax
   - Why Not Just Ruby?
     - Small, Smart, Secure, Safe, Solid & Sound (S6) Ruby - Yes, It's Just Ruby
 - 10 Contracts - Contracts by Example
@@ -29,7 +29,10 @@ title: Contracts, Contracts, Contracts - Code Your Own (Crypto Blockchain) Contr
   - Kick Start Your Project with a Crowd Funder
   - PonzICO - Blockchain Performance Art
   - Powerball Mega Millions Lottery
-  - New to (Secure) Ruby Contract Programming / Scripting?
+- Networks, Networks, Networks - Running the Contract Code
+  - Hello, World! - Greeter - Running on the Private (Local) Test Network
+  - Simple Ponzi - Running on the Private (Local) Test Network
+- New to (Secure) Ruby Contract Programming / Scripting?
 
 
 
@@ -142,10 +145,10 @@ CHECKMULTISIG
 # History Corner - Bitcoin - The World's Worst Database for Everything? - Bitcoin Maximalism in Action
 
 
-[NameCoin (formerly BitDNS)](https://en.wikipedia.org/wiki/Namecoin) - a decentralized domain name service (DNS) for a new top level (internet) domain,
+[Namecoin (formerly BitDNS)](https://en.wikipedia.org/wiki/Namecoin) - a decentralized domain name service (DNS) for a new top level (internet) domain,
 that is, `.bit`. built on top of bitcoin
 
-[MasterCoin](https://bitcoinmagazine.com/articles/mastercoin-a-second-generation-protocol-on-the-bitcoin-blockchain-1383603310/) - a new application "platform" or protocol layer running on top of bitcoin - like HTTP runs on top of TCP/IP
+[Mastercoin](https://bitcoinmagazine.com/articles/mastercoin-a-second-generation-protocol-on-the-bitcoin-blockchain-1383603310/) - a new application "platform" or protocol layer running on top of bitcoin - like HTTP runs on top of TCP/IP
 
 [Colored Coins](https://en.bitcoin.it/wiki/Colored_Coins) - a class of methods for coding and managing real world assets on top of bitcoin
 
@@ -200,9 +203,9 @@ and for extra safety there's a maximum limit of CPU cycle / bytecode instruction
 Python? JavaScript?
 
 Solidity - JavaScript-like
-Contract-Oriented Programming Languages with (Static) Types
+Contract-Oriented Programming Language with (Static) Types
 
-```
+``` solidity
 contract GavToken
 {
   mapping(address=>uint) balances;
@@ -238,9 +241,9 @@ Compiles to Ethereum Virtual Machine (EVM) Bytecode
 Python? JavaScript?
 
 ~~Serepent~~  Vyper - Python-like
-Contract-Oriented Programming Languages with (Static) Types (Python 3-Compatible Syntax)
+Contract-Oriented Programming Language with (Static) Types - Python 3-Compatible Syntax
 
-```
+``` python
 Transfer: event({_from: indexed(address), _to: indexed(address), _value: uint256})
 Approval: event({_owner: indexed(address), _spender: indexed(address), _value: uint256})
 
