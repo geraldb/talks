@@ -3,14 +3,6 @@
 title: Contracts, Contracts, Contracts - Code Your Own (Crypto Blockchain) Contracts w/ Ruby (sruby), Universum & Co
 
 
-# Contracts, Contract, Contracts ++ New Contracts Per Month - Total Contracts
-
-
-![](i/state-of-the-dapps-stats.png)
-
-(Source: [State of the DApps Stats](https://www.stateofthedapps.com/stats))
-
-
 
 # Agenda
 
@@ -43,6 +35,13 @@ title: Contracts, Contracts, Contracts - Code Your Own (Crypto Blockchain) Contr
   - Simple Ponzi - Running on the Private (Local) Test Network
 - New to (Secure) Ruby Contract Programming / Scripting?
 
+
+# Contracts, Contract, Contracts ++ New Contracts Per Month - Total Contracts ⇑⇑
+
+
+![](i/state-of-the-dapps-stats.png)
+
+(Source: [State of the DApps Stats](https://www.stateofthedapps.com/stats))
 
 
 
