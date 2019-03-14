@@ -36,7 +36,7 @@ title: Contracts, Contracts, Contracts - Code Your Own (Crypto Blockchain) Contr
 - New to (Secure) Ruby Contract Programming / Scripting?
 
 
-# Contracts, Contract, Contracts ++ New Contracts Per Month - Total Contracts ⇑⇑
+# Contracts, Contract, Contracts ++ New Contracts Per Month - Total Contracts ⇑⇑⇑⇑⇑
 
 
 ![](i/state-of-the-dapps-stats.png)
@@ -370,6 +370,16 @@ Runs on "plain vanilla" ruby (*).
 - Kick Start Your Project with a Crowd Funder
 - PonzICO - Blockchain Performance Art
 - Powerball Mega Millions Lottery
+
+
+
+# Contracts, Contracts, Contracts - Transactions Per Contract Category
+
+![](i/state-of-the-dapps-txns-per-category.png)
+
+(Source: [State of the DApps Stats](https://www.stateofthedapps.com/stats))
+
+
 
 
 # Contracts by Example - Hello, World! - Greeter
