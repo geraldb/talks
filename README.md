@@ -1,17 +1,37 @@
 
 # Talks, talks, talks
 
-sources in plain text w/ markdown formatting
+sources in text w/ formatting in markdown conventions
+
+
+
+## 2019
+
+Tue March 12th, 2019 -
+[**Contracts, Contracts, Contracts - Code Your Own (Crypto Blockchain) Contracts w/ Ruby (sruby), Universum & Co**](https://github.com/geraldb/talks/blob/master/contracts.md)
+@ [Vienna Ruby Crypto Meetup](https://meetup.com/vienna-rb/events/258872693)
+
 
 
 ## 2018
 
-Mon Mar 12th, 2018 -  [**Build (Online) Presentations / Talks (and Handout Notes) with (Structured) Text with Formatting in Markdown Markup Conventions and (Off-the-Shelf Open Free) Slide Design Themes (Reveal.js, Bespoke.js, Impress.js, Shower.js, S6, ...) and the Jekyll (Static) Website Compiler**](https://github.com/geraldb/talks/blob/master/slideshow-s9.md)
+Thu October 18th, 2018 -
+[**Mining for Gold Using the World's #1 and Most Popular Data Format**](https://github.com/geraldb/talks/blob/master/csv.md)
+@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/255296867) 
+
+Wed June 20th, 2018 - 
+[**Stay Static - Build Static Websites w/ VuePress (and Text with Formatting Conventions in Markdown)**](https://github.com/geraldb/talks/blob/master/vuepress.md) 
+@ [Vienna Vue.js Meetup](https://meetup.com/Vue-js-Vienna/events/249255348)
+
+Wed April 11th, 2018 -
+[**Blockchain! Blockchain! Blockchain! - Build Your Own Blockchains in Go from Zero (Scratch)**](https://github.com/geraldb/talks/blob/master/blockchain_go.md)
+@ [Vienna Go Meetup](https://meetup.com/vienna-go-Vienna-Go-User-Group/events/248920971)
+
+Mon March 12th, 2018 -  [**Build (Online) Presentations / Talks (and Handout Notes) with (Structured) Text with Formatting in Markdown Markup Conventions and (Off-the-Shelf Open Free) Slide Design Themes (Reveal.js, Bespoke.js, Impress.js, Shower.js, S6, ...) and the Jekyll (Static) Website Compiler**](https://github.com/geraldb/talks/blob/master/slideshow-s9.md)
 @ [Austria.TXT Meetup](https://github.com/austriacodes/austria.txt)
 
-
-Thu Mar 8th, 2018 - [**Build (Online) Books and Documentation with Markdown and Octobook Themes and the Jekyll (Static) Website Compiler - Incl. Yuki & Moto Press Bookshelf Case Study**](https://github.com/geraldb/talks/blob/master/octobook.md)
-@ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/247811456)
+Thu March 8th, 2018 - [**Build (Online) Books and Documentation with Markdown and Octobook Themes and the Jekyll (Static) Website Compiler - Incl. Yuki & Moto Press Bookshelf Case Study**](https://github.com/geraldb/talks/blob/master/octobook.md)
+@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/247811456)
 
 
 
@@ -19,34 +39,33 @@ Thu Mar 8th, 2018 - [**Build (Online) Books and Documentation with Markdown and 
 
 ## 2017
 
-Thu Dec 7th, 2017 - [**Blockchain! Blockchain! Blockchain! - Build Your Own Blockchains in Ruby from Zero (Scratch)**](https://github.com/geraldb/talks/blob/master/blockchain_ruby.md) •
+Thu December 7th, 2017 - [**Blockchain! Blockchain! Blockchain! - Build Your Own Blockchains in Ruby from Zero (Scratch)**](https://github.com/geraldb/talks/blob/master/blockchain_ruby.md) •
 [(Slides)](http://slideshow-s9.github.io/demos/blockchain_ruby.html), [(Print)](http://slideshow-s9.github.io/demos/blockchain_ruby.pdf.html)
-@ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/245432241)
+@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/245432241)
 
 
-
-Mon Nov 13rd, 2017 -
+Mon November 13rd, 2017 -
 [**Build Blazing Fast (Static) Websites with GraphQL (and Gatsby)**](gatsby2.md#whats-graphql) •
 [(Slides)](http://slideshow-s9.github.io/demos/gatsby2.html), [(Print)](http://slideshow-s9.github.io/demos/gatsby2.pdf.html)
 @ [GraphQL Vienna Meetup](https://meetup.com/GraphQL-Vienna/events/243984437)
 
 
-Wed Sept 27th, 2017 -
+Wed September 27th, 2017 -
 [**Blockchain! Blockchain! Blockchain! - Build Your Own Blockchains in JavaScript from Zero (Scratch)**](https://github.com/geraldb/talks/blob/master/blockchain.md) •
 [(Slides)](http://slideshow-s9.github.io/demos/blockchain.html), [(Print)](http://slideshow-s9.github.io/demos/blockchain.pdf.html)
-@ [Vienna.js Meetup](https://meetup.com/viennajs/events/236300243)
+@ [Vienna JavaScript Meetup](https://meetup.com/viennajs/events/236300243)
 
-Wed Sept 20th, 2017 -
+Wed September 20th, 2017 -
 [**Progressive Web Apps (PWAs) and Lighthouse - From Responsive to Mobile to Offline First Design**](progressive.md)
 @ Inhouse (Private)
 
-Thu Sept 14th, 2017 -
+Thu September 14th, 2017 -
 [**JSON - What's Next for the No 1. Universal (Non-Binary/Human) Data Exchange Format**](jsonnext.md)
 @ [Microservices Vienna Meetup](https://meetup.com/microservices-vienna/events/241960207)
 
-Tue Sept 5th, 2017 -
+Tue September 5th, 2017 -
 [**Gastsby 1.0 - Build Single-Page Static Websites in React w/ Gatsby and GraphQL**](gatsby2.md)
-@ [React Vienna Meetup](https://meetup.com/ReactVienna/events/242821292)
+@ [React (JavaScript) Vienna Meetup](https://meetup.com/ReactVienna/events/242821292)
 
 
 
@@ -56,15 +75,15 @@ Tue July 4th, 2017 -
 
 Thu June 8th, 2017 -
 [**Meet Jason Feed - The New Web Feed & Syndication Guy (Ruby Edition)**](webfeeds2.md)
-@ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/239689512)
+@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/239689512)
 
 Wed May 31st, 2017 -
 [**Meet Jason Feed - The New Web Feed & Syndication Guy (JavaScript Edition)**](jsonfeed.md)
-@ [Vienna.js Meetup](https://meetup.com/viennajs/events/236300238)
+@ [Vienna JavaScript Meetup](https://meetup.com/viennajs/events/236300238)
 
 Wed May 17th, 2017 - 
 [**Building Static Websites with Jigsaw 'n' Blade (in PHP)**](jigsaw.md) 
-@ [Laravel Vienna Meetup](https://meetup.com/Laravel-Frameworkers-Vienna/events/237725787)
+@ [Laravel (PHP) Vienna Meetup](https://meetup.com/Laravel-Frameworkers-Vienna/events/237725787)
 
 Fri May 5th, 2017 -
 [**The World Factbook - Explore the World with Free Open Public Domain Datasets**](factbook.md) 
@@ -87,7 +106,7 @@ Wed April 19th, 2017 -
 
 Thu April 6th, 2017 -
 [**New Horizons - Build Your Own (Static) Planet News Site with Pluto (and Ruby)**](planet.md)
-@ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/238794079)
+@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/238794079)
 
 The talk covers how to read web feeds in ruby w/ the standard rss
 module and 3rd party libraries such as the universal feedparser gem and
@@ -101,7 +120,7 @@ wrap up discussing the future of planet ruby.
 
 Wed March 29th, 2017 -
 [**factbook.json - How to model the world with JavaScript**](factbook.md)
-@ [Vienna.js Meetup](https://meetup.com/viennajs/events/230066469)
+@ [Vienna JavaScript Meetup](https://meetup.com/viennajs/events/230066469)
 
 Wed March 15th, 2017 -
 [**Jekyll vs Middleman  - Build static websites with Ruby**](jekyll_vs_middleman.md)
@@ -110,35 +129,35 @@ Wed March 15th, 2017 -
 
 ## 2016
 
-Thu Nov 17th, 2016 - 
+Thu November 17th, 2016 - 
 Part I) [**factbook.json - Turn the World Factbook into Open (Structured) Data**](factbook.md)  
 Part II) [**factbook.json - Using Git (and GitHub) for (Publishing) Data**](git_for_data.md)
 @ [Vienna Open Data Meetup](https://meetup.com/Open-Knowledge-Oesterreich/events/233208866)
 
 
-Thu Sept 22nd, 2016 -
+Thu September 22nd, 2016 -
 [**Building Static Websites with Jigsaw 'n' Blade (in PHP)**](jigsaw.md)
 @ [Vienna PHP Meetup](https://meetup.com/viennaphp/events/232763541)
 
-Wed Aug 31rd, 2016 -
+Wed August 31rd, 2016 -
 [**Building static websites with the Great Gatsby and React.js web components**](gatsby.md)
-@ [Vienna.js Meetup](https://meetup.com/viennajs/events/230515294)
+@ [Vienna JavaScript Meetup](https://meetup.com/viennajs/events/230515294)
 
-Thu Aug 11th, 2016 -
+Thu August 11th, 2016 -
 Part I) [**Building static websites with Metalsmith**](metalsmith2.md)
 Part II) [**Building static websites with Gatsby**](gatsby.md)
-@ [Stahlstadt.js Linz Meetup](https://meetup.com/stahlstadt-js/events/232729094)
+@ [Stahlstadt JavaScript Linz Meetup](https://meetup.com/stahlstadt-js/events/232729094)
 
 Wed July 20th, 2016 -
 [**The New New JavaScript / ECMAScript (ES6, ES7, ES8)**](es6.md) @ Inhouse (Private) 
 
 Wed July 13rd, 2016 -
 [**Stay Static - Build Single-Page Websites with the Great Gatsby**](gatsby.md)
-@ [React Vienna Meetup](https://meetup.com/ReactVienna/events/232438531)
+@ [React (JavaScript) Vienna Meetup](https://meetup.com/ReactVienna/events/232438531)
 
 Thu June 9th, 2016 -
 [**Stay Static - Build Static Websites with Hugo and the Go Template Language**](gohugo.md)
-@ [Vienna Golang Meetup](https://meetup.com/Vienna-Golang-Meetup/events/230458823)
+@ [Vienna Go Meetup](https://meetup.com/Vienna-Golang-Meetup/events/230458823)
 
 Sat April 30th, 2016 @ [Linuxwochen Wien '16](http://www.linuxwochen.at/Wien)
 
@@ -157,11 +176,11 @@ In 2016 you can get pretty far with just HTML, JS and CSS. The talk shows how to
 
 Tue March 8th, 2016 - 
 [**Building Static Websites with Metalsmith (+Handelbars/Nunjucks)**](metalsmith2.md)
-@ [Node.js Vienna Meetup](https://meetup.com/nodejs-vienna/events/228638709)
+@ [Node (JavaScript) Vienna Meetup](https://meetup.com/nodejs-vienna/events/228638709)
 
 Thu March 3rd, 2016 -
 [**Stay Static - Jekyll vs. Middleman - Build Static Websites with Ruby**](jekyll_vs_middleman.md)
-@ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/228656812)
+@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/228656812)
 
 
 Wed March 2nd, 2016 -
@@ -170,13 +189,13 @@ Wed March 2nd, 2016 -
 
 ## 2015
 
-Thu Oct 15, 2015 -
+Thu October 15, 2015 -
 [**Dr. Jekyll and Mr. Hyde: The Missing Theme Package Manager & Quick Start Script Wizard**](drjekyll.md)
-@ [Vienna.rb Meetup](https://meetup.com/vienna-rb/events/225097350)
+@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/225097350)
 
-Wed Sept 30, 2015 -
+Wed September 30, 2015 -
 [**Add (Deep) Anchor Links to Your Website**](anchor.md)
-@ [Vienna.js Meetup](https://meetup.com/viennajs/events/220339170)
+@ [Vienna JavaScript Meetup](https://meetup.com/viennajs/events/220339170)
 
 Fri May 8th, 2015 @ [Linuxwochen Wien '15](http://www.linuxwochen.at/Wien)
 
@@ -206,9 +225,9 @@ Join to learn more and discuss the state of open data with a focus on practical 
 
 ## 2014
 
-Wed Aug 27th, 2014 -
+Wed August 27th, 2014 -
 [**Building Your Own Web Components (Tags / Elements)**](webcomponents2.md)
-@ [Vienna.js Meetup](https://meetup.com/viennajs/events/135052012)
+@ [Vienna JavaScript Meetup](https://meetup.com/viennajs/events/135052012)
 
 
 
@@ -229,7 +248,7 @@ What's the state of open data for the World Cup? And football in general? What o
 
 Wed April 30th, 2014 -
 [**Using Open Football Data - Get Ready for the World Cup in Brazil w/ JavaScript**](open_data_world_cup_with_js.md)
-@ [Vienna.js Meetup](https://meetup.com/viennajs/events/126159362)
+@ [Vienna JavaScript Meetup](https://meetup.com/viennajs/events/126159362)
 
 
 
@@ -237,7 +256,7 @@ Wed April 30th, 2014 -
 
 Mon Oct 7th, 2013 -
 [**(J)Ruby in Action - Web Apps w/ Rails 'n' Jetty"**](jruby_web_apps.md)
-@ JUG Austria
+@ Java Austria
 
 Fri May 3rd, 2013 @ [Linuxwochen Wien '13](http://www.linuxwochen.at/Wien)
 
