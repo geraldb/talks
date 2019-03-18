@@ -3,6 +3,14 @@
 
 sources in text w/ formatting in markdown conventions
 
+[2019](#2019) •
+[2018](#2018) •
+[2017](#2017) •
+[2016](#2016) •
+[2015](#2015) •
+[2014](#2014) •
+[2013](#2013)
+
 
 
 ## 2019
@@ -26,6 +34,10 @@ Wed June 20th, 2018 -
 Wed April 11th, 2018 -
 [**Blockchain! Blockchain! Blockchain! - Build Your Own Blockchains in Go from Zero (Scratch)**](https://github.com/geraldb/talks/blob/master/blockchain_go.md)
 @ [Vienna Go Meetup](https://meetup.com/vienna-go-Vienna-Go-User-Group/events/248920971)
+
+Tue March 13th, 2018 - 
+[**Blockchain vs (Hyper) Ledger -- Inside (Hyper) Ledger Lite - Add Transactions One Block at a Time and Balance the Accounts (Books)**](https://github.com/geraldb/talks/blob/master/hyperledger.md)
+@ [Hyperledger Vienna](https://meetup.com/Hyperledger-Vienna/events/246847194)
 
 Mon March 12th, 2018 -  [**Build (Online) Presentations / Talks (and Handout Notes) with (Structured) Text with Formatting in Markdown Markup Conventions and (Off-the-Shelf Open Free) Slide Design Themes (Reveal.js, Bespoke.js, Impress.js, Shower.js, S6, ...) and the Jekyll (Static) Website Compiler**](https://github.com/geraldb/talks/blob/master/slideshow-s9.md)
 @ [Austria.TXT Meetup](https://github.com/austriacodes/austria.txt)
