@@ -200,7 +200,7 @@ Values set from user input will first be converted into the appropriate ruby typ
 ## Bool Conversion - Empty String
 
 ``` ruby
-!!""        #=> false
+!! ""       #=> false
 ActiveModel::Type::Boolean.cast( "" )  #=> nil
 "".to_b     #=> false
 "".to_bool  #=> nil
@@ -211,7 +211,7 @@ Bool("")    #=> ArgumentError: invalid value "":String for Bool(); parse_bool fa
 ## Bool Conversion - Number Two
 
 ``` ruby
-!!2        #=> true
+!! 2        #=> true
 ActiveModel::Type::Boolean.cast( 2 )  #=> true
 2.to_b      #=> true
 2.to_bool   #=> nil
