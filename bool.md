@@ -48,8 +48,8 @@ false.class           #=> FalseClass
 true.class            #=> TrueClass
 false.is_a?(Bool)     #=> NameError: uninitialized constant Bool
 true.is_a?(Bool)      #=> NameError: uninitialized constant Bool
-true.class.ancestors  #=> [TrueClass, Object, Kernel, BasicObject]
 false.class.ancestors #=> [FalseClass, Object, Kernel, BasicObject]
+true.class.ancestors  #=> [TrueClass, Object, Kernel, BasicObject]
 ```
 
 Did you known? Ruby has no builtin common bool class / type.
@@ -61,11 +61,11 @@ Did you known? Ruby has no builtin common bool class / type.
 ``` ruby
 module Bool; end
 
-class TrueClass
+class FalseClass
   include Bool
 end
 
-class FalseClass
+class TrueClass
   include Bool
 end
 ```
@@ -75,8 +75,8 @@ Now try:
 ``` ruby
 false.is_a?(Bool)     #=> true
 true.is_a?(Bool)      #=> true
-true.class.ancestors  #=> [TrueClass, Bool, Object, Kernel, BasicObject]
 false.class.ancestors #=> [FalseClass, Bool, Object, Kernel, BasicObject]
+true.class.ancestors  #=> [TrueClass, Bool, Object, Kernel, BasicObject]
 ```
 
 (Source: [`s6/safebool`](https://github.com/s6ruby/safebool))
