@@ -19,7 +19,7 @@
 - Bool Share Nothing - True or False?
   - Bool in the Real World? What for?
 - Bool in Other Programming Languages
-  - Classic Programming Lanuages - From Integer to...
+  - Classic Programming Languages - From Integer to...
   - Modern (Functional) Programming Languages - ... Algebraic Data (Sum) Types
 
 
