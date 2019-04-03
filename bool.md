@@ -361,7 +361,7 @@ data Bool = False | True
 Try:
 
 ```
-1 + True   #=> TypeError`
+1 + True   #=> TypeError
 ```
 
 And in Ruby:
