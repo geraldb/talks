@@ -89,18 +89,18 @@ true.class.ancestors  #=> [TrueClass, Bool, Object, Kernel, BasicObject]
 **Everything is `true` except `false` and `nil`.**
 
 ``` ruby
-!!false   #=> false
-!!nil     #=> false
+!! false   #=> false
+!! nil     #=> false
 
-!!true    #=> true
-!!"false" #=> true
-!!""      #=> true
-!!0       #=> true
-!!1       #=> true
-!![]      #=> true
-!!{}      #=> true
-!!0.0     #=> true
-!!:false  #=> true
+!! true    #=> true
+!! "false" #=> true
+!! ""      #=> true
+!! 0       #=> true
+!! 1       #=> true
+!! []      #=> true
+!! {}      #=> true
+!! 0.0     #=> true
+!! :false  #=> true
 # ...
 ```
 
