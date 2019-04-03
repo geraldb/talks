@@ -350,9 +350,9 @@ Try:
 
 ## Bool in Modern (Functional) Programming Languages
 
-Bool is just an enum with two variants, that is, `True` and `False`.
+Bool is just an enum with two variants, that is, `False` and `True`.
 
-And an enum is "just" an algebraic union "sum" type with variants e.g.
+And an enum is "just" an algebraic union "sum" data type with variants e.g.
 
 ```
 data Bool = False | True
