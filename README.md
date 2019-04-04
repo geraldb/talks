@@ -15,9 +15,14 @@ sources in text w/ formatting in markdown conventions
 
 ## 2019
 
+Thu April 4th, 2019 -
+[**The State of Bool (in Ruby) - Everything You Never Wanted to Know**](https://github.com/geraldb/talks/blob/master/bool.md)
+@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/258293252)
+
+
 Tue March 12th, 2019 -
 [**Contracts, Contracts, Contracts - Code Your Own (Crypto Blockchain) Contracts w/ Ruby (sruby), Universum & Co**](https://github.com/geraldb/talks/blob/master/contracts.md)
-@ [Vienna Ruby Crypto Meetup](https://meetup.com/vienna-rb/events/258872693)
+@ [Vienna Crypto Programming Meetup](https://meetup.com/vienna-crypto/events/258872831)
 
 
 
