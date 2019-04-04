@@ -16,7 +16,7 @@ sources in text w/ formatting in markdown conventions
 ## 2019
 
 Thu April 4th, 2019 -
-[**The State of Bool (in Ruby) - Everything You Never Wanted to Know**](https://github.com/geraldb/talks/blob/master/bool.md)
+[**The State of Bool - Everything You Never Wanted to Know**](https://github.com/geraldb/talks/blob/master/bool.md)
 @ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/258293252)
 
 
