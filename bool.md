@@ -179,6 +179,10 @@ Bool(1)               #=> true
 - gem [`boolean`](https://rubygems.org/gems/boolean), source <https://github.com/RISCfuture/boolean> - archived (read-only)
 - gem [`boolean_class`](https://rubygems.org/gems/boolean_class), source <https://github.com/elgalu/boolean_class>
 - gem [`to_boolean`](https://rubygems.org/gems/to_boolean), source <https://github.com/JaniJegoroff/to_boolean>
+- gem [`extends_bool`](https://rubygems.org/gems/extends_bool), source <https://github.com/andreleoni/extends_bool>
+- gem [`be_boolean`](https://rubygems.org/gems/be_boolean), source <https://github.com/sporto/be_boolean> - archived (read-only)
+- gem [`to_b`](https://rubygems.org/gems/to_b), source <https://github.com/benSlaughter/utilise>
+- gem [`boolean_conversions`](https://rubygems.org/gems/boolean_conversions), source <https://github.com/thebadmonkeydev/boolean_conversions>
 - and many more.
 
 Try a search onb rubygems with [`bool`](https://rubygems.org/search?&query=bool) /
