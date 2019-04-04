@@ -26,11 +26,11 @@
 
 ## What's a Bool?
 
-> In computer science, the Boolean data type is a data type that has one of two possible values (usually denoted _true_ and _false_),
-> intended to represent the two truth values of logic and Boolean algebra. 
-> It is named after George Boole, who first defined an algebraic system of logic in the mid 19th century.
->
-> (Source: [Boolean data type](https://en.wikipedia.org/wiki/Boolean_data_type) @ Wikipedia)
+In computer science, the Boolean data type is a data type that has one of two possible values (usually denoted _true_ and _false_),
+intended to represent the two truth values of logic and Boolean algebra. 
+It is named after George Boole, who first defined an algebraic system of logic in the mid 19th century.
+
+(Source: [Boolean data type @ Wikipedia](https://en.wikipedia.org/wiki/Boolean_data_type))
 
 
 ## Trivia Quiz - The States of Bool
