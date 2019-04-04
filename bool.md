@@ -11,7 +11,7 @@
 - safebool Library / Gem
   - Prior Art
     - Some Older Bool / Boolean Libraries
-    - `ActiveRecord::Type::Boolean < Value`
+    - `ActiveModel::Type::Boolean < Value`
   - Bool Conversion
     - Empty String
     - Number Two
@@ -22,6 +22,15 @@
   - Classic Programming Languages - From Integer to...
   - Modern (Functional) Programming Languages - ... Algebraic Data (Sum) Types
 
+
+
+## What's a Bool?
+
+> In computer science, the Boolean data type is a data type that has one of two possible values (usually denoted _true_ and _false_),
+> intended to represent the two truth values of logic and Boolean algebra. 
+> It is named after George Boole, who first defined an algebraic system of logic in the mid 19th century.
+>
+> (Source: [Boolean data type](https://en.wikipedia.org/wiki/Boolean_data_type) @ Wikipedia)
 
 
 ## Trivia Quiz - The States of Bool
@@ -178,7 +187,7 @@ Try a search onb rubygems with [`bool`](https://rubygems.org/search?&query=bool)
 
 
 
-## Prior Art - ActiveRecord::Type::Boolean < Value
+## Prior Art - ActiveModel::Type::Boolean < Value
 
 A class that behaves like a boolean type, including rules for conversion of user input.
 
@@ -201,7 +210,7 @@ Values set from user input will first be converted into the appropriate ruby typ
 
 ``` ruby
 !! ""       #=> true
-ActiveModel::Type::Boolean.cast( "" )  #=> nil
+ActiveModel::Type::Boolean.new.cast( "" )  #=> nil
 "".to_b     #=> false
 "".to_bool  #=> nil
 Bool("")    #=> ArgumentError: invalid value "":String for Bool(); parse_bool failed (returns nil)
@@ -212,7 +221,7 @@ Bool("")    #=> ArgumentError: invalid value "":String for Bool(); parse_bool fa
 
 ``` ruby
 !! 2        #=> true
-ActiveModel::Type::Boolean.cast( 2 )  #=> true
+ActiveModel::Type::Boolean.new.cast( 2 )  #=> true
 2.to_b      #=> true
 2.to_bool   #=> nil
 Bool(2)     #=> ArgumentError: invalid value 2:Integer for Bool(); parse_bool failed (returns nil)
