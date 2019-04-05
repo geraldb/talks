@@ -35,18 +35,19 @@ It is named after George Boole, who first defined an algebraic system of logic i
 
 ## Trivia Quiz - The States of Bool
 
-Q: How many states has a boolean type in a programming language?
+Q: How many states has a boolean type in a (classic¹) programming language?
 
 - [ A ] 1 - One State
 - [ B ] 2 - Two States
 - [ C ] 3 - Three States
 - [ D ] Other. Please tell
 
+1: with nil-able / null-able types
+
 
 ## Trivia Quiz - The States of Bool
 
-A: In practice three really :-), that is, `true`, `false` and
-undefined (e.g. `nil`).
+A: In practice three (!), that is, `true`, `false` and undefined (e.g. `nil`).
 
 
 
@@ -235,14 +236,14 @@ Bool(2)     #=> ArgumentError: invalid value 2:Integer for Bool(); parse_bool fa
 
 ## Bool Conversion - Choose Your Error Handling on Invalid Bool Values / States
 
-1. `to_b` always returns a bool even if the conversion / parsing fails e.g. `true` (for numbers) and `false` (for strings) on error
+1. `to_b` always returns a bool even if the conversion / parsing fails e.g. `true` for invalid numbers or strings and `false` (for empty / blank strings) on error
 2. `parse_bool / to_bool` always returns `nil` if the conversion / parsing fails
 3. `Bool()` always raises an `ArgumentError` if the conversion / parsing fails
    and a `TypeError` if the conversion is unsupported (e.g. expected required `parse_bool` method missing / undefined)
 
 
 ``` ruby
-"2".to_b                #=> false
+"2".to_b                #=> true
 "2".to_bool             #=> nil
 "2".to_bool.bool?       #=> false
 "2".to_bool.is_a?(Bool) #=> false
@@ -358,7 +359,8 @@ with `False` and `True`.
 Try:
 
 ```
-1 + True  #=> 4
+1 + True       #=> 2
+1 + True + 2   #=> 4
 ```
 
 
