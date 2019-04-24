@@ -1,6 +1,7 @@
 # JavaScript in 2019 - Teach Yourself Web Programming in ~24 Hours~ 10 Minutes
 
 
+
 ## Silicon Valley Mantra - Software is Eating the World
 
 Q: Who's going to write all that code?
@@ -13,7 +14,6 @@ Q: Who's going to write all that code?
 -->
 
 Q: And in what programming language(s)?
-
 
 
 ## Trivia Quiz - Q: What's the world's most popular programming language?
@@ -61,10 +61,11 @@ Python for data science, machine learning and "casual" programming
 
 C for systems programming
 
-SQL for (relational) database queries
+SQL for (relational) database queries programming
+
+CSS for styling and layout programming
 
 and so on.
-
 
 
 ## One Language to Rule Them All?! - Bits & Bytes Rule
@@ -76,37 +77,20 @@ JavaScript Trend: Assembly and Compiler (incl. Source-to-Source Compiler)
 
 
 
+## Teach Yourself Web Programming in 2019 - Roadmap
+
+![](i/react-thomas-fuchs-iiiii.png) -- [19 Nov 2018](https://twitter.com/thomasfuchs/status/1064551463429521413)
+
+
 
 ![](i/web-programming-frontend-roadmap-2019.png)
 
-
-
-##  Occam's Razor - Less Code is More
-
-> Occam's razor (also Ockham's razor)
-> is the problem-solving principle that essentially states that
-> "simpler solutions are more likely to be correct than complex ones."
-> When presented with competing hypotheses to solve a problem, one should select
-> the solution with the fewest assumptions.
-> The idea is attributed to English Franciscan friar
-> William of Ockham (c. 1287–1347), a scholastic philosopher and theologian.
->
-> -- [Occam's razor @ Wikipedia]()
-
-Question: How to decide what language (or "patterns") to use if you have
-hundreds of choices?
-
-Less code is more.
-Less abstractions (and to the "metal"1:) is more.
-More examples upcoming later.
-
-
-1: "Use the platform" always wins (because native is faster).
+(Source: [Roadmap to becoming a web developer in 2019 by Kamran Ahmed](https://github.com/kamranahmedse/developer-roadmap))
 
 
 
 
-## Top Starred (JavaScript) Projects on GitHub in 2019
+## Top Starred (JavaScript) Projects on GitHub¹ in 2019
 
 1. vuejs/vue
 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web
@@ -147,10 +131,11 @@ AngularJS - HTML enhanced for web apps
 13. daneden/animate.css
 A cross-browser library of CSS animations. As easy to use as an easy thing.
 
-(Source: https://github.com/search?l=&p=2&q=stars%3A%22%3E+20000%22&ref=advsearch&type=Repositories&utf8=%E2%9C%93 )
+(Source: [GitHub Search - `stars: > 50000`](https://github.com/search?l=&o=desc&q=stars%3A%22%3E+50000%22&s=stars&type=Repositories))
 
 
-1: excludes learning / course projects (freeCodeCamp/freeCodeCamp,
+
+¹: excludes learning / course projects (freeCodeCamp/freeCodeCamp,
   EbookFoundation/free-programming-books, sindresorhus/awesome, getify/You-Dont-Know-JS, airbnb/javascript, kamranahmedse/developer-roadmap)
   or political campaigns (996icu/996.ICU)
   or machine learning (tensorflow/tensorflow) and others
@@ -187,15 +172,19 @@ and many many more
 
 ## Trivia Quiz: Q: What's common to all these top JavaScript projects?
 
-- [ ] Free as in Free Lunch / Beer
-- [ ] Free as in Free Speech
-- [ ] Pricing Starts at $40 per Head
-- [ ] Other, Please Tell
+- [ A ] Free as in Free Lunch / Beer
+- [ B ] Free as in Free Speech
+- [ C ] Pricing Starts at $40 per Head
+- [ ? ] Other, Please Tell
 
 
 
 
 ## Aside - History Nostalgia Corner - What Happened with jQuery?
+
+
+![](i/react-thomas-fuchs-iiii.png)  -- [22 Feb 2017](https://twitter.com/thomasfuchs/status/834481271443226627)
+
 
 jquery/jquery - jQuery JavaScript Library
 
@@ -220,17 +209,17 @@ Loop over DOM nodes - in 1999:
 
 Evergreen
 
-- [ ] Vim
-- [ ] Emacs
+- [ A ] Vim
+- [ B ] Emacs
 
 <!-- -->
 
 New Kids
 
-- [ ] [Visual Studio Code](https://code.visualstudio.com) by Microsoft
-- [ ] [Atom](https://atom.io) by GitHub (now part of Microsoft)
+- [ C ] [Visual Studio Code¹](https://code.visualstudio.com) by Microsoft
+- [ D ] [Atom](https://atom.io) by GitHub (now part of Microsoft)
 
-1: Note: Microsoft Visual Studio is different from Microsoft Visual Studio Code
+¹: Note: Microsoft Visual Studio is different from Microsoft Visual Studio Code
 
 
 
@@ -298,9 +287,10 @@ And much more
 - And much more
 
 
+
 # ES6 (ES2015) - Can I Use ___ ? - Browser Support Matrix in 2016
 
-- Microsoft Internet Explorer (IE) 11  - 15%
+- Microsoft Internet Explorer (IE) 11  - **15%**
 - Microsoft Edge 14  - 90%
 - Mozilla Firefox 49 - 93%
 - Google Chrome 52 - 98%
@@ -314,7 +304,7 @@ And much more
 
 # ES6 (ES2015) - Can I Use ___ ? - Browser Support Matrix in 2019
 
-- Microsoft Internet Explorer (IE) 11  - 11%
+- Microsoft Internet Explorer (IE) 11  - **11%**
 - Microsoft Edge 18  - 96%
 - Mozilla Firefox 66 - 98%
 - Google Chrome 73 - 98%
@@ -332,39 +322,40 @@ Really, just the optimisation feature called
 
 
 
-## What's New in JavaScript 2016, 2017, 2018, 2019?
+## What's New in JavaScript 2016, 2017, 2018, 2019, 2020?
 
-JavaScript (JS), ECMAScript (ES), ES5, ES6, ES7, ES8,
-ES9, ES10, ES2015, ES2016, ES2017, ES2018, ES2019
+JavaScript (JS), ECMAScript (ES), ES5, ES6 / ES2015,
+ES2016, ES2017, ES2018, ES2019, ES2020
 
 First appeared on May 23, 1995 -- 23 years ago
 
 - ES 5 - Release on December 2009
-- ES2015 (ES 6) - Release on June 2015  -  Almost 6 Years(!)
-- ES2016 (ES 7) - Release on June 2016
-- ES2017 (ES 8) - Release on June 2017
-- ES2018 (ES 9) - Release on June 2018 (Current Version today in 2019)
-- ES2019 (ES 10) -  Release on ??
+- ES 6 / ES2015 - Release on June 2015  -  Almost 6 Years(!)
+- ES2016 - Release on June 2016
+- ES2017 - Release on June 2017
+- ES2018 - Release on June 2018 (Current Version today in 2019)
+- ES2019 -  Release on ??
 - and so on
 
-Note: New Release Schedule Starting with ES2016 (ES7) - Every Year A Release
+Note: New Release Schedule Starting with ES2016 - Every Year A Release
 
 
 ## Aside - Trivia Quiz - Java Release Schedule in 2019
 
 Q: What the latest Java release (as of April/2019)?
 
-- [ ] Java 41
-- [ ] Java 12
-- [ ] Java 9
-- [ ] Other, Please Tell
+- [ A ] Java 41
+- [ B ] Java 12
+- [ C ] Java 9
+- [ ? ] Other, Please Tell
 
 Q: What's the Java release Schedule in 2019?
 
-- [ ] One Release Every Two Years
-- [ ] One Release Every Year
-- [ ] Two Releases Every Year (Every Six Month)
-- [ ] Other, Please Tell
+- [ A ] One Release Every Two Years
+- [ B ] One Release Every Year
+- [ C ] Two Releases Every Year (Every Six Month)
+- [ ? ] Other, Please Tell
+
 
 
 ## What's New In ES2019?
@@ -421,21 +412,44 @@ Q: What's the Java release Schedule in 2019?
 
 ## React in 2019 - (Un)popular Opinions
 
+
 ![](i/react-thomas-fuchs-i.png) -- [19 Dec 2016](https://twitter.com/thomasfuchs/status/810885087214637057)
 
 ![](i/react-thomas-fuchs-ii.png) - [9 Nov 2017](https://twitter.com/thomasfuchs/status/928808041587314689)
 
+
+
+
+
+
+
+
+##  Occam's Razor - Less Code is More
+
+> Occam's razor (also Ockham's razor)
+> is the problem-solving principle that essentially states that
+> "simpler solutions are more likely to be correct than complex ones."
+> When presented with competing hypotheses to solve a problem, one should select
+> the solution with the fewest assumptions.
+> The idea is attributed to English Franciscan friar
+> William of Ockham (c. 1287–1347), a scholastic philosopher and theologian.
+>
+> -- [Occam's razor @ Wikipedia]()
+
+Question: How to decide what language (or "patterns") to use if you have
+hundreds of choices?
+
+Less code is more.
+Less abstractions (and to the "metal"1:) is more.
+More examples upcoming later.
+
+1: "Use the platform" always wins (because native is faster).
+
 ![](i/react-thomas-fuchs-iii.png) -- [12 Mar 2016](https://twitter.com/thomasfuchs/status/708675139253174273)
 
-![](i/react-thomas-fuchs-iiii.png)  -- [22 Feb 2017](https://twitter.com/thomasfuchs/status/834481271443226627)
-
-![](i/react-thomas-fuchs-iiiii.png) -- [19 Nov 2018](https://twitter.com/thomasfuchs/status/1064551463429521413)
 
 
 
-
-
-## Less is More
 
 
 
@@ -482,3 +496,4 @@ See CoffeeScript Wiki Page - 100+
 
 - "Higher-Level" Language  - JavaScript
 - "Lower-Level" Language - WebAssembly (formerly asm.js)
+
