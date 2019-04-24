@@ -68,6 +68,10 @@ JavaScript Trend: Assembly and Compiler (incl. Source-to-Source Compiler)
 
 
 
+![](i/web-programming-frontend-roadmap-2019.png)
+
+
+
 ##  Occam's Razor - Less Code is More
 
 > Occam's razor (also Ockham's razor)
@@ -309,10 +313,8 @@ And much more
 
 (Source: [ES6 Compatibility Table](http://kangax.github.io/compat-table/es6/), April/2019)
 
-todo - add new pic!!!
-<!--
-![](i/es6-compat.png)
--->
+![](i/es6-compat-2019.png)
+
 
 What's the missing 2%?
 
@@ -408,7 +410,17 @@ Q: What's the Java release Schedule in 2019?
 
 
 
-## React in 2019
+## React in 2019 - (Un)popular Opinions
+
+![](i/react-thomas-fuchs-i.png) -- [19 Dec 2016](https://twitter.com/thomasfuchs/status/810885087214637057)
+
+![](i/react-thomas-fuchs-ii.png) - [9 Nov 2017](https://twitter.com/thomasfuchs/status/928808041587314689)
+
+![](i/react-thomas-fuchs-iii.png) -- [12 Mar 2016](https://twitter.com/thomasfuchs/status/708675139253174273)
+
+![](i/react-thomas-fuchs-iiii.png)  -- [22 Feb 2017](https://twitter.com/thomasfuchs/status/834481271443226627)
+
+![](i/react-thomas-fuchs-iiiii.png) -- [19 Nov 2018](https://twitter.com/thomasfuchs/status/1064551463429521413)
 
 
 
