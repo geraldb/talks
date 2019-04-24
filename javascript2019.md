@@ -1,6 +1,4 @@
-# Building Web Apps with JavaScript in 2019 - What's News?
-
-
+# JavaScript in 2019 - Teach Yourself Web Programming in ~24 Hours~ 10 Minutes
 
 
 ## Silicon Valley Mantra - Software is Eating the World
