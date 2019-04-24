@@ -5,15 +5,26 @@
 
 ## Silicon Valley Mantra - Software is Eating the World
 
+Q: Who's going to write all that code?
+
+<!--
+- [ ] You
+- [ ] Robots
+- [ ] Let's Go Shopping / Let's Buy
+- [ ] Other, Please Tell
+-->
+
+Q: And in what programming language(s)?
+
 
 
 ## Trivia Quiz - Q: What's the world's most popular programming language?
 
-- [ ] JavaScript
-- [ ] Python
-- [ ] C
-- [ ] Java
-- [ ] Other, Please Tell
+- [ A ] JavaScript
+- [ B ] Python
+- [ C ] C
+- [ D ] Java
+- [ ? ] Other, Please Tell
 
 
 ##  JavaScript is eating the world!?
