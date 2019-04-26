@@ -15,6 +15,9 @@ sources in text w/ formatting in markdown conventions
 
 ## 2019
 
+[**JavaScript in 2019 - Teach Yourself Web Programming in ~24 Hours~ 10 Minutes**](https://github.com/geraldb/talks/blob/master/javascript2019.md)  @ Inhouse (Private) 
+
+
 Thu April 4th, 2019 -
 [**The State of Bool - Everything You Never Wanted to Know**](https://github.com/geraldb/talks/blob/master/bool.md)
 @ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/258293252)
