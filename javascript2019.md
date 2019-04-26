@@ -16,7 +16,7 @@ Q: Who's going to write all that code?
 Q: And in what programming language(s)?
 
 
-## Trivia Quiz - Q: What's the world's most popular programming language?
+## Trivia Quiz - Q: What's the World's Most Popular Programming Language?
 
 - [ A ] JavaScript
 - [ B ] Python
@@ -25,20 +25,36 @@ Q: And in what programming language(s)?
 - [ ? ] Other, Please Tell
 
 
-##  JavaScript is eating the world!?
+
+##  JavaScript is Eating the World!? - Atwood's JavaScript Law
+
+> Any application that can be written in JavaScript,
+> will eventually be written in
+> JavaScript.
+>
+> -- Jeff Atwood, Co-Founder of Stackoverflow, 2007
+
+All applications will ultimately wind up on the web and
+therefore must be written in JavaScript (or WebAssembly).
+
+
+
+
+## JavaScript is Eating the World!? - Always Bet on JavaScript
 
 > I usually finish with a joke: **Always bet on JavaScript.**
 >
 > -- [Brendan Eich](https://brendaneich.com), Inventor of JavaScript
 
-Remember:
 
-(Sun/Oracle) JavaFX[1]
+The New New / The Next JavaScript - Rest in Peace (R.I.P.):
+
+(Sun/Oracle) JavaFX¹
 vs (Adobe) Flash/ActionScript
 vs (Microsoft) Silverlight/.NET
 vs HTML/JavaScript
 
-1: FX = Special (Visual Graphics) Effects
+¹: FX = Special (Visual Graphics) Effects
 
 Java Applets, Java Web Start, ActiveX,
 VBScript (Visual Basic Script),
@@ -51,6 +67,7 @@ and on and on and on.  FAIL. FAIL. FAIL.
 
 
 
+
 ## And the Winner is...
 
 JavaScript for "higher-level" web (application) programming
@@ -59,6 +76,9 @@ WebAssembly (formerly asm.js) for "lower-level" web ("byte code") programming
 
 Python for data science, machine learning and "casual" programming
 
+Ruby for secure (crypto blockchain) contract transaction script and
+data / text wrangling programming
+
 C for systems programming
 
 SQL for (relational) database queries programming
@@ -66,6 +86,18 @@ SQL for (relational) database queries programming
 CSS for styling and layout programming
 
 and so on.
+
+
+## CSS Trivia Quiz - Vertical Align / Center - Mission Impossible?
+
+Q: How to vertical align / center the content in a box?
+
+- [ A ] Use a block turned into a (bitmap pixel-perfect) image
+- [ B ] Use JavaScript
+- [ C ] Use the "new" flexbox layout
+- [ ? ] Other, Please Tell
+
+
 
 
 ## One Language to Rule Them All?! - Bits & Bytes Rule
@@ -77,11 +109,14 @@ JavaScript Trend: Assembly and Compiler (incl. Source-to-Source Compiler)
 
 
 
+
+
 ## Teach Yourself Web Programming in 2019 - Roadmap
 
 ![](i/react-thomas-fuchs-iiiii.png) -- [19 Nov 2018](https://twitter.com/thomasfuchs/status/1064551463429521413)
 
-**Roadmap**
+
+**Roadmap to becoming a web programmer in 2019**
 
 ![](i/web-programming-frontend-roadmap-2019.png)
 
@@ -170,7 +205,7 @@ and many many more
 
 
 
-## Trivia Quiz: Q: What's common to all these top JavaScript projects?
+## Trivia Quiz: Q: What's Common to All Top JavaScript Projects?
 
 - [ A ] Free as in Free Lunch / Beer
 - [ B ] Free as in Free Speech
@@ -196,14 +231,38 @@ jQuery in 2019?
 
 (DOM) Queries with CSS selectors now built into all (modern) browsers
 
-getSelector
+``` js
+$('.my #awesome selector');
+```
 
+vs
 
-More fluid / beautiful / convenient functions
+``` js
+document.querySelectorAll('.my #awesome selector');
+```
 
-Loop over DOM nodes - in 1999:
+More fluid / beautiful / convenient functions.
+Example - Loops:
 
-2019:
+``` js
+$.each(array, function(i, item){
+
+});
+```
+
+vs
+
+``` js
+array.forEach(function(item, i){
+
+});
+```
+
+See [You might not need jQuery](http://youmightnotneedjquery.com/),
+[(Now More Than Ever) You Might Not Need jQuery](https://css-tricks.com/now-ever-might-not-need-jquery/),
+
+and others.
+
 
 
 
@@ -336,7 +395,8 @@ First appeared on May 23, 1995 -- 23 years ago
 - ES2016 - Release on June 2016
 - ES2017 - Release on June 2017
 - ES2018 - Release on June 2018 (Current Version today in 2019)
-- ES2019 -  Release on ??
+- ES2019 - Release on ??
+- ES2020 - Release on ??
 - and so on
 
 Note: New Release Schedule Starting with ES2016 - Every Year A Release
@@ -357,6 +417,7 @@ Q: What's the Java release Schedule in 2019?
 - [ B ] One Release Every Year
 - [ C ] Two Releases Every Year (Every Six Month)
 - [ ? ] Other, Please Tell
+
 
 
 
@@ -410,15 +471,137 @@ Q: What's the Java release Schedule in 2019?
 
 
 
+## What's New In ES2020?  Official Upcoming JavaScript Language Extension Proposals
+
+See [TC39¹ - State of Proposals](https://tc39.github.io/#proposals)
+or [TC39¹ - Tracking ECMAScript Proposals »](https://github.com/tc39/proposals)
+
+¹: Technical Committee 39 @ ECMA (European Computer Manufacturers Association)
+
+- `globalThis`
+- `import()`
+- Legacy RegExp features in JavaScript
+- `BigInt`
+- `import.meta`
+- Private instance methods and accessors
+- Class Public Instance Fields & Private Instance Fields
+- Static class fields and private static methods
+- Numeric Separators
+- `Promise.allSettled`
+- and some more
 
 
-## React in 2019 - (Un)popular Opinions
 
+
+## React in 2016 - (Un)popular Opinions
 
 ![](i/react-thomas-fuchs-i.png) -- [19 Dec 2016](https://twitter.com/thomasfuchs/status/810885087214637057)
 
+## React in 2017
+
+[Building Web Components with React.js - Past, Present, Future](https://github.com/geraldb/talks/blob/master/react.md)
 
 
+
+## React vs Vue vs Svelte in 2019 - Hello, World!
+
+
+**React**
+
+All `.jsx`:
+
+``` jsx
+function Message( {name} ) {
+  return <h1>{ `Hello, ${name}!` }</h1>;
+}
+
+<Message name="World" />
+```
+
+Note: JSX (JavaScript XML) adds XML syntax to JavaScript
+and gets compiled (or really preprocessed):
+
+``` js
+function Message( {name} ) {
+  return React.createElement( "h1", null, `Hello, ${name}!`);
+}
+
+React.createElement( Message, { name: "World" });
+```
+
+
+
+**Vue**
+
+`.html`:
+
+``` html
+<div id="message">
+  Hello, {{ name }}!
+</div>
+```
+
+`.js`:
+
+``` js
+var msg = new Vue({
+  el: '#message',
+  data: {
+    name: 'World'
+  }
+})
+```
+
+or use "single-file" component-style:
+
+`.vue`:
+
+```
+<template>
+  <div id="message">
+    Hello, {{ name }}!
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'World'
+  }
+</script>
+```
+
+
+
+**Svelte**
+
+
+`.svelte`:
+
+```
+<script>
+	let name = 'World';
+</script>
+
+<h1>Hello {name}!</h1>
+```
+
+
+## What's Svelte?
+
+Cybernetically enhanced web apps!?
+
+
+**Write Less Code** Build boilerplate-free components
+using languages you already know - HTML, CSS and JavaScript
+
+**No Virtual DOM** Svelte compiles your code to tiny,
+framework-less vanilla JavaScript - your app starts fast and stays fast
+
+**True reactive** No more complex state management libraries -
+Svelete brings reactivity to JavaScript itself
+
+
+See [`svelte.dev` »](https://svelte.dev/)
 
 
 
@@ -439,58 +622,333 @@ Question: How to decide what language (or "patterns") to use if you have
 hundreds of choices?
 
 Less code is more.
-Less abstractions (and to the "metal"1:) is more.
-More examples upcoming later.
+Less abstractions (and to the "metal"¹) is more.
 
-1: "Use the platform" always wins (because native is faster).
+¹: "Use the platform" always wins (because native is faster).
 
-![](i/react-thomas-fuchs-ii.png) - [9 Nov 2017](https://twitter.com/thomasfuchs/status/928808041587314689)
-
+![](i/react-thomas-fuchs-ii.png)  -- [9 Nov 2017](https://twitter.com/thomasfuchs/status/928808041587314689)
 
 
 
 
 
-## Compiler with New (Functional) Language (Haskell Syntax Style )
-
-Elm
-
-- built-in virtual dom / built-in reactive updates
-- dom nodes are always unchangeable / immutable (by defintion)
+## React vs Vue vs Svelte in 2019 - Counter
 
 
-Cons:
+**React**
 
-- "Radical" new syntax for Java or JavaScript coders
-- "Radical" functional code (always typed and always unchangeable / immutable)
+`.jsx` - "classical" (pre-hooks):
+
+``` jsx
+class Counter extends React.Component {
+  state = { count: 0 };
+
+  handleClick = () => {
+    this.setState(({ count }) => ({ count: count + 1 }));
+  };
+
+  render() {
+    return
+      <button onClick={this.handleClick}>
+        {this.state.count}
+      </button>;
+  }
+}
+
+<Counter />
+```
+
+New: React "class-less" with hooks
+
+`.jsx`:
+
+``` jsx
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return
+    <button onClick={() => setCount(count + 1)}>
+      {count}
+    </button>;
+}
+```
+
+What are Hooks?  Hooks are a new addition in React 16.8.
+Hooks let you use state and other React goodies
+without writing a class. (Source: [Introducing Hooks @ React](https://reactjs.org/docs/hooks-intro.html))
 
 
 
-## Types, Types, Types
+**Vue**
 
-TypeScript   - Gradual Typing for JavaScript
+`.vue`:
 
-ReasonML (OCaml Syntax)  - 100 % (Strong) Typing for JavaScript-like ReasonML
+```
+<template>
+  <button @click="handleClick">{{count}}</button>
+</template>
 
+<script>
+export default {
+  data() { return { count: 0 } },
+  methods: {
+    handleClick() { this.count += 1 }
+  }
+}
+</script>
+```
+
+
+**Svelte**
+
+`.svelte`:
+
+```
+<script>
+	let count = 0;
+	function handleClick() { count += 1; }
+</script>
+
+<button on:click={handleClick}>
+	Clicked {count}
+</button>
+```
+
+
+
+
+## React vs Vue vs Svelte in 2019 - A+B=? Form
+
+**Svelte**
+
+`.svelte`:
+
+```
+<script>
+	let a = 1;
+	let b = 2;
+</script>
+
+<input type="number" bind:value={a}>
+<input type="number" bind:value={b}>
+
+<p>{a} + {b} = {a + b}</p>
+```
+
+
+**React**
+
+`.jsx` - "class-less" with hooks:
+
+``` jsx
+export default () => {
+  const [a, setA] = useState(1);
+  const [b, setB] = useState(2);
+
+  function handleChangeA(event) { setA(+event.target.value); }
+  function handleChangeB(event) { setB(+event.target.value); }
+
+  return
+    <>
+      <input type="number" value={a} onChange={handleChangeA}/>
+      <input type="number" value={b} onChange={handleChangeB}/>
+
+      <p>{a} + {b} = {a + b}</p>
+    </>;
+};
+```
+
+
+**Vue**
+
+`.vue`:
+
+```
+<template>
+  <input type="number" v-model.number="a">
+  <input type="number" v-model.number="b">
+
+  <p>{{a}} + {{b}} = {{a + b}}</p>
+</template>
+
+<script>
+  export default {
+    data: function() {
+      return {
+        a: 1,
+        b: 2
+      };
+    }
+  };
+</script>
+```
+
+Conclusion:
+
+The example takes 442 characters in React,
+and 263 characters in Vue,
+to achieve something that takes 145 characters in Svelte.
+The React version is literally three times larger!
+
+(Source: [Svelte - Write less code: The most important metric you're not paying attention to](https://svelte.dev/blog/write-less-code))
+
+
+
+
+
+## What's Next? JavaScript in 2016
+
+### What's Next? JavaScript w/ Types
+
+Biggies
+
+- TypeScript ★48127 (20098¹) (by Microsoft) -  JavaScript Extended w/ Types
+- Flow ★19356 (10693¹) (by Facebook)        -  Add Annotations for Type Checking
+- Dart ★3521 (1038¹) (by Google)           -  New Language w/ (Optional) Types
+
+And Others.
+
+¹: Stars in July 2016
+
+
+### What's Next? More Fun - Fun(ctional) Languages
+
+Biggies
+
+- Elm ★ 5161 (3706)¹ (by Evan Czaplicki 'n' friends) - Small (Pure) Functional Language for the Web
+  - Based on Haskell (Simplified)
+- ReasonML ★7610 (2467)¹ (by Facebook) - Larger (Pragmatic) Functional Language
+  - Based on OCaml (New ReasonML Syntax Closer to JavaScript)
+
+And Others.
+
+¹: Stars in July 2016
+
+
+Why Fun(ctional)?
+
+- "Stronger" Types
+  - No Null and No Undefined Possible
+    - e.g. Elm Uses Maybe types with Just a and Nothing and Tuple Units e.g. `()`)
+  - Lists must always be of the same type
+  - If expressions must always return the same type (in if and else branch)
+  - Case expressions must always cover all possible branches / values
+  - And so on
+- Immutability
+  - Cannot change/overwrite variables (change will always create a new variable)
+  - Great for "high-speed" diffing web component/element trees ("just" compare node references)
+  - Great for "time travel" debugging e.g. save or restore any state in time
+
+
+## Homework - Practice (or Learn) Functional Programming :-)
+
+**Counter Example with Elm**
+
+Homework. Practice (or Learn) Functional Programming with Elm  :-)
+
+**Counter Example with ReasonML (and React)**
+
+Homework. Practice (or Learn) Functional Programming with ReasonML  :-)
+
+
+
+## Counter Example with Elm
+
+``` elm
+type Msg = Tick
+
+model : Int
+model = 0
+
+view : Int -> Html.Html Msg
+view model =
+      button [ onClick Tick ] [ text (toString model) ]
+
+update : Msg -> Int -> Int
+update msg model =
+    case msg of
+        Add -> model + 1
+```
+
+
+
+
+## Counter Example with ReasonML (and React) and Timer (Side) Effect
+
+``` reasonml
+type action =
+  | Tick;
+
+type state = {
+  count: int,
+};
+
+[@react.component]
+let make = () => {
+  let (state, dispatch) = React.useReducer(
+    (state, action) =>
+      switch (action) {
+      | Tick => {count: state.count + 1}
+      },
+    {count: 0}
+  );
+
+  React.useEffect0(() => {
+    let timerId = Js.Global.setInterval(() => dispatch(Tick), 1000);
+    Some(() => Js.Global.clearInterval(timerId))
+  });
+
+  <div>{ReasonReact.string(string_of_int(state.count))}</div>;
+};
+```
 
 
 ## Many More Languages
 
 Java:
-- Scala.js
-- Kotlin.js
-- Clojure.js
 
-CoffeScript, PureScript, Opal (Ruby), Brython (Python),
+- Scala.js - A safer way to build robust front-end web applications!
+- Kotlin.js - Kotlin for JavaScript
+- ClojureScript - Clojure to JavaScript compiler
+- and many more
+
+
+CoffeScript, Opal (Ruby), Brython (Python),
 and many many more.
 
-See CoffeeScript Wiki Page - 100+
-
+See [List of languages that compile to JavaScript »](https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js)
 
 
 
 ## JavaScript + WebAssembly
 
-- "Higher-Level" Language  - JavaScript
+- "Higher-Level" Language - JavaScript
 - "Lower-Level" Language - WebAssembly (formerly asm.js)
 
+
+## What's WebAssembly?
+
+Compile C, C++, Rust, and more "system" languages
+to "Lower-Level" JavaScript. Use compiled code as WebAssembly modules / libraries
+(almost runs with "native" speed) in JavaScript.
+
+
+See [`webassembly.org »`](https://webassembly.org)
+
+
+
+
+## Official WebAssembly Frequently Asked Questions (and Answers)
+
+**Q: Is WebAssembly trying to replace JavaScript?**
+
+A: No! WebAssembly is designed to be a complement to, not replacement of, JavaScript. While WebAssembly will, over time, allow many languages to be compiled to the Web, JavaScript has an incredible amount of momentum and will remain the single, privileged (as described above) dynamic language of the Web. Furthermore, it is expected that JavaScript and WebAssembly will be used together in a number of configurations:
+
+Whole, compiled C++ apps that leverage JavaScript to glue things together.
+
+HTML/CSS/JavaScript UI around a main WebAssembly-controlled center canvas, allowing developers to leverage the power of web frameworks to build accessible, web-native-feeling experiences.
+
+Mostly HTML/CSS/JavaScript app with a few high-performance WebAssembly modules (e.g., graphing, simulation, image/sound/video processing, visualization, animation, compression, etc., examples which we can already see in asm.js today) allowing developers to reuse popular WebAssembly libraries just like JavaScript libraries today.
+
+When WebAssembly gains the ability to access garbage-collected objects,
+those objects will be shared with JavaScript, and not live in a walled-off world of their own.
