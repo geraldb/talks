@@ -1,8 +1,57 @@
 # JavaScript in 2019 - Teach Yourself Web Programming in ~24 Hours~ 10 Minutes
 
 
+- Silicon Valley Mantra - Software is Eating the World¹
+  - Trivia Quiz - Q: What's the World's Most Popular Programming Language?
+  - JavaScript is Eating the World!?
+    - Atwood's JavaScript Law
+    - Always Bet on JavaScript
+      - The New New / The Next JavaScript - Rest in Peace (R.I.P.)
+  - And the Winner is...
+    - CSS Trivia Quiz - Vertical Align / Center - Mission Impossible?
+  - One Language to Rule Them All?! - Bits & Bytes Rule
+- Teach Yourself Web Programming in 2019 - Roadmap
+- Top Starred (JavaScript) Projects on GitHub¹ in 2019
+  - And Many More Top (JavaScript) Projects
+  - Trivia Quiz: Q: What's Common to All Top JavaScript Projects?
+  - Aside - History Nostalgia Corner - What Happened with jQuery?
+- JavaScript in Action - What's Your Code (Text) Editor?
+- JavaScript in 2016 - A Look Back
+  - What's News? Q: How many new language feature can you find?
+  - Can I Use ___ ? - Browser ES6 (ES2015) Support Matrix in 2016
+- JavaScript (Today) in 2019  
+  - Can I Use ___ ? - Browser ES6 (ES2015) Support Matrix (Today) in 2019
+  - What's New in JavaScript 2016, 2017, 2018, 2019, 2020?
+    - Aside - Trivia Quiz - Java Release Schedule (Today) in 2019
+    - What's New In ES2019?
+    - What's New In ES2018?
+    - What's New In ES2016? ES2017?
+    - What's New In ES2020?  Official Upcoming JavaScript Language Extension Proposals
+- React in 2016 - (Un)popular Opinions
+- React in 2017 - A Look Back
+- React vs Vue vs Svelte in 2019
+  - Hello, World!
+  - What's Svelte?
+    - Trivia Quiz - React & Reactivity
+    - Occam's Razor - Less Code is More
+  - Counter
+  - A+B=? Form
+- What's Next? JavaScript in 2016
+  - JavaScript w/ Types
+  - More Fun - Fun(ctional) Languages
+    - Why Fun(ctional)?
+    - Counter Example with Elm
+    - Counter Example with ReasonML (and React) and Timer (Side) Effect
+  - Many More Languages Compiling to JavaScript
+- What's Next? JavaScript (Today) in 2019
+  - JavaScript + WebAssembly
+    - What's WebAssembly?
+    - Official WebAssembly Frequently Asked Questions (and Answers)
+    - Bonus - Counter Example in "Low-Level" System Language Compiled to "Low-Level" WebAssembly
 
-## Silicon Valley Mantra - Software is Eating the World
+
+
+## Silicon Valley Mantra - Software is Eating the World¹
 
 Q: Who's going to write all that code?
 
@@ -14,6 +63,10 @@ Q: Who's going to write all that code?
 -->
 
 Q: And in what programming language(s)?
+
+
+¹: [Why Software Is Eating the World](https://a16z.com/2011/08/20/why-software-is-eating-the-world/) by Marc Andreessen, 2011
+
 
 
 ## Trivia Quiz - Q: What's the World's Most Popular Programming Language?
@@ -32,7 +85,7 @@ Q: And in what programming language(s)?
 > will eventually be written in
 > JavaScript.
 >
-> -- Jeff Atwood, Co-Founder of Stackoverflow, 2007
+> -- [Jeff Atwood](https://blog.codinghorror.com/the-principle-of-least-power/), Co-Founder of Stackoverflow, 2007
 
 All applications will ultimately wind up on the web and
 therefore must be written in JavaScript (or WebAssembly).
@@ -42,7 +95,7 @@ therefore must be written in JavaScript (or WebAssembly).
 
 ## JavaScript is Eating the World!? - Always Bet on JavaScript
 
-> I usually finish with a joke: **Always bet on JavaScript.**
+> I usually finish with a joke: Always bet on JavaScript.
 >
 > -- [Brendan Eich](https://brendaneich.com), Inventor of JavaScript
 
@@ -116,7 +169,8 @@ JavaScript Trend: Assembly and Compiler (incl. Source-to-Source Compiler)
 ![](i/react-thomas-fuchs-iiiii.png) -- [19 Nov 2018](https://twitter.com/thomasfuchs/status/1064551463429521413)
 
 
-**Roadmap to becoming a web programmer in 2019**
+
+**Learn Web Programming in 2019 - Roadmap**
 
 ![](i/web-programming-frontend-roadmap-2019.png)
 
@@ -127,81 +181,86 @@ JavaScript Trend: Assembly and Compiler (incl. Source-to-Source Compiler)
 
 ## Top Starred (JavaScript) Projects on GitHub¹ in 2019
 
-1. vuejs/vue
+1. [**vuejs/vue**](https://github.com/vuejs/vue) ★136 920 -
 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web
 
-2. twbs/bootstrap
+2. [**twbs/bootstrap**](https://github.com/twbs/bootstrap) ★132 863 -
 The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
 
-3. facebook/react
+3. [**facebook/react**](https://github.com/facebook/react) ★127 905 -
 A declarative, efficient, and flexible JavaScript library for building user interfaces.
 
-4. d3/d3
+4. [**d3/d3**](https://github.com/d3/d3) ★84 257 -
 Bring data to life with SVG, Canvas and HTML
 
-5. facebook/react-native
+5. [**facebook/react-native**](https://github.com/facebook/react-native) ★76 458 -
 A framework for building native apps with React
 
-6. Microsoft/vscode
+6. [**Microsoft/vscode**](https://github.com/Microsoft/vscode) ★74 379 -
 Visual Studio Code
 
-7. electron/electron
+7. [**electron/electron**](https://github.com/electron/electron) ★72 606 -
 Build cross-platform desktop apps with JavaScript, HTML, and CSS
 
-8. facebook/create-react-app
+8. [**facebook/create-react-app**](https://github.com/facebook/create-react-app) ★66 872 -
 Set up a modern web app by running one command
 
-9. flutter/flutter
+9. [**flutter/flutter**](https://github.com/flutter/flutter) ★61 469 -
 Flutter makes it easy and fast to build beautiful mobile apps
 
-10. nodejs/node
+10. [**nodejs/node**](https://github.com/nodejs/node) ★60 626 -
 Node.js JavaScript runtime
 
-11. FortAwesome/Font-Awesome
+11. [**FortAwesome/Font-Awesome**](https://github.com/FortAwesome/Font-Awesome) ★59 630 -
 The iconic SVG, font, and CSS toolkit
 
-12. angular/angular.js (v1)
+12. [**angular/angular.js (v1)**](https://github.com/angular/angular.js) ★59 505 -
 AngularJS - HTML enhanced for web apps
 
-13. daneden/animate.css
+13. [**daneden/animate.css**](https://github.com/daneden/animate.css) ★59 097 -
 A cross-browser library of CSS animations. As easy to use as an easy thing.
 
 (Source: [GitHub Search - `stars: > 50000`](https://github.com/search?l=&o=desc&q=stars%3A%22%3E+50000%22&s=stars&type=Repositories))
 
 
+¹: excludes learning / course projects
+(freeCodeCamp/freeCodeCamp ★302 097,
+ EbookFoundation/free-programming-books ★121 973,
+ sindresorhus/awesome ★107 345, getify/You-Dont-Know-JS ★100 808,
+ airbnb/javascript ★84 470,
+ kamranahmedse/developer-roadmap ★80 121)
+ or political campaigns (996icu/996.ICU ★238 634)
+ or machine learning (tensorflow/tensorflow ★126 387) and others
 
-¹: excludes learning / course projects (freeCodeCamp/freeCodeCamp,
-  EbookFoundation/free-programming-books, sindresorhus/awesome, getify/You-Dont-Know-JS, airbnb/javascript, kamranahmedse/developer-roadmap)
-  or political campaigns (996icu/996.ICU)
-  or machine learning (tensorflow/tensorflow) and others
 
 
 
 ## And Many More Top (JavaScript) Projects
 
-axios/axios - Promise based HTTP client for the browser and node.js
+**axios/axios** ★58 572 - Promise based HTTP client for the browser and node.js
 
-jquery/jquery - jQuery JavaScript Library
+**jquery/jquery** ★51 443 - jQuery JavaScript Library
 
-mrdoob/three.js - JavaScript 3D library
+**mrdoob/three.js** ★50 954 - JavaScript 3D library
 
-atom/atom - The hackable text editor
+**atom/atom** ★48 539 - The hackable text editor
 
-webpack/webpack - A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading...
+**webpack/webpack** ★48 505 - A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading...
 
-GoogleChrome/puppeteer - Headless Chrome Node API
+**GoogleChrome/puppeteer** ★48 477 - Headless Chrome Node API
 
-reduxjs/redux - Predictable state container for JavaScript apps
+**reduxjs/redux** ★48 290 - Predictable state container for JavaScript apps
 
-Microsoft/TypeScript - TypeScript is a superset of JavaScript that compiles to clean JavaScript output
+**Microsoft/TypeScript** ★48 171 - TypeScript is a superset of JavaScript that compiles to clean JavaScript output
 
-angular/angular (v2) - One framework. Mobile & desktop
+**angular/angular (v2)** ★47 508 - One framework. Mobile & desktop
 
-mui-org/material-ui - React components for faster and easier web development. Build your own design system, or start with Material Design
+**mui-org/material-ui** ★46 341 - React components for faster and easier web development. Build your own design system, or start with Material Design
 
-socketio/socket.io - Realtime application framework (Node.JS server)
+**socketio/socket.io** ★46 116 - Realtime application framework (Node.JS server)
 
 and many many more
+
 
 
 
@@ -223,7 +282,7 @@ and many many more
 ![](i/react-thomas-fuchs-iii.png) -- [12 Mar 2016](https://twitter.com/thomasfuchs/status/708675139253174273)
 
 
-jquery/jquery - jQuery JavaScript Library
+[jquery/jquery](https://github.com/jquery/jquery) ★51 443 - jQuery JavaScript Library
 
 jQuery in 2019?
 
@@ -280,18 +339,22 @@ New Kids
 - [ C ] [Visual Studio Code¹](https://code.visualstudio.com) by Microsoft
 - [ D ] [Atom](https://atom.io) by GitHub (now part of Microsoft)
 
+
+![](i/visualstudiocode.png)
+
 ¹: Note: Microsoft Visual Studio is different from Microsoft Visual Studio Code
 
 
 
 
-## JavaScript in 2019
+
+## JavaScript in 2016 - A Look Back
+
+See the Talk Notes -
+[The New New JavaScript / ECMAScript (ES6, ES7, ES8) »](https://github.com/geraldb/talks/blob/master/es6.md)
 
 
-
-## JavaScript in 2016  - A Look Back
-
-[The New New JavaScript / ECMAScript (ES6, ES7, ES8)](https://github.com/geraldb/talks/blob/master/es6.md)
+## JavaScript in 2016 - What's News?
 
 Q: How many new language feature can you find?
 
@@ -316,7 +379,7 @@ export default class PostList extends React.Component {
 ```
 
 
-# The New New JavaScript - What's News? (Cont.)
+## JavaScript in 2016 - The New New JavaScript - What's News? (Cont.)
 
 Q: How many new language feature can you find?
 
@@ -349,7 +412,7 @@ And much more
 
 
 
-# ES6 (ES2015) - Can I Use ___ ? - Browser Support Matrix in 2016
+## JavaScript in 2016 - Can I Use ___ ? - Browser ES6 (ES2015) Support Matrix in 2016
 
 - Microsoft Internet Explorer (IE) 11  - **15%**
 - Microsoft Edge 14  - 90%
@@ -363,7 +426,7 @@ And much more
 
 
 
-# ES6 (ES2015) - Can I Use ___ ? - Browser Support Matrix in 2019
+## JavaScript (Today) in 2019  - Can I Use ___ ? - Browser ES6 (ES2015) Support Matrix (Today) in 2019
 
 - Microsoft Internet Explorer (IE) 11  - **11%**
 - Microsoft Edge 18  - 96%
@@ -402,7 +465,7 @@ First appeared on May 23, 1995 -- 23 years ago
 Note: New Release Schedule Starting with ES2016 - Every Year A Release
 
 
-## Aside - Trivia Quiz - Java Release Schedule in 2019
+## Aside - Trivia Quiz - Java Release Schedule (Today) in 2019
 
 Q: What the latest Java release (as of April/2019)?
 
@@ -497,9 +560,12 @@ or [TC39¹ - Tracking ECMAScript Proposals »](https://github.com/tc39/proposals
 
 ![](i/react-thomas-fuchs-i.png) -- [19 Dec 2016](https://twitter.com/thomasfuchs/status/810885087214637057)
 
-## React in 2017
 
-[Building Web Components with React.js - Past, Present, Future](https://github.com/geraldb/talks/blob/master/react.md)
+## React in 2017 - A Look Back
+
+See the Talk Notes -  
+[Building Web Components with React.js - Past, Present, Future »](https://github.com/geraldb/talks/blob/master/react.md)
+
 
 
 
@@ -575,7 +641,7 @@ or use "single-file" component-style:
 **Svelte**
 
 
-`.svelte`:
+`.html`:
 
 ```
 <script>
@@ -605,8 +671,20 @@ See [`svelte.dev` »](https://svelte.dev/)
 
 
 
+## Trivia Quiz - React & Reactivity
 
-##  Occam's Razor - Less Code is More
+Q: Why is React's Page Update NOT Reactive?
+
+Hint: Schedule vs React,
+Virtual DOM Diff & Buffer Batches (Reconciles)
+DOM Updates (60 Frames/Second),
+No (Model) "Binding" with Publish & Subscribe
+
+
+
+
+
+## Occam's Razor - Less Code is More
 
 > Occam's razor (also Ockham's razor)
 > is the problem-solving principle that essentially states that
@@ -701,7 +779,7 @@ export default {
 
 **Svelte**
 
-`.svelte`:
+`.html`:
 
 ```
 <script>
@@ -721,7 +799,7 @@ export default {
 
 **Svelte**
 
-`.svelte`:
+`.html`:
 
 ```
 <script>
@@ -840,7 +918,7 @@ Why Fun(ctional)?
   - Great for "time travel" debugging e.g. save or restore any state in time
 
 
-## Homework - Practice (or Learn) Functional Programming :-)
+### Homework - Practice (or Learn) Functional Programming :-)
 
 **Counter Example with Elm**
 
@@ -852,28 +930,32 @@ Homework. Practice (or Learn) Functional Programming with ReasonML  :-)
 
 
 
-## Counter Example with Elm
+### Counter Example with Elm
 
 ``` elm
-type Msg = Tick
+type Msg = Click
 
 model : Int
 model = 0
 
 view : Int -> Html.Html Msg
 view model =
-      button [ onClick Tick ] [ text (toString model) ]
+      button [ onClick Click ] [ text (toString model) ]
 
 update : Msg -> Int -> Int
 update msg model =
     case msg of
-        Add -> model + 1
+        Click -> model + 1
 ```
 
 
+Read more in [An Introduction to Elm](https://guide.elm-lang.org)
+incl. the Elm Architecture and much more
+by Evan Czaplicki
 
 
-## Counter Example with ReasonML (and React) and Timer (Side) Effect
+
+### Counter Example with ReasonML (and React) and Timer (Side) Effect
 
 ``` reasonml
 type action =
@@ -903,7 +985,12 @@ let make = () => {
 ```
 
 
-## Many More Languages
+Read more in [Exploring ReasonML](http://reasonmlhub.com/exploring-reasonml/)
+and functional programming by Axel Rauschmayer
+
+
+
+### Many More Languages Compiling to JavaScript
 
 Java:
 
@@ -919,14 +1006,15 @@ and many many more.
 See [List of languages that compile to JavaScript »](https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js)
 
 
+## What's Next? JavaScript (Today) in 2019
 
-## JavaScript + WebAssembly
+### JavaScript + WebAssembly
 
 - "Higher-Level" Language - JavaScript
 - "Lower-Level" Language - WebAssembly (formerly asm.js)
 
 
-## What's WebAssembly?
+### What's WebAssembly?
 
 Compile C, C++, Rust, and more "system" languages
 to "Lower-Level" JavaScript. Use compiled code as WebAssembly modules / libraries
@@ -935,10 +1023,10 @@ to "Lower-Level" JavaScript. Use compiled code as WebAssembly modules / librarie
 
 See [`webassembly.org »`](https://webassembly.org)
 
+![](i/webassembly-site.png)
 
 
-
-## Official WebAssembly Frequently Asked Questions (and Answers)
+### Official WebAssembly Frequently Asked Questions (and Answers)
 
 **Q: Is WebAssembly trying to replace JavaScript?**
 
@@ -952,3 +1040,51 @@ Mostly HTML/CSS/JavaScript app with a few high-performance WebAssembly modules (
 
 When WebAssembly gains the ability to access garbage-collected objects,
 those objects will be shared with JavaScript, and not live in a walled-off world of their own.
+
+
+
+### Bonus - Counter Example in "Low-Level" System Language Compiled to "Low-Level" WebAssembly
+
+
+``` rust
+pub enum Msg {
+    Click,
+}
+
+pub struct App {
+    click_count: u32,
+}
+
+impl App {
+    pub fn new() -> Self {
+        App { click_count: 0 }
+    }
+}
+
+impl Component<Msg> for App {
+
+    fn view(&self) -> Node<Msg> {
+        div(
+            [class("some-class"), id("some-id"), attr("data-id", 1)],
+            [
+                input(
+                    [
+                        class("client"),
+                        r#type("button"),
+                        value("Click me!"),
+                        onclick(|_| { Msg::Click }),
+                    ],
+                    [],
+                ),
+                text(format!("Clicked: {}", self.click_count)),
+            ],
+        )
+    }
+
+    fn update(&mut self, msg: Msg) {
+        match msg {
+            Msg::Click => self.click_count += 1,
+        }
+    }
+}
+```
