@@ -135,7 +135,7 @@ peer chaincode query -n mycc -c '{"Args":["query","a"]}' -C myc
 
 ``` ruby
 def setup( key, value )
-  @state = Mapping.of( String => Integer ).new
+  @state = Mapping.of( String => String ).new
   @state[ key ] = value
 end
 
@@ -144,7 +144,7 @@ def set( key, value )
 end
 
 def get( key )
-  assert @state.has_key?( key )
+  assert @state.has_key?( key ), "Asset not found: #{key}"
   @state[ key ]
 end
 ```
@@ -152,23 +152,25 @@ end
 or with (optional) type signatures
 
 ``` ruby
-sig [String, Integer],
+sig [String, String],
 def setup( key, value )
-  @state = Mapping.of( String => Integer ).new
+  @state = Mapping.of( String => String ).new
   @state[ key ] = value
 end
 
-sig [String, Integer],
+sig [String, String],
 def set( key, value )
   @state[ key] = value
 end
 
-sig [String] => [Integer],
+sig [String] => [String],
 def get( key )
-  assert @state.has_key?( key )
+  assert @state.has_key?( key ), "Asset not found: #{key}"
   @state[ key ]
 end
 ```
+
+(Source: `s6ruby/universum-contracts/hyperledger/simple_asset.rb`)
 
 
 ## Simple (Asset) Storage Service  - (Secure) Ruby Contract Version (Cont.)
@@ -176,32 +178,55 @@ end
 **Use the new contract code**
 
 ``` ruby
-require 'universum'
+require "universum"
 
 ## create contract
-tx = Uni.send_transaction( from: '0x1111', data: ['./service', 'a', '10'] )
-service = tx.receipt.contract
+tx = Uni.send_transaction( from: "0x1111", data: ["./simple_asset", "a", "10"] )
+simple_asset = tx.receipt.contract
 ```
 
 Now issue an invoke to change the value of `a` to `20`.
 
 ``` ruby
-Uni.send_transaction( from: '0x1111', to: service, data: [:set, 'a', '20'] )
+Uni.send_transaction( from: "0x1111", to: simple_asset, data: [:set, "a", "20"] )
 ```
 
 Finally, query `a`. We should see a value of `20`.
 
 ``` ruby
-Uni.send_transaction( from: '0x1111', to: service, data: [:get, 'a'] )
+Uni.send_transaction( from: "0x1111", to: simple_asset, data: [:get, "a"] )
 ```
+
+(Source: `s6ruby/universum-contracts/hyperledger/run_simple_asset.rb`)
+
+
+
+
+## Expert Corner - Use (Code) Your Own (Secure) Ruby Contract (State) Storage
+
+
+``` ruby
+class HyperledgerStorage
+  def initialize( stub )
+    @stub
+  end
+  def []( key )
+    @stub.get_state( key )
+  end
+  def []=( key, value )
+    @stub.put_state( key, value )
+  end
+end
+```
+
+See (Secure) Ruby [Language Syntax Pragmas](https://github.com/s6ruby/pragmas) for more.
+
 
 
 
 ## What's (Secure) Ruby?
 
-
-- add s6ruby github pic here!!!
-
+![](i/sruby.png)
 
 (Source: [`github.com/s6ruby`](https://github.com/s6ruby))
 
@@ -232,7 +257,7 @@ You can cross-compile (transpile) contract scripts (*) to:
 
 - Solidity - JavaScript-like contract scripts
 - Liquidity - OCaml-like (or ReasonML-like) contract scripts
-- Hyperledger Fabric Chaincode -  Go / JavaScript contract scripts
+- Hyperledger Fabric Chaincode -  Go / Java / JavaScript (Node.js) contract scripts
 - and much much more
 
 (*) in the future.
@@ -249,13 +274,24 @@ that runs with "classic" ruby or mruby "out-of-the-box".
 
 New Languages
 
-- Ethereum & Friends ⇒ Solidity - JavaScript-like contract scripts
-- Tezos              ⇒ Liquidity - OCaml-like (or ReasonML-like) contract scripts
+1) Turning Incomplete (No loops, No Jumps, etc.)
 
-New APIs for "Old" Languages
+- Bitcoin (Genesis!) ⇒ **(Bitcoin) Script** - Forth-like contract scripts run on stack machine
+- Bitcoin Elements (Side-Chain) ⇒  **Simplicity** - "Next Generation" (Bitcoin) Script - "type-safe" (functional) Haskell-like "bitmachine"
 
-- EOSIO              ⇒  C++  (Must Compile to WebAssembly)
-- Hyperledger Fabric ⇒  Go / JavaScript
+
+2) Turning Complete
+- Ethereum & Friends ⇒ **Solidity** - JavaScript-like contract scripts run on Ethereum Virtual stack-Machine (EVM)
+- Tezos              ⇒ **Liquidity** - OCaml-like (or ReasonML-like) contract scripts run on "Michelson" "type-safe" (functional) stack machine
+
+
+New APIs Only - Use "Classic" Languages
+
+- EOSIO              ⇒  **C++**  (must compile to WebAssembly; runs with WebAssembly stack machine)
+- Hyperledger Fabric ⇒  **Go / Java / JavaScript (Node.js)** run in Docker container using the Chaincode API / Interface
+   - `start(...)`
+   - `getState( key )` / `putState( key, value )`
+   - `error()` / `success()`
 
 
 
@@ -279,7 +315,7 @@ Good luck on trying to rebuild a new ecosystem from scratch.
 
 
 
-## Fabcar Sample
+## Hyperledger Fabric Sample - Fabcar
 
 FabCar is a database of car records stored in the ledger of a Fabric network. We can consider this as a traditional database storing the data:
 it is like a table, indexed with a Car Identifier (CarID), and the information of Maker, Model, Colour and Owner is recorded for this car.
@@ -311,11 +347,11 @@ import (
 	"strconv"
 
 	"github.com/hyperledger/fabric/core/chaincode/shim"
-	sc "github.com/hyperledger/fabric/protos/peer"
+	"github.com/hyperledger/fabric/protos/peer"
 )
 
 // Define the Smart Contract structure
-type SmartContract struct {
+type FabCar struct {
 }
 
 // Define the car structure, with 4 properties.  Structure tags are used by encoding/json library
@@ -330,7 +366,7 @@ type Car struct {
  * The Init method is called when the Smart Contract "fabcar" is instantiated by the blockchain network
  * Best practice is to have any Ledger initialization in separate function -- see initLedger()
  */
-func (s *SmartContract) Init(APIstub shim.ChaincodeStubInterface) sc.Response {
+func (t *FabCar) Init(APIstub shim.ChaincodeStubInterface) peer.Response {
 	return shim.Success(nil)
 }
 
@@ -338,27 +374,27 @@ func (s *SmartContract) Init(APIstub shim.ChaincodeStubInterface) sc.Response {
  * The Invoke method is called as a result of an application request to run the Smart Contract "fabcar"
  * The calling application program has also specified the particular smart contract function to be called, with arguments
  */
-func (s *SmartContract) Invoke(APIstub shim.ChaincodeStubInterface) sc.Response {
+func (t *FabCar) Invoke(APIstub shim.ChaincodeStubInterface) peer.Response {
 
 	// Retrieve the requested Smart Contract function and arguments
 	function, args := APIstub.GetFunctionAndParameters()
 	// Route to the appropriate handler function to interact with the ledger appropriately
 	if function == "queryCar" {
-		return s.queryCar(APIstub, args)
+		return t.queryCar(APIstub, args)
 	} else if function == "initLedger" {
-		return s.initLedger(APIstub)
+		return t.initLedger(APIstub)
 	} else if function == "createCar" {
-		return s.createCar(APIstub, args)
+		return t.createCar(APIstub, args)
 	} else if function == "queryAllCars" {
-		return s.queryAllCars(APIstub)
+		return t.queryAllCars(APIstub)
 	} else if function == "changeCarOwner" {
-		return s.changeCarOwner(APIstub, args)
+		return t.changeCarOwner(APIstub, args)
 	}
 
 	return shim.Error("Invalid Smart Contract function name.")
 }
 
-func (s *SmartContract) queryCar(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
+func (t *FabCar) queryCar(APIstub shim.ChaincodeStubInterface, args []string) peer.Response {
 
 	if len(args) != 1 {
 		return shim.Error("Incorrect number of arguments. Expecting 1")
@@ -368,7 +404,7 @@ func (s *SmartContract) queryCar(APIstub shim.ChaincodeStubInterface, args []str
 	return shim.Success(carAsBytes)
 }
 
-func (s *SmartContract) initLedger(APIstub shim.ChaincodeStubInterface) sc.Response {
+func (t *FabCar) initLedger(APIstub shim.ChaincodeStubInterface) peer.Response {
 	cars := []Car{
 		Car{Make: "Toyota", Model: "Prius", Colour: "blue", Owner: "Tomoko"},
 		Car{Make: "Ford", Model: "Mustang", Colour: "red", Owner: "Brad"},
@@ -394,7 +430,7 @@ func (s *SmartContract) initLedger(APIstub shim.ChaincodeStubInterface) sc.Respo
 	return shim.Success(nil)
 }
 
-func (s *SmartContract) createCar(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
+func (t *FabCar) createCar(APIstub shim.ChaincodeStubInterface, args []string) peer.Response {
 
 	if len(args) != 5 {
 		return shim.Error("Incorrect number of arguments. Expecting 5")
@@ -408,7 +444,7 @@ func (s *SmartContract) createCar(APIstub shim.ChaincodeStubInterface, args []st
 	return shim.Success(nil)
 }
 
-func (s *SmartContract) queryAllCars(APIstub shim.ChaincodeStubInterface) sc.Response {
+func (t *FabCar) queryAllCars(APIstub shim.ChaincodeStubInterface) peer.Response {
 
 	startKey := "CAR0"
 	endKey := "CAR999"
@@ -451,7 +487,7 @@ func (s *SmartContract) queryAllCars(APIstub shim.ChaincodeStubInterface) sc.Res
 	return shim.Success(buffer.Bytes())
 }
 
-func (s *SmartContract) changeCarOwner(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
+func (t *FabCar) changeCarOwner(APIstub shim.ChaincodeStubInterface, args []string) peer.Response {
 
 	if len(args) != 2 {
 		return shim.Error("Incorrect number of arguments. Expecting 2")
@@ -472,10 +508,10 @@ func (s *SmartContract) changeCarOwner(APIstub shim.ChaincodeStubInterface, args
 // The main function is only relevant in unit test mode. Only included here for completeness.
 func main() {
 
-	// Create a new Smart Contract
-	err := shim.Start(new(SmartContract))
+	// Create a new FabCar Contract
+	err := shim.Start(new(FabCar))
 	if err != nil {
-		fmt.Printf("Error creating new Smart Contract: %s", err)
+		fmt.Printf("Error creating new FabCar Contract: %s", err)
 	}
 }
 ```
@@ -485,10 +521,10 @@ func main() {
 
 
 
+
 ## Fabcar - From Go Chaincode to (Secure) Ruby Contract Script
 
 ``` go
-// Define the car structure, with 4 properties.  Structure tags are used by encoding/json library
 type Car struct {
 	Make   string `json:"make"`
 	Model  string `json:"model"`
@@ -509,14 +545,14 @@ struct :Car, {
 ```
 
 
-## Fabcar - From Go Chaincode to (Secure) Ruby Contract Script
+## initLedger - Fabcar - From Go Chaincode to (Secure) Ruby Contract Script
 
 ``` go
-func (s *SmartContract) Init(APIstub shim.ChaincodeStubInterface) sc.Response {
+func (t *FabCar) Init(APIstub shim.ChaincodeStubInterface) peer.Response {
 	return shim.Success(nil)
 }
 
-func (s *SmartContract) initLedger(APIstub shim.ChaincodeStubInterface) sc.Response {
+func (t *FabCar) initLedger(APIstub shim.ChaincodeStubInterface) peer.Response {
 	cars := []Car{
 		Car{Make: "Toyota", Model: "Prius", Colour: "blue", Owner: "Tomoko"},
 		Car{Make: "Ford", Model: "Mustang", Colour: "red", Owner: "Brad"},
@@ -564,10 +600,174 @@ def init_ledger
 	 Car.new( make: "Holden",     model: "Barina",  colour: "brown",  owner: "Shotaro"),
 	].each_with_index do |car,i|
     puts "i is #{i}"
-    @state[ "CAR#{i}" ] = car.to_bytes
+    @state[ "CAR#{i}" ] = car
 		puts "Added #{car.inspect}"
 end
 ```
+
+
+## queryCar - Fabcar - From Go Chaincode to (Secure) Ruby Contract Script
+
+
+``` go
+func (t *FabCar) queryCar(APIstub shim.ChaincodeStubInterface, args []string) peer.Response {
+
+	if len(args) != 1 {
+		return shim.Error("Incorrect number of arguments. Expecting 1")
+	}
+
+	carAsBytes, _ := APIstub.GetState(args[0])
+	return shim.Success(carAsBytes)
+}
+```
+
+vs
+
+``` ruby
+def query_car( key )
+  @state[ key ]
+end
+```
+
+
+
+## createCar - Fabcar - From Go Chaincode to (Secure) Ruby Contract Script
+
+``` go
+func (t *FabCar) createCar(APIstub shim.ChaincodeStubInterface, args []string) peer.Response {
+
+	if len(args) != 5 {
+		return shim.Error("Incorrect number of arguments. Expecting 5")
+	}
+
+	var car = Car{Make: args[1], Model: args[2], Colour: args[3], Owner: args[4]}
+
+	carAsBytes, _ := json.Marshal(car)
+	APIstub.PutState(args[0], carAsBytes)
+
+	return shim.Success(nil)
+}
+```
+
+vs
+
+``` ruby
+def create_car( key, make, model, colour, owner )
+	car = Car.new( make: make, model: model, colour: colour, owner: owner )
+  @state[ key ] = car
+end
+```
+
+or
+
+``` ruby
+def create_car( key, make, model, colour, owner )
+  @state[ key ] = Car.new( make, model, colour, owner )
+end
+```
+
+
+
+
+## changeCarOwner - Fabcar - From Go Chaincode to (Secure) Ruby Contract Script
+
+``` go
+func (t *FabCar) changeCarOwner(APIstub shim.ChaincodeStubInterface, args []string) peer.Response {
+
+	if len(args) != 2 {
+		return shim.Error("Incorrect number of arguments. Expecting 2")
+	}
+
+	carAsBytes, _ := APIstub.GetState(args[0])
+	car := Car{}
+
+	json.Unmarshal(carAsBytes, &car)
+	car.Owner = args[1]
+
+	carAsBytes, _ = json.Marshal(car)
+	APIstub.PutState(args[0], carAsBytes)
+
+	return shim.Success(nil)
+}
+```
+
+vs
+
+``` ruby
+def change_car_owner( key, owner )
+  car = @state[ key ]
+  car.owner = owner
+  @state[ key ] = car
+end
+```
+
+or
+
+``` ruby
+def change_car_owner( key, owner )
+  assert @state.has_key?( key ), "Car not found: #{key}"
+  @state[ key ].owner = owner
+end
+```
+
+
+## queryAllChars - Fabcar - From Go Chaincode to (Secure) Ruby Contract Script
+
+``` go
+func (t *FabCar) queryAllCars(APIstub shim.ChaincodeStubInterface) peer.Response {
+
+	startKey := "CAR0"
+	endKey := "CAR999"
+
+	resultsIterator, err := APIstub.GetStateByRange(startKey, endKey)
+	if err != nil {
+		return shim.Error(err.Error())
+	}
+	defer resultsIterator.Close()
+
+	// buffer is a JSON array containing QueryResults
+	var buffer bytes.Buffer
+	buffer.WriteString("[")
+
+	bArrayMemberAlreadyWritten := false
+	for resultsIterator.HasNext() {
+		queryResponse, err := resultsIterator.Next()
+		if err != nil {
+			return shim.Error(err.Error())
+		}
+		// Add a comma before array members, suppress it for the first array member
+		if bArrayMemberAlreadyWritten == true {
+			buffer.WriteString(",")
+		}
+		buffer.WriteString("{\"Key\":")
+		buffer.WriteString("\"")
+		buffer.WriteString(queryResponse.Key)
+		buffer.WriteString("\"")
+
+		buffer.WriteString(", \"Record\":")
+		// Record is a JSON object, so we write as-is
+		buffer.WriteString(string(queryResponse.Value))
+		buffer.WriteString("}")
+		bArrayMemberAlreadyWritten = true
+	}
+	buffer.WriteString("]")
+
+	fmt.Printf("- queryAllCars:\n%s\n", buffer.String())
+
+	return shim.Success(buffer.Bytes())
+}
+```
+
+vs
+
+``` ruby
+def query_all_cars
+  #####################
+  # Homework :-).
+  #####################
+end
+```
+
 
 
 
@@ -599,10 +799,66 @@ def init_ledger
 	 Car.new( make: "Holden",     model: "Barina",  colour: "brown",  owner: "Shotaro"),
 	].each_with_index do |car,i|
     puts "i is #{i}"
-    @state[ "CAR#{i}" ] = car.to_bytes
+    @state[ "CAR#{i}" ] = car
 		puts "Added #{car.inspect}"
 end
+
+def query_car( key )
+  assert @state.has_key?( key ), "Car not found: #{key}"
+  @state[ key ]
+end
+
+def create_car( key, make, model, colour, owner )
+  @state[ key ] = Car.new( make, model, colour, owner )
+end
+
+def change_car_owner( key, owner )
+  assert @state.has_key?( key ), "Car not found: #{key}"
+  @state[ key ].owner = owner
+end
+
+def query_all_cars
+  #####################
+  # Homework :-).
+  #####################
+end
 ```
+
+(Source: `s6ruby/universum-contracts/hyperledger/fabcar.rb`)
+
+
+
+## FabCar  - (Secure) Ruby Contract Version (Cont.)
+
+**Use the new contract code**
+
+``` ruby
+require "universum"
+
+## create contract
+tx = Uni.send_transaction( from: "0x1111", data: ["./fabcar"] )
+fabcar = tx.receipt.contract
+```
+
+Now issue an invoke to init the ledger.
+
+``` ruby
+Uni.send_transaction( from: "0x1111", to: fabcar, data: [:init_ledger] )
+```
+
+Finally, query `CAR0`. We should see a value of
+`<Car make:"Toyota", model: "Prius", colour: "blue", owner: "Tomoko">`.
+
+
+``` ruby
+Uni.send_transaction( from: "0x1111", to: fabcar, data: [:query_car, "CAR0"] )
+```
+
+(Source: `s6ruby/universum-contracts/hyperledger/run_fabcar.rb`)
+
+
+
+
 
 
 
@@ -649,7 +905,7 @@ Yes ⇒ You MIGHT need a permissioned blockchain,
 No ⇒ You MIGHT need a public blockchain
 
 
-![](i/blockchain-flowchart-ii.png)
+![](i/blockchain-flowchart-ii.jpg)
 
 (Source: [Do You Need a Blockchain?](https://spectrum.ieee.org/computing/networks/do-you-need-a-blockchain), IEEE Spectrum, Special Report: Blockchain World)
 
