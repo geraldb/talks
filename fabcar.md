@@ -341,13 +341,13 @@ package main
  * 2 specific Hyperledger Fabric specific libraries for Smart Contracts
  */
 import (
-	"bytes"
-	"encoding/json"
-	"fmt"
-	"strconv"
+ "bytes"
+ "encoding/json"
+ "fmt"
+ "strconv"
 
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	"github.com/hyperledger/fabric/protos/peer"
+ "github.com/hyperledger/fabric/core/chaincode/shim"
+ "github.com/hyperledger/fabric/protos/peer"
 )
 
 // Define the Smart Contract structure
@@ -356,10 +356,10 @@ type FabCar struct {
 
 // Define the car structure, with 4 properties.  Structure tags are used by encoding/json library
 type Car struct {
-	Make   string `json:"make"`
-	Model  string `json:"model"`
-	Colour string `json:"colour"`
-	Owner  string `json:"owner"`
+ Make   string `json:"make"`
+ Model  string `json:"model"`
+ Colour string `json:"colour"`
+ Owner  string `json:"owner"`
 }
 
 /*
@@ -367,7 +367,7 @@ type Car struct {
  * Best practice is to have any Ledger initialization in separate function -- see initLedger()
  */
 func (t *FabCar) Init(APIstub shim.ChaincodeStubInterface) peer.Response {
-	return shim.Success(nil)
+ return shim.Success(nil)
 }
 
 /*
@@ -376,143 +376,143 @@ func (t *FabCar) Init(APIstub shim.ChaincodeStubInterface) peer.Response {
  */
 func (t *FabCar) Invoke(APIstub shim.ChaincodeStubInterface) peer.Response {
 
-	// Retrieve the requested Smart Contract function and arguments
-	function, args := APIstub.GetFunctionAndParameters()
-	// Route to the appropriate handler function to interact with the ledger appropriately
-	if function == "queryCar" {
-		return t.queryCar(APIstub, args)
-	} else if function == "initLedger" {
-		return t.initLedger(APIstub)
-	} else if function == "createCar" {
-		return t.createCar(APIstub, args)
-	} else if function == "queryAllCars" {
-		return t.queryAllCars(APIstub)
-	} else if function == "changeCarOwner" {
-		return t.changeCarOwner(APIstub, args)
-	}
+ // Retrieve the requested Smart Contract function and arguments
+ function, args := APIstub.GetFunctionAndParameters()
+ // Route to the appropriate handler function to interact with the ledger appropriately
+ if function == "queryCar" {
+  return t.queryCar(APIstub, args)
+ } else if function == "initLedger" {
+  return t.initLedger(APIstub)
+ } else if function == "createCar" {
+  return t.createCar(APIstub, args)
+ } else if function == "queryAllCars" {
+  return t.queryAllCars(APIstub)
+ } else if function == "changeCarOwner" {
+  return t.changeCarOwner(APIstub, args)
+ }
 
-	return shim.Error("Invalid Smart Contract function name.")
+ return shim.Error("Invalid Smart Contract function name.")
 }
 
 func (t *FabCar) queryCar(APIstub shim.ChaincodeStubInterface, args []string) peer.Response {
 
-	if len(args) != 1 {
-		return shim.Error("Incorrect number of arguments. Expecting 1")
-	}
+ if len(args) != 1 {
+  return shim.Error("Incorrect number of arguments. Expecting 1")
+ }
 
-	carAsBytes, _ := APIstub.GetState(args[0])
-	return shim.Success(carAsBytes)
+ carAsBytes, _ := APIstub.GetState(args[0])
+ return shim.Success(carAsBytes)
 }
 
 func (t *FabCar) initLedger(APIstub shim.ChaincodeStubInterface) peer.Response {
-	cars := []Car{
-		Car{Make: "Toyota", Model: "Prius", Colour: "blue", Owner: "Tomoko"},
-		Car{Make: "Ford", Model: "Mustang", Colour: "red", Owner: "Brad"},
-		Car{Make: "Hyundai", Model: "Tucson", Colour: "green", Owner: "Jin Soo"},
-		Car{Make: "Volkswagen", Model: "Passat", Colour: "yellow", Owner: "Max"},
-		Car{Make: "Tesla", Model: "S", Colour: "black", Owner: "Adriana"},
-		Car{Make: "Peugeot", Model: "205", Colour: "purple", Owner: "Michel"},
-		Car{Make: "Chery", Model: "S22L", Colour: "white", Owner: "Aarav"},
-		Car{Make: "Fiat", Model: "Punto", Colour: "violet", Owner: "Pari"},
-		Car{Make: "Tata", Model: "Nano", Colour: "indigo", Owner: "Valeria"},
-		Car{Make: "Holden", Model: "Barina", Colour: "brown", Owner: "Shotaro"},
-	}
+ cars := []Car{
+  Car{Make: "Toyota", Model: "Prius", Colour: "blue", Owner: "Tomoko"},
+  Car{Make: "Ford", Model: "Mustang", Colour: "red", Owner: "Brad"},
+  Car{Make: "Hyundai", Model: "Tucson", Colour: "green", Owner: "Jin Soo"},
+  Car{Make: "Volkswagen", Model: "Passat", Colour: "yellow", Owner: "Max"},
+  Car{Make: "Tesla", Model: "S", Colour: "black", Owner: "Adriana"},
+  Car{Make: "Peugeot", Model: "205", Colour: "purple", Owner: "Michel"},
+  Car{Make: "Chery", Model: "S22L", Colour: "white", Owner: "Aarav"},
+  Car{Make: "Fiat", Model: "Punto", Colour: "violet", Owner: "Pari"},
+  Car{Make: "Tata", Model: "Nano", Colour: "indigo", Owner: "Valeria"},
+  Car{Make: "Holden", Model: "Barina", Colour: "brown", Owner: "Shotaro"},
+ }
 
-	i := 0
-	for i < len(cars) {
-		fmt.Println("i is ", i)
-		carAsBytes, _ := json.Marshal(cars[i])
-		APIstub.PutState("CAR"+strconv.Itoa(i), carAsBytes)
-		fmt.Println("Added", cars[i])
-		i = i + 1
-	}
+ i := 0
+ for i < len(cars) {
+  fmt.Println("i is ", i)
+  carAsBytes, _ := json.Marshal(cars[i])
+  APIstub.PutState("CAR"+strconv.Itoa(i), carAsBytes)
+  fmt.Println("Added", cars[i])
+  i = i + 1
+ }
 
-	return shim.Success(nil)
+ return shim.Success(nil)
 }
 
 func (t *FabCar) createCar(APIstub shim.ChaincodeStubInterface, args []string) peer.Response {
 
-	if len(args) != 5 {
-		return shim.Error("Incorrect number of arguments. Expecting 5")
-	}
+ if len(args) != 5 {
+  return shim.Error("Incorrect number of arguments. Expecting 5")
+ }
 
-	var car = Car{Make: args[1], Model: args[2], Colour: args[3], Owner: args[4]}
+ var car = Car{Make: args[1], Model: args[2], Colour: args[3], Owner: args[4]}
 
-	carAsBytes, _ := json.Marshal(car)
-	APIstub.PutState(args[0], carAsBytes)
+ carAsBytes, _ := json.Marshal(car)
+ APIstub.PutState(args[0], carAsBytes)
 
-	return shim.Success(nil)
+ return shim.Success(nil)
 }
 
 func (t *FabCar) queryAllCars(APIstub shim.ChaincodeStubInterface) peer.Response {
 
-	startKey := "CAR0"
-	endKey := "CAR999"
+ startKey := "CAR0"
+ endKey := "CAR999"
 
-	resultsIterator, err := APIstub.GetStateByRange(startKey, endKey)
-	if err != nil {
-		return shim.Error(err.Error())
-	}
-	defer resultsIterator.Close()
+ resultsIterator, err := APIstub.GetStateByRange(startKey, endKey)
+ if err != nil {
+  return shim.Error(err.Error())
+ }
+ defer resultsIterator.Close()
 
-	// buffer is a JSON array containing QueryResults
-	var buffer bytes.Buffer
-	buffer.WriteString("[")
+ // buffer is a JSON array containing QueryResults
+ var buffer bytes.Buffer
+ buffer.WriteString("[")
 
-	bArrayMemberAlreadyWritten := false
-	for resultsIterator.HasNext() {
-		queryResponse, err := resultsIterator.Next()
-		if err != nil {
-			return shim.Error(err.Error())
-		}
-		// Add a comma before array members, suppress it for the first array member
-		if bArrayMemberAlreadyWritten == true {
-			buffer.WriteString(",")
-		}
-		buffer.WriteString("{\"Key\":")
-		buffer.WriteString("\"")
-		buffer.WriteString(queryResponse.Key)
-		buffer.WriteString("\"")
+ bArrayMemberAlreadyWritten := false
+ for resultsIterator.HasNext() {
+  queryResponse, err := resultsIterator.Next()
+  if err != nil {
+   return shim.Error(err.Error())
+  }
+  // Add a comma before array members, suppress it for the first array member
+  if bArrayMemberAlreadyWritten == true {
+   buffer.WriteString(",")
+  }
+  buffer.WriteString("{\"Key\":")
+  buffer.WriteString("\"")
+  buffer.WriteString(queryResponse.Key)
+  buffer.WriteString("\"")
 
-		buffer.WriteString(", \"Record\":")
-		// Record is a JSON object, so we write as-is
-		buffer.WriteString(string(queryResponse.Value))
-		buffer.WriteString("}")
-		bArrayMemberAlreadyWritten = true
-	}
-	buffer.WriteString("]")
+  buffer.WriteString(", \"Record\":")
+  // Record is a JSON object, so we write as-is
+  buffer.WriteString(string(queryResponse.Value))
+  buffer.WriteString("}")
+  bArrayMemberAlreadyWritten = true
+ }
+ buffer.WriteString("]")
 
-	fmt.Printf("- queryAllCars:\n%s\n", buffer.String())
+ fmt.Printf("- queryAllCars:\n%s\n", buffer.String())
 
-	return shim.Success(buffer.Bytes())
+ return shim.Success(buffer.Bytes())
 }
 
 func (t *FabCar) changeCarOwner(APIstub shim.ChaincodeStubInterface, args []string) peer.Response {
 
-	if len(args) != 2 {
-		return shim.Error("Incorrect number of arguments. Expecting 2")
-	}
+ if len(args) != 2 {
+  return shim.Error("Incorrect number of arguments. Expecting 2")
+ }
 
-	carAsBytes, _ := APIstub.GetState(args[0])
-	car := Car{}
+ carAsBytes, _ := APIstub.GetState(args[0])
+ car := Car{}
 
-	json.Unmarshal(carAsBytes, &car)
-	car.Owner = args[1]
+ json.Unmarshal(carAsBytes, &car)
+ car.Owner = args[1]
 
-	carAsBytes, _ = json.Marshal(car)
-	APIstub.PutState(args[0], carAsBytes)
+ carAsBytes, _ = json.Marshal(car)
+ APIstub.PutState(args[0], carAsBytes)
 
-	return shim.Success(nil)
+ return shim.Success(nil)
 }
 
 // The main function is only relevant in unit test mode. Only included here for completeness.
 func main() {
 
-	// Create a new FabCar Contract
-	err := shim.Start(new(FabCar))
-	if err != nil {
-		fmt.Printf("Error creating new FabCar Contract: %s", err)
-	}
+ // Create a new FabCar Contract
+ err := shim.Start(new(FabCar))
+ if err != nil {
+  fmt.Printf("Error creating new FabCar Contract: %s", err)
+ }
 }
 ```
 
@@ -526,10 +526,10 @@ func main() {
 
 ``` go
 type Car struct {
-	Make   string `json:"make"`
-	Model  string `json:"model"`
-	Colour string `json:"colour"`
-	Owner  string `json:"owner"`
+ Make   string `json:"make"`
+ Model  string `json:"model"`
+ Colour string `json:"colour"`
+ Owner  string `json:"owner"`
 }
 ```
 
@@ -549,33 +549,33 @@ struct :Car, {
 
 ``` go
 func (t *FabCar) Init(APIstub shim.ChaincodeStubInterface) peer.Response {
-	return shim.Success(nil)
+ return shim.Success(nil)
 }
 
 func (t *FabCar) initLedger(APIstub shim.ChaincodeStubInterface) peer.Response {
-	cars := []Car{
-		Car{Make: "Toyota", Model: "Prius", Colour: "blue", Owner: "Tomoko"},
-		Car{Make: "Ford", Model: "Mustang", Colour: "red", Owner: "Brad"},
-		Car{Make: "Hyundai", Model: "Tucson", Colour: "green", Owner: "Jin Soo"},
-		Car{Make: "Volkswagen", Model: "Passat", Colour: "yellow", Owner: "Max"},
-		Car{Make: "Tesla", Model: "S", Colour: "black", Owner: "Adriana"},
-		Car{Make: "Peugeot", Model: "205", Colour: "purple", Owner: "Michel"},
-		Car{Make: "Chery", Model: "S22L", Colour: "white", Owner: "Aarav"},
-		Car{Make: "Fiat", Model: "Punto", Colour: "violet", Owner: "Pari"},
-		Car{Make: "Tata", Model: "Nano", Colour: "indigo", Owner: "Valeria"},
-		Car{Make: "Holden", Model: "Barina", Colour: "brown", Owner: "Shotaro"},
-	}
+ cars := []Car{
+  Car{Make: "Toyota", Model: "Prius", Colour: "blue", Owner: "Tomoko"},
+  Car{Make: "Ford", Model: "Mustang", Colour: "red", Owner: "Brad"},
+  Car{Make: "Hyundai", Model: "Tucson", Colour: "green", Owner: "Jin Soo"},
+  Car{Make: "Volkswagen", Model: "Passat", Colour: "yellow", Owner: "Max"},
+  Car{Make: "Tesla", Model: "S", Colour: "black", Owner: "Adriana"},
+  Car{Make: "Peugeot", Model: "205", Colour: "purple", Owner: "Michel"},
+  Car{Make: "Chery", Model: "S22L", Colour: "white", Owner: "Aarav"},
+  Car{Make: "Fiat", Model: "Punto", Colour: "violet", Owner: "Pari"},
+  Car{Make: "Tata", Model: "Nano", Colour: "indigo", Owner: "Valeria"},
+  Car{Make: "Holden", Model: "Barina", Colour: "brown", Owner: "Shotaro"},
+ }
 
-	i := 0
-	for i < len(cars) {
-		fmt.Println("i is ", i)
-		carAsBytes, _ := json.Marshal(cars[i])
-		APIstub.PutState("CAR"+strconv.Itoa(i), carAsBytes)
-		fmt.Println("Added", cars[i])
-		i = i + 1
-	}
+ i := 0
+ for i < len(cars) {
+  fmt.Println("i is ", i)
+  carAsBytes, _ := json.Marshal(cars[i])
+  APIstub.PutState("CAR"+strconv.Itoa(i), carAsBytes)
+  fmt.Println("Added", cars[i])
+  i = i + 1
+ }
 
-	return shim.Success(nil)
+ return shim.Success(nil)
 }
 ```
 
@@ -588,20 +588,21 @@ def setup
 end
 
 def init_ledger
-	[Car.new( make: "Toyota",     model: "Prius",   colour: "blue",   owner: "Tomoko"),
-	 Car.new( make: "Ford",       model: "Mustang", colour: "red",    owner: "Brad"),
-	 Car.new( make: "Hyundai",    model: "Tucson",  colour: "green",  owner: "Jin Soo"),
-	 Car.new( make: "Volkswagen", model: "Passat",  colour: "yellow", owner: "Max"),
-	 Car.new( make: "Tesla",      model: "S",       colour: "black",  owner: "Adriana"),
-	 Car.new( make: "Peugeot",    model: "205",     colour: "purple", owner: "Michel"),
-	 Car.new( make: "Chery",      model: "S22L",    colour: "white",  owner: "Aarav"),
-	 Car.new( make: "Fiat",       model: "Punto",   colour: "violet", owner: "Pari"),
-	 Car.new( make: "Tata",       model: "Nano",    colour: "indigo", owner: "Valeria"),
-	 Car.new( make: "Holden",     model: "Barina",  colour: "brown",  owner: "Shotaro"),
-	].each_with_index do |car,i|
+  [Car.new( make: "Toyota",     model: "Prius",   colour: "blue",   owner: "Tomoko"),
+   Car.new( make: "Ford",       model: "Mustang", colour: "red",    owner: "Brad"),
+   Car.new( make: "Hyundai",    model: "Tucson",  colour: "green",  owner: "Jin Soo"),
+   Car.new( make: "Volkswagen", model: "Passat",  colour: "yellow", owner: "Max"),
+   Car.new( make: "Tesla",      model: "S",       colour: "black",  owner: "Adriana"),
+   Car.new( make: "Peugeot",    model: "205",     colour: "purple", owner: "Michel"),
+   Car.new( make: "Chery",      model: "S22L",    colour: "white",  owner: "Aarav"),
+   Car.new( make: "Fiat",       model: "Punto",   colour: "violet", owner: "Pari"),
+   Car.new( make: "Tata",       model: "Nano",    colour: "indigo", owner: "Valeria"),
+   Car.new( make: "Holden",     model: "Barina",  colour: "brown",  owner: "Shotaro"),
+  ].each_with_index do |car,i|
     puts "i is #{i}"
     @state[ "CAR#{i}" ] = car
-		puts "Added #{car.inspect}"
+   puts "Added #{car.inspect}"
+  end
 end
 ```
 
@@ -612,12 +613,12 @@ end
 ``` go
 func (t *FabCar) queryCar(APIstub shim.ChaincodeStubInterface, args []string) peer.Response {
 
-	if len(args) != 1 {
-		return shim.Error("Incorrect number of arguments. Expecting 1")
-	}
+ if len(args) != 1 {
+  return shim.Error("Incorrect number of arguments. Expecting 1")
+ }
 
-	carAsBytes, _ := APIstub.GetState(args[0])
-	return shim.Success(carAsBytes)
+ carAsBytes, _ := APIstub.GetState(args[0])
+ return shim.Success(carAsBytes)
 }
 ```
 
@@ -636,16 +637,16 @@ end
 ``` go
 func (t *FabCar) createCar(APIstub shim.ChaincodeStubInterface, args []string) peer.Response {
 
-	if len(args) != 5 {
-		return shim.Error("Incorrect number of arguments. Expecting 5")
-	}
+ if len(args) != 5 {
+  return shim.Error("Incorrect number of arguments. Expecting 5")
+ }
 
-	var car = Car{Make: args[1], Model: args[2], Colour: args[3], Owner: args[4]}
+ var car = Car{Make: args[1], Model: args[2], Colour: args[3], Owner: args[4]}
 
-	carAsBytes, _ := json.Marshal(car)
-	APIstub.PutState(args[0], carAsBytes)
+ carAsBytes, _ := json.Marshal(car)
+ APIstub.PutState(args[0], carAsBytes)
 
-	return shim.Success(nil)
+ return shim.Success(nil)
 }
 ```
 
@@ -653,7 +654,7 @@ vs
 
 ``` ruby
 def create_car( key, make, model, colour, owner )
-	car = Car.new( make: make, model: model, colour: colour, owner: owner )
+ car = Car.new( make: make, model: model, colour: colour, owner: owner )
   @state[ key ] = car
 end
 ```
@@ -674,20 +675,20 @@ end
 ``` go
 func (t *FabCar) changeCarOwner(APIstub shim.ChaincodeStubInterface, args []string) peer.Response {
 
-	if len(args) != 2 {
-		return shim.Error("Incorrect number of arguments. Expecting 2")
-	}
+ if len(args) != 2 {
+  return shim.Error("Incorrect number of arguments. Expecting 2")
+ }
 
-	carAsBytes, _ := APIstub.GetState(args[0])
-	car := Car{}
+ carAsBytes, _ := APIstub.GetState(args[0])
+ car := Car{}
 
-	json.Unmarshal(carAsBytes, &car)
-	car.Owner = args[1]
+ json.Unmarshal(carAsBytes, &car)
+ car.Owner = args[1]
 
-	carAsBytes, _ = json.Marshal(car)
-	APIstub.PutState(args[0], carAsBytes)
+ carAsBytes, _ = json.Marshal(car)
+ APIstub.PutState(args[0], carAsBytes)
 
-	return shim.Success(nil)
+ return shim.Success(nil)
 }
 ```
 
@@ -716,45 +717,45 @@ end
 ``` go
 func (t *FabCar) queryAllCars(APIstub shim.ChaincodeStubInterface) peer.Response {
 
-	startKey := "CAR0"
-	endKey := "CAR999"
+ startKey := "CAR0"
+ endKey := "CAR999"
 
-	resultsIterator, err := APIstub.GetStateByRange(startKey, endKey)
-	if err != nil {
-		return shim.Error(err.Error())
-	}
-	defer resultsIterator.Close()
+ resultsIterator, err := APIstub.GetStateByRange(startKey, endKey)
+ if err != nil {
+  return shim.Error(err.Error())
+ }
+ defer resultsIterator.Close()
 
-	// buffer is a JSON array containing QueryResults
-	var buffer bytes.Buffer
-	buffer.WriteString("[")
+ // buffer is a JSON array containing QueryResults
+ var buffer bytes.Buffer
+ buffer.WriteString("[")
 
-	bArrayMemberAlreadyWritten := false
-	for resultsIterator.HasNext() {
-		queryResponse, err := resultsIterator.Next()
-		if err != nil {
-			return shim.Error(err.Error())
-		}
-		// Add a comma before array members, suppress it for the first array member
-		if bArrayMemberAlreadyWritten == true {
-			buffer.WriteString(",")
-		}
-		buffer.WriteString("{\"Key\":")
-		buffer.WriteString("\"")
-		buffer.WriteString(queryResponse.Key)
-		buffer.WriteString("\"")
+ bArrayMemberAlreadyWritten := false
+ for resultsIterator.HasNext() {
+  queryResponse, err := resultsIterator.Next()
+  if err != nil {
+   return shim.Error(err.Error())
+  }
+  // Add a comma before array members, suppress it for the first array member
+  if bArrayMemberAlreadyWritten == true {
+   buffer.WriteString(",")
+  }
+  buffer.WriteString("{\"Key\":")
+  buffer.WriteString("\"")
+  buffer.WriteString(queryResponse.Key)
+  buffer.WriteString("\"")
 
-		buffer.WriteString(", \"Record\":")
-		// Record is a JSON object, so we write as-is
-		buffer.WriteString(string(queryResponse.Value))
-		buffer.WriteString("}")
-		bArrayMemberAlreadyWritten = true
-	}
-	buffer.WriteString("]")
+  buffer.WriteString(", \"Record\":")
+  // Record is a JSON object, so we write as-is
+  buffer.WriteString(string(queryResponse.Value))
+  buffer.WriteString("}")
+  bArrayMemberAlreadyWritten = true
+ }
+ buffer.WriteString("]")
 
-	fmt.Printf("- queryAllCars:\n%s\n", buffer.String())
+ fmt.Printf("- queryAllCars:\n%s\n", buffer.String())
 
-	return shim.Success(buffer.Bytes())
+ return shim.Success(buffer.Bytes())
 }
 ```
 
@@ -787,20 +788,21 @@ def setup
 end
 
 def init_ledger
-	[Car.new( make: "Toyota",     model: "Prius",   colour: "blue",   owner: "Tomoko"),
-	 Car.new( make: "Ford",       model: "Mustang", colour: "red",    owner: "Brad"),
-	 Car.new( make: "Hyundai",    model: "Tucson",  colour: "green",  owner: "Jin Soo"),
-	 Car.new( make: "Volkswagen", model: "Passat",  colour: "yellow", owner: "Max"),
-	 Car.new( make: "Tesla",      model: "S",       colour: "black",  owner: "Adriana"),
-	 Car.new( make: "Peugeot",    model: "205",     colour: "purple", owner: "Michel"),
-	 Car.new( make: "Chery",      model: "S22L",    colour: "white",  owner: "Aarav"),
-	 Car.new( make: "Fiat",       model: "Punto",   colour: "violet", owner: "Pari"),
-	 Car.new( make: "Tata",       model: "Nano",    colour: "indigo", owner: "Valeria"),
-	 Car.new( make: "Holden",     model: "Barina",  colour: "brown",  owner: "Shotaro"),
-	].each_with_index do |car,i|
+  [Car.new( make: "Toyota",     model: "Prius",   colour: "blue",   owner: "Tomoko"),
+   Car.new( make: "Ford",       model: "Mustang", colour: "red",    owner: "Brad"),
+   Car.new( make: "Hyundai",    model: "Tucson",  colour: "green",  owner: "Jin Soo"),
+   Car.new( make: "Volkswagen", model: "Passat",  colour: "yellow", owner: "Max"),
+   Car.new( make: "Tesla",      model: "S",       colour: "black",  owner: "Adriana"),
+   Car.new( make: "Peugeot",    model: "205",     colour: "purple", owner: "Michel"),
+   Car.new( make: "Chery",      model: "S22L",    colour: "white",  owner: "Aarav"),
+   Car.new( make: "Fiat",       model: "Punto",   colour: "violet", owner: "Pari"),
+   Car.new( make: "Tata",       model: "Nano",    colour: "indigo", owner: "Valeria"),
+   Car.new( make: "Holden",     model: "Barina",  colour: "brown",  owner: "Shotaro"),
+  ].each_with_index do |car,i|
     puts "i is #{i}"
     @state[ "CAR#{i}" ] = car
-		puts "Added #{car.inspect}"
+    puts "Added #{car.inspect}"
+  end
 end
 
 def query_car( key )
