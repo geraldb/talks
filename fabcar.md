@@ -1,9 +1,7 @@
 # Contract Scripting for Everyone: (Hyperledger) Car Registration Sample with (Secure) Ruby
 
 
-
 ## Hyperledger Fabric - Getting Started - Simple (Asset) Storage Service
-
 
 ``` go
 package main
