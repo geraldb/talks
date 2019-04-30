@@ -1,6 +1,41 @@
 # Contract Scripting for Everyone: (Hyperledger) Car Registration Sample with (Secure) Ruby
 
 
+- Hyperledger Fabric - Getting Started - Simple (Asset) Storage Service
+  - Go Version
+    - Use the New Chaincode
+  - (Secure) Ruby Contract Version
+    - Use the New Contract Code
+    - Expert Corner - Use (Code) Your Own (Secure) Ruby Contract (State) Storage
+- What's (Secure) Ruby?
+  - sruby - Small, Smart, Secure, Safe, Solid & Sound (S6) Ruby
+    - What's missing and why?
+    - Yes, yes, yes - It's just "plain-vanilla" ruby
+- Contract-Oriented Programming Languages - Do We Need A New Language?
+- Networks, Networks, Networks - Running the Contract Code
+- Hyperledger Fabric Sample - Fabcar
+  - Fabcar Chaincode in Go
+  - Fabcar - From Go Chaincode to (Secure) Ruby Contract Script
+    - initLedger 
+    - queryCar
+    - createCar
+    - changeCarOwner
+    - queryAllCars 
+    - Fabcar - (Secure) Ruby Contract Script - All Together Now
+      - Use the New Contract Code
+- Bonus - Do You Need A Blockchain?
+  - Do You Need A Blockchain?  
+    - TL;DR Version
+    - Bitcoin Maximalist Version
+    - IEEE Spectrum Version
+    - ETH Zürich Version
+- Contracts, Contract, Contracts 
+  - New Contracts Per Month - Total Contracts ⇑⇑⇑⇑⇑
+  - Transactions Per Contract Category
+  - Bonus - Vienna Crypto Programming Talk Notes
+
+
+
 ## Hyperledger Fabric - Getting Started - Simple (Asset) Storage Service
 
 ``` go
@@ -206,7 +241,7 @@ Uni.send_transaction( from: "0x1111", to: simple_asset, data: [:get, "a"] )
 ``` ruby
 class HyperledgerStorage
   def initialize( stub )
-    @stub
+    @stub = stub
   end
   def []( key )
     @stub.get_state( key )
@@ -710,7 +745,7 @@ end
 ```
 
 
-## queryAllChars - Fabcar - From Go Chaincode to (Secure) Ruby Contract Script
+## queryAllCars - Fabcar - From Go Chaincode to (Secure) Ruby Contract Script
 
 ``` go
 func (t *FabCar) queryAllCars(APIstub shim.ChaincodeStubInterface) peer.Response {
@@ -882,10 +917,27 @@ No   ⇒ You DON'T need a blockchain
 
 Yes  ⇒ Use Bitcoin - the ONLY blockchain that works
 
+**BEWARE: Bitcoin is a gigantic ponzi scheme¹.
+To the moon!? The new gold standard!? 
+Do NOT "invest" trying to get-rich-quick HODLing. 
+Why not? The bitcoin code is archaic and out-of-date.
+Burn, baby, burn! Proof-of-work / waste is a global
+energy environmental disaster
+using 300 kW/h per bitcoin transaction (!) that's about 179 kilograms of CO₂ emissions².
+Programmable money (or the internet of value) 
+for all future generations with (bitcoin) script
+without loops and jumps (gotos) and all "stateless"!? LOL.**
+
+¹: See [Best of Bitcoin Maximalist - Scammers, Morons, Clowns, Shills & BagHODLers - Inside The New New Crypto Ponzi Economics](https://bitsblocks.github.io/bitcoin-maximalist)) for more about the greatest "investment programme" where earlier investors are paid with the contributions from later investors.
+
+²: Assuming let's say 0.596 kilograms of CO₂ per kW/h 
+(that's the energy efficiency in Germany) that's 
+about 179 kilograms of CO₂ per bitcoin transaction (300 kW/h × 0.596 kg). For more insights see the [Bitcoin Energy Consumption Index](https://digiconomist.net/bitcoin-energy-consumption).
 
 
 
-### Do You Need A Blockchain?  - IEEE Spectrum Verison
+
+### Do You Need A Blockchain?  - IEEE Spectrum Version
 
 Q: Can a traditional database meet your needs?  Yes  ⇒ You DON'T need a blockchain
 
