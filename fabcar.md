@@ -307,13 +307,13 @@ that runs with "classic" ruby or mruby "out-of-the-box".
 
 New Languages
 
-1) Turning Incomplete (No loops, No Jumps, etc.)
+1) Turing Incomplete (No loops, No Jumps, etc.)
 
 - Bitcoin (Genesis!) ⇒ **(Bitcoin) Script** - Forth-like contract scripts run on stack machine
 - Bitcoin Elements (Side-Chain) ⇒  **Simplicity** - "Next Generation" (Bitcoin) Script - "type-safe" (functional) Haskell-like "bitmachine"
 
 
-2) Turning Complete
+2) Turing Complete
 - Ethereum & Friends ⇒ **Solidity** - JavaScript-like contract scripts run on Ethereum Virtual stack-Machine (EVM)
 - Tezos              ⇒ **Liquidity** - OCaml-like (or ReasonML-like) contract scripts run on "Michelson" "type-safe" (functional) stack machine
 
