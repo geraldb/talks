@@ -15,8 +15,11 @@ sources in text w/ formatting in markdown conventions
 
 ## 2019
 
-[**JavaScript in 2019 - Teach Yourself Web Programming in ~24 Hours~ 10 Minutes**](https://github.com/geraldb/talks/blob/master/javascript2019.md)  @ Inhouse (Private) 
+Wed May 15th, 2019 - [**JavaScript in 2019 - Teach Yourself Web Programming in ~24 Hours~ 10 Minutes**](https://github.com/geraldb/talks/blob/master/javascript2019.md)  @ Inhouse (Private) 
 
+Tue April 30th, 2019 - 
+[**Contract Scripting for Everyone: (Hyperledger) Car Registration Sample - From Go Chaincode to (Secure) Ruby Contract Script**](https://github.com/geraldb/talks/blob/master/fabcar.md)
+@ [Vienna Hyperledger Meetup](https://meetup.com/Hyperledger-Vienna/events/260252086)
 
 Thu April 4th, 2019 -
 [**The State of Bool - Everything You Never Wanted to Know**](https://github.com/geraldb/talks/blob/master/bool.md)
