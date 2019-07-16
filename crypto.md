@@ -57,7 +57,7 @@ Maximum value of 2^256-1 =
 78 (!) decimal digits
 
 
-Triva: Q: What's the maximum value for a 256-bit (32 byte) integer number
+Triva Quiz: What's the maximum value for a 256-bit (32 byte) integer number
 in hexadecimal format?
 
 ``` ruby
@@ -106,7 +106,7 @@ What's an Elliptic Curve?
 
 ![](i/secp256k1.png)
 
-> This is a graph of secp256k1's elliptic curve¹ `y² = x³ + 7`
+> This is a graph of secp256k1's elliptic curve `y² = x³ + 7`
 > over the real numbers.
 > Note that because secp256k1 is actually defined over the field Zₚ,
 > its graph will in reality look like random scattered points,
@@ -356,7 +356,7 @@ That's it. Thanks.
 Upcoming:
 
 - Proof-of-Work Mining - Byzantine Fault Tolerance (BFT) - State Machine Replication and the Truth Machine
-- Contract-Oriented (Blockchain) Programming / Scripting - Turning Complete and the Halting Problem  - "On Chain" Storage vs "State-Less"
+- Contract-Oriented (Blockchain) Programming / Scripting - Turing Complete and the Halting Problem  - "On Chain" Storage vs "State-Less"
 - Inside Libra & Move - "Stable" Coin with Reserve "Stake" for Payments
 
 
