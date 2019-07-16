@@ -93,17 +93,16 @@ How big (or how safe) is a (random) 256-bit (32 byte) integer number?
 The public key gets auto-generated/calculated from the
 256-bit integer number.
 
-How?  Ecliptic Curve Cryptography
-
-What's an Ecliptic Curve?
+How?  Elliptic Curve Cryptography
 
 > Elliptic-curve cryptography (ECC) is
 > an approach to public-key cryptography based
 > on the algebraic structure of elliptic curves over finite fields.
 >
-> ([Elliptic-curve cryptography @ Wikipedia](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography))
+> (Source: [Elliptic-curve cryptography @ Wikipedia](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography))
 
 
+What's an Elliptic Curve?
 
 ![](i/secp256k1.png)
 
@@ -113,20 +112,22 @@ What's an Ecliptic Curve?
 > its graph will in reality look like random scattered points,
 > not anything like this.
 >
-> ([Secp256k1 @ Bitcoin Wiki](https://en.bitcoin.it/wiki/Secp256k1))
+> (Source: [Secp256k1 @ Bitcoin Wiki](https://en.bitcoin.it/wiki/Secp256k1))
 
 
+An ECDSA (Elliptic Curve Digital Signature Algorithm) private key is a random number between 1 and the order of the elliptic curve group. The public key are two numbers (that is, a point with the coordinates x and y) computed by multiplying 
+the generator point (`G`) of the curve with the private key. 
+This is equivalent to adding the generator to itself `private_key` times.
 
 
 ``` ruby
-require 'pp'              # pp = pretty print(er)
 require 'ecdsa'           # Use an elliptic curve (digital signature algorithm) library
 
 # This private key is just an example. It should be much more secure!
 privatekey = 1234
 
 # Elliptic curve multiplication
-group = ECDSA::Group::Secp256k1      # Select the curve used in Bitcoin and Ethereum
+group  = ECDSA::Group::Secp256k1      # Select the curve used in Bitcoin and Ethereum
 point = group.generator.multiply_by_scalar( privatekey ) # Multiply by integer (not hex string)
 
 point.x
@@ -139,7 +140,6 @@ point.x.to_s(16)
 point.y.to_s(16)
 #=> "6d2ee9a82d4158f164ae653e9c6fa7f982ed8c94347fc05c2d068ff1d38b304c"
 ```
-
 
 Is the public key the (bank) account address?
 
@@ -247,7 +247,7 @@ Alphabets - Base 16 (a.k.a. Hexadecimal), Base 32, Base 56:
 Triva Quiz: What characters (digits/letters) are
 missing in the base 32/base 56 alphabets?
 
-- In Base 56   -  `0`, `O` (Upper-O), `I` (Upper-I), `l` (Lower-L)
+- In Base 56   -  `0` (Zero), `O` (Upper-O), `I` (Upper-I), `l` (Lower-L)
 - In Base 32 (Bitcoin Bech32 Version) - `1`, `B`, `I`, `O`
 
 
