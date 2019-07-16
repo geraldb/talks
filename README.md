@@ -15,6 +15,9 @@ sources in text w/ formatting in markdown conventions
 
 ## 2019
 
+Wed July 17th, 2019 - [**Blockchain Evolution - 1st, 2nd, 3rd, 4th Generation - From Bitcoin to Ethereum 1.0 to Libra to Ethereum 2.0 - Part I: Private Key, Public Key and Address**](https://github.com/geraldb/talks/blob/master/crypto.md)  @ Inhouse (Private)
+
+
 Wed May 15th, 2019 - [**JavaScript in 2019 - Teach Yourself Web Programming in ~24 Hours~ 10 Minutes**](https://github.com/geraldb/talks/blob/master/javascript2019.md)  @ Inhouse (Private) 
 
 Tue April 30th, 2019 - 
