@@ -377,15 +377,12 @@ txhash = Digest::SHA256.digest( tx )
 # Step 2 - Get the Signer's Private key
 privatekey = 1234     # This private key is just an example. It should be much more secure!
 
-signature = nil
-while signature.nil?
-  # Step 3 - Auto-Generate a New (Secure) Private Key 
-  group     = ECDSA::Group::Secp256k1      # Select the curve used in Bitcoin and Ethereum
-  tempkey   = 1 + SecureRandom.random_number( group.order - 1 )
+# Step 3 - Auto-Generate a New (Secure) Private Key 
+group     = ECDSA::Group::Secp256k1      # Select the curve used in Bitcoin and Ethereum
+tempkey   = 1 + SecureRandom.random_number( group.order - 1 )
 
-  # Sign!
-  signature = ECDSA.sign(group, privatekey, txhash, tempkey)
-end
+# Sign!
+signature = ECDSA.sign(group, privatekey, txhash, tempkey)
 
 signature.r
 #=> 80563021554295584320113598933963644829902821722081604563031030942154621916407
