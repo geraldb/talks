@@ -1,5 +1,5 @@
-# Blockchain Evolution - 1st, 2nd, 3rd, 4th Generation - From Bitcoin to Ethereum 1.0
-to Libra to Ethereum 2.0
+# Blockchain Evolution - 1st, 2nd, 3rd, 4th Generation - From Bitcoin to Ethereum 1.0 to Libra to Ethereum 2.0
+
 
 
 Bitcoin Public Service Announcement
@@ -247,8 +247,8 @@ Alphabets - Base 16 (a.k.a. Hexadecimal), Base 32, Base 56:
 Triva Quiz: What characters (digits/letters) are
 missing in the base 32/base 56 alphabets?
 
-- In Base 56   -  0, O (Upper-O), I (Upper-I), l (Lower-L)
-- In Base 32 (Bitcoin Bech32 Version) - 1, B, I, O
+- In Base 56   -  `0`, `O` (Upper-O), `I` (Upper-I), `l` (Lower-L)
+- In Base 32 (Bitcoin Bech32 Version) - `1`, `B`, `I`, `O`
 
 
 Why use base56 (and not "standard" base64)?
