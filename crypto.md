@@ -1,4 +1,4 @@
-title: Blockchain Evolution - 1st, 2nd, 3rd, 4th Generation - From Bitcoin to Ethereum 1.0
+# Blockchain Evolution - 1st, 2nd, 3rd, 4th Generation - From Bitcoin to Ethereum 1.0
 to Libra to Ethereum 2.0
 
 
@@ -26,11 +26,10 @@ about 179 kilograms of CO₂ per bitcoin transaction (300 kW/h × 0.596 kg). For
 
 
 
-# Part I - Private Key, Public Key and Address
+## Part I - Private Key, Public Key and Address
 
 
-# Crypto (Bank) Accounts
-
+Crypto (Bank) Accounts
 
 Trivia Quiz: How long does it take to open up 10 000 (bank) accounts?
 
@@ -226,13 +225,14 @@ We calculated the public key hash.
 Now what about the address?
 
 
-There are currently three Bitcoin address formats in use:
+> There are currently three Bitcoin address formats in use:
+>
+> - P2PKH (Pay to public key hash) which begin with the number 1, eg: `1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2`.
+> - P2SH (pay to script hash) type starting with the number 3, eg: `3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy`.
+> - Bech32 type starting with bc1, eg: `bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq`.
+>
+> (Source: [Bitcoin address @ Bitcoin Wiki](https://en.bitcoin.it/wiki/Address))
 
-- P2PKH (Pay to public key hash) which begin with the number 1, eg: `1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2`.
-- P2SH (pay to script hash) type starting with the number 3, eg: `3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy`.
-- Bech32 type starting with bc1, eg: `bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq`.
-
-(Source: [Bitcoin address @ Bitcoin Wiki](https://en.bitcoin.it/wiki/Address))
 
 What's Base 56 Encoding? What's Base 32 Encoding?
 
