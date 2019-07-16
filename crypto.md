@@ -363,12 +363,57 @@ Upcoming:
 
 Appendix:
 
-Signing a transaction with an (ecliptic curve) private key
+Signing a transaction with an (elliptic curve) private key
 
 ``` ruby
+
 ```
 
-Verifying a signed transaction with an (ecliptic curve) public key
+Verifying a signed transaction with an (elliptic curve) public key
 
 ``` ruby
+require 'pp'              # pp = pretty print(er)
+require 'ecdsa'           # Use an elliptic curve (digital signature algorithm) library
+require 'digest'
+
+# Step 1 - Calculate the Transaction (tx) Hash
+
+tx = 'from: Alice  to: Bob     cryptos: 43_000_000_000'
+txhash = Digest::SHA256.digest( tx )
+
+# Step 2 - Get the Signer's Public Key
+
+group = ECDSA::Group::Secp256k1      # Select the curve used in Bitcoin and Ethereum
+pubkey = ECDSA::Point.new( group,
+   102884003323827292915668239759940053105992008087520207150474896054185180420338,
+   49384988101491619794462775601349526588349137780292274540231125201115197157452
+)
+
+# Step 3 - Get the Transaction's Signature
+
+signature = ECDSA::Signature.new(
+  80563021554295584320113598933963644829902821722081604563031030942154621916407,
+  58316177618967642068351252425530175807242657664855230973164972803783751708604
+)
+
+# Don't Trust - Verify
+
+ECDSA.valid_signature?( pubkey, txhash, signature)
+#=> true
+
+
+# or using hexadecimal numbers
+
+pubkey = ECDSA::Point.new( group,
+  0xe37648435c60dcd181b3d41d50857ba5b5abebe279429aa76558f6653f1658f2,
+  0x6d2ee9a82d4158f164ae653e9c6fa7f982ed8c94347fc05c2d068ff1d38b304c
+)
+
+signature = ECDSA::Signature.new(
+  0x3306a2f81ad2b2f62ebe0faec129545bc772babe1ca5e70f6e56556b406464c0,
+  0x4fe202bb0835758f514cd4a0787986f8f6bf303df629dc98c5b1a438a426f49a
+)
+
+ECDSA.valid_signature?( pubkey, txhash, signature)
+#=> true
 ```
