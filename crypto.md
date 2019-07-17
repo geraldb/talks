@@ -177,9 +177,15 @@ What's a one-way crypto hashing algorithm / function?
 ``` ruby
 require 'digest'
 
-Digest::SHA256.hexdigest( 'Hello, Cryptos!' )
+message = 'Hello, Cryptos!'
+Digest::SHA256.hexdigest( message )
 #=> "33eedea60b0662c66c289ceba71863a864cf84b00e10002ca1069bf58f9362d5"
+
+pubkey = "02b4632d08485ff1df2db55b9dafd23347d1c47a457072a1e87be26896549a8737"
+Digest::SHA256.hexdigest( pubkey )
+#=> "8ae8ae0c4d72457f81e6e5aa5d7f40fabc1d7b1a1c9ecd75da95aa1add734e4e"
 ```
+
 
 Trivia Quiz: What's SHA256?
 
