@@ -225,6 +225,12 @@ We calculated the public key hash.
 Now what about the address?
 
 
+Example: (Elliptic Curve) Public Key to Bitcoin Address
+
+![](i/bitcoin-pubkey-to-addr.png)
+
+
+
 > There are currently three Bitcoin address formats in use:
 >
 > - P2PKH (Pay to public key hash) which begin with the number 1, eg: `1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2`.
