@@ -83,12 +83,8 @@ $ docker build .
 
 Sending build context to Docker daemon  2.048kB
 Step 1/2 : FROM ubuntu
- ---> 4e2eef94cd6b
 Step 2/2 : RUN echo 'Hello world'
- ---> Running in a49a1961315d
 Hello world
-Removing intermediate container a49a1961315d
- ---> 09953f45072b
 Successfully built 09953f45072b
 
 
@@ -203,7 +199,7 @@ RUN cd /src; npm install --production
 # Bundle app source
 COPY hello.js /src/hello.js
 
-# app binds to port 8080 
+# App binds to port 8080 
 EXPOSE  8080
 
 # Last but not least, define the command to run your app
