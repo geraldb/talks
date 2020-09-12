@@ -92,7 +92,7 @@ Removing intermediate container a49a1961315d
 Successfully built 09953f45072b
 
 
-$ docker images | grep 09953f45072b
+$ docker images
 
 REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
 <none>               <none>              09953f45072b        2 minutes ago       73.9MB
@@ -215,8 +215,6 @@ CMD ["node", "/src/hello.js"]
 
 Example: Node.js hello world web app in a container (Cont.)
 
-`Dockerfile`:
-
 Done. Build the image and run.
 
 ```
@@ -224,9 +222,8 @@ $ docker build -t hello_nodejs .
 
 $ docker images
 
-# Example
-REPOSITORY            TAG        ID              CREATED
-hello_nodejs          latest     d64d3505b0d2    2 minutes ago
+REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+hello_nodejs         latest              00362d5176e4        2 minutes ago       944MB
 
 $ docker run -p 8080:8080 -d hello_nodejs
 ```
