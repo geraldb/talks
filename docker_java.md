@@ -234,7 +234,7 @@ $ docker run -p 8080:8080 -d hello_nodejs
 Step 1. Try it out.
 
 Works on Windows (requires 64-bit) runs Docker Server
-on the Windows Subsystem for Linux v2 (WSL2).
+in the Windows Subsystem for Linux v2 (WSL2).
 
 Step 2. Use Docker for development and testing.
 
