@@ -75,13 +75,27 @@ FROM ubuntu
 RUN echo 'Hello world'
 ```
 
-Proof of the pudding. Let's run it:
+Proof of the pudding. Let's build it:
 
 
 ```
-$ docker run Dockerfile
+$ docker build .
 
->>  Hello world
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu
+ ---> 4e2eef94cd6b
+Step 2/2 : RUN echo 'Hello world'
+ ---> Running in a49a1961315d
+Hello world
+Removing intermediate container a49a1961315d
+ ---> 09953f45072b
+Successfully built 09953f45072b
+
+
+$ docker images | grep 09953f45072b
+
+REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+<none>               <none>              09953f45072b        19 minutes ago      73.9MB
 ```
 
 
