@@ -1,4 +1,4 @@
-title: Docker for Java Enterprise Architects, Designerns n Coders
+title: Docker for Java Enterprise Architects, Designerns 'n' Coders
 
 
 # What's an (application) container?
@@ -95,7 +95,7 @@ Successfully built 09953f45072b
 $ docker images | grep 09953f45072b
 
 REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
-<none>               <none>              09953f45072b        19 minutes ago      73.9MB
+<none>               <none>              09953f45072b        2 minutes ago       73.9MB
 ```
 
 
@@ -161,12 +161,14 @@ Example: Node.js hello world web app in a container
 
 ```
 var express = require('express');
-var app = express();
+var app = express.createServer();
 
 // respond with "hello world" when a GET request is made
 app.get('/', function(req, res) {
   res.send( 'hello world' );
 });
+
+app.listen( 8080 );
 ```
 
 
@@ -199,13 +201,13 @@ COPY package.json /src/package.json
 RUN cd /src; npm install --production
 
 # Bundle app source
-COPY . /src
+COPY hello.js /src/hello.js
 
 # app binds to port 8080 
 EXPOSE  8080
 
 # Last but not least, define the command to run your app
-CMD ["node", "/src/index.js"]
+CMD ["node", "/src/hello.js"]
 ```
 
 
@@ -226,7 +228,7 @@ $ docker images
 REPOSITORY            TAG        ID              CREATED
 hello_nodejs          latest     d64d3505b0d2    2 minutes ago
 
-$ docker run -p 49160:8080 -d hello_nodejs
+$ docker run -p 8080:8080 -d hello_nodejs
 ```
 
 
