@@ -189,7 +189,7 @@ to the free world and open structured data. Let's welcome factbook.json
 (and the factbook page parser)!
 
 See [`/factbook/factbook`](https://github.com/factbook/factbook)
-and [`/opendatajson/factbook.json`](https://github.com/opendatajson/factbook.json) on GitHub.
+and [`/factbook/factbook.json`](https://github.com/factbook/factbook.json) on GitHub.
 
 
 
@@ -535,7 +535,7 @@ EOS
 
 ## step 1: read all countries; using local json (dump) files
 
-json_dir = '../../opendatajson/factbook.json'
+json_dir = '../../factbook/factbook.json'
 
 codes  = Factbook.codes.countries
 pages  = Factbook::JsonPageReader.new( json_dir ).read_pages( codes )
@@ -544,7 +544,7 @@ almanac = Factbook::Almanac.new( pages )
 
 ## step 2: save to disk
 
-File.open( './ALMANAC.md', 'w' ) do |f|
+File.open( './ALMANAC.md', 'w:utf-8' ) do |f|
   f.write almanac.render( TEMPLATE )
 end
 
@@ -602,7 +602,7 @@ Algiers • 2,381,741 sq km • pop. 39,542,166 (July 2015 est.)
 
 ...
 
-(Source: [opendatajson/factbook.json/ALMANAC.md](https://github.com/opendatajson/factbook.json/blob/master/ALMANAC.md))
+(Source: [factbook/factbook.json/ALMANAC.md](https://github.com/factbook/factbook.json/blob/master/ALMANAC.md))
 
 
 # Case Study - How to use? - factbook.sql - I/II
