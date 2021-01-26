@@ -23,12 +23,12 @@ Tue April 30th, 2019 -
 
 Thu April 4th, 2019 -
 [**The State of Bool - Everything You Never Wanted to Know**](https://github.com/geraldb/talks/blob/master/bool.md)
-@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/258293252)
+@ [Vienna Ruby Meetup](https://viennarb.github.io)
 
 
 Tue March 12th, 2019 -
 [**Contracts, Contracts, Contracts - Code Your Own (Crypto Blockchain) Contracts w/ Ruby (sruby), Universum & Co**](https://github.com/geraldb/talks/blob/master/contracts.md)
-@ [Vienna Crypto Programming Meetup](https://meetup.com/vienna-crypto/events/258872831)
+@ [Vienna Crypto Programming Meetup](https://viennacrypto.github.io)
 
 
 
@@ -36,7 +36,7 @@ Tue March 12th, 2019 -
 
 Thu October 18th, 2018 -
 [**Mining for Gold Using the World's #1 and Most Popular Data Format**](https://github.com/geraldb/talks/blob/master/csv.md)
-@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/255296867) 
+@ [Vienna Ruby Meetup](https://viennarb.github.io) 
 
 Wed June 20th, 2018 - 
 [**Stay Static - Build Static Websites w/ VuePress (and Text with Formatting Conventions in Markdown)**](https://github.com/geraldb/talks/blob/master/vuepress.md) 
@@ -54,7 +54,7 @@ Mon March 12th, 2018 -  [**Build (Online) Presentations / Talks (and Handout Not
 @ [Austria.TXT Meetup](https://github.com/austriacodes/austria.txt)
 
 Thu March 8th, 2018 - [**Build (Online) Books and Documentation with Markdown and Octobook Themes and the Jekyll (Static) Website Compiler - Incl. Yuki & Moto Press Bookshelf Case Study**](https://github.com/geraldb/talks/blob/master/octobook.md)
-@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/247811456)
+@ [Vienna Ruby Meetup](https://viennarb.github.io)
 
 
 
@@ -64,7 +64,7 @@ Thu March 8th, 2018 - [**Build (Online) Books and Documentation with Markdown an
 
 Thu December 7th, 2017 - [**Blockchain! Blockchain! Blockchain! - Build Your Own Blockchains in Ruby from Zero (Scratch)**](https://github.com/geraldb/talks/blob/master/blockchain_ruby.md) •
 [(Slides)](http://slideshow-s9.github.io/demos/blockchain_ruby.html), [(Print)](http://slideshow-s9.github.io/demos/blockchain_ruby.pdf.html)
-@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/245432241)
+@ [Vienna Ruby Meetup](https://viennarb.github.io)
 
 
 Mon November 13rd, 2017 -
@@ -98,7 +98,7 @@ Tue July 4th, 2017 -
 
 Thu June 8th, 2017 -
 [**Meet Jason Feed - The New Web Feed & Syndication Guy (Ruby Edition)**](webfeeds2.md)
-@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/239689512)
+@ [Vienna Ruby Meetup](https://viennarb.github.io)
 
 Wed May 31st, 2017 -
 [**Meet Jason Feed - The New Web Feed & Syndication Guy (JavaScript Edition)**](jsonfeed.md)
@@ -129,7 +129,7 @@ Wed April 19th, 2017 -
 
 Thu April 6th, 2017 -
 [**New Horizons - Build Your Own (Static) Planet News Site with Pluto (and Ruby)**](planet.md)
-@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/238794079)
+@ [Vienna Ruby Meetup](https://viennarb.github.io)
 
 The talk covers how to read web feeds in ruby w/ the standard rss
 module and 3rd party libraries such as the universal feedparser gem and
@@ -203,7 +203,7 @@ Tue March 8th, 2016 -
 
 Thu March 3rd, 2016 -
 [**Stay Static - Jekyll vs. Middleman - Build Static Websites with Ruby**](jekyll_vs_middleman.md)
-@ [Vienna Ruby Meetup](https://meetup.com/vienna-rb/events/228656812)
+@ [Vienna Ruby Meetup](https://viennarb.github.io)
 
 
 Wed March 2nd, 2016 -
