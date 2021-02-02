@@ -29,7 +29,7 @@ The World Factbook [1][2] published by the Central Intelligence Agency (CIA)
 offers free country profiles in the public domain
 (that is, no copyright(s), no rights reserved).
 
-- [1] [The World Factbook](https://www.cia.gov/library/publications/the-world-factbook/)
+- [1] [The World Factbook](https://www.cia.gov/the-world-factbook/)
 - [2] [Wikipedia Article: The World Factbook](http://en.wikipedia.org/wiki/The_World_Factbook)
 
 
@@ -40,7 +40,7 @@ offers free country profiles in the public domain
 
 ![](i/factbook-au.png)
 
-(Source: [www.cia.gov/library/publications/the-world-factbook/geos/au.html](https://www.cia.gov/library/publications/the-world-factbook/geos/au.html))
+(Source: [www.cia.gov/the-world-factbook/countries/austria](https://www.cia.gov/the-world-factbook/countries/austria/))
 
 
 # World Factbook - Country Trivia (Taxonomy)
@@ -128,7 +128,7 @@ The World Factbook is a unique reference in that it is updated continuously - on
 > Information in The Factbook is collected from - and coordinated with - a wide variety of US Government
 > agencies, as well as from hundreds of published sources.
 
-(Source: [the-world-factbook/docs/didyouknow.html](https://www.cia.gov/library/publications/the-world-factbook/docs/didyouknow.html))
+(Source: [the-world-factbook/about/did-you-know](https://www.cia.gov/the-world-factbook/about/did-you-know/))
 
 
 
@@ -142,7 +142,7 @@ In 1943, Gen. George B. Strong (G-2), Adm. H. C. Train (Office of Naval Intellig
 
 The need for more comprehensive basic intelligence in the postwar world was well expressed in 1946 by George S. Pettee, a noted author on national security. He wrote in The Future of American Secret Intelligence (Infantry Journal Press, 1946, page 46) that world leadership in peace requires even more elaborate intelligence than in war. "The conduct of peace involves all countries, all human activities - not just the enemy and his war production."
 
-(Source: [the-world-factbook/docs/history.html](https://www.cia.gov/library/publications/the-world-factbook/docs/history.html))
+(Source: [the-world-factbook/about/history](https://www.cia.gov/the-world-factbook/about/history/))
 
 
 # World Factbook - History - Milestones II/II
@@ -175,7 +175,7 @@ Last year for the production of CD-ROM versions of the Factbook.
 **2012**
 Size of the printed Factbook's 50th anniversary edition reaches 847 pages.
 
-(Source: [the-world-factbook/docs/history.html](https://www.cia.gov/library/publications/the-world-factbook/docs/history.html))
+(Source: [the-world-factbook/about/history](https://www.cia.gov/the-world-factbook/about/history/))
 
 
 
