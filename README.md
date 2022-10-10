@@ -3,6 +3,7 @@
 
 sources in text w/ formatting in markdown conventions
 
+[2022](#2022) •
 [2019](#2019) •
 [2018](#2018) •
 [2017](#2017) •
@@ -10,6 +11,14 @@ sources in text w/ formatting in markdown conventions
 [2015](#2015) •
 [2014](#2014) •
 [2013](#2013)
+
+## 2022
+
+Wed October 5th, 2022 - [**Inside the Billion Dollar $$$ (Crypto) Punk Pixel Heads**](
+https://github.com/cryptopunksnotdead/cryptopunks/tree/master/insidepunks) @ Technologieplauscherl LXXVII (Linz, Austria)
+
+Wed September 21st, 2022 - [**Inside Punkbase - SQLite (SQL.js) In Action**](
+https://github.com/cryptopunksnotdead/punkbase/tree/master/insidepunkbase) @ Stahlstadt.js (Linz, Austria)
 
 
 
