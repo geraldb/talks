@@ -14,6 +14,11 @@ sources in text w/ formatting in markdown conventions
 
 ## 2022
 
+Tue November 29th, 2022 - [**Inside Punkbase - SQLite (SQL.js) In Action (Update)**](
+https://github.com/cryptopunksnotdead/punkbase/tree/master/insidepunkbase) @ Vienna.js
+
+Wed October 19th, 2022 - [**Programming Pixel Punk Profile Pictures & (Generative) Art with Go**](https://github.com/cryptopunksnotdead/lets-go-programming-cryptopunks) @ Vienna.go
+
 Wed October 5th, 2022 - [**Inside the Billion Dollar $$$ (Crypto) Punk Pixel Heads**](
 https://github.com/cryptopunksnotdead/cryptopunks/tree/master/insidepunks) @ Technologieplauscherl LXXVII (Linz, Austria)
 
