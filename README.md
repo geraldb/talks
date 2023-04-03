@@ -3,6 +3,7 @@
 
 sources in text w/ formatting in markdown conventions
 
+[2023](#2023) •
 [2022](#2022) •
 [2019](#2019) •
 [2018](#2018) •
@@ -11,6 +12,15 @@ sources in text w/ formatting in markdown conventions
 [2015](#2015) •
 [2014](#2014) •
 [2013](#2013)
+
+## 2023
+
+Tue March 28th, 2023 - [**Inside Ordinal Inscriptions - Turn the Blockchain Into A Database For Digital Artefacts**](https://github.com/pixelartexchange/ordinals.sandbox/tree/master/insideordinals) @ Technologieplauscherl LXXX (Linz, Austria)
+
+
+Wed March 8th, 2023 - [**GoReleaser In Action - Deliver Go Binaries As Fast and Easily As Possible (For Windows, Mac, Linux & Co.) Via GitHub Actions (Workflow)**](https://github.com/pixelartexchange/artbase.server/tree/master/goreleaser) @ Vienna.go
+
+
 
 ## 2022
 
