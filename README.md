@@ -15,6 +15,10 @@ sources in text w/ formatting in markdown conventions
 
 ## 2023
 
+Wed April 26th, 2023 - [**Query the (Open) Ethereum Blockchain (Database) with Contract Services**](https://github.com/viennacrypto/viennacrypto.github.io/tree/master/ethers) @ Vienna.js <br>
+_using strongly-typed application binary interfaces (ABIs) with ethers.js (v6) via JSON-RPC_ 
+
+
 Tue March 28th, 2023 - [**Inside Ordinal Inscriptions - Turn the Blockchain Into A Database For Digital Artefacts**](https://github.com/pixelartexchange/ordinals.sandbox/tree/master/insideordinals) @ Technologieplauscherl LXXX (Linz, Austria)
 
 
