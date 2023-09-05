@@ -842,27 +842,6 @@ see the [**Art Factory Sandbox**](https://github.com/generativeartfactory/artfac
 Thanks.
 
 
-**What's ETH Vienna / Wien Meetup / Stammtisch?**
-
-The idea is to (re)start the Eth(erum) community in Vienna / Wien.
-
-Eth(ereum) Vienna Meetup(s) - Jour Fixe - Every First Wednesday of the Month.
-
-- **Wednesday, April 5th, 2023, 6-8pm - (Ethereum) Blockchain & Red Kriek Beer**
-- **Wednesday, May 3rd, 2023, 6-8pm**
-- **Wednesday, June 7th, 2023, 6-8pm**
-- Summer Break
-
-@ Delirium Café Vienna, Passauer Platz 2, 1. District (Beside the Church - Maria am Gestade)
-
-Note: Everyone MUST pay for your own drink(s) and optional food.
-For the menu & prices, see <https://paddysco.at/datein/Delirium-Cafe-Menu.pdf>. For example - A traditional (on tap!) Belgian kriek lambic beer by Brouwerij F. Boon costs 0.15L €2.80 / 0.33L €4.80.
-
-Join us. See  <https://meetup.com/eth-vienna> or <https://viennacrypto.github.io>.
-
-
-
-
 ---
 
 ##  Bonus
