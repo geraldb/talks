@@ -57,7 +57,7 @@ Highest is
 ![](i/ordinalpunk41.png)
 Ordinal Punk No. 41  w/ 11.5 BTC (~US$ 270 000) on February 10th, 2023
 and
-![](i/ordinalpunks94.png)
+![](i/ordinalpunk94.png)
 Ordinal Punk No. 94 w/ 9.5 BTC (~US$ 220 000) on February 8th, 2023.
 
 
