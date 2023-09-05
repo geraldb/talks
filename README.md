@@ -18,7 +18,7 @@ sources in text w/ formatting in markdown conventions
 Wed April 26th, 2023 - [**Query the (Open) Ethereum Blockchain (Database) with Contract Services**](ethers.md)  - Using Strongly-Typed Application Binary Interfaces (ABIs) With ethers.js (v6) Via JSON-RPC @ Vienna.js
 
 
-Tue March 28th, 2023 - [**Inside Ordinal Inscriptions - Turn the Blockchain Into A Database For Digital Artefacts**](https://github.com/pixelartexchange/ordinals.sandbox/tree/master/insideordinals) @ Technologieplauscherl LXXX (Linz, Austria)
+Tue March 28th, 2023 - [**Inside Ordinal Inscriptions - Turn the Blockchain Into A Database For Digital Artefacts**](insideordinals.md) @ Technologieplauscherl LXXX (Linz, Austria)
 
 
 Wed March 8th, 2023 - [**GoReleaser In Action - Deliver Go Binaries As Fast and Easily As Possible (For Windows, Mac, Linux & Co.) Via GitHub Actions (Workflow)**](goreleaser.md) @ Vienna.go
