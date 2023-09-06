@@ -28,14 +28,15 @@ Wed March 8th, 2023 - [**GoReleaser In Action - Deliver Go Binaries As Fast and 
 ## 2022
 
 Tue November 29th, 2022 - [**Inside Punkbase - SQLite (SQL.js) In Action**](
-https://github.com/cryptopunksnotdead/punkbase/tree/master/insidepunkbase) @ Vienna.js
+insidepunkbase.md) @ Vienna.js
 
 Wed October 19th, 2022 - [**Programming Pixel Punk Profile Pictures & (Generative) Art with Go**](https://github.com/cryptopunksnotdead/lets-go-programming-cryptopunks) @ Vienna.go
 
 Wed October 5th, 2022 - [**Inside the Billion Dollar $$$ (Crypto) Punk Pixel Heads**](insidepunks.md) @ Technologieplauscherl LXXVII (Linz, Austria)
 
 Wed September 21st, 2022 - [**Inside Punkbase - SQLite (SQL.js) In Action**](
-https://github.com/cryptopunksnotdead/punkbase/tree/master/insidepunkbase) @ Stahlstadt.js (Linz, Austria)
+insidepunkbase.md) @ Stahlstadt.js (Linz, Austria)
+
 
 
 
