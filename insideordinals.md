@@ -7,7 +7,7 @@ Version (& Live Talk) History:
 
 Flashback
 
-[**Inside the Billion Dollar $$$ (Crypto) Punk Pixel Heads**](https://github.com/cryptopunksnotdead/cryptopunks/tree/master/insidepunks) - October 2022 @ [Technologieplauscherl LXXVII](http://technologieplauscherl.at/77/)
+[**Inside the Billion Dollar $$$ (Crypto) Punk Pixel Heads**](insidepunks.md) - October 2022 @ [Technologieplauscherl LXXVII](http://technologieplauscherl.at/77/)
 
 
 
